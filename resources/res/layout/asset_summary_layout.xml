@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/motion_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutDescription="@xml/asset_summary_scene">
+    <include android:id="@+id/summary_head" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/asset_index_summary_head_layout_new"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/summary_list" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/summary_head"/>
+    <RelativeLayout android:id="@+id/fold_view" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_20" app:layout_constraintTop_toBottomOf="@+id/summary_list">
+        <ImageView android:id="@+id/iv_fold_icon" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_10" android:src="@drawable/ic_asset_account_arrow_down" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

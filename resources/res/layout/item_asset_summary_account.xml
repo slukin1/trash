@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/bg_asset_summary_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_8" android:minHeight="@dimen/dimen_60">
+    <RelativeLayout android:id="@+id/item_account_header" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" android:paddingStart="@dimen/dimen_13_5" android:paddingEnd="@dimen/dimen_12">
+        <ImageView android:id="@+id/iv_asset_account_icon" android:layout_width="@dimen/dimen_25" android:layout_height="@dimen/dimen_25" android:scaleType="fitXY" android:layout_centerVertical="true"/>
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@+id/asset_amount_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/account_tv_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/account_tv_amount_cny" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/state_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <ImageView android:id="@+id/iv_state_icon" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15" android:src="@drawable/balances_trade_reminder" android:scaleType="fitCenter"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_balance_total_none_open_title" android:layout_marginStart="@dimen/dimen_5"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_8" android:layout_toEndOf="@+id/iv_asset_account_icon"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/sub_accounts_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/item_account_header"/>
+    <FrameLayout android:id="@+id/expand_arrow_down_panel" android:background="@drawable/balances_unfold" android:visibility="gone" android:layout_width="@dimen/dimen_86" android:layout_height="@dimen/dimen_11" android:layout_alignBottom="@+id/item_account_header" android:layout_centerHorizontal="true"/>
+    <FrameLayout android:id="@+id/expand_arrow_up_panel" android:visibility="gone" android:layout_width="@dimen/dimen_86" android:layout_height="@dimen/dimen_30" android:layout_alignBottom="@+id/sub_accounts_container" android:layout_centerHorizontal="true">
+        <FrameLayout android:layout_gravity="bottom" android:background="@drawable/balances_fold" android:layout_width="@dimen/dimen_86" android:layout_height="@dimen/dimen_11"/>
+    </FrameLayout>
+</RelativeLayout>

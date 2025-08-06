@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <ConstraintSet android:id="@+id/progress_start">
+        <Constraint android:id="@+id/iv_loading_plain" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="60dp" android:translationY="0dp" android:scaleX="0.25" android:scaleY="0.25" app:layout_constraintBottom_toTopOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_plain"/>
+        <Constraint android:id="@+id/iv_loading_gradient" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="-60dp" android:translationY="0dp" android:scaleX="0.25" android:scaleY="0.25" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_gradient"/>
+        <Constraint android:id="@+id/iv_loading_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0" android:scaleY="0" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/progress_end">
+        <Constraint android:id="@+id/iv_loading_plain" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="-60dp" android:translationY="0dp" android:scaleX="0.25" android:scaleY="0.25" app:layout_constraintBottom_toTopOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_plain"/>
+        <Constraint android:id="@+id/iv_loading_gradient" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="60dp" android:translationY="0dp" android:scaleX="0.25" android:scaleY="0.25" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_gradient"/>
+        <Constraint android:id="@+id/iv_loading_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0" android:scaleY="0" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop"/>
+    </ConstraintSet>
+    <Transition app:constraintSetEnd="@+id/progress_end" app:constraintSetStart="@+id/progress_start" app:duration="600" app:motionInterpolator="0">
+        <KeyFrameSet>
+            <KeyAttribute android:scaleX="0.178" android:scaleY="0.178" app:framePosition="50" app:motionTarget="@+id/iv_loading_gradient"/>
+            <KeyAttribute android:scaleX="0.321" android:scaleY="0.321" app:framePosition="50" app:motionTarget="@+id/iv_loading_plain"/>
+        </KeyFrameSet>
+    </Transition>
+    <Transition app:constraintSetEnd="@+id/progress_start" app:constraintSetStart="@+id/progress_end" app:duration="600" app:motionInterpolator="0">
+        <KeyFrameSet>
+            <KeyAttribute android:scaleX="0.178" android:scaleY="0.178" app:framePosition="50" app:motionTarget="@+id/iv_loading_plain"/>
+            <KeyAttribute android:scaleX="0.321" android:scaleY="0.321" app:framePosition="50" app:motionTarget="@+id/iv_loading_gradient"/>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/success">
+        <Constraint android:id="@+id/iv_loading_plain" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="0dp" android:translationY="0dp" android:scaleX="1" android:scaleY="1" app:layout_constraintBottom_toTopOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_plain"/>
+        <Constraint android:id="@+id/iv_loading_gradient" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="0dp" android:translationY="0dp" android:scaleX="1" android:scaleY="1" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_gradient"/>
+        <Constraint android:id="@+id/iv_loading_icon" android:layout_width="wrap_content" android:layout_height="0dp" android:alpha="1" android:scaleX="1" android:scaleY="1" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHeight_default="2" app:layout_constraintHeight_percent="0.08" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/error" app:deriveConstraintsFrom="@+id/success">
+        <Constraint android:id="@+id/btn_retry" android:layout_width="match_parent" android:layout_height="@dimen/jumio_button_height_max" android:alpha="1" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:id="@+id/iv_loading_plain" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="0dp" android:translationY="0dp" android:scaleX="1" android:scaleY="1" app:layout_constraintBottom_toTopOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_error_plain"/>
+        <Constraint android:id="@+id/iv_loading_gradient" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitCenter" android:translationX="0dp" android:translationY="0dp" android:scaleX="1" android:scaleY="1" app:layout_constraintBottom_toBottomOf="@+id/animationGuidelineBottom" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/animationGuidelineTop" app:srcCompat="@drawable/jumio_ic_loading_gradient_error"/>
+    </ConstraintSet>
+    <Transition app:constraintSetEnd="@+id/success" app:constraintSetStart="@+id/progress_start" app:duration="500"/>
+    <Transition app:constraintSetEnd="@+id/success" app:constraintSetStart="@+id/progress_end" app:duration="500"/>
+    <Transition app:constraintSetEnd="@+id/error" app:constraintSetStart="@+id/progress_start" app:duration="500"/>
+    <Transition app:constraintSetEnd="@+id/error" app:constraintSetStart="@+id/progress_end" app:duration="500"/>
+    <Transition app:constraintSetEnd="@+id/progress_start" app:constraintSetStart="@+id/error" app:duration="500"/>
+</MotionScene>

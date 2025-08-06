@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/linear_layout_market_remind_header" android:paddingTop="@dimen/dimen_14_5" android:paddingBottom="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dimen_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/text_view_market_remind_date" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textColor="@color/baseColorSecondaryText" android:id="@+id/text_view_market_remind_protocol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_market_remind_protocol"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linear_layout_market_remind_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/market_remind_line" android:layout_width="@dimen/dimen_10" android:layout_height="match_parent">
+            <View android:id="@+id/view_market_remind_top_line" android:background="@color/color_0066ED" android:layout_width="@dimen/dimen_1" android:layout_height="@dimen/dimen_5" android:alpha="0.2"/>
+            <View android:id="@+id/view_market_remind_top_line_2" android:background="@color/color_0066ED" android:layout_width="@dimen/dimen_1" android:layout_height="@dimen/dimen_10" android:alpha="0.2"/>
+            <ImageView android:layout_width="@dimen/dimen_10" android:layout_height="@dimen/dimen_10" android:src="@drawable/shape_new_flash_time_circle"/>
+            <View android:background="@color/color_0066ED" android:layout_width="@dimen/dimen_1" android:layout_height="0dp" android:layout_weight="1" android:alpha="0.2"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_8">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <View android:id="@+id/view_market_remind_bottom_line" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_6" android:layout_marginBottom="@dimen/dimen_10"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dimen_20">
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/color_fast_newer_time_font_color" android:id="@+id/text_view_market_remind_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <ImageView android:id="@+id/image_view_market_remind_coin" android:layout_width="@dimen/dimen_13" android:layout_height="@dimen/dimen_13" android:layout_marginLeft="@dimen/dimen_4"/>
+                    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_coin_text" android:id="@+id/text_view_market_remind_coin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_4" android:layout_weight="1"/>
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/kyc_auth_success" android:id="@+id/text_view_market_remind_info" android:background="@color/kyc_auth_success_bg" android:paddingLeft="@dimen/dimen_5" android:paddingRight="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_1" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/text_view_market_remind_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_1" android:layout_marginTop="@dimen/dimen_4" android:layout_weight="1" android:lineSpacingMultiplier="1.4" android:fontFamily="@font/roboto_medium" android:textFontWeight="500"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/text_view_market_remind_content" android:paddingBottom="@dimen/dimen_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_1" android:layout_marginTop="@dimen/dimen_8" android:layout_weight="1" android:lineSpacingMultiplier="1.55" android:fontFamily="@font/roboto_regular" android:textFontWeight="400"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

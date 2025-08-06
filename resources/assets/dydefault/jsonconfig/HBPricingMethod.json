@@ -1,0 +1,146 @@
+[
+  {
+    "abbr": "USD",
+    "fiatName": "usd_usd",
+    "imageUrl": "icon_currency_flag_usd",
+    "symbol": "$",
+    "defaultCurrency": 1,
+    "deviceLanguage": "en"
+  },
+  {
+    "abbr": "ARS",
+    "fiatName": "usd_ars",
+    "imageUrl": "icon_currency_flag_ars",
+    "symbol": "ARS$",
+    "defaultCurrency": 0,
+    "deviceLanguage": "es-AR"
+  },
+  {
+    "abbr": "BRL",
+    "fiatName": "usd_brl",
+    "imageUrl": "icon_currency_flag_brl",
+    "symbol": "R$",
+    "defaultCurrency": 0,
+    "deviceLanguage": "pt-BR"
+  },
+  {
+    "abbr": "EUR",
+    "fiatName": "usd_eur",
+    "imageUrl": "icon_currency_flag_eur",
+    "symbol": "€",
+    "defaultCurrency": 0,
+    "deviceLanguage": "de,es,pt-PT,it,nl"
+  },
+  {
+    "abbr": "GBP",
+    "fiatName": "usd_gbp",
+    "imageUrl": "icon_currency_flag_gbp",
+    "symbol": "￡",
+    "defaultCurrency": 0,
+    "deviceLanguage": "en-GB"
+  },
+  {
+    "abbr": "HKD",
+    "fiatName": "usd_hkd",
+    "imageUrl": "icon_currency_flag_hkd",
+    "symbol": "HK$",
+    "defaultCurrency": 0,
+    "deviceLanguage": "zh-HK"
+  },
+  {
+    "abbr": "IDR",
+    "fiatName": "usd_idr",
+    "imageUrl": "icon_currency_flag_idr",
+    "symbol": "Rp",
+    "defaultCurrency": 0,
+    "deviceLanguage": "id"
+  },
+  {
+    "abbr": "INR",
+    "fiatName": "usd_inr",
+    "imageUrl": "icon_currency_flag_inr",
+    "symbol": "₹",
+    "defaultCurrency": 0,
+    "deviceLanguage": "en-IN"
+  },
+  {
+    "abbr": "JPY",
+    "fiatName": "usd_jpy",
+    "imageUrl": "icon_currency_flag_jpy",
+    "symbol": "¥",
+    "defaultCurrency": 0,
+    "deviceLanguage": "ja"
+  },
+  {
+    "abbr": "KRW",
+    "fiatName": "usd_krw",
+    "imageUrl": "icon_currency_flag_krw",
+    "symbol": "₩",
+    "defaultCurrency": 0,
+    "deviceLanguage": "ko"
+  },
+  {
+    "abbr": "MYR",
+    "fiatName": "usd_myr",
+    "imageUrl": "icon_currency_flag_myr",
+    "symbol": "RM",
+    "defaultCurrency": 0,
+    "deviceLanguage": "my,ms"
+  },
+  {
+    "abbr": "NGN",
+    "fiatName": "usd_ngn",
+    "imageUrl": "icon_currency_flag_ngn",
+    "symbol": "₦",
+    "defaultCurrency": 0,
+    "deviceLanguage": ""
+  },
+  {
+    "abbr": "TRY",
+    "fiatName": "usd_try",
+    "imageUrl": "icon_currency_flag_try",
+    "symbol": "₺",
+    "defaultCurrency": 0,
+    "deviceLanguage": "tr"
+  },
+  {
+    "abbr": "RUB",
+    "fiatName": "usd_rub",
+    "imageUrl": "icon_currency_flag_rub",
+    "symbol": "₽",
+    "defaultCurrency": 0,
+    "deviceLanguage": "ru"
+  },
+  {
+    "abbr": "TWD",
+    "fiatName": "usd_twd",
+    "imageUrl": "icon_currency_flag_twd",
+    "symbol": "NT$",
+    "defaultCurrency": 0,
+    "deviceLanguage": "zh-TW"
+  },
+  {
+    "abbr": "UAH",
+    "fiatName": "usd_uah",
+    "imageUrl": "icon_currency_flag_uah",
+    "symbol": "₴",
+    "defaultCurrency": 0,
+    "deviceLanguage": "uk"
+  },
+  {
+    "abbr": "VND",
+    "fiatName": "usd_vnd",
+    "imageUrl": "icon_currency_flag_vnd",
+    "symbol": "₫",
+    "defaultCurrency": 0,
+    "deviceLanguage": "vi"
+  },
+  {
+    "abbr": "ZAR",
+    "fiatName": "usd_zar",
+    "imageUrl": "icon_currency_flag_zar",
+    "symbol": "R",
+    "defaultCurrency": 0,
+    "deviceLanguage": "en-ZA"
+  }
+]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/scrollerLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:id="@+id/fl_back" android:background="@drawable/bg_live_back" android:visibility="gone" android:layout_width="@dimen/dimen_28" android:layout_height="@dimen/dimen_28" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_53">
+        <ImageView android:id="@+id/iv_back" android:padding="6dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_live_square_back"/>
+    </FrameLayout>
+    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/loading_layout" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent" app:empty_view="@layout/common_empty_item_layout" app:error_view="@layout/layout_live_load_error"/>
+</com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>

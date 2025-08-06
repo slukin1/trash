@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="start" android:orientation="vertical" android:background="@drawable/common_dialog_bg" android:paddingTop="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_20" android:paddingEnd="@dimen/dimen_20">
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5" android:text="@string/n_currency_kyc_condition_auth_tips"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:id="@+id/kyc_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_condition_item1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/marquee_selected"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_jump_btn_color" android:id="@+id/tv_condition_item1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_fiat_uab_dw_kyc_verify_tip" android:layout_marginStart="@dimen/dimen_10"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:id="@+id/fa2_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_condition_item2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/marquee_selected"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_jump_btn_color" android:id="@+id/tv_condition_item2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_currency_kyc_condition_auth_condition2" android:layout_marginStart="@dimen/dimen_10"/>
+    </LinearLayout>
+</LinearLayout>

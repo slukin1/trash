@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/common_dialog_bg" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llHeader" android:paddingTop="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_15" android:paddingEnd="1px" android:layout_toStartOf="@+id/ivClose">
+        <RelativeLayout android:layout_width="@dimen/dimen_48" android:layout_height="@dimen/dimen_48">
+            <com.hbg.module.huobi.im.view.AvatarView android:id="@+id/ivAvatar" android:layout_width="48dp" android:layout_height="48dp" app:avatarType="0"/>
+            <ImageView android:id="@+id/iv_speaker_tag" android:visibility="visible" android:layout_width="16dp" android:layout_height="16dp" android:src="0x7f080a73" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/global_text_size_18" android:textStyle="bold" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dimen_12"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/ivClose" android:padding="@dimen/dimen_15" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/icon_hbg_dialog_top_close" android:layout_alignParentEnd="true"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/llHeader">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/global_text_size_14" android:textStyle="bold" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tvAttention" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/n_content_communityList_attention"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/global_text_size_14" android:textStyle="bold" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tvFans" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/n_content_community_userinfo_fans"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/global_text_size_14" android:textStyle="bold" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tvDynamic" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/n_content_community_userinfo_dynamic"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20" android:layout_below="@+id/llInfo" android:layout_marginStart="@dimen/dimen_15" android:layout_marginEnd="@dimen/dimen_15">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseTextColor" android:gravity="center" android:id="@+id/tvLeftBtn" android:background="@drawable/cancel_8_radius_selector" android:layout_width="0dp" android:layout_height="@dimen/dimen_44" android:layout_weight="1" android:layout_marginEnd="@dimen/dimen_15"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseTextColor" android:gravity="center" android:id="@+id/tvRightBtn" android:background="@drawable/common_blue_8_radius_selector" android:layout_width="0dp" android:layout_height="@dimen/dimen_44" android:text="@string/n_content_live_private_chat" android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

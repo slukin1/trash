@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/ali_vsdk_rect_gray" android:layout_width="300dp" android:layout_height="wrap_content">
+    <TextView android:textSize="17dp" android:textColor="@android:color/black" android:gravity="center" android:id="@+id/message" android:layout_width="match_parent" android:layout_height="91dp"/>
+    <TextView android:background="#dedede" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="51dp">
+        <Button android:textSize="17dp" android:textColor="#1475ea" android:gravity="center" android:id="@+id/cancel" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ali_vsdk_verify_call_dialog_cancel" android:singleLine="true" android:layout_weight="1"/>
+        <TextView android:background="#dedede" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <Button android:textSize="17dp" android:textColor="#1475ea" android:gravity="center" android:id="@+id/ok" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/ali_vsdk_verify_call_dialog_ok" android:singleLine="true" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

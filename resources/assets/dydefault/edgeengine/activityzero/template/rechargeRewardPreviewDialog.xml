@@ -1,0 +1,43 @@
+<LinearLayout width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground" topLeftRadius="8" topRightRadius="8" paddingBottom="{{@data.openPosition.bottomBarHeight}}" orientation="vertical">
+  <LinearLayout width="match_parent" height="wrap_content" layout_gravity="centerVertical" gravity="centerVertical" orientation="horizontal" paddingTop="12" paddingBottom="12">
+    <TextView width="0" height="wrap_content" weight="1" marginStart="16" text="{{@i18n/n_zero_swap_recharge_reward}}" textColor="@color/kColorPrimaryText" textSize="20" textFontWeight="500"/>
+    <FrameLayout width="wrap_content" paddingStart="12" paddingEnd="12" height="28">
+      <ImageView width="16" height="16" layout_gravity="center" onClick="@event.openPosition.hideRechargeRewardsDialog(0)" src="@drawable/edge_engine_asset_fall_coin_close"/>
+    </FrameLayout>
+  </LinearLayout>
+  <View width="match_parent" height="0.5" background="@color/KBaseColorPrimarySeparator"/>
+  <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" paddingStart="16" paddingEnd="16" paddingTop="12" paddingBottom="12">
+    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_exchange_call_auction_end_of_distance}}" textColor="@color/kColorSecondaryText" textSize="12"/>
+    <TextView width="wrap_content" height="wrap_content" marginStart="6" background="@color/KBaseColorDeepestBackground" paddingStart="4" paddingEnd="4" paddingTop="3" paddingBottom="3" textFontWeight="500" cornerRadius="4" text="{{@data.openPosition.rechargeRewardsDialogDay}}" textColor="@color/kColorPrimaryText" textSize="12"/>
+    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_day}}" marginStart="6" marginEnd="6" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="500"/>
+    <TextView width="wrap_content" height="wrap_content" background="@color/KBaseColorDeepestBackground" text="{{@data.openPosition.rechargeRewardsDialogHour}}" textColor="@color/kColorPrimaryText" textSize="12" paddingStart="4" paddingEnd="4" paddingTop="3" paddingBottom="3" textFontWeight="500" cornerRadius="4"/>
+    <ImageView width="10" height="9" marginStart="6" marginEnd="6" src="@drawable/edge_engine_zero_swap_time_split"/>
+    <TextView width="wrap_content" height="wrap_content" background="@color/KBaseColorDeepestBackground" text="{{@data.openPosition.rechargeRewardsDialogMinute}}" textColor="@color/kColorPrimaryText" textSize="12" paddingStart="4" paddingEnd="4" paddingTop="3" paddingBottom="3" textFontWeight="500" cornerRadius="4"/>
+    <ImageView width="10" height="8" marginStart="6" marginEnd="6" src="@drawable/edge_engine_zero_swap_time_split"/>
+    <TextView width="wrap_content" height="wrap_content" background="@color/KBaseColorDeepestBackground" text="{{@data.openPosition.rechargeRewardsDialogSecond}}" textColor="@color/kColorPrimaryText" textSize="12" paddingStart="4" paddingEnd="4" paddingTop="3" paddingBottom="3" textFontWeight="500" cornerRadius="4"/>
+  </LinearLayout>
+  <Scroller height="wrap_content" orientation="horizontal" marginTop="4" width="match_parent">
+    <LinearLayout width="wrap_content" height="wrap_content" paddingLeft="16" paddingRight="16" gravity="centerVertical" orientation="horizontal">
+      <For data="@data.openPosition.rechargeRewardsDialog.leverList" itemKey="item">
+        <Cell height="wrap_content" type="normal" width="wrap_content">
+          <LinearLayout width="wrap_content" orientation="horizontal" gravity="centerVertical" height="wrap_content">
+            <LinearLayout width="100" height="wrap_content" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" cornerRadius="8" gravity="centerHorizontal" orientation="vertical">
+              <TextView width="wrap_content" height="wrap_content" background="@color/kColor1AFE8731" paddingBottom="2" paddingTop="2" cornerRadius="10" marginTop="12" paddingStart="4" paddingEnd="4" gravity="center" text="{{@item.reward}}" textColor="@color/kSecurityMiddleLevelColor" textSize="12"/>
+              <ImageView width="6" height="3" src="@drawable/edge_engine_zero_swap_arrow_down"/>
+              <ImageView width="40" height="40" src="{{@item.drawable}}"/>
+              <TextView width="wrap_content" height="wrap_content" marginTop="6" text="{{@i18n/n_otc_balance_deposit}}" textColor="@color/kColorThreeLevelText" textSize="12"/>
+              <TextView width="wrap_content" height="wrap_content" marginTop="3" marginBottom="12" text="{{@item.condition}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12"/>
+            </LinearLayout>
+            <View width="10" height="2" marginStart="6" visibility="{{@item.indicatorVisibility | gone}}" marginEnd="6" background="{{@data.openPosition.rechargeRewardsDialog.indicatorColor}}"/>
+          </LinearLayout>
+        </Cell>
+      </For>
+    </LinearLayout>
+  </Scroller>
+  <TextView width="match_parent" height="wrap_content" marginStart="16" marginTop="16" text="{{@i18n/n_zero_swap_recharge_rule_title}}" textColor="@color/kColorPrimaryText" textSize="12"/>
+  <TextView width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" marginTop="4" text="{{@i18n/n_zero_swap_recharge_rule_1}}" textColor="@color/kColorSecondaryText" maxLines="0" textSize="12"/>
+  <TextView width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" marginTop="4" text="{{@i18n/n_zero_swap_recharge_rule_2}}" textColor="@color/kColorSecondaryText" maxLines="0" textSize="12"/>
+  <TextView width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" marginTop="4" text="{{@i18n/n_zero_swap_recharge_rule_3}}" textColor="@color/kColorSecondaryText" maxLines="0" textSize="12"/>
+  <TextView width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" marginTop="3" text="{{@i18n/n_zero_swap_recharge_rule_4}}" textFontWeight="500" textColor="@color/kColorPrimaryText" maxLines="0" textSize="12"/>
+  <TextView width="match_parent" height="44" margin="16" background="@color/kColorMajorTheme100" marginTop="28" marginStart="16" marginEnd="16" marginBottom="16" cornerRadius="4" gravity="center" text="{{@i18n/n_trade_alert_go_recharge}}" textColor="@color/KBaseTextColor" onClick="@event.openPosition.hideRechargeRewardsDialog(1)" textSize="14" textFontWeight="500"/>
+</LinearLayout>

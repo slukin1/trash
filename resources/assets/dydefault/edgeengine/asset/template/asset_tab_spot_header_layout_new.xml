@@ -1,0 +1,71 @@
+<!-- 现货头部卡片 模版 -->
+<LinearLayout orientation="vertical" width="match_parent" height="wrap_content">
+
+    <LinearLayout height="wrap_content" orientation="vertical" marginLeft="16" marginRight="16" marginTop="20" width="match_parent">
+
+        <LinearLayout width="match_parent" height="30" orientation="horizontal" gravity="bottom">
+
+            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" text="{{@data.totalAsset}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="22" width="wrap_content"/>
+
+            <TextView height="17" text="USDT" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" marginLeft="4" visibility="{{@data.usdtVis}}" width="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout height="16" marginBottom="24" marginTop="4" orientation="horizontal" width="match_parent" gravity="centerVertical">
+
+            <TextView height="wrap_content" text="{{@i18n/n_today_profit}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+
+            <TextView height="wrap_content" marginLeft="4" text="{{@data.todayPlNumber}}" textColor="{{@data.todayPlNumberColor}}" textFontWeight="400" textSize="12" width="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- <View
+            height="1"
+            weight="1"
+            width="0" />
+        <TextView
+            gravity="right"
+            height="wrap_content"
+            marginLeft="2"
+            marginRight="12"
+            marginTop="12"
+            maxLines="2"
+            onClick="@event.jump(7)"
+            text="@data.asset_small_coin_title"
+            textColor="@color/kColorMajorTheme100"
+            textSize="12"
+            width="110" /> -->
+
+    <View background="@color/KBaseColorPrimarySeparator" height="0.5" visibility="{{@data.openTextVisible | gone}}" width="match_parent"/>
+
+    <LinearLayout gravity="centerVertical" height="44" onClick="@event.jump(137)" orientation="horizontal" marginLeft="16" marginRight="16" tag="-987" visibility="{{@data.openTextVisible | gone}}" width="match_parent">
+
+        <ImageView height="wrap_content" width="wrap_content" src="@drawable/edge_engine_asset_icon_3"/>
+
+        <TextView height="wrap_content" text="{{@i18n/n_asset_cash_auto_to_yyb}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" marginLeft="8" width="wrap_content"/>
+
+        <ImageView width="12" height="13" marginLeft="2" scaleType="fitXY" src="@drawable/edge_engine_earn_upgrade"/>
+
+        <LinearLayout width="wrap_content" height="13" paddingLeft="1" paddingRight="4" background="{{@data.upgradeBgColor}}" topRightRadius="8" bottomRightRadius="8" gravity="center">
+
+            <TextView autoSizeMinTextSize="7" autoSizeTextType="uniform" height="wrap_content" text="{{@i18n/n_asset_auto_to_yyb_upgrade}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="10" maxWidth="48" maxLines="1" width="wrap_content"/>
+
+        </LinearLayout>
+
+        <View height="1" weight="1" width="0"/>
+
+        <TextView height="wrap_content" text="{{@data.openText}}" textColor="{{@data.openTextColor}}" textSize="12" textFontWeight="400" width="wrap_content"/>
+
+        <ImageView height="14" src="@drawable/ic_asset_header_arrow_right" width="14"/>
+
+        <LinearLayout width="0" height="0" visibility="{{data.spotOpenGuidevisibility | gone}}">
+            <View width="0" height="0" popArrowDirection="down" popArrowHeight="0" popArrowWidth="0" popShowMode="anchor" popCancelOnTouchOutside="true" popBackgroundDimmed="false" popShow="{{@data.spotOpenGuideShow | false}}" popTemplate="asset_tab_spot_open_guide.xml"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View background="@color/KBaseColorPrimarySeparator" height="0.5" width="match_parent"/>
+
+</LinearLayout>

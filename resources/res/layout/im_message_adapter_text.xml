@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="28dp">
+    <TextView android:textSize="@dimen/chat_message_text_size" android:gravity="center_vertical" android:id="@+id/msg_body_tv" android:paddingLeft="7dp" android:paddingRight="7dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="276dp"/>
+    <View android:id="@+id/v_line" android:background="@color/baseColorPrimarySeparator" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="8dp" android:maxWidth="276dp"/>
+    <TextView android:textSize="@dimen/chat_message_text_size" android:textColor="?attr/chat_self_msg_text_color" android:gravity="center_vertical" android:id="@+id/msg_body_translate_tv" android:paddingLeft="7dp" android:paddingRight="7dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:layout_marginBottom="6dp" android:maxWidth="276dp"/>
+</LinearLayout>

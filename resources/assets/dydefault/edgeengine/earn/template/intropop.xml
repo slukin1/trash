@@ -1,0 +1,6 @@
+<LinearLayout width="375" height="wrap_content" orientation="vertical" gravity="center" onClick="@event.introduce.hideIntroPop()">
+	<ImageView marginTop="39" width="8" height="4" src="@drawable/edge_engine_strutured_pop_arrow"/>
+	<LinearLayout width="wrap_content" height="wrap_content" orientation="vertical" cornerRadius="4" background="#5E5E61">
+		<TextView width="wrap_content" height="wrap_content" marginTop="5" marginLeft="8" marginRight="8" marginBottom="5" textSize="14" textFontWeight="400" maxLines="0" maxWidth="224" textColor="@color/KBaseTextColor" text="{{@i18n/n_strutured_products_guide}}"/>
+	</LinearLayout>
+</LinearLayout>

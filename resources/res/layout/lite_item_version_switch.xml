@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:background="@drawable/shape_version_switch_shadow_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:gravity="center_vertical" android:id="@+id/tv_tag" android:background="@drawable/lite_shape_version_switch_card_tag" android:paddingRight="@dimen/dimen_8" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_22" android:paddingStart="@dimen/dimen_16" android:layout_alignParentEnd="true"/>
+        <com.hbg.lib.widgets.SafeLottieView android:id="@+id/iv_anim" android:layout_width="@dimen/dimen_64" android:layout_height="@dimen/dimen_64" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_15"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_30" android:layout_marginBottom="@dimen/dimen_30" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_13" android:layout_marginEnd="@dimen/dimen_15" android:layout_toEndOf="@+id/iv_anim">
+            <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lite_version_switch_lite_title" android:fontFamily="@font/roboto_medium"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorSecondaryText" android:id="@+id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:text="非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字非常多的字" android:lineSpacingExtra="@dimen/dimen_2"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/rl_market_info_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44"/>
+    <com.hbg.lib.widgets.CommonTextListIndicator android:id="@+id/common_text_list_indicator" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1" app:tab_current_position="0" app:tab_indicator_height="@dimen/dimen_2" app:tab_text_size="@dimen/global_text_size_14" app:use_transparent_pic="true"/>
+    <View android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager_kline_content" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

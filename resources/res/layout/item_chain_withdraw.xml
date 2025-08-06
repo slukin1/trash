@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.AutoSizeTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:id="@+id/balance_header_hint" android:paddingLeft="2dp" android:paddingRight="2dp" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:maxLines="1" android:includeFontPadding="false"/>

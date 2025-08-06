@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="16sp" android:textColor="@color/color_live_square_two_base" android:gravity="center" android:id="@+id/tv_setting_top" android:background="@color/white_day_black_night_color" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/n_im_setting_notice_top"/>
+    <View android:background="@color/base_dialog_devide_line_color" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_live_square_two_base" android:gravity="center" android:id="@+id/tv_delete_notice" android:background="@color/white_day_black_night_color" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/n_im_delete_notice"/>
+    <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_5"/>
+    <TextView android:textSize="@dimen/dimen_16" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:id="@+id/tv_cancel" android:background="@color/white_day_black_night_color" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/n_cancel" android:fontFamily="@font/roboto_medium"/>
+</LinearLayout>

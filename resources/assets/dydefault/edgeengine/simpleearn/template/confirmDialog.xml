@@ -1,0 +1,111 @@
+<LinearLayout width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground" orientation="vertical" topLeftRadius="8" topRightRadius="8">
+
+
+  <!-- 确认申购弹窗标题 -->
+  <FrameLayout width="match_parent" height="44">
+
+    <LinearLayout width="match_parent" height="match_parent" gravity="centerVertical" orientation="horizontal">
+      <TextView width="0" weight="1" height="wrap_content" marginLeft="16" text="{{@data.dialog.confirmTitle}}" textSize="16" textFontWeight="500" textColor="@color/kColorPrimaryText"/>
+      <ImageView width="wrap_content" height="wrap_content" marginRight="16" onClick="@event.dialog.closeConfirmDialog()" src="@drawable/edge_engine_copy_trading_dialog_close"/>
+    </LinearLayout>
+
+    <View layout_gravity="bottom" width="match_parent" height="0.5" background="@color/KBaseColorPrimarySeparator"/>
+  </FrameLayout>
+
+  <!-- 使用了USDT资金来源提示 -->
+  <LinearLayout height="wrap_content" width="match_parent" background="@color/KColor12FE8731" visibility="{{@data.dialog.usdtTipDisplay}}" orientation="horizontal">
+
+    <ImageView height="12" marginLeft="16" marginTop="10" src="@drawable/edge_engine_copy_trading_tip" width="12"/>
+
+    <!-- 提示文案 -->
+    <TextView width="wrap_content" height="wrap_content" marginLeft="4" marginRight="16" marginTop="8" marginBottom="8" textSize="12" maxLines="0" lineSpacing="4" weight="1" textFontWeight="400" layout_gravity="centerVertical" textColor="@color/kColorPrimaryText" text="{{@data.dialog.usdtTip}}"/>
+
+  </LinearLayout>
+
+
+  <!-- 申购数量-->
+
+  <LinearLayout width="match_parent" height="20" marginTop="12" orientation="horizontal" paddingLeft="16" paddingRight="16" gravity="centerVertical">
+
+    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_asset_subscribe_number}}" textFontWeight="400" textColor="@color/KBaseColorSecondaryText" textSize="14"/>
+
+    <TextView width="0" height="wrap_content" weight="1" textFontWeight="400" gravity="right" text="{{@data.dialog.purchaseValue}}" textColor="@color/kColorPrimaryText" textSize="14"/>
+
+  </LinearLayout>
+
+  <!-- 添加申购资产组成灰色背景内容 -->
+  <LinearLayout visibility="{{@data.dialog.usdtTipDisplay}}" background="@color/KAssetTopHeaderContentBackground" orientation="vertical" cornerRadius="8" marginLeft="16" marginRight="16" paddingLeft="12" paddingRight="12" paddingTop="4" marginTop="8" paddingBottom="12" width="match_parent" height="wrap_content">
+
+    <For data="@data.dialog.assetCombineData" itemKey="item" typeKey="type">
+
+      <Cell type="5" width="match_parent" height="wrap_content">
+
+        <LinearLayout marginTop="8" width="match_parent" height="14" gravity="centerVertical" orientation="horizontal">
+
+          <!-- 使用现货 -->
+          <TextView maxLines="1" text="{{@item.currency}}" textColor="@color/kColorSecondaryText" textSize="11" textFontWeight="400" height="wrap_content" width="0" weight="1"/>
+
+          <!-- 数量 -->
+          <TextView maxLines="1" text="{{@item.value}}" textColor="@color/kColorSecondaryText" textSize="11" textFontWeight="400" height="wrap_content" width="wrap_content"/>
+
+        </LinearLayout>
+      </Cell>
+
+    </For>
+  </LinearLayout>
+
+  <For data="@data.dialog.confirmlist" marginTop="4" itemKey="item">
+    <Cell type="normal" width="match_parent" height="32">
+
+      <LinearLayout width="match_parent" height="20" marginTop="12" orientation="horizontal" paddingLeft="16" paddingRight="16" gravity="centerVertical">
+
+        <TextView width="wrap_content" height="wrap_content" text="{{@item.title}}" textFontWeight="400" textColor="@color/KBaseColorSecondaryText" textSize="14"/>
+
+        <TextView width="0" height="wrap_content" weight="1" textFontWeight="400" gravity="right" text="{{@item.value}}" textColor="@color/kColorPrimaryText" textSize="14"/>
+
+      </LinearLayout>
+    </Cell>
+  </For>
+
+  <!-- 添加灰色背景内容 -->
+  <LinearLayout visibility="{{@data.dialog.confirmInnerListVis}}" background="@color/KAssetTopHeaderContentBackground" orientation="vertical" cornerRadius="8" marginLeft="16" marginRight="16" paddingLeft="12" paddingRight="12" paddingTop="4" marginTop="8" paddingBottom="12" width="match_parent" height="wrap_content">
+
+    <For data="@data.dialog.confirmInnerList" itemKey="item" typeKey="type">
+
+      <Cell type="1" width="match_parent" height="wrap_content">
+
+        <LinearLayout marginTop="8" width="match_parent" height="14" gravity="centerVertical" orientation="horizontal">
+
+          <!-- 申购金额+币种 -->
+          <TextView maxLines="1" text="{{@item.amount}}" textColor="@color/kColorSecondaryText" textSize="11" textFontWeight="400" height="wrap_content" width="0" weight="1"/>
+
+          <!-- 类别+利率 -->
+          <TextView maxLines="1" text="{{@item.rate}}" textColor="@color/kColorSecondaryText" textSize="11" textFontWeight="400" height="wrap_content" width="wrap_content"/>
+
+        </LinearLayout>
+      </Cell>
+
+      <!-- 加息券类型 -->
+      <Cell type="2" width="match_parent" height="wrap_content">
+
+        <LinearLayout marginTop="8" width="match_parent" height="14" gravity="centerVertical" orientation="horizontal">
+
+          <ImageView src="@drawable/edge_engine_simple_earn_include" height="12" width="12"/>
+
+          <!-- 申购金额+币种 -->
+          <TextView maxLines="1" text="{{@item.amount}}" textColor="@color/kColorThreeLevelText" textSize="10" textFontWeight="400" marginLeft="2" height="wrap_content" width="0" weight="1"/>
+
+          <!-- 类别+利率 -->
+          <TextView maxLines="1" text="{{@item.rate}}" textColor="@color/kColorSecondaryText" textSize="11" textFontWeight="400" height="wrap_content" width="wrap_content"/>
+
+        </LinearLayout>
+
+
+      </Cell>
+    </For>
+  </LinearLayout>
+
+  <TextView width="match_parent" height="44" marginLeft="16" marginTop="32" marginRight="16" textFontWeight="500" marginBottom="16" background="@color/kColorMajorTheme100" gravity="center" text="{{@i18n/n_otc_balance_trade_deal_confirm}}" onClick="@event.deposit.confirmDialogBlock(`{{@data.dialog.amtSource}}`)" cornerRadius="4" textColor="@color/KBaseTextColor" textSize="14"/>
+
+  <View width="0" height="{{@data.commonData.bottomSafeAreaHeight}}"/>
+</LinearLayout>

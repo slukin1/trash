@@ -1,0 +1,52 @@
+<LinearLayout height="match_parent" orientation="vertical" width="match_parent">
+
+    <RecyclerView background="{{@data.nativeRes.nativeRes.baseColorContentBackground}}" data="@data.deepNews.allContentList" height="match_parent"
+        indexKey="i" itemKey="item"
+        loadMoreStatus="{{@data.deepNews.listLoadMoreStatus}}"
+        onLoadMore="@event.deepNews.onLoadMore()" onRefresh="@event.deepNews.onRefresh()"
+        refreshStatus="{{@data.deepNews.listRefreshStatus}}" width="match_parent">
+
+        <Cell height="wrap_content" type="1" width="match_parent">
+
+            <LinearLayout background="{{@data.nativeRes.nativeRes.baseColorContentBackground}}" height="104.5"
+                onClick="@event.deepNews.itemClick('{{@item.news.id}}')" orientation="vertical"
+                width="375">
+                <LinearLayout gravity="centerVertical" height="104" orientation="horizontal"
+                    width="375">
+
+                    <LinearLayout height="match_parent" marginBottom="15" marginLeft="15"
+                        marginTop="15" orientation="vertical" width="216">
+
+                        <TextView height="wrap_content" maxLines="2" text="{{@item.news.title | }}"
+                            textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}" textSize="16" textWeight="600"
+                            width="match_parent" />
+
+                        <View weight="1" />
+
+                        <LinearLayout height="16" orientation="horizontal" width="match_parent">
+
+                            <TextView height="match_parent" text="{{@item.news.source | }}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryTextNew}}" textSize="12" textWeight="400"
+                                width="wrap_content" />
+
+                            <View weight="1" />
+
+                            <TextView height="match_parent" text="{{@item.showTime | }}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryTextNew}}" textSize="12" textWeight="400"
+                                width="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView cornerRadius="4" height="73" marginLeft="12" marginRight="15"
+                        scaleType="fitXY" src="{{@item.news.imgUrl}}" width="117" />
+
+                </LinearLayout>
+
+                <View background="{{@data.nativeRes.nativeRes.baseColorPrimarySeparator}}" height="0.5" marginLeft="15"
+                    marginRight="15" width="match_parent" />
+            </LinearLayout>
+        </Cell>
+    </RecyclerView>
+</LinearLayout>
+

@@ -1,0 +1,15 @@
+package ug;
+
+import com.hbg.lib.network.retrofit.exception.APIStatusErrorException;
+import i6.d;
+import rx.functions.Action1;
+
+public final /* synthetic */ class e0 implements Action1 {
+
+    /* renamed from: b  reason: collision with root package name */
+    public static final /* synthetic */ e0 f60589b = new e0();
+
+    public final void call(Object obj) {
+        d.j("bindPhone", ((APIStatusErrorException) obj).getErrMsg());
+    }
+}

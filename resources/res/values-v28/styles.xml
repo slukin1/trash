@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V14.ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.MaterialComponents.CheckedTextView</item>
+        <item name="?0x1010571">@null</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.MaterialComponents</item>
+        <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat">
+        <item name="dialogCornerRadius">?unknown_attr_ref: 1010571</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?unknown_attr_ref: 1010571</item>
+    </style>
+    <style name="ChatMinimalistMessageTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:gravity">clip_horizontal</item>
+        <item name="?0x101057f">16.7sp</item>
+        <item name="?0x1010585">500</item>
+    </style>
+    <style name="TextAppearance.SNSCore.Subtitle2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="?0x1010585">500</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="fontWeight">500</item>
+    </style>
+</resources>

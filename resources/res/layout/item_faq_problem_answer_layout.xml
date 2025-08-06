@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cl_root" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20">
+    <FrameLayout android:id="@+id/fl_problem" android:paddingLeft="@dimen/dimen_55" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseTextColor" android:layout_gravity="right" android:id="@+id/tv_problem" android:background="@color/baseColorMajorTheme100" android:padding="@dimen/dimen_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_vip_login_tips_black"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/fl_problem">
+        <RelativeLayout android:gravity="left" android:id="@+id/ll_answer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_20" android:layout_marginRight="@dimen/dimen_21">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/otc_faq_ans_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/rl_like" android:layout_alignParentBottom="true">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_answer" android:padding="@dimen/dimen_13" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/tv_action" android:paddingLeft="@dimen/dimen_13" android:paddingRight="@dimen/dimen_13" android:paddingBottom="@dimen/dimen_13" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="了解更多"/>
+            </LinearLayout>
+            <RelativeLayout android:id="@+id/rl_like" android:layout_width="@dimen/dimen_24" android:layout_height="@dimen/dimen_56" android:layout_marginLeft="@dimen/dimen_10" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <ImageView android:id="@+id/iv_step" android:background="@drawable/shape_faq_dialog_like_bg" android:layout_width="@dimen/dimen_24" android:layout_height="@dimen/dimen_24" android:src="@drawable/selector_faq_un_fix_icon_bg" android:scaleType="center" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+                <ImageView android:id="@+id/iv_great" android:background="@drawable/shape_faq_dialog_like_bg" android:layout_width="@dimen/dimen_24" android:layout_height="@dimen/dimen_24" android:layout_marginBottom="@dimen/dimen_8" android:src="@drawable/selector_faq_fix_icon_bg" android:scaleType="center" android:layout_above="@+id/iv_step"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

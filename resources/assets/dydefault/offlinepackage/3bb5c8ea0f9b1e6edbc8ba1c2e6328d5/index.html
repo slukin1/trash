@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,shrink-to-fit=no"><link rel="icon" href="/favicon.ico?1128"><title>loading...</title><script>!function(){"use strict";function e(e,o){var t=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);o&&(r=r.filter((function(o){return Object.getOwnPropertyDescriptor(e,o).enumerable}))),t.push.apply(t,r)}return t}function o(o){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?e(Object(n),!0).forEach((function(e){r(o,e,n[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(o,Object.getOwnPropertyDescriptors(n)):e(Object(n)).forEach((function(e){Object.defineProperty(o,e,Object.getOwnPropertyDescriptor(n,e))}))}return o}function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},t(e)}function r(e,o,t){return o in e?Object.defineProperty(e,o,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[o]=t,e}!function(e){var r="woodpeckerSdkJson",n=["Promise","Object.keys","Object.assign"],c="noStart",s=[],i=null,l={},p=null;function a(o){try{return o.every((function(o){for(var t=o.split("."),r=e;t.length&&r;)r=r[t.shift()];return!!r}))}catch(e){return console.error("isSupportErr",e),!1}}function u(e){return a(n)?(e(),!0):("noStart"==c&&(o="/microapps/polyfill.js?bt=".concat(+new Date),c="loading",f(o,(function(){c="done",a(n)?s.forEach((function(e){return e()})):console.error("当前浏览器有不支持语法")}))),("loading"==c||"noStart"==c)&&s.push(e));var o}function f(e){var o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){},t=document.createElement("script");return t.src=e,t.onload=o,document.head.prepend(t),t}function d(){if(Object.keys(l).length){var n=Object.assign({},function(e){try{var n=JSON.parse(localStorage.getItem(r)||"{}"),c={},s=n.woodReportHost,i=n.extObj;return s&&"string"==typeof s&&(c.url="https://".concat(s,"/-/x/woodpecker/open/v1/log/profile/get")),i&&"object"===t(i)&&(c=o(o({},c),i)),c=o(o({},e),c)}catch(o){return console.error("formateReportUrlErr",o),e}}({app:1,source:1,env:"prd"}),l);e.woodpecker=n}else console.error("请传入配置信息 app source 等")}function y(){try{var o=JSON.parse(localStorage.getItem(r)||"{}"),t=JSON.parse(localStorage.getItem("sdkDev")||"false"),n=null;if(!Object.keys(o).length)return void b().then(y);d(),b();var c={};Object.keys(o).forEach((function(e){o[e]&&(c[e]=o[e])}));try{n=e.woodpecker.app||e.woodpecker.$options.app}catch(e){n=null,console.error("appIdErr",e)}var s=c.version,i=void 0===s?"1.0.0":s,l=c.sdkUrl,p=void 0===l?"/woodpecker/static/woodpecker.js":l,a=c.sdkHost,u=void 0===a?"file.hbfile.net":a,g=c.testVersion,v=void 0===g?"":g,h=c.testSdkUrl,O=void 0===h?"/woodpecker/static/woodpecker.js":h,w=c.testApp,j=void 0===w?"":w,k=c.stopApp,m=void 0===k?"":k,S=c.stopAll,P=void 0!==S&&S,E=c.peckerFullUrl,J=void 0===E?"":E,N="https://".concat(u).concat(p,"?v=").concat(i);if(t&&console.log("delEmptyObjKey",c,n,o,i,p,u,v,O,j,m,P),J&&(N=J),j&&v&&j.split("#").indexOf(n+"")>-1&&(N="https://".concat(u).concat(O,"?v=").concat(v)),"string"==typeof m&&m.split("#").indexOf(n+"")>-1)return void console.log("woodpecker was stop by json");if(P)return void console.log("all app woodpecker stop by json");t&&console.log("woodpeckerUrl",N),f(N)}catch(e){console.error("initErr",e)}}function b(){return p=new Promise((function(o,t){try{var n=(i||["https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/L9bKRCcFY2QdNewslxcs6.json","https://hbg-prod-fed-public.hbfile.net/nuwa/static/prod/L9bKRCcFY2QdNewslxcs6.json"]).map((function(e){return fetch(e)}));Promise.race(n).then((function(n){var c=JSON.parse(localStorage.getItem("sdkDev")||"false");return n.json().then((function(t){c&&console.log("啄木鸟配置json",t),e.localStorage.setItem(r,JSON.stringify(t)),o(t)})).catch((function(e){console.error("jsonError",e),t(e)}))})).catch((function(e){console.error("fetchError",e),t(e)}))}catch(e){console.error("fetchConf",e),t(e)}}))}e.woodpeckerFunc=function(o){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){},r=0;function n(){r++,e.woodpecker&&e.woodpecker[o]?t(e.woodpecker[o]):setTimeout(n,100)}r<500&&n()},e.setWoodPeckerConf=function(){var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return l=o,u(y),e.woodpecker},e.getFetchJson=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:function(){};try{var o=function(){Object.keys(t).length?e(Promise.resolve(t)):e(p)},t=JSON.parse(localStorage.getItem(r)||"{}");if(!u(o))return}catch(e){return console.error("getFetchJsonErr",e),{}}},e.setFetchArr=function(e){return Array.isArray(e)&&e.length?(i=e,e):(console.error("请传入有效参数数组[国内cdn url, 国外cdn url]"),e)}}(window)}();</script><script>function isPc() {
+        let userAgent = navigator.userAgent,Agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
+        return Agents.some((i)=>{
+            return userAgent.includes(i)
+        })
+    }
+    if(isPc()){
+        !function(win) {
+            if (!win) return;
+            InitView();
+            win.addEventListener('resize', function() {
+                InitView();
+            }, false);
+            "onorientationchange" in win && win.addEventListener('orientationchange', function() {
+                InitView();
+            }, false);
+            function InitView() {
+                var t = 750,
+                    w = screen.width,
+                    h = screen.height,
+                    a = w / t,
+                    n = win.viewMeta || document.createElement('meta');
+                win.viewMeta || document.getElementsByTagName("head")[0].appendChild(n);
+                n.setAttribute('name', 'viewport');
+                n.setAttribute('content', "width=" + t + ", initial-scale=" + a
+                + ",maximum-scale=" + a + ",minimum-scale=" + a + ", user-scalable=no,target-densitydpi=device-dpi,minimal-ui,uc-fitscreen=no");
+                win.viewMeta = n;
+            }
+            win.showPlaceholder = 1;
+        }(window);
+    }
+    var env = "prd";
+    // 注意：不要使用es5以上语法，啄木鸟动态sdk脚本会按需异步添加polyfill支持新js方法，如then方法等，但仅限回调函数中使用es5+方法（是方法不是语法，箭头函数，解构赋值...等语法都不支持），回调函数以外不要使用所有新js
+    if(window.setWoodPeckerConf ){
+        // 第三步：调用啄木鸟配置初始化方法
+        // 初始化啄木鸟配置方法，需要在第一行调用,传入项目自己的配置（app的值到下边接入业务的表格中找自己业务对应的appid，不要填60）
+        window.setWoodPeckerConf({
+            app: 65,
+            source: 1,
+            env: env,
+            modules: {
+                trace: {
+                    exclude: function(urlmap) {
+                        if(urlmap.href.indexOf('.s3.ap-northeast-1.amazonaws.')!==-1 || urlmap.href.indexOf('hbfile://')!==-1){
+                            return true
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    var localKeyVal = {};
+    try {
+        // 使用啄木鸟本地存储的host
+        localKeyVal = JSON.parse(localStorage.getItem('woodpeckerSdkJson') || '{}');
+    } catch(e) {}
+
+    var sensorHost = (localKeyVal && localKeyVal.sensorHost) || 'report.daumoon.com';
+    (function(para) {
+        var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+        if(typeof(w['sensorsDataAnalytic201505']) !== 'undefined') {
+            return false;
+        }
+        w['sensorsDataAnalytic201505'] = n;
+        w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+        var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+        for (var i = 0; i < ifs.length; i++) {
+            w[n][ifs[i]] = w[n].call(null, ifs[i]);
+        }
+        if (!w[n]._t) {
+            x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+            x.async = 1;
+            x.src = p;
+            x.setAttribute('charset','UTF-8');
+            w[n].para = para;
+            y.parentNode.insertBefore(x, y);
+        }
+    })({
+        sdk_url: 'https://hbg-fed-static-prd.hbfile.net/enhome/static/script/sd.min.js',
+        name: 'sensors',
+        server_url: (env==='prd' && !window.location.hostname.match(/\.(test-\d+)\./))
+            ? ('https://'+sensorHost+'/sa?project=production')
+            :('https://'+sensorHost+'/sa?project=default'),
+        heatmap:{scroll_notice_map:'default'},
+        use_client_time:true,
+        show_log: false,
+        send_type:'beacon',
+        app_js_bridge:true
+    });
+    sensors.registerPage({
+        platform_type: 'OfficialWeb',
+        is_login: true,
+        language_type: function () {
+            let sensorsLangType= {
+                'zh-cn': 'SimplifiedChinese',
+                'zh-hk': 'TraditionalChinese',
+                'en-us': 'English',
+                'ko-kr': 'Korean',
+                'ja-jp': 'Japanese',
+                'ru-ru': 'Russian',
+                'tr-tr': 'Turkish',
+                'vi-vi': 'Vietnamese',
+                'fr-fr': 'French',
+                'de-de': 'German',
+                'es-es': 'Spanish',
+                'pt-pt': 'Portuguese',
+                'pt-pr': 'BrazilianPortuguese',
+                'es-la': 'Spanish-Latin America',
+                'it-it': 'Italian',
+                'nl-nl': 'Dutch',
+                "ms-my": "Bahasa Malaysia",
+                "en-in": "English (India)",
+                'uk-ua': 'Українська',
+                "hi-in": "हिन्दी",
+                "id-id": "Bahasa Indonesia",
+            };
+            return sensorsLangType[location.pathname.split('/')[1] || 'zh-cn'];
+        }
+    })
+    sensors.quick('autoTrack');</script><link href="/css/app.c0587ee4.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but fed-kyc doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.6afb1042.js"></script><script src="/js/app.34c77f41.js"></script></body></html>

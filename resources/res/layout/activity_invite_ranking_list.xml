@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleGravity="30" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleMarginTop="@dimen/dimen_60" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:layout_scrollFlags="3" app:theme="@style/Theme.CollapsingToolbar">
+            <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_60">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:orientation="horizontal" android:id="@+id/id_invite_ranking_list_date_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_3" android:src="@drawable/global_filter_unselected"/>
+                    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:id="@+id/id_invite_ranking_list_month" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:layout_collapseMode="1" app:title="@string/invite_ranking_list_title"/>
+        </com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/id_common_empty_view" layout="@layout/common_empty_view"/>
+            <com.huobi.invite.ui.InviteReturnRankHeadView android:id="@+id/id_invite_ranking_list_head_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_20" android:layout_marginRight="@dimen/dimen_15"/>
+            <FrameLayout android:id="@+id/id_invite_ranking_list_recyclerView_parent_layout" android:paddingLeft="@dimen/dimen_20" android:paddingTop="@dimen/dimen_20" android:paddingRight="@dimen/dimen_20" android:paddingBottom="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="false">
+                <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_invite_ranking_list_recyclerView" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="false"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

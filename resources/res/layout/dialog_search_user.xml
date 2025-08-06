@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/dialog_search_user_0" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/vEmpty" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_live_rank_top" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dimen_16" android:paddingTop="@dimen/dimen_16" android:paddingRight="@dimen/dimen_16" android:paddingBottom="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivBack" android:layout_width="@dimen/dimen_23" android:layout_height="wrap_content" android:src="@drawable/icon_live_rank_back"/>
+            <LinearLayout android:layout_gravity="center" android:background="@drawable/search_bar_shape" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_28" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginRight="@dimen/dimen_12" android:layout_weight="1">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/dimen_16" android:layout_height="@dimen/dimen_16" android:src="@drawable/hb_search_icon" android:layout_marginStart="@dimen/dimen_8"/>
+                <EditText android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color_light" android:textColorHint="@color/global_input_hint_color" android:ellipsize="start" android:gravity="center_vertical" android:id="@+id/etSearch" android:background="@null" android:paddingLeft="@dimen/dimen_8" android:layout_width="0dp" android:layout_height="match_parent" android:hint="@string/n_live_manage_input_placeholder" android:singleLine="true" android:layout_weight="1" android:imeOptions="actionSearch"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivClose" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15" android:src="@drawable/search_clear_input"/>
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/global_main_text_color_light" android:gravity="center_vertical" android:id="@+id/tvSearch" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/n_im_member_search_defalut"/>
+        </LinearLayout>
+        <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loadingLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="350dp" app:empty_view="@layout/empty_live_user" app:error_view="@layout/content_error_view" app:loading_view="@layout/common_loading_view_balance">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvContent" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+        </com.hbg.lib.widgets.LoadingLayout>
+    </LinearLayout>
+</LinearLayout>

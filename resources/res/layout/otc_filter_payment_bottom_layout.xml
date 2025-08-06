@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="@dimen/dimen_76">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:id="@+id/id_filter_payment_reset_tv" android:background="@drawable/otc_amount_filter_bottom_left_bg" android:layout_width="@dimen/dimen_100" android:layout_height="@dimen/dimen_44" android:text="@string/n_otc_order_filter_reset"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:gravity="center" android:id="@+id/id_filter_payment_confirm_tv" android:background="@drawable/shape_next_btn_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_marginLeft="@dimen/dimen_8" android:text="@string/otc_trade_setting_btn_text"/>
+    </LinearLayout>
+</LinearLayout>

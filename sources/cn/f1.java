@@ -1,0 +1,15 @@
+package cn;
+
+import com.hbg.lib.widgets.dialog.DialogUtils;
+import com.hbg.lib.widgets.dialog.HBDialogFragment;
+import com.huobi.linearswap.ui.LinearSwapTradeBaseFragment;
+
+public final /* synthetic */ class f1 implements DialogUtils.b.f {
+
+    /* renamed from: a  reason: collision with root package name */
+    public static final /* synthetic */ f1 f13139a = new f1();
+
+    public final void a(HBDialogFragment hBDialogFragment) {
+        LinearSwapTradeBaseFragment.kj(hBDialogFragment);
+    }
+}

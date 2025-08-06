@@ -1,0 +1,151 @@
+<FrameLayout height="match_parent" paddingLeft="16" paddingRight="16" width="match_parent" background="@color/KBaseColorContentBackground">
+    <LinearLayout gravity="centerVertical" height="wrap_content" orientation="vertical"
+        paddingTop="16" width="match_parent">
+        <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal"
+            width="match_parent">
+
+            <TextView height="wrap_content" text="{{@data.botDetailOrder.singleBoxTitle}}"
+                textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="14"
+                width="wrap_content" />
+            <View weight="1" />
+            <TextView height="wrap_content" text="{{@data.botDetailOrder.quantity}}" textColor="@color/kColorPrimaryText"
+                textFontWeight="500" textSize="14" width="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="8"
+            orientation="horizontal" width="match_parent">
+
+            <TextView height="wrap_content" text="{{@data.botDetailOrder.curPriceTitle}}"
+                textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="14"
+                width="wrap_content" />
+            <View weight="1" />
+            <TextView height="wrap_content" text="{{@data.botDetailOrder.curPriceContent}}" textColor="@color/kColorPrimaryText"
+                textFontWeight="500" textSize="14" width="wrap_content" />
+        </LinearLayout>
+
+        <!--买单 卖单-->
+        <FrameLayout height="32" marginTop="16"
+            visibility="{{@data.botDetailOrder.contentVisibility | gone}}" width="match_parent">
+            <!--背景进度条-->
+            <LinearLayout gravity="centerVertical" height="32" orientation="horizontal"
+                width="match_parent">
+                <View background="{{@data.botDetailOrder.buyColor}}" bottomLeftRadius="2"
+                    height="match_parent" opacity="0.1" topLeftRadius="2"
+                    weight="{{@data.botDetailOrder.buyWeight|1}}" width="0" />
+                <ImageView height="32" scaleType="fitXY"
+                    src="@drawable/edge_engine_bot_detail_order_progress_middle" width="26" />
+                <View background="{{@data.botDetailOrder.sellColor}}" bottomRightRadius="2"
+                    height="match_parent" opacity="0.1" topRightRadius="2"
+                    weight="{{@data.botDetailOrder.sellWeight|1}}" width="0" />
+            </LinearLayout>
+            <!--买单、卖单文案-->
+            <LinearLayout gravity="centerVertical" height="32" orientation="horizontal"
+                width="match_parent">
+
+                <TextView height="wrap_content" marginLeft="8" text="{{@data.botDetailOrder.buyAmount}}"
+                    textColor="{{@data.botDetailOrder.buyColor}}" textFontWeight="500" textSize="12"
+                    width="wrap_content" />
+                <View weight="1" />
+                <TextView height="wrap_content" marginRight="8" text="{{@data.botDetailOrder.sellAmount}}"
+                    textColor="{{@data.botDetailOrder.sellColor}}" textFontWeight="500"
+                    textSize="12" width="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout borderColor="@color/kColorPrimarySeparator" borderWidth="0.5" cornerRadius="4"
+            gravity="centerVertical" height="wrap_content" marginTop="8" orientation="vertical"
+            visibility="{{@data.botDetailOrder.contentVisibility | gone}}" width="match_parent">
+            <!--委托价格(USDT) 涨跌多少后成交 -->
+            <LinearLayout background="@color/KAssetTopHeaderContentBackground"
+                gravity="centerVertical" height="wrap_content" orientation="horizontal"
+                paddingBottom="7" paddingTop="7" topLeftRadius="4" topRightRadius="4"
+                width="match_parent">
+
+                <TextView gravity="left" height="wrap_content" marginLeft="8"
+                    text="{{@data.botDetailOrder.entrustPrice}}"
+                    textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="11"
+                    weight="1" width="0" />
+                <TextView gravity="center" height="wrap_content" marginLeft="8" marginRight="8"
+                    text="{{@i18n/n_bot_detail_rise_fall_transaction}}"
+                    textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="11"
+                    weight="1" width="0" />
+                <TextView gravity="right" height="wrap_content" marginRight="8"
+                    text="{{@data.botDetailOrder.entrustPrice}}"
+                    textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="11"
+                    weight="1" width="0" />
+            </LinearLayout>
+
+            <!-- 列表 -->
+            <RecyclerView data="@data.botDetailOrder.orderList" height="{{@data.botDetailOrder.orderListHeight}}"
+                itemKey="element" typeKey="traderListType" width="match_parent">
+                <Cell height="40" type="1" width="match_parent">
+                    <LinearLayout gravity="centerVertical" height="40" marginLeft="8"
+                        marginRight="8" orientation="horizontal" width="match_parent">
+                        <LinearLayout gravity="centerVertical" height="40" orientation="horizontal"
+                            weight="1" width="0">
+                            <!--1-->
+                            <TextView height="wrap_content" text="{{@element.buyIndex | }}"
+                                textColor="{{@data.botDetailOrder.buyColor}}" textFontWeight="400"
+                                textSize="12" width="24" />
+                            <!--22,054.45-->
+                            <TextView height="wrap_content" text="{{@element.buyPrice | }}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="400"
+                                textSize="12" weight="1" width="0" />
+                            <!---3.12%-->
+                            <TextView height="wrap_content" text="{{@element.buyRate | }}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="400"
+                                textSize="12" width="wrap_content" />
+                        </LinearLayout>
+                        <View background="@color/eColorInputFillDisabled" height="40"
+                            marginLeft="12" marginRight="12" width="0.5" />
+                        <LinearLayout gravity="centerVertical" height="40" orientation="horizontal"
+                            weight="1" width="0">
+                            <!---3.12%-->
+                            <TextView height="wrap_content" text="{{@element.sellRate | }}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="400"
+                                textSize="12" width="wrap_content" />
+                            <!--22,054.45-->
+                            <TextView gravity="right" height="wrap_content" text="{{@element.sellPrice | }}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="400"
+                                textSize="12" weight="1" width="0" />
+                            <!--1-->
+                            <TextView gravity="right" height="wrap_content" text="{{@element.sellIndex | }}"
+                                textColor="{{@data.botDetailOrder.sellColor}}" textFontWeight="400"
+                                textSize="12" width="24" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </Cell>
+            </RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 暂无挂单空样式 -->
+    <LinearLayout gravity="center" height="168" marginTop="80" orientation="vertical"
+        visibility="{{@data.botDetailOrder.listEmptyVisibility | gone}}" width="match_parent">
+        <ImageView height="60" src="@drawable/edge_engine_empty" width="60" />
+        <TextView gravity="center" height="wrap_content" marginTop="12"
+            text="{{@i18n/n_bot_detail_no_pending_orders}}"
+            textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent" />
+    </LinearLayout>
+
+    <!-- 暂无可执行的买单空样式 -->
+    <LinearLayout gravity="center" height="160" marginLeft="8" marginTop="148"
+        orientation="vertical" visibility="{{@data.botDetailOrder.buyEmptyVisibility | gone}}"
+        width="151.5">
+        <ImageView height="48" scaleType="fitCenter" src="@drawable/edge_engine_empty" width="48" />
+        <TextView gravity="center" height="wrap_content" lineSpacing="4" marginTop="12" maxLines="0"
+            text="{{@i18n/n_bot_detail_no_executable_buy_orders}}"
+            textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent" />
+    </LinearLayout>
+
+    <!-- 暂无可执行的卖单空样式 183.5 = 151.5+8+12+12-->
+    <LinearLayout gravity="center" height="160" marginLeft="183.5" marginTop="148"
+        orientation="vertical" visibility="{{@data.botDetailOrder.sellEmptyVisibility | gone}}"
+        width="151.5">
+        <ImageView height="48" scaleType="fitCenter" src="@drawable/edge_engine_empty" width="48" />
+        <TextView gravity="center" height="wrap_content" lineSpacing="4" marginTop="12" maxLines="0"
+            text="{{@i18n/n_bot_detail_no_executable_sell_orders}}"
+            textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent" />
+    </LinearLayout>
+
+</FrameLayout>

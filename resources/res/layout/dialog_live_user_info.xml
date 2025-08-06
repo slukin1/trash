@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/dialog_live_user_info_0" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/vEmpty" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <RelativeLayout android:background="@drawable/bg_live_user_top" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llHeader" android:paddingTop="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_35" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_16" android:paddingEnd="@dimen/dimen_16">
+            <com.hbg.module.huobi.im.view.AvatarView android:id="@+id/ivAvatar" android:layout_width="40dp" android:layout_height="40dp"/>
+            <TextView android:textSize="@dimen/global_text_size_18" android:textStyle="bold" android:textColor="@color/color_group_user_text_color" android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dimen_167" android:maxLines="2" android:layout_marginStart="@dimen/dimen_12"/>
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/tvChat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_live_chat"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseTextColor" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tvFollow" android:background="@drawable/follow_selector" android:paddingLeft="@dimen/dimen_8" android:paddingTop="@dimen/dimen_5" android:paddingRight="@dimen/dimen_8" android:paddingBottom="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_18" android:text="@string/n_content_community_userinfo_focus"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/llHeader">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/global_text_size_18" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/tvAttention" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/color_group_user_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/n_content_communityList_attention"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/global_text_size_18" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/tvFans" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/color_group_user_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/n_content_community_userinfo_fans"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/global_text_size_18" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/tvDynamic" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/color_group_user_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/n_content_community_userinfo_dynamic"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_60" android:layout_below="@+id/llInfo">
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/tvDisableSpeaking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_im_forbin_send" android:layout_weight="1"/>
+            <View android:layout_gravity="center_vertical" android:background="#26ffffff" android:layout_width="@dimen/dimen_0_5" android:layout_height="@dimen/dimen_14"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/tvBlockUser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_im_block_user" android:layout_weight="1"/>
+            <View android:layout_gravity="center_vertical" android:background="#26ffffff" android:layout_width="@dimen/dimen_0_5" android:layout_height="@dimen/dimen_14"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/tvKickout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_im_forbin_kick" android:layout_weight="1"/>
+            <View android:layout_gravity="center_vertical" android:background="#26ffffff" android:layout_width="@dimen/dimen_0_5" android:layout_height="@dimen/dimen_14"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/tvSetAdmin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_live_manage_set_as_manager" android:layout_weight="1"/>
+        </LinearLayout>
+        <View android:background="@drawable/bg_live_user_bottom" android:layout_width="@dimen/dimen_134" android:layout_height="@dimen/dimen_5" android:layout_marginTop="@dimen/dimen_60" android:layout_marginBottom="@dimen/dimen_8" android:layout_below="@+id/llAction" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

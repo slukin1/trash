@@ -1,0 +1,149 @@
+<LinearLayout
+                topLeftRadius="8"
+                topRightRadius="8"
+                width="375"
+                height="wrap_content"
+                background="@color/KBaseColorContentBackground"
+                orientation="vertical">
+        <LinearLayout
+                        width="375"
+                        height="600"
+                        orientation="vertical">
+                <LinearLayout
+                                width="match_parent"
+                                height="28"
+                                marginTop="8"
+                                marginLeft="16"
+                                marginRight="16"
+                                gravity="centerVertical"
+                                orientation="horizontal">
+                        <TextView
+                                        width="wrap_content"
+                                        height="wrap_content"
+                                        text="{{@i18n/n_margin_select_currency}}"
+                                        textSize="16"
+                                        textColor="@color/kColorPrimaryText"
+                                        textFontWeight="500" />
+                        <View
+                                        weight="1"
+                                        height="0"
+                                        width="0" />
+                        <ImageView
+                                        width="wrap_content"
+                                        height="wrap_content"
+                                        src="@drawable/edge_engine_copy_trading_dialog_close"
+                                        onClick="@event.leverHistory.currencyPopDismiss()" />
+                </LinearLayout>
+                <View
+                                marginTop="8"
+                                height="0.5"
+                                background="@color/kColorPrimarySeparator"
+                                width="match_parent" />
+                <!-- 搜索视图 -->
+                <LinearLayout
+                                marginTop="8"
+                                marginBottom="8"
+                                width="match_parent"
+                                height="36"
+                                marginLeft="16"
+                                marginRight="16"
+                                cornerRadius="18"
+                                borderColor="{{@data.leverHistory.borderColor}}"
+                                borderWidth="1"
+                                orientation="horizontal"
+                                gravity="centerVertical"
+                                background="@color/KBaseColorInputBackground">
+                        <ImageView
+                                        marginLeft="8"
+                                        width="20"
+                                        height="20"
+                                        src="@drawable/edge_engine_search" />
+                        <EditText
+                                        marginLeft="8"
+                                        bindText="@data.leverHistory.searchWord"
+                                        hint="{{@i18n/n_margin_select_currency}}"
+                                        height="match_parent"
+                                        weight="1"
+                                        requestFocus="{{@data.leverHistory.isFocus}}"
+                                        onFocusChange="@event.leverHistory.onFocusChange(@eventParams)"
+                                        textColor="@color/kColorPrimaryText"
+                                        textColorHint="@color/baseColorThreeLevelText"
+                                        singleLine="true"
+                                        onTextChange="@event.leverHistory.onTextChange(@eventParams)"
+                                        imeOptions="actionSearch"
+                                        textSize="14" />
+                        <ImageView
+                                        marginRight="8"
+                                        width="20"
+                                        height="20"
+                                        onClick="@event.leverHistory.clickedClear()"
+                                        visibility="{{@data.leverHistory.clearVisible | invisible}}"
+                                        src="@drawable/edge_engine_close" />
+                </LinearLayout>
+                <FrameLayout
+                                width="match_parent"
+                                height="0"
+                                weight="1"
+                                visibility="{{@data.leverHistory.currencyListVisible | gone}}">
+                        <RecyclerView
+                                        height="match_parent"
+                                        width="match_parent"
+                                        orientation="vertical"
+                                        data="@data.leverHistory.filterCurrencies"
+                                        itemKey="item">
+                                <Cell
+                                                type="normal"
+                                                marginLeft="16"
+                                                marginRight="16"
+                                                width="match_parent"
+                                                height="wrap_content">
+                                        <LinearLayout
+                                                        width="match_parent"
+                                                        height="48"
+                                                        gravity="centerVertical"
+                                                        orientation="horizontal"
+                                                        onClick="@event.leverHistory.filterCurrency('{{@item.tag}}')">
+                                                <TextView
+                                                                width="wrap_content"
+                                                                height="wrap_content"
+                                                                text="{{@item.title}}"
+                                                                textSize="14"
+                                                                textColor="{{@item.titleColor}}"
+                                                                textFontWeight="500" />
+                                                <View
+                                                                weight="1"
+                                                                height="0"
+                                                                width="0" />
+                                                <ImageView
+                                                                width="16"
+                                                                height="16"
+                                                                src="@drawable/edge_engine_marquee_selected"
+                                                                visibility="{{@item.currencySelected | gone}}" />
+                                        </LinearLayout>
+
+                                </Cell>
+                        </RecyclerView>
+                </FrameLayout>
+                <!-- 空样式 -->
+                <LinearLayout
+                                width="match_parent"
+                                height="wrap_content"
+                                orientation="vertical"
+                                gravity="centerHorizontal"
+                                visibility="{{@data.leverHistory.currencyEmptyVisible | gone}}">
+                        <ImageView
+                                        marginTop="40"
+                                        width="60"
+                                        height="60"
+                                        src="@drawable/edge_engine_empty" />
+                        <TextView
+                                        marginTop="8"
+                                        width="match_parent"
+                                        height="wrap_content"
+                                        gravity="center"
+                                        textSize="12"
+                                        text="{{@i18n/n_contract_trade_no_record}}"
+                                        textColor="@color/kColorThreeLevelText" />
+                </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="#000000" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="" android:lines="1" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:lineHeight="@dimen/dimen_24" android:textFontWeight="600"/>
+    <RelativeLayout android:id="@+id/rlTips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_11">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/pk_hint_text" android:id="@+id/tvRiseTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_live_recommend_vote_rise" android:textFontWeight="500"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/pk_hint_text" android:id="@+id/tvFallTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_live_recommend_vote_fall" android:layout_alignParentEnd="true" android:textFontWeight="500"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_pk_progress" android:layout_width="match_parent" android:layout_height="14dp" android:layout_marginTop="16dp">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="14dp">
+            <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_agree_progress" android:background="@drawable/bg_live_pk_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:paddingStart="6dp" android:paddingEnd="14dp"/>
+            <ImageView android:id="@+id/ivAgree" android:background="@drawable/bg_live_pk_left" android:paddingTop="1dp" android:paddingBottom="1dp" android:visibility="gone" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/icon_pk_selected" android:scaleType="fitCenter" android:paddingStart="2dp" android:layout_alignEnd="@+id/tv_agree_progress"/>
+        </RelativeLayout>
+        <com.hbg.module.libkt.common.LiveRecommendPkProgressView android:id="@+id/ppv_progress" android:background="@color/color_rise_fall_red" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="14dp">
+            <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_disagree_progress" android:background="@drawable/bg_pk_right" android:layout_width="wrap_content" android:layout_height="match_parent" android:paddingStart="14dp" android:paddingEnd="6dp"/>
+            <ImageView android:id="@+id/ivDisagree" android:background="@drawable/bg_pk_right" android:paddingTop="1dp" android:paddingBottom="1dp" android:visibility="gone" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/icon_pk_selected" android:scaleType="fitCenter" android:paddingStart="2dp" android:layout_alignStart="@+id/tv_disagree_progress"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/white" android:gravity="center" android:orientation="horizontal" android:id="@+id/tvPk100" android:visibility="gone" android:layout_width="match_parent" android:layout_height="14dp" android:layout_marginTop="16dp"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/llSelectBefore" android:layout_width="match_parent" android:layout_height="@dimen/dimen_32" android:layout_marginTop="16dp">
+        <LinearLayout android:gravity="center" android:id="@+id/ll_agree_btn" android:background="@drawable/bg_live_pk_left" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_agree"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_agree_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="4dp"/>
+        </LinearLayout>
+        <View android:id="@+id/vMiddleView" android:background="@drawable/icon_live_pk_middle_light" android:layout_width="@dimen/dimen_25" android:layout_height="@dimen/dimen_32"/>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_disagree_btn" android:background="@drawable/bg_pk_right" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_disagree_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginEnd="4dp"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_disagree"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_user_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <RelativeLayout android:id="@+id/fl_icon1" android:background="@drawable/bg_common_widget_circle_image" android:paddingLeft="0.54dp" android:paddingTop="0.54dp" android:layout_width="16.8dp" android:layout_height="16.8dp">
+            <com.hbg.module.libkt.common.HexagonImageView android:id="@+id/iv_icon1" android:layout_width="16dp" android:layout_height="16dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/fl_icon2" android:background="@drawable/bg_common_widget_circle_image" android:paddingLeft="0.54dp" android:paddingTop="0.54dp" android:layout_width="16.8dp" android:layout_height="16.8dp" android:layout_marginLeft="-2dp" android:layout_toRightOf="@+id/iv_icon1">
+            <com.hbg.module.libkt.common.HexagonImageView android:id="@+id/iv_icon2" android:layout_width="16dp" android:layout_height="16dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/fl_icon3" android:background="@drawable/bg_common_widget_circle_image" android:paddingLeft="0.54dp" android:paddingTop="0.54dp" android:layout_width="16.8dp" android:layout_height="16.8dp" android:layout_marginLeft="-2dp" android:layout_toRightOf="@+id/iv_icon2">
+            <com.hbg.module.libkt.common.HexagonImageView android:id="@+id/iv_icon3" android:layout_width="16dp" android:layout_height="16dp"/>
+        </RelativeLayout>
+        <TextView android:textSize="10sp" android:textColor="@color/color_909090" android:id="@+id/tv_people_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="" android:layout_toRightOf="@+id/iv_icon3"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/llShareOption" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="?attr/base_color_primary_text" android:layout_gravity="center_horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_content_your_opinion" android:layout_weight="1" android:fontFamily="@font/roboto_regular"/>
+        <ImageView android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_arrow_pk"/>
+    </LinearLayout>
+</LinearLayout>

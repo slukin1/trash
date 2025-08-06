@@ -1,0 +1,19 @@
+package com.jumio.sdk.enums;
+
+public enum JumioScanStep {
+    PREPARE,
+    STARTED,
+    ATTACH_ACTIVITY,
+    ATTACH_FILE,
+    SCAN_VIEW,
+    IMAGE_TAKEN,
+    NEXT_PART,
+    PROCESSING,
+    CONFIRMATION_VIEW,
+    REJECT_VIEW,
+    RETRY,
+    CAN_FINISH,
+    ADDON_SCAN_PART,
+    DIGITAL_IDENTITY_VIEW,
+    THIRD_PARTY_VERIFICATION
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingTop="@dimen/dimen_10" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_15" android:includeFontPadding="false"/>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:id="@+id/icon_iv" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_4"/>
+        <View android:id="@+id/id_color_view" android:visibility="gone" android:layout_width="@dimen/dimen_2" android:layout_height="@dimen/dimen_10" android:layout_marginEnd="@dimen/dimen_5"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium"/>
+        <ImageView android:id="@+id/content_icon_fist_iv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dimen_3"/>
+        <ImageView android:id="@+id/content_icon_two_iv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10" android:layout_marginStart="@dimen/dimen_5"/>
+    </LinearLayout>
+</LinearLayout>

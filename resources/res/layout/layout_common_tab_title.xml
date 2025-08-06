@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44">
+    <ImageView android:id="@+id/iv_common_back" android:paddingLeft="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/selector_top_bar_back" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/llyt_common_action_menu" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/dimen_7_5" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:layout_goneMarginRight="@dimen/dimen_15">
+        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/erv_common_action_menu" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/clyt_common_center" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintLeft_toRightOf="@+id/iv_common_back" app:layout_constraintRight_toLeftOf="@+id/llyt_common_action_menu">
+        <com.hbg.lib.widgets.CommonTextListIndicator android:id="@+id/view_common_center_indicator" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dimen_10" app:use_transparent_pic="true"/>
+    </LinearLayout>
+</merge>

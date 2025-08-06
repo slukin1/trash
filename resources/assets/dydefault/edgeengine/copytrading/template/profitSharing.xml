@@ -1,0 +1,43 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/KBaseColorContentBackground">
+        <LinearLayout marginLeft="16" marginRight="16" marginTop="16" width="match_parent" height="16">
+                <TextView width="240" height="match_parent" gravity="centerVertical" text="{{@data.profitSharing.cumulativeSharing}}" textSize="12" textColor="@color/kColorThreeLevelText"/>
+                <TextView gravity="right" weight="1" width="0" height="match_parent" text="{{@data.profitSharing.hisBenefit | --}}" textSize="12" textColor="@color/kColorPrimaryText"/>
+        </LinearLayout>
+        <LinearLayout marginTop="8" marginLeft="16" marginRight="16" width="match_parent" height="16">
+                <TextView width="240" height="match_parent" gravity="centerVertical" text="{{@data.profitSharing.periodSharing}}" textSize="12" textColor="@color/kColorThreeLevelText"/>
+                <TextView gravity="right" weight="1" width="0" height="match_parent" text="{{@data.profitSharing.lastBenefit | --}}" textSize="12" textColor="@color/kColorPrimaryText"/>
+        </LinearLayout>
+        <LinearLayout marginTop="8" marginLeft="16" marginRight="16" width="match_parent" height="16">
+                <BottomLineTextView gravity="left" height="match_parent" onClick="@event.profitSharing.currentShareTips()" opacity="1" text="{{@data.profitSharing.currentShare}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" weight="1" width="240"/>
+                <TextView gravity="right" weight="1" width="0" height="match_parent" text="{{@data.profitSharing.curBenefit | --}}" textSize="12" textColor="@color/kColorPrimaryText"/>
+        </LinearLayout>
+        <LinearLayout marginTop="16" marginLeft="16" marginRight="16" width="match_parent" height="28">
+                <TextView width="match_parent" height="match_parent" gravity="left" text="{{@i18n/n_copytrading_share_info}}" textSize="14" textFontWeight="500" textColor="@color/kColorPrimaryText"/>
+        </LinearLayout>
+        <FrameLayout marginLeft="16" marginRight="16" width="match_parent" height="0" weight="1">
+                <!-- 列表数据 -->
+                <RecyclerView height="match_parent" width="match_parent" gravity="centerVertical" orientation="horizontal" data="@data.profitSharing.list" itemKey="item" typeKey="type" onLoadMore="@event.profitSharing.onLoadMore()" loadMoreStatus="{{@data.profitSharing.loadMoreStatus}}" visibility="{{@data.profitSharing.listVisible | invisible}}">
+                        <Header marginBottom="8" width="match_parent" height="16">
+                                <LinearLayout width="match_parent" height="16" orientation="horizontal">
+                                        <TextView height="match_parent" text="{{@i18n/n_copy_trading_follower}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                        <View height="0" weight="1" width="0"/>
+                                        <TextView height="match_parent" text="{{@i18n/n_copytrading_share_amount}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                </LinearLayout>
+                        </Header>
+                        <Cell type="normal" width="match_parent" height="wrap_content">
+                                <LinearLayout width="match_parent" height="44" gravity="centerVertical" orientation="horizontal">
+                                        <ImageView width="24" height="24" cornerRadius="12" src="{{@item.imgUrl}}"/>
+                                        <TextView height="wrap_content" marginLeft="8" text="{{@item.nickName}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                        <View height="0" weight="1" width="0"/>
+                                        <TextView height="wrap_content" text="{{@item.takeAmountDes}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                </LinearLayout>
+                        </Cell>
+                </RecyclerView>
+                <!-- 空样式 -->
+                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" gravity="centerHorizontal" visibility="{{@data.profitSharing.emptyVisible | gone}}">
+                        <ImageView marginTop="40" width="60" height="60" src="@drawable/edge_engine_empty"/>
+                        <TextView marginTop="8" width="match_parent" height="wrap_content" gravity="center" textSize="12" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/kColorThreeLevelText"/>
+                </LinearLayout>
+        </FrameLayout>
+        <TextView width="0" height="0" text="" popTemplate="current_share_pop.xml" popShow="{{@data.profitSharing.currentShareShow|false}}" onPopDismiss="@event.profitSharing.currentSharePopDismiss()" popCancelOnTouchOutside="false" popBackgroundDimmed="true" popShowMode="modal" popModalPositon="center"/>
+</LinearLayout>

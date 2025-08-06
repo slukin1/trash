@@ -1,0 +1,114 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="match_parent" orientation="vertical" width="match_parent">
+    <View height="0" onPopDismiss="@event.profitTipsPop.popDismiss()" popCancelOnTouchOutside="false" popModalPositon="center" popShow="{{@data.profitTipsPop.popShow}}" popShowMode="modal" popTemplate="profitTipsPop.xml"/>
+    <FrameLayout height="match_parent" width="match_parent">
+        <!-- 列表数据 -->
+        <RecyclerView data="@data.followerPosition.list" gravity="centerVertical" height="match_parent" itemKey="item" orientation="horizontal" typeKey="type" visibility="{{@data.followerPosition.listVisible | gone}}" width="match_parent">
+            <Header width="match_parent" height="28">
+                <!-- 收益说明 -->
+                <LinearLayout width="wrap_content" height="16" marginLeft="16" marginTop="12" onClick="@event.profitTipsPop.popShow(1)">
+                        <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_copytrading_profit_title}}" textSize="12" textColor="@color/kColorSecondaryText"/>
+                        <ImageView marginLeft="4" marginTop="1" width="12" height="12" scaleType="fitXY" src="@drawable/edge_engine_copy_trading_fok"/>
+                </LinearLayout>
+            </Header>
+            <Cell height="wrap_content" type="1" width="match_parent">
+                <LinearLayout height="wrap_content" orientation="vertical" width="match_parent">
+                    <!-- 数据行 -->
+                    <LinearLayout height="wrap_content" orientation="vertical" width="match_parent">
+                        <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+                            <LinearLayout height="wrap_content" orientation="vertical" weight="1" width="0">
+                                <!-- 币种 收益额 -->
+                                <LinearLayout height="18" marginLeft="16" marginRight="16" marginTop="16" orientation="horizontal" width="wrap_content">
+                                    <!-- 币种名称 -->
+                                    <TextView background="{{@item.directionColor}}" cornerRadius="2" height="wrap_content" paddingBottom="1" paddingLeft="2" paddingRight="2" paddingTop="1" text="{{@item.directionLabel}}" textColor="#FFFFFF" textSize="10" width="wrap_content"/>
+                                    <TextView height="wrap_content" marginLeft="4" text="{{@item.symbolDesc}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" width="wrap_content"/>
+                                </LinearLayout>
+                                <!-- tag行 收益率-->
+                                <LinearLayout gravity="center" height="16" marginLeft="16" marginRight="16" marginTop="6" orientation="horizontal" width="wrap_content">
+                                    <TextView background="@color/baseColorInputBackground" cornerRadius="2" height="wrap_content" paddingBottom="2" paddingLeft="4" paddingRight="4" paddingTop="2" text="{{@item.modeTypeName}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+                                    <TextView background="@color/baseColorInputBackground" cornerRadius="2" height="wrap_content" marginLeft="4" paddingBottom="2" paddingLeft="4" paddingRight="4" paddingTop="2" text="{{@item.leverDesc}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+                                    <TextView background="@color/baseColorInputBackground" cornerRadius="2" height="wrap_content" marginLeft="4" paddingBottom="2" paddingLeft="4" paddingRight="4" paddingTop="2" text="{{@item.directionDesc}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView background="@color/kColorInputFill" cornerRadius="4" gravity="center" height="28" marginRight="16" maxWidth="90" onClick="@event.followerPosition.onPositionClose({{@item.index}})" paddingLeft="16" paddingRight="16" text="{{@i18n/n_contract_trade_position_close}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" width="wrap_content"/>
+                        </LinearLayout>
+                        <!-- 收益 收益率 -->
+                        <LinearLayout height="wrap_content" marginLeft="16" marginRight="16" marginTop="14" orientation="horizontal" width="match_parent">
+                            <!-- 收益 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@i18n/n_copy_trading_income}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                            <!-- 收益率 -->
+                            <TextView gravity="right" height="wrap_content" maxLines="0" text="{{@i18n/n_copy_trading_yield}}" textColor="@color/kColorThreeLevelText" textSize="12" weight="1" width="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout gravity="centerVertical" height="16" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+                            <!-- 收益 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@item.openProfitStr}}" textColor="{{@item.openProfitColor}}" textFontWeight="500" textSize="14" width="wrap_content"/>
+                            <!-- 收益率 -->
+                            <TextView gravity="right" height="wrap_content" maxLines="0" text="{{@item.openProfitRateStr}}" textColor="{{@item.openProfitColor}}" textFontWeight="500" textSize="14" weight="1" width="0"/>
+                        </LinearLayout>
+                        <!-- 持仓数量 持仓价格  保证金-->
+                        <LinearLayout height="wrap_content" marginLeft="16" marginRight="16" marginTop="14" orientation="horizontal" width="match_parent">
+                            <!-- 持仓数量 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@item.openAmountVolumeTitle}}" textColor="@color/kColorThreeLevelText" textSize="12" weight="1" width="0"/>
+                            <!-- 持仓价格 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@i18n/n_copytrading_observation_price}}" textColor="@color/kColorThreeLevelText" textSize="12" weight="1" width="0"/>
+                            <!-- 保证金 -->
+                            <LinearLayout gravity="right" height="wrap_content" onClick="@event.followerPosition.adjustMargin({{@item.index}})" orientation="horizontal" weight="1" width="0">
+                                <TextView height="wrap_content" maxLines="0" text="{{@i18n/n_copytrading_margin}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                                <ImageView height="12" paddingLeft="2" paddingTop="2" src="@drawable/edge_engine_copy_trading_margin" visibility="{{@item.adjustMarginVisible | gone}}" width="12"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout gravity="centerVertical" height="16" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+                            <!-- 持仓数量 -->
+                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" text="{{@item.openAmountVolume}}" textColor="@color/kColorPrimaryText" textSize="12" weight="1" width="0"/>
+                            <!-- 持仓价格 -->
+                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" isSubscript="true" text="{{@item.openPriceStr}}" textColor="@color/kColorPrimaryText" textSize="12" weight="1" width="0"/>
+                            <!-- 保证金 -->
+                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" gravity="right" height="wrap_content" text="{{@item.bondAmount}}" textColor="@color/kColorPrimaryText" textSize="12" weight="1" width="0"/>
+                        </LinearLayout>
+                        <!-- 预估强平价 最新价  保证金率-->
+                        <LinearLayout height="wrap_content" marginLeft="16" marginRight="16" marginTop="14" orientation="horizontal" width="match_parent">
+                            <!-- 预估强平价 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@i18n/n_trade_liquidation_price_usdt}}" textColor="@color/kColorThreeLevelText" textSize="12" weight="1" width="0"/>
+                            <!--                            &lt;!&ndash; 最新价 &ndash;&gt;-->
+                            <!--                            <TextView height="wrap_content" maxLines="0" text="{{@item.priceTitle}}"-->
+                            <!--                                textColor="@color/kColorThreeLevelText" textSize="12" weight="1"-->
+                            <!--                                width="0" />-->
+                            <!--                            &lt;!&ndash; 保证金率 &ndash;&gt;-->
+                            <!--                            <TextView gravity="right" height="wrap_content" maxLines="0"-->
+                            <!--                                text="{{@i18n/n_asset_margin_rate}}"-->
+                            <!--                                textColor="@color/kColorThreeLevelText" textSize="12" weight="1"-->
+                            <!--                                width="0" />-->
+                        </LinearLayout>
+                        <LinearLayout gravity="centerVertical" height="16" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+                            <!-- 强平价 -->
+                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" text="{{@item.explosionPrice}}" isSubscript="true" textColor="@color/kColorPrimaryText" textSize="12" weight="1" width="0"/>
+                            <!--                            &lt;!&ndash; 最新价 &ndash;&gt;-->
+                            <!--                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform"-->
+                            <!--                                height="wrap_content" isSubscript="true" text="{{@item.price}}"-->
+                            <!--                                textColor="@color/kColorPrimaryText" textSize="12" weight="1"-->
+                            <!--                                width="0" />-->
+                            <!--                            &lt;!&ndash; 保证金率 &ndash;&gt;-->
+                            <!--                            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform"-->
+                            <!--                                gravity="right" height="wrap_content"-->
+                            <!--                                text="{{@item.riskRateString}}" textColor="@color/kColorPrimaryText"-->
+                            <!--                                textSize="12" weight="1" width="0" />-->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 分割线 -->
+                    <TextView background="@color/KBaseColorPrimarySeparator" height="0.5" marginLeft="16" marginRight="16" marginTop="12" width="match_parent"/>
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+        <!-- 空样式 -->
+        <LinearLayout gravity="centerHorizontal" height="wrap_content" orientation="vertical" visibility="{{@data.followerPosition.emptyVisible | gone}}" width="match_parent">
+            <ImageView height="60" marginTop="40" src="@drawable/edge_engine_empty" width="60"/>
+            <TextView gravity="center" height="wrap_content" marginTop="8" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent"/>
+        </LinearLayout>
+    </FrameLayout>
+    <!-- 平仓弹窗 -->
+    <TextView height="0" onPopDismiss="@event.followerPosition.onClose()" popBackgroundDimmed="true" popCancelOnTouchOutside="true" popModalPositon="bottom" popShow="{{@data.followerPosition.positionClosePopShow|false}}" popShowMode="modal" popTemplate="follower_position_close.xml" text="" width="0"/>
+    <TextView height="0" onPopDismiss="@event.followerPosition.onClose()" popBackgroundDimmed="true" popCancelOnTouchOutside="true" popModalPositon="center" popShow="{{@data.followerPosition.positionCloseTipShow|false}}" popShowMode="modal" popTemplate="follower_position_close_pop.xml" text="" width="0"/>
+    <TextView height="0" onPopDismiss="@event.followerPosition.onClose()" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="bottom" popShow="{{@data.followerPosition.adjustMarginShow|false}}" popShowMode="modal" popTemplate="followerAdjustMargin.xml" text="" width="0"/>
+</LinearLayout>

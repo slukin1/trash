@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:id="@+id/appbar_layout" android:layout_width="match_parent" android:layout_height="@dimen/global_top_layout_height">
+        <com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:layout_scrollFlags="3" app:theme="@style/Theme.CollapsingToolbar">
+            <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:layout_collapseMode="1"/>
+        </com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/nsv" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:id="@+id/anchor_view" android:paddingBottom="@dimen/dimen_120" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/verification_tip" android:gravity="center_vertical" android:id="@+id/tv_tips" android:background="@color/global_item_bg" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/withdraw_quick_tips"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_tag_area" android:paddingLeft="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_40">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/verification_title" android:id="@+id/tv_tag_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/withdraw_quick_id"/>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15">
+                    <com.hbg.lib.widgets.input.ClearEditText android:textColor="@color/global_main_text_color" android:textColorHint="@color/global_input_hint_color" android:id="@+id/et_quick_id" android:background="@drawable/edt_bg_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_15" android:hint="@string/withdraw_quick_hint" android:maxLines="1" android:inputType="textEmailAddress" android:textCursorDrawable="@drawable/color_cursor1"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15" android:layout_marginBottom="@dimen/dimen_15" app:layout_anchor="@+id/anchor_view" app:layout_anchorGravity="50">
+        <Button android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseTextColor" android:id="@+id/btn_skip" android:background="@drawable/withdraw_btn_selector" android:layout_width="0dp" android:layout_height="@dimen/dimen_44" android:layout_marginRight="@dimen/dimen_10" android:text="@string/withdraw_human_review" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+        <Button android:textSize="@dimen/global_text_size_14" android:textColor="@color/transfer_select_text_color" android:id="@+id/btn_action" android:background="@drawable/common_blue_5_radius_selector" android:layout_width="0dp" android:layout_height="@dimen/dimen_44" android:layout_marginLeft="@dimen/dimen_10" android:text="@string/currency_detail_notice_dialog_confirm" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

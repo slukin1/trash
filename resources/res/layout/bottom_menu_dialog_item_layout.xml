@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="menu_item" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorSecondaryIconButton" android:gravity="center" android:id="@+id/menu_item" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50" android:fontFamily="@font/roboto_regular"/>
+</LinearLayout>

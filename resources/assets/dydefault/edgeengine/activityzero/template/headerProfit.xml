@@ -1,0 +1,42 @@
+<LinearLayout height="wrap_content" orientation="vertical" width="375">
+    <FrameLayout width="343" height="68" marginLeft="16" marginRight="16" marginTop="8" marginBottom="4" visibility="{{@data.headerProfit.bannerVisibility | visible}}">
+        <SliderView width="match_parent" height="match_parent" direction="horizontal" autoScroll="{{@data.headerProfit.bannerAutoScroll}}" timeInterval="5" scrollMode="infinite" onSelected="@event.headerProfit.selectedBannerIndex(@eventParams)" borderColor="@color/kColorPrimarySeparator" borderWidth="0.5" cornerRadius="12" currentIndex="@data.headerProfit.bannerCurrentIndex" clipRadius="12">
+            <For data="@data.headerProfit.bannerList" itemKey="element" typeKey="type">
+                <Cell width="match_parent" height="match_parent" type="1">
+                    <LinearLayout width="match_parent" height="match_parent" gravity="centerVertical" orientation="horizontal">
+                        <ImageView width="match_parent" height="match_parent" src="{{@element.currentImageURL}}" scaleType="center_crop" onClick="@event.headerProfit.bannerClickBanner()" placeholder="@drawable/home_new_banner_placeholder"/>
+                    </LinearLayout>
+                </Cell>
+            </For>
+        </SliderView>
+        <LinearLayout width="wrap_content" height="2" orientation="horizontal" layout_gravity="left|bottom" marginLeft="12" marginBottom="8" visibility="{{@data.headerProfit.bannerIndicatorVisibility}}">
+            <For data="@data.headerProfit.bannerIndicatorList" itemKey="element" typeKey="type">
+                <Cell width="wrap_content" height="wrap_content" type="1">
+                    <FrameLayout width="8" height="2" background="@color/kColorIndicatorSelected" marginRight="2" cornerRadius="2"/>
+                </Cell>
+                <Cell width="wrap_content" height="wrap_content" type="2">
+                    <FrameLayout width="2" height="2" background="@color/kColorIndicatorUnSelected" marginRight="2" cornerRadius="2"/>
+                </Cell>
+            </For>
+        </LinearLayout>
+        <ImageView width="match_parent" height="match_parent" cornerRadius="12" borderColor="@color/kColorPrimarySeparator" borderWidth="0.5" visibility="{{@data.headerProfit.bannerAndroidStrokeVisibility | gone}}"/>
+    </FrameLayout>
+    <TextView height="wrap_content" marginLeft="14" marginTop="16" text="{{@i18n/n_zero_swap_my_position_profit}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+    <LinearLayout width="match_parent" marginLeft="14" marginTop="2" height="wrap_content" orientation="horizontal">
+        <TextView height="wrap_content" text="{{@data.headerProfit.pnl | --}}" textColor="@color/kColorPrimaryText" textSize="24" textFontWeight="500" width="wrap_content"/>
+        <TextView height="wrap_content" marginLeft="6" text="{{@i18n/n_personal_center_reward_unit}}" textColor="@color/kColorPrimaryText" textSize="24" textFontWeight="500" width="wrap_content"/>
+    </LinearLayout>
+    <FrameLayout height="wrap_content" width="match_parent" marginLeft="14" visibility="{{@data.headerProfit.activityPnlVisibility | gone}}" onClick="@event.openPosition.showRechargeRewardsDialog(0)" marginRight="14">
+        <LinearLayout background="@color/kColorTipsBackground" height="wrap_content" marginTop="10" orientation="horizontal" paddingStart="12" paddingTop="8" cornerRadius="4" paddingEnd="12" gravity="centerVertical" paddingBottom="8" width="match_parent">
+            <LinearLayout height="wrap_content" weight="1" orientation="horizontal" gravity="centerVertical" width="0">
+                <ImageView src="@drawable/edge_engine_zero_swap_activity_pnl" height="20" width="20"/>
+                <TextView height="wrap_content" marginLeft="8" text="{{@data.headerProfit.activityPnl}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="500" maxLines="0" weight="1" width="0"/>
+            </LinearLayout>
+            <ImageView src="@drawable/edge_engine_zero_swap_arrow_end" height="16" marginLeft="10" width="16"/>
+        </LinearLayout>
+        <LinearLayout background="@color/kColorFFF3EA" gravity="center_vertical" height="wrap_content" layout_gravity="end" orientation="horizontal" paddingStart="4" paddingTop="1" paddingEnd="4" cornerRadius="2" paddingBottom="1" width="wrap_content">
+            <TextView height="wrap_content" text="{{@data.headerProfit.activityCountDownTime}}" textColor="@color/kSecurityMiddleLevelColor" textFontWeight="500" textSize="11" width="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+    <View width="wrap_content" height="16"/>
+</LinearLayout>

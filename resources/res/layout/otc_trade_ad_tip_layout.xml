@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_root_ad_open_tip" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_ad_open_tip" android:paddingLeft="@dimen/dimen_16" android:paddingTop="@dimen/dimen_8" android:paddingRight="@dimen/dimen_16" android:paddingBottom="@dimen/dimen_8" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl">
+        <ImageView android:id="@+id/iv_close_tip" android:paddingTop="@dimen/dimen_8" android:paddingBottom="@dimen/dimen_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/c2c_advert_auth_close"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_des" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/n_otc_advert_opt_ad_maker_state_tip" android:layout_marginStart="@dimen/dimen_24"/>
+    </LinearLayout>
+</LinearLayout>

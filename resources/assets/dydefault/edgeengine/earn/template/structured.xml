@@ -1,0 +1,264 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/kColorF1F7FF">
+	<FrameLayout width="match_parent" height="match_parent">
+		<RecyclerView width="match_parent" height="match_parent" topLeftRadius="8" topRightRadius="8" data="@data.structured.mainData" onRefresh="@event.structured.refresh()" refreshStatus="{{@data.structured.refresh}}" itemKey="element" typeKey="type" orientation="vertical">
+			<Header width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground">
+				<LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+					<!-- header -->
+					<FrameLayout width="match_parent" height="149" background="@color/kColorF1F7FF">
+						<ImageView src="@drawable/edge_engine_strutured_top_icon" width="148" height="120" marginTop="15" marginLeft="227"/>
+						<LinearLayout height="25" width="wrap_content" marginLeft="16" marginTop="100" gravity="centerVertical" cornerRadius="12" borderColor="@color/kColorPrimarySeparator" borderWidth="1" onClick="@event.structured.toExplain()">
+							<TextView text="{{@i18n/n_strutured_explain}}" marginLeft="12" marginRight="4" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" width="wrap_content"/>
+							<ImageView src="@drawable/edge_engine_strutured_arrow_right" width="8.5" height="7" marginRight="12"/>
+						</LinearLayout>
+						<TextView marginTop="0" marginLeft="16" width="222" height="100" maxLines="3" gravity="centerVertical" textColor="@color/kColorPrimaryText" autoSizeTextType="uniform" autoSizeMinTextSize="16" textFontWeight="500" textSize="24" lineSpacing="{{@data.structured.descLineSpacing | 6}}" text="{{@i18n/n_strutured_desc}}"/>
+					</FrameLayout>
+					<!-- tab -->
+					<LinearLayout width="375" height="50" orientation="horizontal" background="@color/kColorF1F7FF">
+						<LinearLayout width="375" height="50" topLeftRadius="8" topRightRadius="8" orientation="horizontal" background="@color/KBaseColorContentBackground">
+							<LinearLayout width="wrap_content" height="match_parent" paddingBottom="4" orientation="vertical">
+								<View width="0" height="0" weight="1"/>
+								<TextView width="wrap_content" height="wrap_content" gravity="center" marginLeft="16" textSize="{{@data.structured.dualTab.textSize}}" textFontWeight="500" text="{{@i18n/n_strutured_dual}}" textColor="{{@data.structured.dualTab.textColor}}" onClick="@event.structured.tabClicked('dual')"/>
+							</LinearLayout>
+							<LinearLayout width="wrap_content" height="match_parent" paddingBottom="4" orientation="vertical">
+								<View width="0" height="0" weight="1"/>
+								<TextView width="wrap_content" height="wrap_content" gravity="center" marginLeft="16" textSize="{{@data.structured.sharkfinTab.textSize}}" textFontWeight="500" text="{{@i18n/n_shark_fin}}" textColor="{{@data.structured.sharkfinTab.textColor}}" onClick="@event.structured.tabClicked('sharkfin')"/>
+							</LinearLayout>
+						</LinearLayout>
+					</LinearLayout>
+					<!-- 更多解读 -->
+					<LinearLayout marginTop="12" marginLeft="16" marginRight="16" paddingLeft="16" paddingRight="16" cornerRadius="8" width="match_parent" height="wrap_content" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" background="@color/KBaseColorContentBackground" orientation="horizontal" gravity="centerVertical" onClick="@event.structured.toMoreExplain({{@data.structured.descData.tabIndex}})">
+						<ImageView width="24" height="24" src="{{@data.structured.descData.icon}}"/>
+						<TextView marginTop="20" marginLeft="12" marginBottom="20" width="wrap_content" height="wrap_content" maxLines="0" maxWidth="275" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" richText="{{@data.structured.descData.name | }}"/>
+					</LinearLayout>
+					<!-- 鲨鱼鳍 -->
+					<LinearLayout marginTop="12" marginLeft="16" marginRight="16" width="match_parent" height="wrap_content" orientation="vertical" cornerRadius="8" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" visibility="{{@data.structured.sharkfinVisibility|gone}}">
+						<!-- tab区 -->
+						<LinearLayout width="match_parent" height="35" background="@color/KBaseColorDeepestBackground" topLeftRadius="8" topRightRadius="8" gravity="center" orientation="horizontal" visibility="{{@data.structured.tabVisable|gone}}">
+							<TextView gravity="center" width="0" weight="1" height="match_parent" topLeftRadius="8" textSize="14" text="{{@data.structured.tab0.tabValue}}" textColor="{{@data.structured.tab0.textColor}}" textFontWeight="500" background="{{@data.structured.tab0.background}}" onClick="@event.structured.sharkfinTabClicked('{{@data.structured.tab0.tabKey}}')"/>
+							<View width="0.5" height="match_parent" background="@color/kColorEBEBEB"/>
+							<TextView gravity="center" width="0" weight="1" height="match_parent" topRightRadius="8" textSize="14" text="{{@data.structured.tab1.tabValue}}" textColor="{{@data.structured.tab1.textColor}}" textFontWeight="500" background="{{@data.structured.tab1.background}}" onClick="@event.structured.sharkfinTabClicked('{{@data.structured.tab1.tabKey}}')"/>
+						</LinearLayout>
+						<!-- 申购区 -->
+						<LinearLayout width="match_parent" height="wrap_content" marginTop="24" marginLeft="20" marginRight="20" marginBottom="20" orientation="vertical" gravity="center" visibility="{{@data.structured.contentVisable|gone}}">
+
+							<!-- 倒计时 -->
+							<LinearLayout marginBottom="12" width="wrap_content" height="34" layout_gravity="center" gravity="center" orientation="horizontal" visibility="{{@data.structured.countdownVisable|gone}}">
+
+								<TextView width="34" height="34" gravity="center" cornerRadius="8" textSize="12" textColor="@color/kColorPrimaryText" background="@color/KBaseColorDeepestBackground" textFontWeight="500" borderWidth="0.5" borderColor="@color/kColorPrimarySeparator" text="{{@data.structured.countdown.day}}" visibility="{{@data.structured.countdown.showDay|gone}}"/>
+
+								<TextView width="wrap_content" height="wrap_content" marginLeft="8" marginRight="8" gravity="center" text="{{@i18n/n_mining_day_text}}" textSize="12" textColor="@color/kColorSecondaryText" textFontWeight="400" visibility="{{@data.structured.countdown.showDay|gone}}"/>
+
+								<TextView width="34" height="34" gravity="center" cornerRadius="8" textSize="12" textColor="@color/kColorPrimaryText" background="@color/KBaseColorDeepestBackground" textFontWeight="500" borderWidth="0.5" borderColor="@color/kColorPrimarySeparator" text="{{@data.structured.countdown.hour}}"/>
+
+								<LinearLayout marginLeft="8" marginRight="8" width="4" height="10" gravity="center" orientation="vertical">
+									<View width="2.5" height="2.5" cornerRadius="1.25" background="@color/kColorSecondaryText"/>
+									<View marginTop="3" width="2.5" height="2.5" cornerRadius="1.25" background="@color/kColorSecondaryText"/>
+								</LinearLayout>
+
+								<TextView width="34" height="34" gravity="center" cornerRadius="8" textSize="12" textColor="@color/kColorPrimaryText" background="@color/KBaseColorDeepestBackground" textFontWeight="500" borderWidth="0.5" borderColor="@color/kColorPrimarySeparator" text="{{@data.structured.countdown.minute}}"/>
+
+								<LinearLayout marginLeft="8" marginRight="8" width="4" height="10" gravity="center" orientation="vertical">
+									<View width="2.5" height="2.5" cornerRadius="1.25" background="@color/kColorSecondaryText"/>
+									<View marginTop="3" width="2.5" height="2.5" cornerRadius="1.25" background="@color/kColorSecondaryText"/>
+								</LinearLayout>
+
+								<TextView width="34" height="34" gravity="center" cornerRadius="8" textSize="12" textColor="@color/kColorPrimaryText" background="@color/KBaseColorDeepestBackground" textFontWeight="500" borderWidth="0.5" borderColor="@color/kColorPrimarySeparator" text="{{@data.structured.countdown.second}}"/>
+
+							</LinearLayout>
+							<!-- 申购状态 -->
+							<TextView width="wrap_content" height="20" textSize="14" gravity="center" text="{{@data.structured.subscriptionTitle}}" textColor="@color/kColorPrimaryText" textFontWeight="400"/>
+
+							<TextView marginTop="2" width="wrap_content" height="14" textSize="11" gravity="center" text="{{@data.structured.subscriptionDate}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" visibility="{{@data.structured.subscriptionDateVisable|gone}}"/>
+
+							<!-- 进度条 -->
+							<LinearLayout width="303" height="4" orientation="horizontal" cornerRadius="2" marginTop="12" background="@color/KBaseColorPrimarySeparator" visibility="{{@data.structured.progressVisable|gone}}">
+
+								<View width="{{@data.structured.width}}" height="match_parent" background="@color/kColorPrimaryText" cornerRadius="2"/>
+							</LinearLayout>
+
+							<!-- 进度状态 -->
+							<LinearLayout width="match_parent" height="wrap_content" marginTop="6" orientation="horizontal" visibility="{{@data.structured.progressVisable|gone}}">
+
+								<TextView gravity="left" width="0" weight="1" height="wrap_content" marginRight="4" textSize="11" text="{{@data.structured.depositAmountTitle}}" textColor="@color/kColorThreeLevelText" textFontWeight="400"/>
+								<TextView gravity="left" width="wrap_content" height="wrap_content" marginRight="4" textSize="11" text="{{@data.structured.finishAmount}}" textColor="@color/kColorPrimaryText" textFontWeight="400"/>
+								<TextView gravity="left" width="wrap_content" height="wrap_content" textSize="11" text="{{@data.structured.totalLimit}}" textColor="@color/kColorThreeLevelText" textFontWeight="400"/>
+							</LinearLayout>
+						</LinearLayout>
+						<View marginLeft="16" marginRight="16" width="match_parent" height="0.5" background="@color/kColorEBEBEB" visibility="{{@data.structured.contentVisable|gone}}"/>
+						<!-- 申购产品列表 -->
+						<LinearLayout marginTop="4" marginBottom="4" width="match_parent" height="wrap_content" orientation="vertical" visibility="{{@data.structured.contentVisable|gone}}">
+							<For data="@data.structured.productList" itemKey="element" typeKey="cellType">
+
+								<Cell type="normal" width="match_parent" height="60">
+
+									<LinearLayout width="match_parent" height="60" paddingLeft="16" paddingRight="16" orientation="horizontal" onClick="@event.structured.goDeposit({{@element.idx}})" gravity="centerVertical">
+
+										<ImageView width="14" height="14" marginRight="4" layout_gravity="center" gravity="center" src="{{@element.icon}}"/>
+
+										<TextView marginRight="4" width="wrap_content" height="wrap_content" textSize="16" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@element.title}}"/>
+
+										<TextView marginRight="4" paddingLeft="4" paddingRight="4" width="wrap_content" height="18" textSize="11" gravity="center" textFontWeight="500" textColor="@color/kButtonUnselectTextColor" text="{{@element.term}}" background="@color/KBaseColorInputBackground" borderWidth="2" cornerRadius="2" borderColor="@color/KBaseColorInputBackground"/>
+
+										<TextView width="0" weight="1" height="wrap_content" textSize="18" textFontWeight="500" textColor="@color/kColorPriceGreen" text="{{@element.earnings}}" gravity="right"/>
+									</LinearLayout>
+								</Cell>
+							</For>
+						</LinearLayout>
+					</LinearLayout>
+					<!-- 查看更多 -->
+					<LinearLayout marginTop="12" marginLeft="16" marginRight="16" width="wrap_content" height="wrap_content" gravity="center" layout_gravity="center" orientation="horizontal" onClick="@event.structured.goHistory()" visibility="{{@data.structured.sharkfinVisibility|gone}}">
+
+						<TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_shark_fin_all_history}}" textSize="12" textFontWeight="400" gravity="center" textColor="@color/baseColorThreeLevelText"/>
+
+						<ImageView height="16" width="16" gravity="center" layout_gravity="center" src="@drawable/edge_engine_strutured_arrow_history"/>
+					</LinearLayout>
+				</LinearLayout>
+			</Header>
+			<!-- 双币赢 -->
+			<Cell type="dualCell" width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground">
+				<LinearLayout marginTop="12" marginLeft="16" marginRight="16" width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground">
+					<LinearLayout orientation="vertical" width="match_parent" height="wrap_content" cornerRadius="8" borderWidth="0.5" borderColor="@color/kColorPrimarySeparator">
+						<!-- 总 -->
+						<LinearLayout orientation="horizontal" width="match_parent" height="64" gravity="centerVertical" marginLeft="16" onClick="@event.structured.clickItem('{{@element.index}}')">
+							<ImageView width="24" height="24" src="{{@element.mainIcon}}" marginRight="12"/>
+							<TextView height="22" weight="1" text="{{@element.coinName}}" textSize="16" textFontWeight="500" textColor="@color/kColorPrimaryText" gravity="left|center"/>
+
+							<TextView height="25" width="wrap_content" text="{{@element.yieldText}}" textSize="18" marginLeft="4" textColor="@color/kHomeTextGreenColor" textFontWeight="500" gravity="right|center"/>
+
+							<ImageView width="12" height="12" marginLeft="4" marginRight="16" src="{{@element.icon_arrow}}"/>
+						</LinearLayout>
+						<!-- 低买 -->
+						<LinearLayout orientation="horizontal" marginLeft="16" marginRight="16" gravity="centerVertical" width="match_parent" height="64" onClick="@event.structured.toDetail('{{@element.index}}','{{@element.productTypeId1}}')" visibility="{{@element.unfoldedVisible|gone}}">
+							<FrameLayout width="wrap_content" height="wrap_content">
+								<ImageView width="24" height="24" src="{{@element.bigIcon1}}"/>
+								<ImageView width="12" height="12" marginLeft="16" marginTop="12" src="{{@element.smallIcon1}}" borderWidth="1" borderColor="@color/KBaseColorContentBackground" cornerRadius="6"/>
+							</FrameLayout>
+							<TextView height="22" weight="1" text="{{@element.descText1}}" textSize="16" marginLeft="8" textFontWeight="500" textColor="@color/kColorPrimaryText" gravity="left"/>
+							<TextView height="25" width="wrap_content" text="{{@element.yieldText1}}" textSize="18" marginLeft="4" textColor="@color/kHomeTextGreenColor" textFontWeight="500" gravity="right"/>
+						</LinearLayout>
+						<!-- 高卖 -->
+						<LinearLayout orientation="horizontal" marginLeft="16" marginRight="16" gravity="centerVertical" width="match_parent" height="64" onClick="@event.structured.toDetail('{{@element.index}}','{{@element.productTypeId2}}')" visibility="{{@element.unfoldedVisible|gone}}">
+							<FrameLayout width="wrap_content" height="wrap_content">
+								<ImageView width="24" height="24" src="{{@element.bigIcon2}}"/>
+								<ImageView width="12" height="12" marginLeft="16" marginTop="12" src="{{@element.smallIcon2}}" borderWidth="1" borderColor="@color/KBaseColorContentBackground" cornerRadius="6"/>
+							</FrameLayout>
+							<TextView height="22" weight="1" text="{{@element.descText2}}" textSize="16" marginLeft="8" textFontWeight="500" textColor="@color/kColorPrimaryText" gravity="left"/>
+							<TextView height="25" width="wrap_content" text="{{@element.yieldText2}}" textSize="18" textColor="@color/kHomeTextGreenColor" marginLeft="4" textFontWeight="500" gravity="right"/>
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</Cell>
+			<!-- 独家优势 -->
+			<Cell type="OnlyOne" width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground">
+				<LinearLayout width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" marginTop="16" paddingTop="16" paddingBottom="16" paddingLeft="16" paddingRight="16" background="@color/KAssetTopHeaderContentBackground" gravity="centerVertical" cornerRadius="8" orientation="vertical">
+					<TextView text="{{@element.name}}" textSize="20" width="wrap_content" height="wrap_content" textFontWeight="500" textColor="@color/kColorPrimaryText"/>
+					<LinearLayout width="match_parent" height="wrap_content" marginTop="18" orientation="horizontal" gravity="start">
+						<ImageView width="44" height="44" src="{{@element.icon1}}"/>
+						<LinearLayout marginLeft="12" width="251" height="wrap_content" orientation="vertical">
+							<TextView width="match_parent" height="20" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" maxWidth="251" autoSizeTextType="uniform" autoSizeMinTextSize="12" text="{{@element.title1}}"/>
+							<TextView marginTop="4" width="match_parent" height="wrap_content" maxLines="0" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" maxWidth="251" lineSpacing="2" text="{{@element.desc1}}"/>
+						</LinearLayout>
+					</LinearLayout>
+
+					<LinearLayout width="match_parent" height="wrap_content" marginTop="16" orientation="horizontal" gravity="start">
+						<ImageView width="44" height="44" src="{{@element.icon2}}"/>
+						<LinearLayout marginLeft="12" width="251" height="wrap_content" orientation="vertical">
+							<TextView width="match_parent" height="20" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" maxWidth="251" autoSizeTextType="uniform" autoSizeMinTextSize="12" text="{{@element.title2}}"/>
+							<TextView marginTop="4" width="match_parent" height="wrap_content" maxLines="0" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" maxWidth="251" lineSpacing="2" text="{{@element.desc2}}"/>
+						</LinearLayout>
+					</LinearLayout>
+
+					<LinearLayout width="match_parent" height="wrap_content" marginTop="16" orientation="horizontal" gravity="start">
+						<ImageView width="44" height="44" src="{{@element.icon3}}"/>
+						<LinearLayout marginLeft="12" width="251" height="wrap_content" orientation="vertical">
+							<TextView width="match_parent" height="20" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" maxWidth="251" autoSizeTextType="uniform" autoSizeMinTextSize="12" text="{{@element.title3}}"/>
+							<TextView marginTop="4" width="match_parent" height="wrap_content" maxLines="0" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" maxWidth="251" lineSpacing="2" text="{{@element.desc3}}"/>
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</Cell>
+			<!-- 标题 -->
+			<Cell type="H1" width="match_parent" height="66" background="@color/KBaseColorContentBackground">
+				<LinearLayout width="match_parent" height="28" marginTop="34" marginBottom="4" background="@color/KBaseColorContentBackground" gravity="centerVertical">
+					<TextView text="{{@element.name}}" marginLeft="16" textSize="20" width="wrap_content" height="wrap_content" textFontWeight="500" textColor="@color/kColorPrimaryText"/>
+					<View height="0" weight="1"/>
+					<TextView text="{{@i18n/n_kline_more}}" width="wrap_content" height="match_parent" textSize="12" gravity="center" onClick="@event.structured.toIntroduce({{@element.tabIndex}})" textFontWeight="500" textColor="@color/eBaseColorThreeLevelText" visibility="{{@element.showMore|gone}}"/>
+					<ImageView width="26" height="28" paddingLeft="4" paddingRight="16" paddingTop="9" paddingBottom="9" onClick="@event.structured.toIntroduce({{@element.tabIndex}})" src="@drawable/edge_engine_strutured_arrow_more" visibility="{{@element.showMore|gone}}"/>
+				</LinearLayout>
+			</Cell>
+			<!-- 常见问题 -->
+			<Cell type="QA" width="match_parent" height="wrap_content" background="@color/KBaseColorContentBackground">
+				<LinearLayout width="375" height="wrap_content" background="@color/KBaseColorContentBackground">
+					<LinearLayout width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" orientation="vertical">
+						<!-- Q -->
+						<LinearLayout paddingTop="16" width="match_parent" height="wrap_content" orientation="horizontal" onClick="@event.structured.clickQA({{@element.index}})">
+							<TextView width="16" height="16" cornerRadius="4" textSize="12" gravity="center" textFontWeight="500" textColor="@color/kColorSecondaryText" background="@color/KBaseColorInputBackground" text="Q"/>
+
+							<TextView width="279" height="wrap_content" marginLeft="12" marginRight="24" textSize="14" textFontWeight="500" maxLines="0" gravity="left" lineSpacing="2" textColor="@color/kColorPrimaryText" text="{{@element.Q}}"/>
+
+							<ImageView width="16" height="16" layout_gravity="right" src="{{@element.qaIcon}}"/>
+
+						</LinearLayout>
+						<!-- A -->
+						<LinearLayout width="match_parent" height="wrap_content" marginTop="12" orientation="vertical" visibility="{{@element.answerVisable|gone}}">
+							<LinearLayout width="match_parent" height="wrap_content">
+								<TextView width="16" height="16" cornerRadius="4" textSize="12" textFontWeight="500" gravity="center" textColor="@color/kColorSecondaryText" background="@color/KBaseColorInputBackground" text="A"/>
+								<LinearLayout width="323" height="wrap_content" orientation="vertical">
+									<TextView width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A}}"/>
+									<TextView marginTop="10" width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A1}}" visibility="{{@element.A1Show}}"/>
+									<TextView marginTop="10" width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A2}}" visibility="{{@element.A2Show}}"/>
+									<TextView marginTop="10" width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A3}}" visibility="{{@element.A3Show}}"/>
+									<TextView marginTop="10" width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A4}}" visibility="{{@element.A4Show}}"/>
+									<TextView marginTop="10" width="match_parent" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A5}}" visibility="{{@element.A5Show}}"/>
+								</LinearLayout>
+							</LinearLayout>
+						</LinearLayout>
+						<View width="match_parent" height="0.35" marginTop="16" background="@color/kColorEBEBEB"/>
+					</LinearLayout>
+				</LinearLayout>
+			</Cell>
+			<!-- 更多相关 -->
+			<Cell type="more" width="match_parent" height="72" background="@color/KBaseColorContentBackground">
+				<LinearLayout width="match_parent" height="56" marginTop="16" marginLeft="16" marginRight="16" orientation="horizontal" gravity="centerVertical" onClick="@event.structured.openPageWithPath('{{@element.jumpPath}}', {{@element.index}})">
+					<ImageView width="56" height="56" src="{{@element.icon}}"/>
+					<LinearLayout marginLeft="16" width="257" height="wrap_content" orientation="vertical">
+						<TextView marginTop="8" width="257" height="20" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" maxWidth="243" autoSizeTextType="uniform" autoSizeMinTextSize="12" text="{{@element.name}}"/>
+						<TextView marginTop="2" width="243" height="wrap_content" maxLines="0" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" maxWidth="243" text="{{@element.desc}}"/>
+					</LinearLayout>
+					<ImageView marginLeft="8" width="6" height="10" src="@drawable/edge_engine_strutured_arrow_more"/>
+				</LinearLayout>
+			</Cell>
+			<Cell type="div" width="match_parent" height="16" background="@color/KBaseColorContentBackground">
+			</Cell>
+			<Footer width="match_parent" height="64" background="@color/KBaseColorContentBackground">
+			</Footer>
+		</RecyclerView>
+
+		<LinearLayout width="match_parent" height="wrap_content" layout_gravity="bottom" orientation="vertical" visibility="{{@data.structured.bottomShow|gone}}">
+			<LinearLayout marginLeft="12" marginRight="12" width="match_parent" height="56" cornerRadius="28" borderWidth="4" borderColor="{{@data.structured.borderColor}}" gravity="center">
+				<LinearLayout width="match_parent" height="48" cornerRadius="24" background="@color/KBaseColorInputBackground" orientation="horizontal" gravity="centerVertical">
+
+					<LinearLayout width="0" weight="1" height="match_parent" gravity="center" onClick="@event.structured.bottomOrderClicked()">
+
+						<ImageView src="@drawable/edge_engine_dbcoin_right_btn" width="16" height="16"/>
+
+						<TextView marginLeft="8" width="wrap_content" height="match_parent" text="{{@i18n/n_double_coin_order_entry}}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500" gravity="center">
+						</TextView>
+					</LinearLayout>
+
+					<View width="1.5" height="20" background="@color/kColorPrimarySeparator"/>
+
+					<LinearLayout width="0" weight="1" height="match_parent" gravity="center" onClick="@event.structured.bottomCustomClicked()">
+
+						<ImageView src="@drawable/edge_engine_dbcoin_custom_made" width="wrap_content" height="wrap_content"/>
+
+						<TextView marginLeft="8" width="wrap_content" height="match_parent" text="{{@i18n/n_double_coin_free_custom}}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500" gravity="center">
+						</TextView>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<View width="match_parent" height="{{@data.structured.marginBottom | 0}}"/>
+		</LinearLayout>
+	</FrameLayout>
+
+</LinearLayout>

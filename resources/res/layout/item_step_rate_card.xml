@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_trade_area" android:background="@drawable/step_rate_setting_card_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_10">
+    <RelativeLayout android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/dimen_10" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fees_arrow_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="@dimen/dimen_84_5">
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@+id/ll_maker" android:paddingBottom="@dimen/dimen_20" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatTextView android:gravity="center_vertical" android:id="@+id/tv_trade_maker_rate" android:layout_width="match_parent" android:layout_height="@dimen/dimen_28" android:text="--" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="@dimen/dimen_15" style="@style/global_style_text_title_middle"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:id="@+id/tv_maker_label" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_16" android:layout_marginTop="@dimen/dimen_1" android:text="@string/step_rate_setting_maker"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@+id/ll_taker" android:paddingBottom="@dimen/dimen_20" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatTextView android:gravity="center_vertical" android:id="@+id/tv_trade_taker_rate" android:layout_width="match_parent" android:layout_height="@dimen/dimen_28" android:text="--" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="@dimen/dimen_15" style="@style/global_style_text_title_middle"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_16" android:layout_marginTop="@dimen/dimen_1" android:text="@string/step_rate_setting_taker"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@+id/divider_trade_rate_desc" android:background="@color/baseColorPrimarySeparator" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+    <RelativeLayout android:id="@+id/rl_trade_rate_desc" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_35">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step_rate_fee_rate_desc" android:layout_centerVertical="true"/>
+        <TextView android:textColor="@color/baseColorMajorTheme100" android:id="@+id/tv_trade_fee_desc_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/index_new_coin_view_see" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

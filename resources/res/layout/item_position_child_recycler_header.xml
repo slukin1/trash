@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/contract_header_account_title_layout" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
+        <RelativeLayout android:id="@+id/font_icon_layout" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/contract_header_account_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:fontFamily="@font/roboto_regular" android:layout_marginStart="@dimen/dimen_15"/>
+            <com.huobi.view.FontIconTextView android:textColor="@color/baseColorSecondaryText" android:id="@+id/contract_header_font_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon_font_small_i" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_5" android:layout_marginEnd="@dimen/dimen_10" android:layout_toEndOf="@+id/contract_header_account_title_name"/>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/white" android:id="@+id/contract_header_account_debts_action" android:background="@drawable/shape_asset_position_f9a50_bg" android:paddingLeft="@dimen/dimen_4" android:paddingTop="@dimen/dimen_1" android:paddingRight="@dimen/dimen_4" android:paddingBottom="@dimen/dimen_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/dimen_5" android:layout_toStartOf="@+id/contract_header_account_end_icon" android:paddingHorizontal="@dimen/dimen_4" android:paddingVertical="@dimen/dimen_1"/>
+        <ImageView android:id="@+id/contract_header_account_end_icon" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_asset_header_arrow_right" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <include layout="@layout/item_asset_position_coin"/>
+    <include layout="@layout/item_asset_position_contract"/>
+</LinearLayout>

@@ -1,0 +1,658 @@
+<LinearLayout
+                width="match_parent"
+                height="match_parent"
+                orientation="vertical">
+        <LinearLayout
+                        width="match_parent"
+                        height="44"
+                        gravity="centerVertical"
+                        orientation="horizontal">
+                <ImageView
+                                marginLeft="16"
+                                width="28"
+                                height="28"
+                                onClick="@event.leverHistory.back()"
+                                src="edge_engine_top_bar_back_normal" />
+                <!-- 筛选标题  -->
+                <Scroller
+                                weight="1"
+                                width="0"
+                                height="match_parent"
+                                orientation="horizontal"
+                                scrollToTag="{{@data.leverHistory.currentTag}}">
+                        <LinearLayout
+                                        marginLeft="20"
+                                        width="wrap_content"
+                                        height="match_parent"
+                                        gravity="centerVertical"
+                                        orientation="horizontal">
+                                <For
+                                                data="@data.leverHistory.titleData"
+                                                itemKey="element">
+                                        <Cell
+                                                        width="wrap_content"
+                                                        height="wrap_content"
+                                                        type="normal"
+                                                        marginLeft="8"
+                                                        marginRight="8">
+                                                <LinearLayout
+                                                                width="wrap_content"
+                                                                height="wrap_content"
+                                                                gravity="left"
+                                                                orientation="horizontal">
+                                                        <TextView
+                                                                        width="wrap_content"
+                                                                        height="wrap_content"
+                                                                        gravity="center"
+                                                                        text="{{@element.title}}"
+                                                                        onClick="@event.leverHistory.tabClick('{{@element.tag}}')"
+                                                                        tag="{{@element.tag}}"
+                                                                        textSize="16"
+                                                                        textColor="{{@element.titleColor}}"
+                                                                        textFontWeight="500" />
+                                                </LinearLayout>
+                                        </Cell>
+                                </For>
+                        </LinearLayout>
+
+                </Scroller>
+        </LinearLayout>
+        <LinearLayout
+                        width="match_parent"
+                        height="40"
+                        orientation="vertical">
+                <LinearLayout
+                                width="match_parent"
+                                height="39"
+                                marginLeft="16"
+                                marginRight="16"
+                                gravity="centerVertical"
+                                orientation="horizontal">
+                        <LinearLayout
+                                        width="114"
+                                        height="match_parent"
+                                        gravity="centerHorizontal"
+                                        orientation="horizontal"
+                                        popCancelOnTouchOutside="true"
+                                        popShowMode="modal"
+                                        popModalPositon="bottom"
+                                        onPopDismiss="@event.leverHistory.modeTypePopDismiss()"
+                                        popShow="{{@data.leverHistory.modeTypeShow | false}}"
+                                        popTemplate="mode_type_pop.xml"
+                                        onClick="@event.leverHistory.filterClick(0)">
+                                <TextView
+                                                width="wrap_content"
+                                                height="wrap_content"
+                                                gravity="center"
+                                                text="{{@data.leverHistory.modeTypeText}}"
+                                                textSize="12"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="500" />
+                                <ImageView
+                                                marginTop="1"
+                                                marginLeft="2"
+                                                width="12"
+                                                height="12"
+                                                src="{{@data.leverHistory.modeTypeIcon}}" />
+                        </LinearLayout>
+                        <LinearLayout
+                                        width="114"
+                                        height="match_parent"
+                                        gravity="centerHorizontal"
+                                        orientation="horizontal"
+                                        popCancelOnTouchOutside="true"
+                                        popShowMode="modal"
+                                        popModalPositon="bottom"
+                                        onPopDismiss="@event.leverHistory.currencyPopDismiss()"
+                                        popShow="{{@data.leverHistory.currencyShow | false}}"
+                                        popTemplate="currency_pop.xml"
+                                        onClick="@event.leverHistory.filterClick(1)">
+                                <TextView
+                                                width="wrap_content"
+                                                height="wrap_content"
+                                                gravity="center"
+                                                text="{{@data.leverHistory.currencyText}}"
+                                                textSize="12"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="500" />
+                                <ImageView
+                                                marginTop="1"
+                                                marginLeft="2"
+                                                width="12"
+                                                height="12"
+                                                src="{{@data.leverHistory.currencyIcon}}" />
+                        </LinearLayout>
+                        <LinearLayout
+                                        width="114"
+                                        height="match_parent"
+                                        gravity="centerHorizontal"
+                                        orientation="horizontal"
+                                        popCancelOnTouchOutside="true"
+                                        popShowMode="modal"
+                                        popModalPositon="bottom"
+                                        onPopDismiss="@event.leverHistory.filterMorePopDismiss()"
+                                        popShow="{{@data.leverHistory.filterMoreShow | false}}"
+                                        popTemplate="filter_more_pop.xml"
+                                        onClick="@event.leverHistory.filterClick(2)">
+                                <TextView
+                                                width="wrap_content"
+                                                height="wrap_content"
+                                                gravity="center"
+                                                text="{{@i18n/n_order_filter_more}}"
+                                                textSize="12"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="500" />
+                                <ImageView
+                                                marginTop="1"
+                                                marginLeft="2"
+                                                width="12"
+                                                height="12"
+                                                src="@drawable/edge_engine_filter" />
+                        </LinearLayout>
+                </LinearLayout>
+                <TextView
+                                width="match_parent"
+                                height="0.5"
+                                background="@color/KBaseColorPrimarySeparator" />
+        </LinearLayout>
+        <!-- 历史 view page -->
+        <LinearLayout
+                        width="match_parent"
+                        height="0"
+                        weight='1'
+                        orientation="vertical">
+                <SliderView
+                                width="match_parent"
+                                height="match_parent"
+                                direction="horizontal"
+                                autoScroll="false"
+                                scrollMode="reverse"
+                                onSelected="@event.leverHistory.resetTitleSelectTab(@eventParams)"
+                                currentIndex="@data.leverHistory.currentTabType"
+                                background="@color/KBaseColorContentBackground">
+                        <For
+                                        data="@data.leverHistory.listData"
+                                        itemKey="element">
+                                <Cell
+                                                width="match_parent"
+                                                height="match_parent">
+                                        <RecyclerView
+                                                        height="match_parent"
+                                                        width="match_parent"
+                                                        gravity="left"
+                                                        orientation="vertical"
+                                                        data="@element.data"
+                                                        refreshStatus="{{@data.leverHistory.refreshStatus}}"
+                                                        loadMoreStatus="{{@data.leverHistory.loadMoreStatus}}"
+                                                        onRefresh="@event.leverHistory.onRefresh()"
+                                                        onLoadMore="@event.leverHistory.onLoadMore()"
+                                                        itemKey="item"
+                                                        visibility="{{@element.listVisible | invisible}}">
+                                                <Cell
+                                                                type="loan"
+                                                                marginTop="12"
+                                                                marginLeft="16"
+                                                                marginRight="16"
+                                                                width="match_parent"
+                                                                height="wrap_content">
+                                                        <LinearLayout
+                                                                        width="match_parent"
+                                                                        height="wrap_content"
+                                                                        orientation="vertical">
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="20"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.title}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="500"
+                                                                                        textSize="14"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.time| --}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal"
+                                                                                visibility= "{{@item.currencyVisible | visible}}">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_widget_market_list_header_coin}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.currency | --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_exchange_order_list_amount}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.loanAmount| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                orientation="horizontal">
+                                                                        <LinearLayout
+                                                                                        width="wrap_content"
+                                                                                        height="wrap_content"
+                                                                                        onClick="@event.leverHistory.typeClick('{{@item.loanType}}')"
+                                                                                        orientation="horizontal">
+                                                                                <BottomLineTextView
+                                                                                                gravity="left"
+                                                                                                height="18"
+                                                                                                opacity="1"
+                                                                                                text="{{@i18n/n_mining_type}}"
+                                                                                                textColor="@color/kColorThreeLevelText"
+                                                                                                textFontWeight="400"
+                                                                                                textSize="12"
+                                                                                                width="90" />
+                                                                        </LinearLayout>
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.typeContent| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <!-- 分割线 -->
+                                                                <TextView
+                                                                                marginTop="16"
+                                                                                width="match_parent"
+                                                                                height="0.5"
+                                                                                background="@color/KBaseColorPrimarySeparator" />
+                                                        </LinearLayout>
+                                                </Cell>
+                                                <Cell
+                                                                type="repay"
+                                                                marginTop="12"
+                                                                marginLeft="16"
+                                                                marginRight="16"
+                                                                width="match_parent"
+                                                                height="wrap_content">
+                                                        <LinearLayout
+                                                                        width="match_parent"
+                                                                        height="wrap_content"
+                                                                        orientation="vertical">
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="20"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.title}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="500"
+                                                                                        textSize="14"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.time| --}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal"
+                                                                                visibility= "{{@item.currencyVisible | visible}}">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_widget_market_list_header_coin}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.currency}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal"
+                                                                                visibility="{{@item.repayAmountVisible | visible}}">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_exchange_order_list_amount}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.repayAmount | --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_shark_fin_interest}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.interestAmount | --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal"
+                                                                                visibility="{{@item.totalAmountVisible | visible}}">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_margin_total_amount}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.totalAmount | --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+
+
+                                                                        <LinearLayout
+                                                                                        width="wrap_content"
+                                                                                        height="wrap_content"
+                                                                                        onClick="@event.leverHistory.typeClick('{{@item.repayType}}')"
+                                                                                        orientation="horizontal">
+                                                                                <BottomLineTextView
+                                                                                                gravity="left"
+                                                                                                height="18"
+                                                                                                opacity="1"
+                                                                                                text="{{@i18n/n_mining_type}}"
+                                                                                                textColor="@color/kColorThreeLevelText"
+                                                                                                textFontWeight="400"
+                                                                                                textSize="12"
+                                                                                                width="90" />
+                                                                        </LinearLayout>
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.typeContent| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <!-- 分割线 -->
+                                                                <TextView
+                                                                                marginTop="16"
+                                                                                width="match_parent"
+                                                                                height="0.5"
+                                                                                background="@color/KBaseColorPrimarySeparator" />
+                                                        </LinearLayout>
+                                                </Cell>
+                                                <Cell
+                                                                type="interest"
+                                                                marginTop="12"
+                                                                marginLeft="16"
+                                                                marginRight="16"
+                                                                width="match_parent"
+                                                                height="wrap_content">
+                                                        <LinearLayout
+                                                                        width="match_parent"
+                                                                        height="wrap_content"
+                                                                        orientation="vertical">
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="20"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.title}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="500"
+                                                                                        textSize="14"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.time| --}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_margin_loan_currency}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.currency| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_exchange_order_list_amount}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.interestAmount| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@i18n/n_margin_daily_rate}}"
+                                                                                        textColor="@color/kColorThreeLevelText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        width="wrap_content" />
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.interestRate| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <LinearLayout
+                                                                                width="match_parent"
+                                                                                height="wrap_content"
+                                                                                marginTop="12"
+                                                                                gravity="centerVertical"
+                                                                                orientation="horizontal">
+                                                                        <LinearLayout
+                                                                                        width="wrap_content"
+                                                                                        height="wrap_content"
+                                                                                        onClick="@event.leverHistory.typeClick('{{@item.interestType}}')"
+                                                                                        orientation="horizontal">
+                                                                                <BottomLineTextView
+                                                                                                gravity="left"
+                                                                                                height="18"
+                                                                                                opacity="1"
+                                                                                                text="{{@i18n/n_mining_type}}"
+                                                                                                textColor="@color/kColorThreeLevelText"
+                                                                                                textFontWeight="400"
+                                                                                                textSize="12"
+                                                                                                width="90" />
+                                                                        </LinearLayout>
+                                                                        <View weight="1" />
+                                                                        <TextView
+                                                                                        height="wrap_content"
+                                                                                        text="{{@item.typeContent| --}}"
+                                                                                        textColor="@color/kColorPrimaryText"
+                                                                                        textFontWeight="400"
+                                                                                        textSize="12"
+                                                                                        gravity="right"
+                                                                                        width="wrap_content" />
+                                                                </LinearLayout>
+                                                                <!-- 分割线 -->
+                                                                <TextView
+                                                                                marginTop="16"
+                                                                                width="match_parent"
+                                                                                height="0.5"
+                                                                                background="@color/KBaseColorPrimarySeparator" />
+                                                        </LinearLayout>
+                                                </Cell>
+                                        </RecyclerView>
+                                        <!-- 空样式 -->
+                                        <LinearLayout
+                                                        width="match_parent"
+                                                        height="wrap_content"
+                                                        orientation="vertical"
+                                                        gravity="centerHorizontal"
+                                                        visibility="{{@element.emptyVisible | gone}}">
+                                                <ImageView
+                                                                marginTop="40"
+                                                                width="60"
+                                                                height="60"
+                                                                src="@drawable/edge_engine_empty" />
+                                                <TextView
+                                                                marginTop="8"
+                                                                width="match_parent"
+                                                                height="wrap_content"
+                                                                gravity="center"
+                                                                textSize="12"
+                                                                text="{{@i18n/n_contract_trade_no_record}}"
+                                                                textColor="@color/kColorThreeLevelText" />
+                                        </LinearLayout>
+                                </Cell>
+                        </For>
+                </SliderView>
+        </LinearLayout>
+        <LinearLayout
+                        width="wrap_content"
+                        height="wrap_content"
+                        popCancelOnTouchOutside="false"
+                        popArrowDirection="up"
+                        popArrowHeight="0"
+                        popArrowWidth="0"
+                        popModalPositon="center"
+                        popShowMode="modal"
+                        onPopDismiss="@event.commonPop.popDismiss()"
+                        popShow="{{@data.commonPop.popShow}}"
+                        popTemplate="commonPop.xml"
+                        orientation="horizontal" />
+</LinearLayout>

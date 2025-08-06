@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="@dimen/jumio_ic_loading_gradient_height" android:width="@dimen/jumio_ic_loading_gradient_width" android:viewportWidth="112" android:viewportHeight="112">
+    <path android:fillColor="@drawable/$jumio_ic_nfc_success__0" android:pathData="M56,56m-56,0a56,56 0,1 1,112 0a56,56 0,1 1,-112 0"/>
+    <path android:fillColor="?attr/jumio_loading_circle_icon" android:pathData="M91.952,38.028C93.34,39.408 93.351,41.658 91.977,43.052L54.642,80.947C53.978,81.621 53.073,82 52.129,82C51.186,82 50.281,81.621 49.617,80.947L28.023,59.029C26.649,57.635 26.66,55.386 28.048,54.005C29.436,52.625 31.675,52.636 33.048,54.03L52.129,73.398L86.952,38.053C88.325,36.659 90.564,36.647 91.952,38.028Z" android:fillType="1"/>
+</vector>

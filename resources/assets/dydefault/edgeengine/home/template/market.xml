@@ -1,0 +1,21 @@
+<LinearLayout width="match_parent" height="wrap_content" marginBottom="16" orientation="vertical" background="@color/KBaseColorContentBackground">
+
+  <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" background="@color/KBaseColorContentBackground" marginLeft="12" marginRight="12">
+    <For data="@data.market.list" itemKey="element" typeKey="cellType">
+      <Cell type="normal" width="0" height="38" weight="1" marginTop="8" marginRight="4" marginLeft="4">
+        <LinearLayout height="match_parent" width="match_parent" orientation="vertical" onClick="@event.market.jumpToKline('{{@element.index}}')">
+          <LinearLayout height="12" width="match_parent" marginTop="0" orientation="horizontal">
+            <TextView maxWidth="65" width="wrap_content" height="match_parent" text="{{@element.productTitle}}" textColor="@color/kColorPrimaryText" autoSizeTextType="uniform" gravity="left|center" textSize="10"/>
+            <TextView marginLeft="2" maxWidth="40" width="wrap_content" height="match_parent" text="{{@element.ratio}}" textColor="{{@element.ratioColor}}" gravity="left|center" textSize="10"/>
+          </LinearLayout>
+          <LinearLayout height="22" width="match_parent" orientation="horizontal" marginTop="4">
+            <TextView maxWidth="120" height="22" text="{{@element.currentPrice}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="16" width="wrap_content" gravity="left|center" autoSizeTextType="uniform" autoSizeMinTextSize="12"/>
+          </LinearLayout>
+        </LinearLayout>
+      </Cell>
+    </For>
+  </LinearLayout>
+
+  <View width="match_parent" marginTop="20" height="0.5" background="@color/kColorPrimarySeparator"/>
+
+</LinearLayout>

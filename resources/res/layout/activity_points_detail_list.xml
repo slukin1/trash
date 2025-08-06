@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.huobi.view.title.HbTitleBar android:id="@+id/hb_title_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:actionIcon="@drawable/global_filter_unselected"/>
+        <com.hbg.lib.widgets.LoadingLayout android:id="@+id/id_points_detail_loadingLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/id_points_detail_smartRefreshLayout" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnableLoadMore="false">
+                <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_points_detail_recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </com.hbg.lib.widgets.LoadingLayout>
+    </LinearLayout>
+</FrameLayout>

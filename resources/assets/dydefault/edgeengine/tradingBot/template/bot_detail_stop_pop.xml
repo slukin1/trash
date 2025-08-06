@@ -1,0 +1,145 @@
+<LinearLayout
+	width="match_parent"
+	height="wrap_content"
+	gravity="centerVertical"
+	orientation="vertical"
+	topRightRadius="8"
+	topLeftRadius="8"
+	background="@color/KBaseColorContentBackground">
+
+	    <!-- 顶部标题+关闭按钮 -->
+    <LinearLayout
+		paddingLeft="16"
+		paddingRight="0"
+		width="match_parent"
+		height="44"
+		gravity="center"
+		orientation="horizontal">
+        <TextView
+			height="match_parent"
+			width="wrap_content"
+			gravity="center|left"
+			text="{{@i18n/n_trade_bot_handle_record_stop_bot}}"
+			textSize="16"
+			textColor="@color/kColorPrimaryText"
+			textFontWeight="500" />
+        <View weight="1" />
+        <LinearLayout
+			width="100"
+			height="44"
+			paddingRight="16"
+			gravity="center|right"
+			orientation="horizontal"
+			onClick="@event.botDetailBottom.stopPopClose()">
+            <ImageView
+				width="28"
+				height="28"
+				src="@drawable/edge_engine_copy_trading_dialog_close" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <View
+            background="@color/kColorPrimarySeparator"
+            width="match_parent"
+            height="0.5" />
+
+	<LinearLayout
+		width="match_parent"
+		paddingLeft="16"
+		paddingRight="16"
+		paddingTop="10"
+		paddingBottom="10"
+		height="wrap_content"
+		gravity="left|top"
+		orientation="horizontal"
+		background="#14FE8731">
+		<ImageView width="12" height="16" gravity="center" scaleType="fitCenter" src="@drawable/edge_engine_copy_trading_tip"/>
+		<TextView 
+			width="0" 
+			height="wrap_content" 
+			marginLeft="4"
+			gravity="left|top"
+			textSize="12"
+			textFontWeight="400"
+			textColor="@color/kColorPrimaryText"
+			text="{{@i18n/n_bot_detail_stop_bot_warning_msg}}"
+			maxLines="0"
+			weight="1"/>
+	</LinearLayout>
+	<TextView 
+		width="match_parent" 
+		height="wrap_content" 
+		marginLeft="16"
+		marginTop="16"
+		marginRight="16"
+		gravity="left|center"
+		textSize="14"
+		textFontWeight="500"
+		maxLines="0"
+		text="{{@i18n/n_contract_market_closing}}"
+		textColor="@color/kColorPrimaryText"/>
+
+	<TextView 
+		width="match_parent" 
+		height="wrap_content" 
+		marginLeft="16"
+		marginTop="4"
+		marginRight="16"
+		gravity="left|center"
+		textSize="12"
+		textFontWeight="400"
+		maxLines="0"
+		text="{{@i18n/n_bot_detail_stop_bot_remind_msg}}"
+		textColor="@color/kColorThreeLevelText"/>
+
+	<LinearLayout
+		width="match_parent"
+		height="76"
+		gravity="center"
+		marginTop="16"
+		marginLeft="16"
+		marginRight="16"
+		orientation="horizontal">
+		<LinearLayout
+			width="167.5"
+			height="44"
+			background="@color/KBaseColorInputBackground"
+			gravity="center"
+			cornerRadius="4"
+			orientation="horizontal"
+			onClick="@event.botDetailBottom.stopPopClose()">
+			<TextView 
+				height="match_parent" 
+				width="match_parent"
+				gravity="center"
+				text="{{@i18n/n_contract_cancel}}"
+				textColor="@color/kColorPrimaryText"
+				textFontWeight="500" 
+				textSize="14" />
+		</LinearLayout>
+		<LinearLayout
+			width="167.5"
+			height="44"
+			background="@color/kColorMajorTheme100"
+			gravity="center"
+			cornerRadius="4"
+			marginLeft="8"
+			orientation="horizontal"
+			onClick="@event.botDetailBottom.stopConfirmClick()">
+			<TextView 
+				height="match_parent" 
+				width="match_parent"
+				gravity="center"
+				text="{{@i18n/n_copy_trading_confirm}}"
+				textColor="@color/KBaseTextColor"
+				textFontWeight="500" 
+				textSize="14" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<View
+		width="match_parent"
+		height="34" />
+
+</LinearLayout>

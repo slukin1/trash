@@ -1,0 +1,14 @@
+package com.huobi.utils;
+
+import android.util.Pair;
+import rx.functions.Func1;
+
+public final /* synthetic */ class j implements Func1 {
+
+    /* renamed from: b  reason: collision with root package name */
+    public static final /* synthetic */ j f83749b = new j();
+
+    public final Object call(Object obj) {
+        return AutoUploadLogHelper.E((Pair) obj);
+    }
+}

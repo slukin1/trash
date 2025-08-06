@@ -1,0 +1,92 @@
+<!-- 加息券列表弹框 -->
+<LinearLayout height="380" orientation="vertical" background="@color/kColorContentBackground" topLeftRadius="8" topRightRadius="8" marginBottom="{{@data.commonData.bottomSafeAreaHeight}}" width="375">
+
+    <!-- 顶部title -->
+    <LinearLayout height="44" width="match_parent" gravity="centerVertical" orientation="horizontal">
+
+        <TextView width="wrap_content" height="wrap_content" marginLeft="16" textSize="16" weight="1" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@i18n/n_coupon_type_saving}}"/>
+
+        <ImageView onClick="@event.couponList.closeDialog()" height="28" marginLeft="8" marginRight="16" src="@drawable/edge_engine_copy_trading_dialog_close" width="28"/>
+
+    </LinearLayout>
+
+    <View width="match_parent" height="1" background="@color/KBaseColorPrimarySeparator"/>
+
+    <LinearLayout height="260" width="match_parent" orientation="vertical">
+        <!-- 不可用原因 todo color_14FE8731 -->
+        <LinearLayout height="36" width="match_parent" gravity="centerVertical" background="#14FE8731" visibility="{{@data.couponList.disabledReasonVis}}" orientation="horizontal">
+
+            <ImageView height="12" marginLeft="18" src="@drawable/edge_engine_copy_trading_tip" width="12"/>
+
+            <!-- 加息券不可用原因 -->
+            <TextView width="wrap_content" height="wrap_content" marginLeft="4" marginRight="16" textSize="12" weight="1" textFontWeight="400" textColor="@color/kColorPrimaryText" text="{{@data.couponList.disabledReason}}"/>
+
+        </LinearLayout>
+
+        <!-- 加息券列表 -->
+        <RecyclerView data="@data.couponList.items" height="0" weight="1" paddingTop="4" width="match_parent" orientation="vertical" itemKey="item" typeKey="type">
+
+            <Cell type="1" width="match_parent" height="wrap_content">
+
+                <FrameLayout onClick="@event.couponList.itemClick('{{@item.index}}')" background="{{@data.couponList.itemBgColor}}" width="match_parent" height="wrap_content" gravity="right" marginTop="12" marginLeft="16" marginRight="16" cornerRadius="8">
+
+                    <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" paddingTop="12" paddingLeft="12" paddingRight="12" paddingBottom="12">
+
+                        <LinearLayout gravity="centerVertical" orientation="horizontal" width="match_parent" height="wrap_content">
+
+                            <!-- item title -->
+                            <LinearLayout orientation="vertical" width="0" weight="1" height="36">
+
+                                <!-- 加息券标题 -->
+                                <TextView width="wrap_content" height="20" gravity="center" maxLines="1" textSize="14" textFontWeight="500" textColor="{{@data.couponList.itemTitleColor}}" text="{{@item.title}}"/>
+
+                                <!-- 加息券有效期 & 即将到期 -->
+                                <LinearLayout orientation="horizontal" width="wrap_content" height="14" gravity="center" marginTop="2">
+                                    <!-- 有效期 -->
+                                    <TextView width="wrap_content" height="14" gravity="center" textSize="10" textFontWeight="400" textColor="{{@data.couponList.itemValColor}}" text="{{@item.endTimeText}}"/>
+
+                                    <TextView visibility="{{@item.dueVis}}" text="｜" textColor="{{@data.couponList.itemValColor}}" gravity="center" textSize="10" textFontWeight="400" width="wrap_content" height="14"/>
+
+                                    <!-- 即将到期 -->
+                                    <TextView visibility="{{@item.dueVis}}" width="wrap_content" height="14" gravity="center" textSize="10" textFontWeight="400" textColor="@color/kSecurityMiddleLevelColor" text="{{@data.couponList.dueTitle}}"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- 百分比 -->
+                            <TextView width="wrap_content" height="wrap_content" textSize="24" textFontWeight="500" textColor="{{@data.couponList.itemTitleColor}}" text="{{@item.apyText}}"/>
+
+                            <TextView width="wrap_content" height="wrap_content" textSize="12" marginLeft="2" marginTop="4" textFontWeight="400" textColor="{{@data.couponList.itemTitleColor}}" text="%"/>
+
+                            <!-- 单选框 -->
+                            <ImageView width="16" height="16" marginLeft="16" src="{{@item.imgSelector}}"/>
+
+                        </LinearLayout>
+
+                        <View marginTop="12" width="match_parent" height="1" background="@color/KBaseColorPrimarySeparator"/>
+
+                        <!-- 认购满 100 USDT | 加息额 1000 USDT | 加息2天 -->
+                        <TextView marginTop="8" width="wrap_content" height="wrap_content" textSize="10" textFontWeight="400" maxWidth="319" text="{{@item.appendText}}" textColor="{{@data.couponList.itemValColor}}"/>
+
+                    </LinearLayout>
+
+                    <!-- 最高图标 -->
+                    <LinearLayout visibility="{{@item.showHigtest}}" layout_gravity="right" orientation="vertical" marginRight="4" width="wrap_content" height="19">
+
+                        <TextView width="wrap_content" height="16" paddingLeft="5" paddingRight="5" paddingTop="1" paddingBottom="1" textSize="11" textFontWeight="500" textColor="@color/KBaseColorInputBackground" text="{{@i18n/n_contract_grid_create_highest}}" cornerRadius="4" background="@color/KBaseRiskTextColorMid"/>
+
+                        <ImageView width="6" height="3" layout_gravity="right" marginRight="13" src="@drawable/edge_engin_simple_earn_coupon_arrow"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </Cell>
+
+        </RecyclerView>
+
+    </LinearLayout>
+
+    <TextView height="44" marginLeft="16" marginRight="16" marginTop="16" marginBottom="16" maxLines="0" text="{{@i18n/n_coupon_select_confirm}}" cornerRadius="4" textFontWeight="500" textSize="14" gravity="center" onClick="@event.couponList.confirm()" textColor="@color/KBaseTextColor" background="@color/kColorMajorTheme100" width="match_parent"/>
+
+</LinearLayout>

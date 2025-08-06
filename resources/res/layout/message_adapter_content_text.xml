@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/text_frame" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/chat_message_text_size" android:textColor="?attr/chat_self_msg_text_color" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/msg_body_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="276dp" android:lineHeight="20.16sp"/>
+</FrameLayout>

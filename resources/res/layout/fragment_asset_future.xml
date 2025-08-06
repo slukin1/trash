@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.hbg.lib.widgets.tablayout.TabItemLayoutIndicator android:id="@+id/tab_item_layout" android:background="@drawable/shape_asset_tab_bg" android:padding="@dimen/dimen_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_13" android:minHeight="@dimen/dimen_30" android:layout_marginStart="@dimen/global_margin_left" android:layout_marginEnd="@dimen/global_margin_right" app:middle_tab_text_size="@dimen/global_text_size_12" app:middle_tab_tight="true" app:tab_check_bg="@color/baseColorDeepestBackground" app:tab_check_color="@color/baseColorPrimaryText" app:tab_padding_bottom="@dimen/dimen_5" app:tab_padding_left="@dimen/dimen_5" app:tab_padding_right="@dimen/dimen_5" app:tab_padding_top="@dimen/dimen_5" app:tab_unCheck_color="@color/baseColorSecondaryText"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.huobi.view.NoHorizontalScrollViewPager android:id="@+id/vp" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

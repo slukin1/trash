@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/image_view_personal_footprint_activity_item_logo" android:layout_width="@dimen/dimen_30" android:layout_height="@dimen/dimen_30" android:scaleType="centerInside"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:id="@+id/text_view_personal_footprint_activity_item_title" android:paddingRight="@dimen/dimen_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_5"/>
+        <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/text_view_personal_footprint_activity_item_participation" android:background="@color/color_0F0066ED" android:padding="@dimen/dimen_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_3" android:layout_marginBottom="@dimen/dimen_6" android:text="@string/n_personal_footprint_activity_participate" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:layout_marginStart="@dimen/dimen_5"/>
+    </LinearLayout>
+</LinearLayout>

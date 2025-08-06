@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="104dp" android:width="104dp" android:autoMirrored="true" android:viewportWidth="104" android:viewportHeight="104">
+    <path android:fillColor="?attr/jumio_scanview_animation_background" android:pathData="M52,0L52,0A52,52 0,0 1,104 52L104,52A52,52 0,0 1,52 104L52,104A52,52 0,0 1,0 52L0,52A52,52 0,0 1,52 0z"/>
+    <path android:fillColor="?attr/jumio_scanview_foreground" android:pathData="M52,100C78.51,100 100,78.51 100,52C100,25.49 78.51,4 52,4C25.49,4 4,25.49 4,52C4,78.51 25.49,100 52,100ZM79.132,38.111C80.298,36.933 80.288,35.034 79.111,33.868C77.933,32.702 76.034,32.712 74.868,33.889L45.322,63.736L29.132,47.381C27.966,46.204 26.067,46.194 24.889,47.36C23.712,48.526 23.702,50.425 24.868,51.603L43.19,70.111C43.753,70.68 44.521,71 45.322,71C46.123,71 46.89,70.68 47.454,70.111L79.132,38.111Z" android:fillType="1"/>
+</vector>

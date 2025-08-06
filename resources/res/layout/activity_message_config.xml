@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/tool_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/iv_group_list_back" android:padding="@dimen/dimen_14" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/im_chat_icon_back" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_group_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_im_chat_set" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/scroll_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/tool_bar" app:layout_constraintVertical_bias="0">
+        <LinearLayout android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:id="@+id/tv_message_remind_label" android:background="@color/baseColorDeepestBackground" android:paddingLeft="@dimen/dimen_14" android:paddingTop="@dimen/dimen_12" android:paddingBottom="@dimen/dimen_12" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/n_im_chat_tip_set"/>
+            <include android:id="@+id/include_message_chat" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_check_list_item"/>
+            <include android:id="@+id/include_message_comment" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_check_list_item"/>
+            <include android:id="@+id/include_message_like" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_check_list_item"/>
+            <include android:id="@+id/include_message_follow" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_check_list_item"/>
+            <include android:id="@+id/include_message_letter" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_check_list_item"/>
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:id="@+id/tv_message_blacklist_label" android:background="@color/baseColorDeepestBackground" android:paddingLeft="@dimen/dimen_14" android:paddingTop="@dimen/dimen_12" android:paddingBottom="@dimen/dimen_12" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/n_im_black_list_mamager"/>
+            <include android:id="@+id/include_message_blacklist" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" layout="@layout/layout_setting_list_item"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1676 @@
+{
+  "click": {
+    "list": [
+      {
+        "event_id": "176",
+        "page_id": "1000086"
+      },
+      {
+        "event_id": "177",
+        "page_id": "1000086"
+      },
+      {
+        "event_id": "178",
+        "page_id": "1005016"
+      },
+      {
+        "event_id": "179",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "180",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "181",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "182",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "183",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "184",
+        "page_id": "1000088"
+      },
+      {
+        "event_id": "185",
+        "page_id": "1000088"
+      },
+      {
+        "event_id": "186",
+        "page_id": "1000088"
+      },
+      {
+        "event_id": "187",
+        "page_id": "1000090"
+      },
+      {
+        "event_id": "188",
+        "page_id": "1000090"
+      },
+      {
+        "event_id": "189",
+        "page_id": "1000091"
+      },
+      {
+        "event_id": "190",
+        "page_id": "1000091"
+      },
+      {
+        "event_id": "191",
+        "page_id": "1000092"
+      },
+      {
+        "event_id": "192",
+        "page_id": "1000092"
+      },
+      {
+        "event_id": "193",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "194",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "195",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "196",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "197",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "198",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "199",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "200",
+        "page_id": "1000103"
+      },
+      {
+        "event_id": "201",
+        "page_id": "1000095"
+      },
+      {
+        "event_id": "202",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "203",
+        "page_id": "1000096"
+      },
+      {
+        "event_id": "204",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "205",
+        "page_id": "1000098"
+      },
+      {
+        "event_id": "210",
+        "page_id": "1000100"
+      },
+      {
+        "event_id": "211",
+        "page_id": "1000101"
+      },
+      {
+        "event_id": "212",
+        "page_id": "1000102"
+      },
+      {
+        "event_id": "213",
+        "page_id": "1000102"
+      },
+      {
+        "event_id": "214",
+        "page_id": "1000102"
+      },
+      {
+        "event_id": "215",
+        "page_id": "1000102"
+      },
+      {
+        "event_id": "216",
+        "page_id": "1000103"
+      },
+      {
+        "event_id": "217",
+        "page_id": "1000103"
+      },
+      {
+        "event_id": "218",
+        "page_id": "1000103"
+      },
+      {
+        "event_id": "219",
+        "page_id": "1000103"
+      },
+      {
+        "event_id": "220",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "221",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "222",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "223",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3965",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3966",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "224",
+        "page_id": "1000105"
+      },
+      {
+        "event_id": "225",
+        "page_id": "1000105"
+      },
+      {
+        "event_id": "226",
+        "page_id": "1000106"
+      },
+      {
+        "event_id": "227",
+        "page_id": "1000106"
+      },
+      {
+        "event_id": "228",
+        "page_id": "1000100"
+      },
+      {
+        "event_id": "229",
+        "page_id": "1000101"
+      },
+      {
+        "event_id": "230",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "231",
+        "page_id": "1000090"
+      },
+      {
+        "event_id": "232",
+        "page_id": "1000090"
+      },
+      {
+        "event_id": "233",
+        "page_id": "1000093"
+      },
+      {
+        "event_id": "234",
+        "page_id": "1000094"
+      },
+      {
+        "event_id": "235",
+        "page_id": "1000094"
+      },
+      {
+        "event_id": "236",
+        "page_id": "1000094"
+      },
+      {
+        "event_id": "237",
+        "page_id": "1000095"
+      },
+      {
+        "event_id": "238",
+        "page_id": "1000095"
+      },
+      {
+        "event_id": "239",
+        "page_id": "1000096"
+      },
+      {
+        "event_id": "240",
+        "page_id": "1000096"
+      },
+      {
+        "event_id": "241",
+        "page_id": "1000093"
+      },
+      {
+        "event_id": "242",
+        "page_id": "1000110"
+      },
+      {
+        "event_id": "243",
+        "page_id": "1000094"
+      },
+      {
+        "event_id": "244",
+        "page_id": "1000111"
+      },
+      {
+        "event_id": "245",
+        "page_id": "1000088"
+      },
+      {
+        "event_id": "246",
+        "page_id": "1000099"
+      },
+      {
+        "event_id": "247",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "248",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "249",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "250",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "251",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "252",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "253",
+        "page_id": "1000115"
+      },
+      {
+        "event_id": "254",
+        "page_id": "1000115"
+      },
+      {
+        "event_id": "255",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "256",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "260",
+        "page_id": "1000116"
+      },
+      {
+        "event_id": "261",
+        "page_id": "1000116"
+      },
+      {
+        "event_id": "263",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "264",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "3111",
+        "page_id": "1005005"
+      },
+      {
+        "event_id": "4231",
+        "page_id": "1005005"
+      },
+      {
+        "event_id": "4232",
+        "page_id": "1005005"
+      },
+      {
+        "event_id": "4233",
+        "page_id": "1005005"
+      },
+      {
+        "event_id": "3112",
+        "page_id": "1005003"
+      },
+      {
+        "event_id": "3113",
+        "page_id": "1005003"
+      },
+      {
+        "event_id": "3114",
+        "page_id": "1005004"
+      },
+      {
+        "event_id": "3115",
+        "page_id": "1000047"
+      },
+      {
+        "event_id": "3340",
+        "page_id": "1000115"
+      },
+      {
+        "event_id": "3128",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3136",
+        "page_id": "0000000"
+      },
+      {
+        "event_id": "3141",
+        "page_id": "1005007"
+      },
+      {
+        "event_id": "3142",
+        "page_id": "1005007"
+      },
+      {
+        "event_id": "3143",
+        "page_id": "1005007"
+      },
+      {
+        "event_id": "3144",
+        "page_id": "1005007"
+      },
+      {
+        "event_id": "5449",
+        "page_id": "1005007"
+      },
+      {
+        "event_id": "3558",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3565",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3559",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "130",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3560",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3561",
+        "page_id": "1005035"
+      },
+      {
+        "event_id": "3562",
+        "page_id": "1005035"
+      },
+      {
+        "event_id": "3563",
+        "page_id": "1005035"
+      },
+      {
+        "event_id": "3564",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "3566",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "134",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3584",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "140",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "141",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "142",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3523",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3524",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3525",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "3526",
+        "page_id": "1000048"
+      },
+      {
+        "event_id": "3957",
+        "page_id": "1005134"
+      },
+      {
+        "event_id": "3958",
+        "page_id": "1005134"
+      },
+      {
+        "event_id": "3959",
+        "page_id": "1005134"
+      },
+      {
+        "event_id": "3960",
+        "page_id": "1005134"
+      },
+      {
+        "event_id": "127",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "3946",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "3947",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "3948",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "4058",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4059",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4088",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4060",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4061",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4062",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4063",
+        "page_id": "1005141"
+      },
+      {
+        "event_id": "4109",
+        "page_id": "1000048"
+      },
+      {
+        "event_id": "4110",
+        "page_id": "1000101"
+      },
+      {
+        "event_id": "4111",
+        "page_id": "1005011"
+      },
+      {
+        "event_id": "4112",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "4113",
+        "page_id": "1000054"
+      },
+      {
+        "event_id": "4114",
+        "page_id": "1000047"
+      },
+      {
+        "event_id": "4115",
+        "page_id": "1000047"
+      },
+      {
+        "event_id": "4116",
+        "page_id": "1000047"
+      },
+      {
+        "event_id": "4117",
+        "page_id": "1000047"
+      },
+      {
+        "event_id": "4118",
+        "page_id": "1000100"
+      },
+      {
+        "event_id": "4119",
+        "page_id": "1005132"
+      },
+      {
+        "event_id": "4120",
+        "page_id": "1005119"
+      },
+      {
+        "event_id": "4133",
+        "page_id": "1000093"
+      },
+      {
+        "event_id": "4134",
+        "page_id": "1000093"
+      },
+      {
+        "event_id": "4135",
+        "page_id": "1000095"
+      },
+      {
+        "event_id": "4136",
+        "page_id": "1000095"
+      },
+      {
+        "event_id": "4137",
+        "page_id": "1000116"
+      },
+      {
+        "event_id": "4138",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "4139",
+        "page_id": "1000097"
+      },
+      {
+        "event_id": "4140",
+        "page_id": "1005167"
+      },
+      {
+        "event_id": "4141",
+        "page_id": "1005167"
+      },
+      {
+        "event_id": "4234",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4235",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4236",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4238",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4239",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4240",
+        "page_id": "1005170"
+      },
+      {
+        "event_id": "4246",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "4247",
+        "page_id": "1000048"
+      },
+      {
+        "event_id": "4248",
+        "page_id": "1000100"
+      },
+      {
+        "event_id": "4249",
+        "page_id": "1000101"
+      },
+      {
+        "event_id": "4250",
+        "page_id": "1005132"
+      },
+      {
+        "event_id": "4251",
+        "page_id": "1005011"
+      },
+      {
+        "event_id": "4252",
+        "page_id": "1005171"
+      },
+      {
+        "event_id": "4253",
+        "page_id": "1005171"
+      },
+      {
+        "event_id": "4254",
+        "page_id": "1005171"
+      },
+      {
+        "event_id": "4255",
+        "page_id": "1005171"
+      },
+      {
+        "event_id": "4256",
+        "page_id": "1005173"
+      },
+      {
+        "event_id": "4257",
+        "page_id": "1005173"
+      },
+      {
+        "event_id": "4258",
+        "page_id": "1005174"
+      },
+      {
+        "event_id": "4259",
+        "page_id": "1005174"
+      },
+      {
+        "event_id": "4260",
+        "page_id": "1005174"
+      },
+      {
+        "event_id": "4261",
+        "page_id": "1005174"
+      },
+      {
+        "event_id": "4262",
+        "page_id": "1005175"
+      },
+      {
+        "event_id": "4263",
+        "page_id": "1005175"
+      },
+      {
+        "event_id": "4264",
+        "page_id": "1005175"
+      },
+      {
+        "event_id": "4265",
+        "page_id": "1005175"
+      },
+      {
+        "event_id": "4380",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "4381",
+        "page_id": "1005016"
+      },
+      {
+        "event_id": "4477",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "4559",
+        "page_id": "1000087"
+      },
+      {
+        "event_id": "4389",
+        "page_id": "1000070"
+      },
+      {
+        "event_id": "4809",
+        "page_id": "1005246"
+      },
+      {
+        "event_id": "4811",
+        "page_id": "1005246"
+      },
+      {
+        "event_id": "4819",
+        "page_id": "1005246"
+      },
+      {
+        "event_id": "4835",
+        "page_id": "1005271"
+      },
+      {
+        "event_id": "4836",
+        "page_id": "1005271"
+      },
+      {
+        "event_id": "4833",
+        "page_id": "1005271"
+      },
+      {
+        "event_id": "4834",
+        "page_id": "1005271"
+      },
+      {
+        "event_id": "4841",
+        "page_id": "1005253"
+      },
+      {
+        "event_id": "4842",
+        "page_id": "1005253"
+      },
+      {
+        "event_id": "4843",
+        "page_id": "1005253"
+      },
+      {
+        "event_id": "4846",
+        "page_id": "1000069"
+      },
+      {
+        "event_id": "4805",
+        "page_id": "1005243"
+      },
+      {
+        "event_id": "4831",
+        "page_id": "1005249"
+      },
+      {
+        "event_id": "4832",
+        "page_id": "1005249"
+      },
+      {
+        "event_id": "4826",
+        "page_id": "1005255"
+      },
+      {
+        "event_id": "4849",
+        "page_id": "1005264"
+      },
+      {
+        "event_id": "4850",
+        "page_id": "1005264"
+      },
+      {
+        "event_id": "4822",
+        "page_id": "1005264"
+      },
+      {
+        "event_id": "4826",
+        "page_id": "1005264"
+      },
+      {
+        "event_id": "4478",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "4479",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "4480",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "4464",
+        "page_id": "1005225"
+      },
+      {
+        "event_id": "4828",
+        "page_id": "1005260"
+      },
+      {
+        "event_id": "4829",
+        "page_id": "1005260"
+      },
+      {
+        "event_id": "5056",
+        "page_id": "1005292"
+      },
+      {
+        "event_id": "5057",
+        "page_id": "1005292"
+      },
+      {
+        "event_id": "166",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "170",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "5060",
+        "page_id": "1000053"
+      },
+      {
+        "event_id": "5061",
+        "page_id": "1000053"
+      },
+      {
+        "event_id": "5066",
+        "page_id": "1000053"
+      },
+      {
+        "event_id": "5058",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "5079",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "165",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5062",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5063",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5067",
+        "page_id": "1005294"
+      },
+      {
+        "event_id": "5064",
+        "page_id": "1005294"
+      },
+      {
+        "event_id": "5065",
+        "page_id": "1005294"
+      },
+      {
+        "event_id": "5059",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5069",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5070",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5071",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5072",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5073",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5074",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5075",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5076",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5077",
+        "page_id": "1005293"
+      },
+      {
+        "event_id": "5080",
+        "page_id": "1005295"
+      },
+      {
+        "event_id": "5081",
+        "page_id": "1005295"
+      },
+      {
+        "event_id": "5082",
+        "page_id": "1005296"
+      },
+      {
+        "event_id": "5083",
+        "page_id": "1005299"
+      },
+      {
+        "event_id": "5084",
+        "page_id": "1005300"
+      },
+      {
+        "event_id": "5085",
+        "page_id": "1005301"
+      },
+      {
+        "event_id": "5086",
+        "page_id": "1005301"
+      },
+      {
+        "event_id": "5230",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5231",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5235",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5236",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5237",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5238",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5239",
+        "page_id": "1005311"
+      },
+      {
+        "event_id": "5171",
+        "page_id": "1005305"
+      },
+      {
+        "event_id": "5209",
+        "page_id": "1005305"
+      },
+      {
+        "event_id": "5173",
+        "page_id": "1005305"
+      },
+      {
+        "event_id": "5381",
+        "page_id": "1000046"
+      },
+      {
+        "event_id": "5406",
+        "page_id": "1000053"
+      },
+      {
+        "event_id": "5424",
+        "page_id": "1000050"
+      },
+      {
+        "event_id": "5407",
+        "page_id": "1005324"
+      },
+      {
+        "event_id": "5408",
+        "page_id": "1005324"
+      },
+      {
+        "event_id": "5409",
+        "page_id": "1005324"
+      },
+      {
+        "event_id": "5410",
+        "page_id": "1005324"
+      },
+      {
+        "event_id": "5411",
+        "page_id": "1005324"
+      },
+      {
+        "event_id": "5412",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "5413",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "5414",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "5415",
+        "page_id": "1005327"
+      },
+      {
+        "event_id": "5416",
+        "page_id": "1005327"
+      },
+      {
+        "event_id": "5417",
+        "page_id": "1005329"
+      },
+      {
+        "event_id": "5418",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "4639",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "4641",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5747",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5748",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5749",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5750",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5751",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5856",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5857",
+        "page_id": "1005226"
+      },
+      {
+        "event_id": "5968",
+        "page_id": "1000104"
+      },
+      {
+        "event_id": "6063",
+        "page_id": "1005006"
+      },
+      {
+        "event_id": "6064",
+        "page_id": "1005006"
+      },
+      {
+        "event_id": "6180",
+        "page_id": "1005397"
+      },
+      {
+        "event_id": "6181",
+        "page_id": "1005397"
+      },
+      {
+        "event_id": "6182",
+        "page_id": "1005397"
+      },
+      {
+        "event_id": "6186",
+        "page_id": "1005397"
+      },
+      {
+        "event_id": "6205",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "6206",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "6207",
+        "page_id": "1005325"
+      },
+      {
+        "event_id": "6222",
+        "page_id": "1005408"
+      },
+      {
+        "event_id": "6223",
+        "page_id": "1005409"
+      },
+      {
+        "event_id": "6229",
+        "page_id": "1005410"
+      },
+      {
+        "event_id": "6230",
+        "page_id": "1005411"
+      }
+    ]
+  },
+  "exposure": {
+    "list": [
+      {
+        "clazz": "com.huobi.main.ui.HuobiMainActivity",
+        "has_fragment": true,
+        "page_id": "1000046",
+        "name": "专业版首页"
+      },
+      {
+        "clazz": "com.huobi.homemarket.ui.HomeMarketNewFragment",
+        "page_id": "1000047",
+        "name": "专业版行情页"
+      },
+      {
+        "clazz": "com.huobi.share.fragment.ImageShareForAboutUsFragment",
+        "page_id": "1005007",
+        "is_dialog": true,
+        "name": "分享弹窗"
+      },
+      {
+        "clazz": "com.hbg.module.kline.ui.MarketInfoActivity",
+        "page_id": "1005005",
+        "name": "专业版K线页面"
+      },
+      {
+        "clazz": "com.huobi.staring.ui.StaringRemindActivity",
+        "page_id": "1005003",
+        "name": "提醒设置页面"
+      },
+      {
+        "clazz": "com.huobi.staring.ui.AllRemindActivity",
+        "page_id": "1005004",
+        "name": "全部提醒页面"
+      },
+      {
+        "clazz": "com.huobi.index.ui.IndexFragment",
+        "page_id": "1000046",
+        "name": "专业版首页"
+      },
+      {
+        "clazz": "com.huobi.trade.ui.TradeVerticalSpotFragment",
+        "page_id": "1000048",
+        "name": "专业版币币交易页"
+      },
+      {
+        "clazz": "com.huobi.finance.ui.BalanceAssetFragment",
+        "page_id": "1000104",
+        "name": "APP账户资产页"
+      },
+      {
+        "clazz": "com.huobi.supermargin.ui.TradeVerticalSuperMarginFragment",
+        "page_id": "1000100",
+        "name": "APP全仓杠杆交易页"
+      },
+      {
+        "clazz": "com.huobi.trade.ui.TradeVerticalMarginFragment",
+        "page_id": "1000101",
+        "name": "APP逐仓杠杆交易页"
+      },
+      {
+        "clazz": "com.huobi.margin.ui.TradeMarginBalanceDialog",
+        "page_id": "1000102",
+        "is_dialog": true,
+        "is_multi_page_id": true,
+        "name": "APP交易账户资产展开弹窗"
+      },
+      {
+        "clazz": "com.hbg.lite.guide.VersionSwitchActivity",
+        "page_id": "1000086",
+        "name": "用户类型选择页面"
+      },
+      {
+        "clazz": "com.hbg.lite.market.LiteMarketInfoActivity",
+        "page_id": "1000090",
+        "name": "Lite版币种行情页",
+        "has_fragment": true,
+        "is_page": true
+      },
+      {
+        "clazz": "com.hbg.lite.market.widget.LiteBuyDialogFragment",
+        "page_id": "1000091",
+        "name": "Lite版币种行情页买入半弹窗",
+        "is_dialog": true,
+        "act_clazz": "com.hbg.lite.market.LiteMarketInfoActivity"
+      },
+      {
+        "clazz": "com.hbg.lite.market.widget.LiteSellDialogFragment",
+        "page_id": "1000092",
+        "name": "Lite版币种行情页卖出半弹窗",
+        "is_dialog": true,
+        "act_clazz": "com.hbg.lite.market.LiteMarketInfoActivity"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1000097",
+        "name": "Lite版交易详情页"
+      },
+      {
+        "clazz": "com.hbg.lite.trade.ui.LiteTradeSuccessActivity",
+        "page_id": "1005167",
+        "name": "专业版OTC交易成功页面"
+      },
+      {
+        "clazz": "com.hbg.lite.trade.ui.LiteFastTradeActivity",
+        "page_id": "1000093",
+        "is_multi_page_id": true,
+        "has_fragment": true,
+        "name": "Lite版交易详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteCheckoutCounterActivity",
+        "page_id": "1000116",
+        "name": "otc收银台页面"
+      },
+      {
+        "clazz": "com.huobi.otc.dialog.OtcFastBuyDialogFragment",
+        "page_id": "1000110",
+        "is_dialog": true,
+        "name": "Lite版CNY购买订单确认弹窗"
+      },
+      {
+        "clazz": "com.huobi.otc.dialog.OtcFastSellDialogFragment",
+        "page_id": "1000111",
+        "is_dialog": true,
+        "name": "Lite版CNY出售订单确认弹窗"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteChatActivity",
+        "page_id": "1000098",
+        "name": "Lite版CNY交易独立聊天页"
+      },
+      {
+        "clazz": "com.huobi.account.ui.AccountDialogFragment",
+        "page_id": "1000070",
+        "name": "专业版侧边栏页",
+        "is_menu": true
+      },
+      {
+        "clazz": "com.hbg.lite.main.ui.LiteMainActivity",
+        "has_fragment": true,
+        "page_id": "1000087",
+        "name": "Lite版首页"
+      },
+      {
+        "clazz": "com.hbg.lite.index.ui.LiteIndexFragment",
+        "page_id": "1000087",
+        "name": "Lite版首页",
+        "page_type": 2
+      },
+      {
+        "clazz": "com.hbg.lite.wallet.ui.WalletFragment",
+        "page_id": "1000088",
+        "name": "Lite钱包页",
+        "page_type": 2
+      },
+      {
+        "clazz": "com.hbg.lite.search.ui.LiteCurrencyChooseActivity",
+        "page_id": "1000089",
+        "name": "Lite资产USDT支持币种搜索页面"
+      },
+      {
+        "clazz": "com.hbg.lite.record.ui.SingleCurrencyRecordActivity",
+        "page_id": "1000099",
+        "name": "Lite版钱包·单币种详情页"
+      },
+      {
+        "clazz": "com.huobi.supermargin.ui.SymbolAssetSuperMarginActivity",
+        "page_id": "1000105",
+        "name": "APP 全仓币种资产详情页"
+      },
+      {
+        "clazz": "com.huobi.finance.ui.LoanSymbolDetailActivity",
+        "page_id": "1000106",
+        "name": "APP 逐仓币种资产详情页"
+      },
+      {
+        "clazz": "com.huobi.search.ui.SearchSymbolActivity",
+        "page_id": "1000115",
+        "name": "专业版行情-搜索页面"
+      },
+      {
+        "clazz": "com.huobi.finance.ui.HtExchangeActivity",
+        "page_id": "1005035",
+        "name": "小额币兑换HT页面"
+      },
+      {
+        "clazz": "com.huobi.finance.ui.HtExchangeHistoryDetailActivity",
+        "page_id": "1005036",
+        "name": "小额币兑换HT-兑换记录明细页面"
+      },
+      {
+        "clazz": "com.huobi.c2c.ui.TradeVerticalC2CFragment",
+        "page_id": "1005132",
+        "name": "C2C杠杆交易页"
+      },
+      {
+        "clazz": "com.huobi.c2c.ui.TradeHorizontalC2CFragment",
+        "page_id": "1005132",
+        "name": "C2C杠杆交易页"
+      },
+      {
+        "clazz": "com.huobi.c2c.ui.TradeC2CMarginBalanceDialog",
+        "act_clazz": "com.huobi.main.ui.HuobiMainActivity",
+        "page_id": "1005134",
+        "name": "C2C杠杆交易页资产展开弹窗",
+        "is_dialog": true
+      },
+      {
+        "clazz": "com.huobi.invite.ui.InviteActivity",
+        "page_id": "1000078",
+        "name": "App专业版邀请返佣页"
+      },
+      {
+        "clazz": "com.huobi.c2c.lend.dialog.C2CLendIncomeDetailDialog",
+        "act_clazz": "com.huobi.main.ui.HuobiMainActivity",
+        "page_id": "1005135",
+        "name": "C2C借出页资产展开弹窗",
+        "is_dialog": true
+      },
+      {
+        "clazz": "com.hbg.module.kline.ui.MarketInfoLandscapeActivity",
+        "page_id": "1005170",
+        "name": "Global App专业版横板K线页"
+      },
+      {
+        "clazz": "com.huobi.login.ui.UserLoginActivity",
+        "page_id": "1005171",
+        "name": "Global APP专业版登录页"
+      },
+      {
+        "clazz": "com.alibaba.verificationsdk.ui.VerifyActivity",
+        "page_id": "1005172",
+        "name": "Global APP专业版登录安全验证页"
+      },
+      {
+        "clazz": "com.huobi.account.ui.SecurityStrategyBottomMenuFragment",
+        "page_id": "1005173",
+        "name": "Global APP登录安全验证弹窗",
+        "is_dialog": true
+      },
+      {
+        "clazz": "com.huobi.login.ui.UserRegisterActivity",
+        "page_id": "1005174",
+        "name": "Global APP手机注册页"
+      },
+      {
+        "clazz": "com.huobi.login.ui.UserRegisterActivity",
+        "page_id": "1005175",
+        "name": "Global APP邮箱注册页"
+      },
+      {
+        "clazz": "com.huobi.savings.ui.SavingsDataActivity",
+        "page_id": "1005177",
+        "name": "Global APP Savings 商品列表页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.CouponActivity",
+        "page_id": "1005194",
+        "is_page": true,
+        "is_multi_page_id": true,
+        "name": "Global APP专业版-我的优惠券页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.CouponActivity",
+        "page_id": "1005195",
+        "is_page": true,
+        "is_multi_page_id": true,
+        "name": "Global APP Lite版-我的优惠券页"
+      },
+      {
+        "clazz": "com.huobi.integration.IntegrationActivity",
+        "page_id": "1005219",
+        "name": "积分权益首页页面"
+      },
+      {
+        "clazz": "com.huobi.login.v2.ui.UserRegisterActivityV2",
+        "page_id": "1005246",
+        "name": "Global APP注册页面"
+      },
+      {
+        "clazz": "com.huobi.login.v2.ui.SetRegisterPswV2Activity",
+        "page_id": "1005248",
+        "name": "Global APP设置密码页"
+      },
+      {
+        "clazz": "com.huobi.login.v2.ui.UserLoginActivityV2",
+        "page_id": "1005271",
+        "name": "Global APP登录页（新）",
+        "is_page": true,
+        "is_multi_page_id": true
+      },
+      {
+        "clazz": "com.huobi.login.v2.ui.UserLoginActivityV2",
+        "page_id": "1005253",
+        "name": "Global APP专业版子账号登录页",
+        "is_page": true,
+        "is_multi_page_id": true
+      },
+      {
+        "clazz": "com.huobi.login.v2.ui.CaptchaCodeActivityV2",
+        "page_id": "1005251",
+        "name": "Global APP验证码页"
+      },
+      {
+        "clazz": "com.huobi.login.ui.SetRegisterPswActivity",
+        "page_id": "1000069",
+        "name": "Global APP设置密码页"
+      },
+      {
+        "clazz": "com.huobi.activity.AppWelcome2Activity",
+        "page_id": "1005243",
+        "name": "Global APP注册引导页"
+      },
+      {
+        "clazz": "com.huobi.activity.AppWelcomeActivity",
+        "page_id": "1005265",
+        "name": "Global APP注册引导页"
+      },
+      {
+        "clazz": "com.hbg.lite.guide.VersionSwitch2Activity",
+        "page_id": "1005249",
+        "name": "Global APP用户类型选择页面"
+      },
+      {
+        "clazz": "com.huobi.login.ui.SecurityGuideActivity",
+        "page_id": "1005264",
+        "name": "Global App手势解锁页（新)"
+      },
+      {
+        "clazz": "com.huobi.contract.ui.ContractConfigActivity",
+        "page_id": "1005304",
+        "name": "Global APP合约设置页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcTradeAreaSwitchActivity",
+        "page_id": "1005292",
+        "name": "global欢迎使用法币交易区域选择页面"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcTradeActivity",
+        "page_id": "1000050",
+        "has_fragment": true,
+        "name": "GlobalAPP法币快捷交易页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcTradeActivity",
+        "page_id": "1000053",
+        "has_fragment": true,
+        "name": "GlobalAPP法币自选交易页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcTradeActivity",
+        "page_id": "1005293",
+        "has_fragment": true,
+        "name": "GlobalAPP新用户法币快捷交易页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcTradeActivity",
+        "page_id": "1005294",
+        "has_fragment": true,
+        "name": "GlobalAPP新用户法币自选交易页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005295",
+        "name": "GlobalAPP新用户等待付款页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005296",
+        "name": "GlobalAPP新用户等待付款页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005297",
+        "name": "Global APP新用户等待卖家付款页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005298",
+        "name": "GlobalAPP新用户交易取消页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005299",
+        "name": "GlobalAPP新用户申诉页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005300",
+        "name": "GlobalAPP新用户被申诉页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcLiteOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005301",
+        "name": "GlobalAPP新用户报价过期页"
+      },
+      {
+        "clazz": "com.huochat.community.activity.CommunityDynamicDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005307",
+        "name": "Global App端社区动态详情页面"
+      },
+      {
+        "clazz": "com.huobi.account.ui.AccountActivity",
+        "page_id": "1005311",
+        "name": "Globalapp端个人中心"
+      },
+      {
+        "clazz": "com.huobi.finance.ui.CurrencyDetailActivity",
+        "page_id": "1005226",
+        "name": "Global-app端-资产-币种详情"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005324",
+        "name": "globalapp端maker-待接单-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005325",
+        "name": "globalapp端taker-待接单-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005326",
+        "name": "globalapp端maker-接单已拒绝-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005327",
+        "name": "globalapp端taker-接单已拒绝-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005328",
+        "name": "globalapp端maker-接单已取消-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcReceiveOrderDetailActivity",
+        "is_multi_page_id": true,
+        "page_id": "1005329",
+        "name": "globalapp端taker-接单已取消-订单详情页"
+      },
+      {
+        "clazz": "com.huobi.strategy.StrategyOrderActivity",
+        "page_id": "1005374",
+        "name": "GlobalApp策略全部-当前策略"
+      },
+      {
+        "clazz": "com.huobi.strategy.StrategyDetailActivity",
+        "page_id": "1005376",
+        "name": "GlobalApp策略策略详情页面"
+      },
+      {
+        "clazz": "com.hbg.module.exchange.grid.ui.GridTradeActivity",
+        "page_id": "1005373",
+        "name": "GlobalApp策略网格交易"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcFAQActivity",
+        "page_id": "1005397",
+        "name": "GlobalApp法币帮助中心落地页"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcCancelReasonActivity",
+        "page_id": "1005400",
+        "name": "正在取消页面"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcMainFragment",
+        "page_id": "1005408",
+        "is_child_fragment": true,
+        "name": "OTCapp端自选"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcFastTradeParentFragment",
+        "page_id": "1005408",
+        "is_child_fragment": true,
+        "name": "OTCapp端自选"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.PublicAdsFragment",
+        "page_id": "1005408",
+        "is_multi_page_id": true,
+        "event_action": "Single_expose",
+        "name": "OTCapp端自选"
+      },
+      {
+        "clazz": "com.huobi.otc.ui.OtcFastTradeFragment",
+        "page_id": "1005410",
+        "is_multi_page_id": true,
+        "event_action": "Single_expose",
+        "name": "OTCapp端快捷"
+      }
+    ]
+  }
+}

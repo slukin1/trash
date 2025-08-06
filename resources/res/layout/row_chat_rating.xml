@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="left" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/chat_bubble_vertical_margin">
+    <include android:layout_gravity="center_vertical" android:id="@+id/avatar_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" layout="@layout/row_agent_avatar_view"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/rating_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chat_bubble_agent_margin_right" android:layout_marginBottom="@dimen/chat_bubble_vertical_margin" android:layout_toRightOf="@+id/avatar_icon" android:layout_alignTop="@+id/avatar_icon">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_this_chat_title"/>
+        <RadioGroup android:orientation="horizontal" android:id="@+id/rating_button_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/chat_bubble_padding">
+            <RadioButton android:id="@+id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chat_bubble_padding" android:button="@drawable/btn_thumb_up_radio_button" android:adjustViewBounds="true"/>
+            <RadioButton android:id="@+id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chat_bubble_padding" android:button="@drawable/btn_thumb_down_radio_button" android:adjustViewBounds="true"/>
+        </RadioGroup>
+    </LinearLayout>
+    <TextView android:textColor="@color/chat_bubble_visitor" android:id="@+id/add_comment_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_this_chat_leave_a_comment_button" android:layout_below="@+id/rating_container" android:layout_alignLeft="@+id/rating_container"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/chat_bubble_visitor_margin_left" android:layout_below="@+id/rating_container" android:layout_alignParentRight="true">
+        <TextView android:id="@+id/comment_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chat_bubble_visitor"/>
+        <TextView android:textColor="@color/chat_bubble_visitor" android:id="@+id/edit_comment_button" android:padding="@dimen/chat_bubble_padding" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_this_chat_edit_comment_button" android:layout_below="@+id/rating_container"/>
+    </LinearLayout>
+</RelativeLayout>

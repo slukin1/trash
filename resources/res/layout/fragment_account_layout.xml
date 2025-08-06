@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/rootContent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:id="@+id/topBgView" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View android:id="@+id/account_page_status_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_25" app:layout_constraintTop_toTopOf="0"/>
+        <include android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_constraintTop_toBottomOf="@+id/account_page_status_bar" layout="@layout/part_home_account_top"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.hbg.lib.widgets.MyNestedScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_account_content_box" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/primeLayout" android:background="@color/KBaseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/imgPrimeHead" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="fitXY" app:layout_constraintBottom_toBottomOf="@+id/levelLayout" app:layout_constraintTop_toTopOf="@+id/view_account_info"/>
+                    <ImageView android:id="@+id/imgPrimeHeadIcon" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginRight="@dimen/dimen_10" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_marginHorizontal="@dimen/dimen_10" app:layout_constraintBottom_toTopOf="@+id/levelLayout" app:layout_constraintEnd_toEndOf="@+id/levelLayout" app:layout_constraintStart_toStartOf="@+id/levelLayout"/>
+                    <com.huobi.account.widget.AccountInfoView android:id="@+id/view_account_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_12" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <RelativeLayout android:id="@+id/levelLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/view_account_info">
+                        <View android:background="@color/baseColorContentBackground" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dimen_12" android:layout_alignParentBottom="true"/>
+                        <RelativeLayout android:id="@+id/levelContent" android:paddingLeft="@dimen/dimen_12" android:paddingRight="@dimen/dimen_12" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" android:layout_marginLeft="@dimen/dimen_12" android:layout_marginRight="@dimen/dimen_12" android:layout_marginHorizontal="@dimen/dimen_12" android:paddingHorizontal="@dimen/dimen_12">
+                            <ImageView android:id="@+id/levelImg" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_32" android:src="@drawable/prime1" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+                            <RelativeLayout android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/levelTopRight" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_32" android:paddingStart="@dimen/dimen_12" android:layout_toEndOf="@+id/levelImg" android:layout_alignParentEnd="true">
+                                <ImageView android:id="@+id/levelArrowImg" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/prime_head_arrow" android:scaleType="centerInside" android:layout_alignParentEnd="true"/>
+                                <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/account_level1_title" android:ellipsize="end" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/levelUpTxt" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:fontFamily="@font/roboto_regular" android:layout_toStartOf="@+id/levelArrowImg"/>
+                            </RelativeLayout>
+                            <com.youth.banner.Banner android:id="@+id/level_banners" android:layout_width="match_parent" android:layout_height="@dimen/dimen_22" android:layout_below="@+id/levelImg"/>
+                            <View android:id="@+id/level_banners_cover" android:layout_width="match_parent" android:layout_height="@dimen/dimen_22" android:layout_below="@+id/levelImg"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.huobi.account.widget.AccountFixedQuickView android:id="@+id/view_account_fixed_quick" android:background="@color/baseColorContentBackground" android:paddingTop="@dimen/dimen_8" android:paddingBottom="@dimen/dimen_8" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/dimen_73" android:paddingVertical="@dimen/dimen_8"/>
+                    <include android:id="@+id/part_account_quick_container" layout="@layout/part_home_account_quick_view_pager"/>
+                    <include android:id="@+id/banner_and_notice_bar_container" layout="@layout/part_home_account_banner"/>
+                    <include android:id="@+id/part_home_account_box" layout="@layout/part_home_account_box"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.hbg.lib.widgets.MyNestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

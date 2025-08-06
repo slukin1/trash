@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/balance_detail_list" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/balance_list" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.hbg.lib.widgets.LoadingLayout android:id="@+id/balance_loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/dimen_120" android:minHeight="@dimen/dimen_85" app:empty_view="@layout/common_empty_view_balance" app:error_view="@layout/common_error_view_balance" app:loading_view="@layout/balance_loading_view_balance"/>
+    </androidx.core.widget.NestedScrollView>
+    <include layout="@layout/item_balance_func"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

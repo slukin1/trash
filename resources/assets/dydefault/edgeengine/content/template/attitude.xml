@@ -1,0 +1,65 @@
+
+<!--
+显示在列表上的点赞UI
+$data.showStyle1 = "visible";//仅点赞+数量
+$data.showStyle2 = "gone";//点赞+态度+数量
+$data.showStyle3 = "gone";//仅态度+数量
+x1:0，x2:18，x3:36，x4(数量)：59
+-->
+
+<LinearLayout
+        width="wrap_content"
+        height="wrap_content"
+        grivaty="centerVertical"
+        orientation="horizontal"
+        onClick="@event.attitude.showPop({{@initData.index}})"
+        popTemplate="pop.xml"
+        popArrowWidth="10"
+        popArrowHeight="5"
+        popColor="FFFFFF"
+        popShow="{{@data.attitude.popShow}}"
+        popArrowDirection="down"
+        popCancelOnTouchOutside="true"
+        popBackgroundDimmed="true">
+    <LinearLayout
+            width="wrap_content"
+            height="wrap_content"
+            grivaty="centerVertical"
+            orientation="horizontal">
+        <For
+                data="@initData.attitudeInfo.list"
+                itemKey="element"
+                typeKey="itemType">
+            <Cell
+                    width="wrap_content"
+                    height="wrap_content"
+                    type="1">
+                <LinearLayout
+                        width="wrap_content"
+                        height="wrap_content"
+                        gravity="centerVertical"
+                        orientation="horizontal"
+                        marginLeft="{{@element.marginLeft}}">
+                    <ImageView
+                            height="20"
+                            width="20"
+                            src="{{@element.selectedUrl}}"
+                            visibility="{{@element.selected}}" />
+                    <ImageView
+                            height="20"
+                            width="20"
+                            src="{{@element.unSelectedUrl}}"
+                            visibility="{{@element.unSelected}}" />
+                </LinearLayout>
+            </Cell>
+        </For>
+    </LinearLayout>
+    <TextView
+            marginLeft="2"
+            text="{{@initData.num}}"
+            width="wrap_content"
+            height="20"
+            textSize="12"
+            textColor="0173E5"
+            gravity="center" />
+</LinearLayout>

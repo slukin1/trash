@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/checkbox_container" android:paddingTop="@dimen/dimen_5" android:paddingBottom="@dimen/dimen_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dimen_9_5">
+    <ImageView android:layout_gravity="center" android:id="@+id/iv_selected" android:layout_width="@dimen/dimen_16" android:layout_height="@dimen/dimen_16" android:src="@drawable/otc_market_unpass_icon"/>
+    <View android:id="@+id/view_divide" android:background="@color/baseColorPrimaryText" android:layout_width="@dimen/dimen_2" android:layout_height="@dimen/dimen_10" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_2"/>
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:id="@+id/tv_order_payment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingTop="@dimen/dimen_80" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/poster_image_layout" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_20">
+        <CheckBox android:id="@+id/poster_frame" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:checked="true" android:button="@null"/>
+        <RelativeLayout android:id="@+id/share_layout" android:padding="@dimen/dimen_1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@+id/poster_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/poster_mask" android:background="@color/invite_share_bg" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+            <CheckBox android:id="@+id/checked_poster" android:background="@drawable/checkbox_invite_share" android:clickable="false" android:layout_width="@dimen/dimen_24" android:layout_height="@dimen/dimen_24" android:layout_marginRight="@dimen/dimen_10" android:layout_marginBottom="@dimen/dimen_10" android:checked="true" android:button="@null" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.LoadingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main_loading" android:background="@color/balance_margin_total_bg_start_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/main_content" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@+id/total_balance_appbar_layout" android:layout_width="match_parent" android:layout_height="@dimen/dimen_191_5">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" app:layout_scrollFlags="3"/>
+            </com.google.android.material.appbar.AppBarLayout>
+            <com.huobi.finance.ui.AssetSmartRefreshLayout android:id="@+id/refresh_layout" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <androidx.viewpager.widget.ViewPager android:id="@+id/total_balance_viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </com.huobi.finance.ui.AssetSmartRefreshLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/total_balance_appbar_layout_real" android:background="@color/balance_margin_total_bg_start_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_223_5" app:elevation="0dp">
+            <include android:layout_width="match_parent" android:layout_height="@dimen/dimen_128" android:layout_marginTop="@dimen/dimen_11" layout="@layout/layout_balance_head"/>
+            <LinearLayout android:orientation="vertical" android:background="@color/app_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+                <FrameLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@+id/balance_safety_layout" android:background="@drawable/balance_safety_hint_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:gravity="center_vertical" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_marginLeft="@dimen/global_margin_left" android:text="@string/balance_safety_advice" android:drawableLeft="@drawable/trade_reminder" android:drawablePadding="@dimen/dimen_5" android:fontFamily="@font/roboto_medium"/>
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/balance_safety_see_tv" android:paddingRight="@dimen/global_padding_right" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:text="@string/index_new_coin_view_see"/>
+                </FrameLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <View android:id="@+id/balance_search_bg" android:background="@color/balance_margin_total_bg_start_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" android:translationY="-41dp" app:layout_collapseMode="0"/>
+                    <com.huobi.finance.ui.BalanceTabIndicator android:layout_gravity="top|center_vertical|center_horizontal|center" android:id="@+id/market_tab" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_marginStart="@dimen/dimen_1" android:layout_marginEnd="@dimen/dimen_1"/>
+                    <ImageView android:layout_gravity="end" android:id="@+id/iv_tab_arrow" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/otc_arrow_icon"/>
+                </FrameLayout>
+                <View android:layout_gravity="bottom" android:id="@+id/divider_title" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@+id/balance_top_func" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_46">
+            <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/balance_main_text_color" android:layout_gravity="center" android:id="@+id/total_balance_header_top_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tab_channel_balance"/>
+            <View android:layout_gravity="bottom" android:id="@+id/divider_title_top" android:background="@color/balance_indicator_top_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+        </FrameLayout>
+    </FrameLayout>
+</com.hbg.lib.widgets.LoadingRelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:titleText="@string/dt_mock_crash"/>
+    <RadioGroup android:orientation="horizontal" android:id="@+id/rg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10" android:layout_marginBottom="@dimen/dimen_10" android:layout_below="@+id/title_bar" android:layout_centerHorizontal="true">
+        <RadioButton android:textSize="@dimen/dimen_15" android:gravity="center" android:id="@+id/rb_native" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="原生异常"/>
+        <RadioButton android:textSize="@dimen/dimen_15" android:gravity="center" android:id="@+id/rb_flutter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_50" android:text="Flutter异常"/>
+    </RadioGroup>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/bottom_bar" android:layout_below="@+id/rg">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@android:color/holo_red_light" android:gravity="center_vertical" android:id="@+id/tv_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:textIsSelectable="true"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/bottom_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/dimen_15" android:id="@+id/btn_clean" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50" android:layout_marginTop="@dimen/dimen_3" android:text="清除native日志" android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:width="@dimen/dimen_0_5" android:color="@color/baseColorDeepestBackground"/>
+            <stroke android:width="@dimen/dimen_0_5" android:color="@color/baseColorDefaultPlaceholder"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <stroke android:width="@dimen/dimen_0_5" android:color="@color/baseColorInputField"/>
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <stroke android:width="@dimen/dimen_0_5" android:color="@color/baseColorDisableButton"/>
+        </shape>
+    </item>
+</selector>

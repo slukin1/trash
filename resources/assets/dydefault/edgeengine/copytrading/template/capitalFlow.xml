@@ -1,0 +1,57 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="match_parent" orientation="vertical" width="375">
+    <LinearLayout gravity="centerVertical" height="44" orientation="horizontal" width="match_parent">
+        <ImageView height="28" marginLeft="16" onClick="@event.capitalFlow.back()" src="edge_engine_top_bar_back_normal" width="28"/>
+        <!-- 标题  -->
+        <TextView gravity="center" height="wrap_content" marginRight="44" text="{{@i18n/n_copy_trading_capital_flow}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" width="0" weight="1"/>
+    </LinearLayout>
+    <LinearLayout gravity="centerVertical" height="40" orientation="horizontal" width="match_parent">
+        <LinearLayout gravity="center" height="40" onClick="@event.capitalFlow.filterClick(1)" orientation="horizontal" weight="1" width="0">
+            <TextView height="wrap_content" text="{{@data.capitalFlow.textFilterSymbol}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" width="wrap_content"/>
+            <ImageView height="12" marginLeft="2" src="{{@data.capitalFlow.iconFilterSymbol}}" width="12"/>
+        </LinearLayout>
+        <LinearLayout gravity="center" height="40" onClick="@event.capitalFlow.filterClick(0)" orientation="horizontal" weight="1" width="0">
+            <TextView height="wrap_content" text="{{@data.capitalFlow.textFilterCrossAndIsolated}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" width="wrap_content"/>
+            <ImageView height="12" marginLeft="2" src="{{@data.capitalFlow.iconFilterCrossAndIsolated}}" width="12"/>
+        </LinearLayout>
+        <LinearLayout gravity="center" height="40" onClick="@event.capitalFlow.filterClick(2)" orientation="horizontal" weight="1" width="0">
+            <TextView height="wrap_content" text="{{@data.capitalFlow.textFilterMore}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" width="wrap_content" maxWidth="100"/>
+            <ImageView height="12" marginLeft="2" src="@drawable/edge_engine_filter" width="12"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View background="@color/kColorPrimarySeparator" height="0.5" width="match_parent"/>
+    <FrameLayout height="0" weight="1" width="match_parent">
+        <RecyclerView data="@data.capitalFlow.accountAction" gravity="centerVertical" height="match_parent" itemKey="item" loadMoreStatus="{{@data.capitalFlow.loadMoreStatus}}" onLoadMore="@event.capitalFlow.onLoadMore()" onRefresh="@event.capitalFlow.onRefresh()" orientation="horizontal" refreshStatus="{{@data.capitalFlow.refreshStatus}}" typeKey="type" visibility="{{@data.capitalFlow.listVisible | invisible}}" width="match_parent">
+            <Cell height="wrap_content" type="normal" width="match_parent">
+                <LinearLayout height="wrap_content" orientation="vertical" paddingLeft="16" paddingRight="16" width="match_parent">
+                    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="12" orientation="horizontal" width="match_parent">
+                        <TextView height="wrap_content" text="USDT" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" weight="1" width="0"/>
+                        <TextView height="wrap_content" text="{{@item.time}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="12" orientation="horizontal" width="match_parent">
+                        <TextView height="wrap_content" text="{{@i18n/n_balance_detail_type}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" weight="1" width="0"/>
+                        <TextView height="wrap_content" text="{{@item.dataType}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="8" orientation="horizontal" width="match_parent" visibility="{{@item.showFuture | gone}}">
+                        <TextView height="wrap_content" text="{{@i18n/n_title_future}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" weight="1" width="0"/>
+                        <TextView height="wrap_content" text="{{@item.businessName}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="8" orientation="horizontal" width="match_parent">
+                        <TextView height="wrap_content" text="{{@i18n/n_margin_total_amount}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" weight="1" width="0"/>
+                        <TextView height="wrap_content" text="{{@item.money}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                    </LinearLayout>
+                    <TextView gravity="right" height="wrap_content" text="{{@item.voucherMoneyTips}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="10" visibility="{{@item.voucherMoneyVisible | gone}}" width="match_parent"/>
+
+                    <View background="@color/kColorPrimarySeparator" height="0.5" marginTop="16" width="match_parent"/>
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+        <!-- 空样式 -->
+        <LinearLayout gravity="center" height="match_parent" orientation="vertical" visibility="{{@data.capitalFlow.emptyVisible | gone}}" width="match_parent">
+            <ImageView height="60" src="@drawable/edge_engine_empty" width="60"/>
+            <TextView gravity="center" height="wrap_content" marginTop="8" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent"/>
+        </LinearLayout>
+    </FrameLayout>
+    <View height="0" onPopDismiss="@event.capitalFlow.currencyPopDismiss()" popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="bottom" popShow="{{@data.capitalFlow.currencyShow}}" popShowMode="modal" popTemplate="currency_pop.xml" width="0"/>
+    <View height="0" onPopDismiss="@event.capitalFlow.modeTypePopDismiss()" popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="bottom" popShow="{{@data.capitalFlow.modeTypeShow}}" popShowMode="modal" popTemplate="mode_type_pop.xml" width="0"/>
+    <View height="0" onPopDismiss="@event.capitalFlow.filterMorePopDismiss()" popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="bottom" popShow="{{@data.capitalFlow.filterMoreShow}}" popShowMode="modal" popTemplate="more_filter_pop.xml" width="0"/>
+</LinearLayout>

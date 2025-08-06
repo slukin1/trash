@@ -1,0 +1,99 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/KBaseColorContentBackground">
+    <FrameLayout width="match_parent" height="match_parent">
+        <!-- 列表数据 -->
+        <RecyclerView height="match_parent" width="match_parent" gravity="centerVertical" orientation="horizontal" data="@data.traderDetailOrder.list" itemKey="item" typeKey="type" onLoadMore="@event.traderDetailOrder.onLoadMore()" loadMoreStatus="{{@data.traderDetailOrder.loadMoreStatus}}" visibility="{{@data.traderDetailOrder.listVisible | invisible}}">
+            <Cell type="normal" width="match_parent" height="wrap_content">
+                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+                    <!-- 数据行 -->
+                    <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" onClick="@event.traderDetailOrder.clickedItem({{@item.index}})">
+                        <!-- 币种 -->
+                        <LinearLayout width="match_parent" height="18" marginTop="16" marginLeft="16" marginRight="16" gravity="centerVertical" orientation="horizontal">
+                            <!-- 币种名称 -->
+                            <TextView paddingTop="1" paddingBottom="1" paddingLeft="2" paddingRight="2" cornerRadius="2" width="wrap_content" height="wrap_content" text="{{@item.directionLabel}}" textColor="#FFFFFF" textSize="10" background="{{@item.directionColor}}"/>
+                            <TextView marginLeft="4" width="wrap_content" height="wrap_content" textFontWeight="600" textSize="14" textColor="@color/kColorPrimaryText" text="{{@item.symbolDesc}}"/>
+                        </LinearLayout>
+                        <LinearLayout width="match_parent" height="16" marginTop="6" marginLeft="16" marginRight="16" orientation="horizontal">
+                            <LinearLayout width="wrap_content" height="match_parent">
+                                <TextView paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" cornerRadius="2" background="@color/baseColorInputBackground" width="wrap_content" height="wrap_content" text="{{@item.modeTypeName}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                                <TextView marginLeft="4" paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" width="wrap_content" height="wrap_content" cornerRadius="2" background="@color/baseColorInputBackground" text="{{@item.leverDesc}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                                <TextView marginLeft="4" paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" width="wrap_content" height="wrap_content" cornerRadius="2" background="@color/baseColorInputBackground" text="{{@item.directionDesc}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!-- 收益 收益率 -->
+                        <LinearLayout height="wrap_content" marginLeft="16" marginRight="16" marginTop="14" orientation="horizontal" width="match_parent">
+                            <!-- 收益 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@i18n/n_copy_trading_income}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                            <!-- 收益率 -->
+                            <TextView gravity="right" height="wrap_content" maxLines="0" text="{{@i18n/n_copy_trading_yield}}" textColor="@color/kColorThreeLevelText" textSize="12" weight="1" width="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout gravity="centerVertical" height="16" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+                            <!-- 收益 -->
+                            <TextView height="wrap_content" maxLines="0" text="{{@item.openProfitStr}}" textColor="{{@item.openProfitColor}}" textFontWeight="500" textSize="14" width="wrap_content"/>
+                            <!-- 收益率 -->
+                            <TextView gravity="right" height="wrap_content" maxLines="0" text="{{@item.openProfitRateStr}}" textColor="{{@item.openProfitColor}}" textFontWeight="500" textSize="14" weight="1" width="0"/>
+                        </LinearLayout>
+                        <!-- tag行-->
+                        <!-- 开仓价格 开仓数量 保证金-->
+                        <LinearLayout width="match_parent" height="wrap_content" marginTop="14" marginLeft="16" orientation="horizontal" marginRight="16">
+                            <!-- 开仓价格 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorThreeLevelText" text="{{@item.openPriceTitle}}" maxLines="0"/>
+                            <!-- 开仓数量 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorThreeLevelText" text="{{@item.openAmountTitle}}" maxLines="0"/>
+                            <!-- 保证金 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" gravity="right" textColor="@color/kColorThreeLevelText" text="{{@item.bondAmountTitle}}" maxLines="0"/>
+                        </LinearLayout>
+                        <LinearLayout width="match_parent" height="16" marginLeft="16" orientation="horizontal" gravity="centerVertical" marginRight="16">
+                            <!-- 开仓价格 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorPrimaryText" text="{{@item.openPriceStr}}" isSubscript="true" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                            <!-- 开仓数量 -->
+                            <TextView width="0" weight="1" height="wrap_content" textSize="12" textColor="@color/kColorPrimaryText" text="{{@item.openAmountVolume}}" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                            <!-- 保证金 -->
+                            <TextView width="0" weight="1" height="wrap_content" textSize="12" gravity="right" textColor="@color/kColorPrimaryText" text="{{@item.bondAmountStr}}" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                        </LinearLayout>
+                        <!-- 止盈价格 止损价格 开仓手续费 -->
+                        <LinearLayout width="match_parent" height="wrap_content" marginTop="14" marginLeft="16" marginRight="16" orientation="horizontal">
+                            <!-- 止盈价格 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorThreeLevelText" text="{{@item.stopProfitPriceTitle}}" maxLines="0"/>
+                            <!-- 止损价格 -->
+                            <LinearLayout width="0" height="wrap_content" weight="1" orientation="horizontal" gravity="left">
+                                <TextView width="wrap_content" height="wrap_content" textSize="12" textColor="@color/kColorThreeLevelText" text="{{@item.stopLossPriceTitle}}" maxLines="0" maxWidth="98"/>
+                                <ImageView paddingLeft="4" paddingTop="2" paddingBottom="2" width="16" height="16" visibility="{{@item.stopProfitPopVisible}}" src="@drawable/edge_engine_copy_trading_fok" onClick="@event.traderDetailOrder.showStopProfitAlert({{@item.index}})"/>
+                            </LinearLayout>
+                            <!-- 开仓手续费 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" gravity="right" textColor="@color/kColorThreeLevelText" text="{{@item.openFeeTitle}}" maxLines="0"/>
+                        </LinearLayout>
+                        <LinearLayout width="match_parent" height="16" marginLeft="16" marginRight="16" orientation="horizontal" gravity="centerVertical">
+                            <!-- 止盈价格 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorPrimaryText" text="{{@item.stopProfitPrice}}" isSubscript="true" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                            <!-- 止损价格 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" textColor="@color/kColorPrimaryText" text="{{@item.stopLossPrice}}" isSubscript="true" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                            <!-- 开仓手续费 -->
+                            <TextView width="0" height="wrap_content" weight="1" textSize="12" gravity="right" textColor="@color/kColorPrimaryText" text="{{@item.openFeeStr}}" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                        </LinearLayout>
+                        <!-- 预计爆仓价格 -->
+                        <LinearLayout width="match_parent" height="32" marginTop="14" marginLeft="16" marginRight="16" orientation="vertical" gravity="left" visibility="{{@item.explosionPriceVisible}}">
+                            <TextView width="match_parent" height="0" weight="1" textSize="12" textColor="@color/kColorThreeLevelText" text="{{@item.explosionPriceTitle}}" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                            <TextView width="match_parent" height="0" weight="1" textSize="12" textColor="@color/kColorPrimaryText" text="{{@item.explosionPrice}}" isSubscript="true" autoSizeTextType="uniform" autoSizeMinTextSize="8"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 开仓时间-->
+                    <LinearLayout marginTop="12" width="match_parent" height="28" marginLeft="16" marginRight="16" background="@color/KAssetTopHeaderContentBackground" visibility="{{@item.orderIdVisible}}" orientation="vertical">
+                        <!-- 开仓时间 -->
+                        <LinearLayout width="match_parent" height="16" marginLeft="12" marginTop="6" gravity="left" orientation="horizontal">
+                            <TextView width="wrap_content" height="wrap_content" textSize="11" textColor="@color/kColorThreeLevelText" gravity="left" text="{{@item.openTimeDesc}}"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- 分割线 -->
+                    <TextView marginTop="12" width="match_parent" height="0.5" marginLeft="16" marginRight="16" background="@color/KBaseColorPrimarySeparator"/>
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+        <!-- 空样式 -->
+        <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" gravity="centerHorizontal" visibility="{{@data.traderDetailOrder.emptyVisible | gone}}">
+            <ImageView marginTop="120" width="60" height="60" src="@drawable/edge_engine_empty"/>
+            <TextView marginTop="8" width="match_parent" height="wrap_content" gravity="center" textSize="12" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/eBaseColorThreeLevelText"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

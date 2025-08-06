@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="jumio_landscape_title_width_percentage">0.6</fraction>
+    <fraction name="jumio_landscape_width_percentage">0.7</fraction>
+</resources>

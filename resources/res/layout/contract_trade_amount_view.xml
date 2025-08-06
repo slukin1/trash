@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:textColorHint="@color/baseColorThreeLevelText" android:id="@+id/contract_trade_amount_view_et" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_8" android:layout_marginRight="@dimen/dimen_8" android:maxLines="1" android:singleLine="true" android:layout_weight="1" android:layout_marginHorizontal="@dimen/dimen_8"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/contract_trade_amount_view_right" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/contract_trade_amount_view_tv" android:paddingLeft="@dimen/dimen_8" android:paddingRight="@dimen/dimen_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:paddingHorizontal="@dimen/dimen_8"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/trade_arrow_down" android:layout_marginEnd="@dimen/dimen_8"/>
+    </LinearLayout>
+</LinearLayout>

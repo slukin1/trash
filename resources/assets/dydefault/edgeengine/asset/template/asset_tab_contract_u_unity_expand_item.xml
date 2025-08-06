@@ -1,0 +1,34 @@
+<!-- 使用asset_tab_contract_u_unity_expand_item_2.xml替代，后面版本看到可以删除 -->
+<LinearLayout width="match_parent" height="51" orientation="vertical">
+
+
+    <LinearLayout width="match_parent" height="51" gravity="center" background="@color/KAssetTopHeaderContentBackground" orientation="horizontal">
+
+        <LinearLayout width="124.5" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(42, {{@initData.index}}, {{@initData.type}})">
+
+            <ImageView width="20" height="20" src="@drawable/asst_exc_exc_marknew"/>
+
+            <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_market_info_quotes_main_title}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+        </LinearLayout>
+
+        <LinearLayout width="125" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(43, {{@initData.index}}, {{@initData.type}})">
+
+            <ImageView width="20" height="20" src="@drawable/asst_futures_u_transfernew"/>
+
+            <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_balance_contract_transfer}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+        </LinearLayout>
+
+        <LinearLayout width="124.5" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(44, {{@initData.index}}, {{@initData.type}})">
+
+            <ImageView width="20" height="20" src="@drawable/asst_exc_exc_detailsnew"/>
+
+            <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_asset_expand_detail}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

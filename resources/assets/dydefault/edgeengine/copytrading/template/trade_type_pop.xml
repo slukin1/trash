@@ -1,0 +1,11 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="4" height="wrap_content" orientation="vertical" paddingBottom="6" paddingTop="6" marginTop="3" width="136">
+    <FrameLayout onClick="@event.tradePanel.onClickTypeSelect('0')" width="match_parent" height="wrap_content" paddingLeft="8" paddingRight="8">
+        <TextView height="wrap_content" text="{{@data.tradePanel.typeStr1}}" textColor="{{@data.tradePanel.typeMenu1TextColor}}" textSize="14" marginTop="4" marginBottom="4" textFontWeight="400" width="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout width="match_parent" height="wrap_content" paddingLeft="8" paddingRight="8" onClick="@event.tradePanel.onClickTypeSelect('1')">
+        <TextView height="wrap_content" marginTop="4" marginBottom="4" text="{{@data.tradePanel.typeStr2}}" textColor="{{@data.tradePanel.typeMenu2TextColor}}" textSize="14" textFontWeight="400" width="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout width="match_parent" height="wrap_content" paddingLeft="8" paddingRight="8" onClick="@event.tradePanel.onClickTypeSelect('2')">
+        <TextView height="wrap_content" marginTop="4" marginBottom="4" text="{{@data.tradePanel.typeStr3}}" textColor="{{@data.tradePanel.typeMenu3TextColor}}" textSize="14" textFontWeight="400" width="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <ImageView android:id="@+id/avatar_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/agent_avatar_margin_right" android:scaleType="fitXY" android:adjustViewBounds="true" android:maxWidth="@dimen/agent_avatar_max_size" android:maxHeight="@dimen/agent_avatar_max_size"/>
+</merge>

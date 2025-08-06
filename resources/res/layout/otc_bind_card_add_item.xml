@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/dimen_5" android:paddingRight="@dimen/dimen_5" android:paddingBottom="@dimen/dimen_30" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_add" android:background="@drawable/otc_card_list_add_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/iv_add" android:layout_width="@dimen/dimen_40" android:layout_height="@dimen/dimen_40" android:src="@drawable/otc_card_add_icon"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_bank_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10" android:text="@string/n_otc_bind_card"/>
+    </LinearLayout>
+</FrameLayout>

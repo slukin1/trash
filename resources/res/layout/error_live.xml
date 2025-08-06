@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="layout/error_live_0" android:background="@drawable/bg_live_detail" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:id="@+id/vErrorTopBar" android:layout_width="match_parent" android:layout_height="0dp"/>
+        <ImageView android:tag="binding_1" android:layout_width="46dp" android:layout_height="44dp" android:src="@drawable/icon_live_arrow_back_" android:scaleType="fitCenter" android:paddingStart="15dp" android:paddingEnd="1dp"/>
+    </LinearLayout>
+    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/icon_live_error" android:layout_above="@+id/tvTips" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/kLineIndexLabelColor" android:id="@+id/tvTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/n_live_load_err" android:layout_above="@+id/tvRetry" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/dimen_30" android:layout_marginEnd="@dimen/dimen_30"/>
+    <TextView android:textColor="@color/color_12B298" android:id="@+id/tvRetry" android:background="@drawable/live_retry_border" android:paddingTop="@dimen/dimen_10" android:paddingBottom="@dimen/dimen_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="150dp" android:text="@string/n_live_click_refresh" android:layout_centerInParent="true" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15"/>
+</RelativeLayout>

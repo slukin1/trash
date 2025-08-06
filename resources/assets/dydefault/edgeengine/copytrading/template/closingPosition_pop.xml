@@ -1,0 +1,19 @@
+<LinearLayout topLeftRadius="8" topRightRadius="8" width="375" height="wrap_content" background="@color/KBaseColorContentBackground" orientation="vertical">
+    <LinearLayout width="match_parent" height="48" marginTop="8" marginLeft="16" gravity="centerVertical" orientation="horizontal" onClick="@event.copySetting.closingPositionPopSelected(1)">
+        <TextView width="wrap_content" height="wrap_content" text="{{@data.copySetting.closingPosition1Title}}" textSize="14" textColor="{{@data.copySetting.closingPosition1TextColor}}" textFontWeight="500"/>
+        <View weight="1" height="0" width="0"/>
+        <ImageView marginRight="16" width="16" height="16" src="@drawable/icon_copytrading_currency_selection_s" visibility="{{@data.copySetting.closingPosition1Visible | gone}}"/>
+    </LinearLayout>
+    <LinearLayout width="match_parent" height="48" marginTop="8" marginLeft="16" gravity="centerVertical" orientation="horizontal" onClick="@event.copySetting.closingPositionPopSelected(2)">
+        <TextView width="wrap_content" height="wrap_content" text="{{@data.copySetting.closingPosition2Title}}" textSize="14" textColor="{{@data.copySetting.closingPosition2TextColor}}" textFontWeight="500"/>
+        <View weight="1" height="0" width="0"/>
+        <ImageView marginRight="16" width="16" height="16" src="@drawable/icon_copytrading_currency_selection_s" visibility="{{@data.copySetting.closingPosition2Visible | gone}}"/>
+    </LinearLayout>
+    <LinearLayout width="match_parent" height="48" marginTop="8" marginLeft="16" gravity="centerVertical" orientation="horizontal" onClick="@event.copySetting.closingPositionPopSelected(3)">
+        <TextView width="wrap_content" height="wrap_content" text="{{@data.copySetting.closingPosition3Title}}" textSize="14" textColor="{{@data.copySetting.closingPosition3TextColor}}" textFontWeight="500"/>
+        <View weight="1" height="0" width="0"/>
+        <ImageView marginRight="16" width="16" height="16" src="@drawable/icon_copytrading_currency_selection_s" visibility="{{@data.copySetting.closingPosition3Visible | gone}}"/>
+    </LinearLayout>
+    <View background="@color/KBaseColorDeepestBackground" height="8" width="match_parent"/>
+    <TextView width="match_parent" height="48" marginLeft="16" marginRight="16" marginTop="16" textColor="@color/kColorThreeLevelText" marginBottom="16" cornerRadius="4" onClick="@event.copySetting.closingPositionPopDismiss()" gravity="center" textSize="14" textFontWeight="500" text="{{@i18n/n_cancel}}"/>
+</LinearLayout>

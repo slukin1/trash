@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dimen_58">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="@dimen/dimen_2" android:paddingBottom="@dimen/dimen_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/img" android:layout_width="@dimen/dimen_22" android:layout_height="@dimen/dimen_22" android:scaleType="fitXY"/>
+            <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/baseColorSecondaryTextNew" android:ellipsize="end" android:gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4" android:maxLines="2"/>
+        </LinearLayout>
+        <View android:layout_gravity="end" android:id="@+id/line_end" android:background="@color/baseColorDeepestBackground" android:layout_width="@dimen/dimen_0_5" android:layout_height="match_parent" android:layout_marginStart="@dimen/dimen_4"/>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@+id/line_bottom" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+</LinearLayout>

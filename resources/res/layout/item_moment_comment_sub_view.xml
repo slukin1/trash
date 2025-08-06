@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.huochat.community.widget.UserLogoView android:id="@+id/ulv_comment_item_avatar" android:layout_width="18dp" android:layout_height="18dp" app:badgeLogoHeight="7dp" app:badgeLogoMargin="0dp" app:badgeLogoWidth="12dp" app:decoraScale="1" app:logoHeight="18dp" app:logoPadding="0.5dp" app:logoWidth="18dp"/>
+        <TextView android:textSize="14dp" android:textColor="@color/color_9B9B9B" android:ellipsize="end" android:gravity="top" android:id="@+id/text_view_comment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:maxLines="3" android:layout_toRightOf="@+id/ulv_comment_item_avatar" android:layout_alignTop="@+id/ulv_comment_item_avatar" android:lineSpacingMultiplier="1.2"/>
+        <View android:background="@color/color_f4f4f4" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="6dp" android:layout_marginTop="5.5dp" android:layout_toRightOf="@+id/ulv_comment_item_avatar" android:layout_below="@+id/text_view_comment"/>
+    </RelativeLayout>
+</LinearLayout>

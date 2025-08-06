@@ -1,0 +1,35 @@
+<LinearLayout
+    width="375"
+    height="44"
+    gravity="centerVertical"
+    orientation="vertical">
+    <LinearLayout
+        width="375"
+        height="43.5"
+        gravity="centerVertical"
+        orientation="horizontal">
+        <TextView
+            width="wrap_content"
+            height="wrap_content"
+            marginLeft="16"
+            text="{{@i18n/n_coupon_return_available}}"
+            textColor="@color/kColorPrimaryText"
+            textSize="16"
+            textFontWeight="500"/>
+        <View
+            width="0"
+            height="wrap_content"
+            weight="1"/>
+        <ImageView
+            width="28"
+            height="28"
+            marginRight="16"
+            onClick="@event.onClose()"
+            src="@drawable/trade_margin_coupon_title_close"/>
+    </LinearLayout>
+    <View
+        width="375"
+        height="0.5"
+        background="@color/KBaseColorPrimarySeparator"/>
+</LinearLayout>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_root" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.huobi.view.rollviewpager.RollPagerView android:id="@+id/roll_view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:rollviewpager_play_delay="5000"/>
+        <ImageView android:id="@+id/iv_close_tip" android:paddingTop="@dimen/dimen_8" android:paddingRight="@dimen/dimen_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/c2c_advert_auth_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <FrameLayout android:id="@+id/fl_indicator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_16">
+        <com.huobi.otc.widget.OtcCommonRectFIndicator android:id="@+id/id_otc_banner_indicator" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/dimen_2" android:layout_marginTop="@dimen/dimen_6"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_style2_step_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/fl_style2_circle_area" android:layout_width="@dimen/dimen_34" android:layout_height="@dimen/dimen_34" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_style2_circle" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/img_style2_circle_bg"/>
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_6" android:textColor="@android:color/black" android:id="@+id/tv_style2_step_circle_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_m_1" android:layout_marginRight="@dimen/dimen_0_5" android:text="$" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@android:color/black" android:gravity="center" android:id="@+id/tv_style2_step_circle_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="40" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_style2_step_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4_5" android:text="Register" android:maxLines="1" android:includeFontPadding="false" android:layout_below="@+id/fl_style2_circle_area" android:layout_centerHorizontal="true"/>
+        <ImageView android:id="@+id/iv_style2_step_arrow" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_7" android:layout_marginTop="@dimen/dimen_8" android:src="@drawable/step_view_arrow" android:layout_below="@+id/tv_style2_step_content" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="@dimen/dimen_7" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/tv_style2_flag" android:background="@drawable/shape_step_item_double" android:layout_width="@dimen/dimen_32" android:layout_height="@dimen/dimen_11" android:layout_marginTop="@dimen/dimen_25" android:text="+100%" android:layout_centerHorizontal="true" android:fontFamily="@font/roboto_medium"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_style1_step_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/fl_style1_circle_area" android:layout_width="@dimen/dimen_34" android:layout_height="@dimen/dimen_34" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_style1_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_index_step_style1_1"/>
+        </FrameLayout>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:id="@+id/tv_style1_step_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4_5" android:text="Register" android:includeFontPadding="false" android:layout_below="@+id/fl_style1_circle_area" android:layout_centerHorizontal="true"/>
+        <ImageView android:id="@+id/iv_style1_step_arrow" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_7" android:layout_marginTop="@dimen/dimen_8" android:src="@drawable/step_view_arrow" android:layout_below="@+id/tv_style1_step_content" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>

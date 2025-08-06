@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/loading_layout" android:tag="layout/fragment_gift_rank_0" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="350dp" app:empty_view="@layout/empty_live_rank" app:error_view="@layout/content_error_view" app:loading_view="@layout/common_loading_view_balance">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvContent" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/llSelfParent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="72dp" android:layout_alignParentBottom="true">
+            <View android:background="@drawable/bg_gift_rank_shadow" android:layout_width="match_parent" android:layout_height="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llSelf" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="14dp" android:paddingEnd="16dp">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textStyle="italic" android:textColor="@color/live_gift_border" android:tag="binding_1" android:layout_width="28dp" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:textFontWeight="900"/>
+                <ImageView android:tag="binding_2" android:layout_width="36dp" android:layout_height="36dp" android:scaleType="centerCrop"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/live_color_primary_text" android:tag="binding_3" android:layout_width="0dp" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1" android:fontFamily="@font/roboto_regular" android:layout_marginStart="8dp" android:textFontWeight="400"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/live_color_primary_text" android:id="@+id/tvOpenGiftPanel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_live_i_want_to_be_on_the_list" android:includeFontPadding="false" android:drawableRight="@drawable/icon_live_rank_self_arrow" android:fontFamily="@font/roboto_regular" android:textFontWeight="400"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</com.hbg.lib.widgets.LoadingLayout>

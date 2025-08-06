@@ -1,0 +1,10 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="8" height="wrap_content" orientation="vertical" paddingBottom="16" paddingTop="16" width="325">
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginLeft="16" orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" text="{{@i18n/n_copy_trading_followsetting_trader_close}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" weight="1" width="0"/>
+    </LinearLayout>
+    <TextView height="wrap_content" marginLeft="16" marginRight="16" marginTop="12" maxLines="0" text="{{@i18n/n_copy_trading_followsetting_trader_close_tips}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" width="match_parent"/>
+    <LinearLayout height="44" marginLeft="16" marginRight="16" marginTop="20" orientation="horizontal" width="match_parent">
+        <TextView background="@color/KAssetTopHeaderContentBackground" cornerRadius="4" gravity="center" height="44" onClick="@event.followSetting.cancelDialogClose()" text="{{@i18n/n_cancel}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" weight="1" width="0dp"/>
+        <TextView background="@color/kColorMajorTheme100" cornerRadius="4" gravity="center" height="44" marginLeft="8" onClick="@event.followSetting.closeConfirm()" text="{{@i18n/n_copy_trading_followsetting_trader_close_confirm}}" textColor="#FFFFFF" textFontWeight="500" textSize="14" weight="1" width="0dp"/>
+    </LinearLayout>
+</LinearLayout>

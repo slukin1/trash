@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/index_market_list_parent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_101">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/index_card_bottom_round_corner_bg" android:paddingLeft="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="93dp">
+        <androidx.viewpager2.widget.ViewPager2 android:id="@+id/market_view_pager2" android:layout_width="match_parent" android:layout_height="84dp"/>
+        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/rv_config_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="84dp" android:overScrollMode="never"/>
+        <com.hbg.lib.widgets.CommonHorizontalIndicator android:layout_gravity="center" android:id="@+id/index_market_list_scroll_bar" android:visibility="visible" android:layout_width="@dimen/dimen_24" android:layout_height="@dimen/dimen_3" android:layout_marginTop="@dimen/dimen_2" android:layout_marginBottom="@dimen/dimen_4" android:layout_marginEnd="@dimen/dimen_8"/>
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/market_slide_guide" android:layout_width="200dp" android:layout_height="60dp" android:layout_marginBottom="@dimen/dimen_8" app:lottie_fileName="index_market_lottie_slide_guide.json" app:lottie_loop="false"/>
+    <View android:layout_gravity="bottom" android:id="@+id/index_market_list_parent_bottom" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_8"/>
+</FrameLayout>

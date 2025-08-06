@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/intro_layout" android:background="@drawable/shape_currency_detail_mid" android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/otc_entry" android:background="@drawable/shape_zero_fee_entrance_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginTop="@dimen/dimen_15" android:paddingStart="@dimen/dimen_10" android:paddingEnd="@dimen/dimen_10">
+        <ImageView android:layout_width="@dimen/dimen_13" android:layout_height="@dimen/dimen_13" android:src="@drawable/asset_details_buy_icon"/>
+        <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/tv_zero_fee_otc" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_balance_detail_zero_buy" android:layout_weight="1" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_10" android:layout_marginEnd="@dimen/dimen_10"/>
+        <com.huobi.view.FontIconTextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/baseColorMajorTheme100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon_font_small_arrow"/>
+    </LinearLayout>
+    <include android:visibility="gone" layout="@layout/layout_currency_detail_earn"/>
+    <View android:id="@+id/intro_trade_divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_10"/>
+    <include android:visibility="gone" layout="@layout/layout_currency_detail_go_trade"/>
+</LinearLayout>

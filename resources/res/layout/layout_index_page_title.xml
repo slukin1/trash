@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/icon_iv" android:layout_width="@dimen/dimen_14" android:layout_height="@dimen/dimen_14" android:layout_centerVertical="true"/>
+    <TextView android:textSize="@dimen/global_text_size_14" android:id="@+id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/icon_iv" android:layout_alignParentBottom="true" android:fontFamily="@font/roboto_medium"/>
+    <ImageView android:id="@+id/iv_red_dot" android:visibility="gone" android:layout_width="@dimen/dimen_6" android:layout_height="@dimen/dimen_6" android:src="@drawable/red_point" android:layout_toRightOf="@+id/title_tv" android:layout_alignTop="@+id/title_tv"/>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<!-- 现货头部卡片 模版 -->
+<LinearLayout background="@color/KAssetTopHeaderContentBackground" height="wrap_content" marginLeft="16" marginRight="16" marginBottom="12" orientation="vertical" width="match_parent" cornerRadius="8">
+
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginLeft="12" marginRight="12" marginTop="12" orientation="horizontal" width="match_parent">
+
+        <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" textFontWeight="700" height="wrap_content" text="{{@data.botTotalAsset}}" textColor="@color/kColorPrimaryText" textSize="16" width="210"/>
+
+    </LinearLayout>
+
+    <LinearLayout height="wrap_content" marginBottom="12" marginLeft="12" marginRight="12" marginTop="10" orientation="horizontal" width="wrap_content">
+
+        <TextView height="wrap_content" text="{{@i18n/n_contract_profit}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+
+        <TextView height="wrap_content" marginLeft="4" text="{{@data.botTodayPlNumber}}" textColor="@color/kColorPrimaryText" textSize="12" width="wrap_content" textFontWeight="600"/>
+
+    </LinearLayout>
+
+</LinearLayout>

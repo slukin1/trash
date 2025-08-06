@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_agents_title" android:drawableTop="0x7f08089b" android:drawablePadding="@dimen/no_connection_error_view_asset_padding" style="@style/no_connection_error_view_title"/>
+    <TextView android:padding="@dimen/no_connection_error_view_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_agents_message" style="@style/no_connection_error_view_text"/>
+    <Button android:id="@+id/no_agents_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_message_button" style="@style/no_agents_button"/>
+</LinearLayout>

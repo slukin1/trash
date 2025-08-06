@@ -1,0 +1,108 @@
+<LinearLayout width="375" height="wrap_content" orientation="vertical">
+	<LinearLayout width="match_parent" height="wrap_content" gravity="top" orientation="vertical" cornerRadius="8" marginLeft="10" marginRight="10" background="@color/KBaseColorContentBackground" enable="false">
+		<LinearLayout width="match_parent" height="wrap_content" gravity="top" orientation="vertical" cornerRadius="8" marginTop="6" marginLeft="6" marginBottom="6" marginRight="6" paddingLeft="12" paddingRight="12" background="@color/KBaseColorContentBackground" borderWidth="1" borderColor="@color/kColorPrimarySeparator">
+
+			<!--昵称+分享+跟单人数+跟单上限+标签-->
+			<LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginTop="12">
+
+				<!--头像+排名-->
+				<FrameLayout width="wrap_content" height="wrap_content" gravity="centerHorizontal" orientation="vertical">
+					<ImageView width="44" height="44" src="{{@data.traderListData.firstTraderInfo.imgUrl}}" cornerRadius="22"/>
+				</FrameLayout>
+
+				<View width="12"/>
+
+				<LinearLayout width="188" height="wrap_content" gravity="left" orientation="vertical">
+
+					<!--昵称+分享(188-9-2=177)-->
+					<LinearLayout width="wrap_content" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+						<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.nickName}}" maxWidth="144" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="16"/>
+						<View width="4"/>
+						<TextView width="wrap_content" height="wrap_content" maxLines="0" maxWidth="35" paddingLeft="4" paddingRight="4" paddingBottom="1" paddingTop="1" borderColor="@color/eColorPrimarySeparator" scaleType="center_crop" borderWidth="0.5" cornerRadius="2" background="@color/KBaseColorInputBackground" text="{{@i18n/n_copytrading_documentary_pass}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="8" visibility="{{@data.traderListData.firstTraderInfo.followed | gone}}"/>
+					</LinearLayout>
+
+					<View height="4"/>
+
+					<!--跟单人数+跟单上限-->
+					<LinearLayout width="wrap_content" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+						<ImageView width="9" height="10" src="@drawable/trader_list_head"/>
+						<View width="4"/>
+						<TextView width="wrap_content" height="wrap_content" maxWidth="172" text="{{@data.traderListData.firstTraderInfo.copyUserNum}}/{{@data.traderListData.firstTraderInfo.fullUserNum}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="10"/>
+					</LinearLayout>
+
+					<View height="4"/>
+
+				</LinearLayout>
+
+				<View weight="1"/>
+
+				<!--跟单按钮-->
+				<LinearLayout width="wrap_content" height="28" gravity="centerHorizontal" orientation="vertical">
+					<TextView paddingLeft="8" paddingRight="8" width="56" maxWidth="72" height="match_parent" text="{{@data.traderListData.firstTraderInfo.followText}}" textColor="#FFFFFF" textFontWeight="500" textSize="12" cornerRadius="4" background="@color/kColorMajorTheme100" visibility="{{@data.traderListData.firstTraderInfo.showFollowText | gone}}" maxLines="2" gravity="center"/>
+					<TextView width="56" maxWidth="72" height="match_parent" text="{{@data.traderListData.firstTraderInfo.fullText}}" paddingLeft="8" paddingRight="8" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" cornerRadius="4" background="@color/KBaseColorDeepestBackground" visibility="{{@data.traderListData.firstTraderInfo.showFullText | gone}}" maxLines="2" gravity="center"/>
+					<TextView width="56" maxWidth="72" height="match_parent" text="{{@data.traderListData.firstTraderInfo.checkText}}" paddingLeft="8" paddingRight="8" textColor="#FFFFFF" textFontWeight="500" textSize="12" cornerRadius="4" background="@color/kColorMajorTheme100" visibility="{{@data.traderListData.firstTraderInfo.showCheckText | gone}}" maxLines="2" gravity="center"/>
+					<TextView width="56" maxWidth="72" height="match_parent" text="{{@data.traderListData.firstTraderInfo.followedText}}" paddingLeft="8" paddingRight="8" textColor="#FFFFFF" textFontWeight="500" textSize="12" cornerRadius="4" background="@color/kColorMajorTheme100" visibility="{{@data.traderListData.firstTraderInfo.showFollowedText | gone}}" maxLines="2" gravity="center"/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<View height="12"/>
+
+			<!--总收益+K线-->
+			<LinearLayout width="match_parent" height="66" gravity="centerVertical" orientation="horizontal">
+				<!--总收益率标题-->
+				<LinearLayout width="wrap_content" height="66" gravity="left" orientation="vertical">
+					<TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_copytrading_days_income}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12"/>
+					<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.profitRate90}}" textColor="{{@data.traderListData.firstTraderInfo.apyTextColor}}" textFontWeight="400" textSize="22"/>
+					<View height="8"/>
+					<LinearLayout width="wrap_content" height="wrap_content">
+						<TextView width="wrap_content" height="wrap_content" maxWidth="135" text="{{@data.traderListData.firstTraderInfo.profit90}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="12"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<View weight="1"/>
+
+				<!--K线图-->
+				<LinearLayout width="144" height="50">
+					<KlineChat width="match_parent" height="match_parent" rate="{{@data.traderListData.firstTraderInfo.profitRate90}}" data="{{@data.traderListData.firstTraderInfo.profits}}"/>
+				</LinearLayout>
+
+				<View width="12"/>
+
+			</LinearLayout>
+
+			<!--分割线-->
+			<View height="0.5" width="match_parent" background="@color/kColorPrimarySeparator" marginTop="12"/>
+			<!--最大回撤+AUM-->
+			<LinearLayout width="match_parent" marginTop="12" height="16" orientation="horizontal">
+				<TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_copytrading_maximum_drawdown}}" maxWidth="142" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View width="4"/>
+				<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.mdd}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View weight="1"/>
+				<TextView width="wrap_content" maxWidth="80" height="wrap_content" text="{{@i18n/n_copytrading_AUM}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" gravity="right" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View width="4"/>
+				<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.aum}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+			</LinearLayout>
+			<!--胜率+跟单者总收益-->
+			<LinearLayout width="match_parent" marginTop="6" marginBottom="12" height="wrap_content" orientation="horizontal">
+				<TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_trade_win_rate}}" maxWidth="112" textColor="@color/kColorThreeLevelText" textFontWeight="400" maxLines="2" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View width="4"/>
+				<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.winRate}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View weight="1"/>
+				<TextView width="wrap_content" maxWidth="80" height="wrap_content" text="{{@i18n/copy_trading_follow_profits}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" maxLines="2" gravity="right" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+				<View width="4"/>
+				<TextView width="wrap_content" height="wrap_content" text="{{@data.traderListData.firstTraderInfo.copyProfit}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="{{@data.traderListData.firstTraderInfo.winRateFontSize}}"/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout gravity="centerHorizontal" height="wrap_content" orientation="vertical" width="match_parent">
+		<ImageView marginTop="4" width="8" height="4" src="@drawable/edge_engine_earn_pop_up"/>
+		<LinearLayout width="240" height="wrap_content" orientation="vertical" cornerRadius="8" background="@color/KBaseColorContentBackground">
+			<TextView width="wrap_content" height="18" marginTop="12" marginLeft="12" textSize="14" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@i18n/n_copy_trading_open_follow}}"/>
+			<TextView width="match_parent" height="wrap_content" marginTop="4" marginLeft="12" marginRight="12" textSize="12" textFontWeight="400" maxLines="0" maxWidth="216" textColor="@color/kColorSecondaryText" text="{{@i18n/n_copy_trading_home_guide}}"/>
+			<LinearLayout marginTop="12" marginRight="12" marginBottom="12" width="match_parent" height="24" orientation="horizontal" gravity="right" layout_gravity="right">
+				<TextView width="wrap_content" height="match_parent" marginLeft="12" paddingLeft="16" paddingRight="16" gravity="center" background="@color/kColorMajorTheme100" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/KBaseTextColor" text="{{@i18n/n_grid_user_guide_complete}}" onClick="@event.traderListData.hidePop()"/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

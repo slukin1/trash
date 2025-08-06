@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huobi.copytrading.widget.HBNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/nl_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/shape_up_position_pager_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_up_position_top_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_56">
+                <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:gravity="center_vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/n_contract_position_limit_symbol" android:layout_weight="80" android:paddingHorizontal="12dp" android:lineHeight="@dimen/dimen_16"/>
+                <View android:background="@color/baseColorPrimarySeparator" android:layout_width="@dimen/dimen_0_5" android:layout_height="match_parent"/>
+                <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:gravity="center_vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/n_contract_position_limit_leverage_range" android:layout_weight="132" android:paddingHorizontal="12dp" android:lineHeight="@dimen/dimen_16"/>
+                <View android:background="@color/baseColorPrimarySeparator" android:layout_width="@dimen/dimen_0_5" android:layout_height="match_parent"/>
+                <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:gravity="center_vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/n_contract_position_limit_adjustment_multiple" android:layout_weight="132" android:paddingHorizontal="12dp" android:lineHeight="@dimen/dimen_16"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_up_position" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.hbg.lib.widgets.LoadingLayout>
+</com.huobi.copytrading.widget.HBNestedScrollView>

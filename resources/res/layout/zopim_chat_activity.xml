@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root_container" android:background="@color/chatBaseColorContent" android:layout_width="match_parent" android:layout_height="match_parent" android:layoutDirection="ltr">
+    <include android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/zopim_toolbar"/>
+    <View android:id="@+id/divider" android:background="@color/chat_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_below="@+id/toolbar"/>
+    <FrameLayout android:id="@+id/chat_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/divider"/>
+</RelativeLayout>

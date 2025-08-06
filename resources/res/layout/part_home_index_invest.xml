@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huobi.view.roundview.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/index_invest_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_8" app:rv_backgroundColor="@color/baseColorContentBackground" app:rv_cornerRadius="@dimen/dimen_8">
+    <RelativeLayout android:id="@+id/rl_huo_bi_invest_title" android:layout_width="match_parent" android:layout_height="40dp">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="#000000" android:id="@+id/tv_huo_bi_invest_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium" android:paddingStart="@dimen/dimen_16"/>
+        <ImageView android:id="@+id/iv_huo_bi_invest_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_page_earn_more_right_next" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/dimen_16" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_prime_invest" android:layout_width="match_parent" android:layout_height="@dimen/dimen_66" android:layout_below="@+id/rl_huo_bi_invest_title">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/dimen_20" android:layout_marginStart="@dimen/dimen_16">
+            <ImageView android:id="@+id/iv_invest_coin_image" android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView android:textSize="14sp" android:textColor="#000000" android:gravity="center" android:id="@+id/tv_invest_coin_name" android:layout_width="wrap_content" android:layout_height="16dp" android:fontFamily="@font/roboto_medium" android:layout_marginStart="4dp" android:layout_toEndOf="@+id/iv_invest_coin_image"/>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/dimen_16" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_4" android:layout_toEndOf="@+id/tv_invest_coin_name">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_invest_trading_to_earn"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <com.huobi.view.roundview.RoundTextView android:textSize="10sp" android:textColor="@color/baseColorMajorTheme100" android:gravity="center_vertical" android:id="@+id/tv_invest_countdown" android:layout_width="wrap_content" android:layout_height="16dp" android:layout_marginTop="2dp" android:layout_marginEnd="@dimen/dimen_16" android:layout_alignParentEnd="true" app:rv_backgroundColor="@color/baseColorMajorTheme006" app:rv_cornerRadius="@dimen/dimen_2"/>
+        <TextView android:textSize="16sp" android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:id="@+id/tv_invest_apy" android:layout_width="wrap_content" android:layout_height="21dp" android:layout_marginTop="28dp" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_16" android:autoSizeTextType="1"/>
+        <TextView android:textSize="10sp" android:textColor="#909090" android:gravity="center" android:id="@+id/tv_invest_apy_text" android:layout_width="wrap_content" android:layout_height="15dp" android:layout_marginTop="47dp" android:text="APY" android:layout_marginStart="@dimen/dimen_16"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="#000000" android:id="@+id/tv_invest_deadline" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginTop="28dp" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textSize="14sp" android:textColor="#000000" android:id="@+id/tv_invest_total_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+        <RelativeLayout android:id="@+id/rl_invest_progress_bar" android:layout_width="120dp" android:layout_height="4dp" android:layout_marginTop="38dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true">
+            <ProgressBar android:id="@+id/pb_invest_progress_bar" android:layout_width="match_parent" android:layout_height="match_parent" android:max="100" android:progressDrawable="@drawable/earn_progress_bar_drawable" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal"/>
+        </RelativeLayout>
+        <TextView android:textSize="10sp" android:textColor="#909090" android:id="@+id/tv_invest_deadline_desc" android:layout_width="wrap_content" android:layout_height="15dp" android:layout_marginTop="47dp"/>
+        <RelativeLayout android:layout_width="156dp" android:layout_height="15dp" android:layout_marginTop="47dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true">
+            <TextView android:textSize="10sp" android:textColor="#909090" android:gravity="center" android:id="@+id/tv_invest_total_position" android:layout_width="wrap_content" android:layout_height="15dp" android:layout_alignParentEnd="true"/>
+            <TextView android:textSize="10sp" android:textColor="#000000" android:gravity="center" android:id="@+id/tv_invest_sold_position" android:layout_width="wrap_content" android:layout_height="15dp" android:layout_marginEnd="2dp" android:layout_toStartOf="@+id/tv_invest_total_position"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:id="@+id/invest_separate_line" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_below="@+id/rl_prime_invest"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_normal_invest" android:layout_width="match_parent" android:layout_height="@dimen/dimen_92" android:layout_below="@+id/rl_prime_invest">
+        <include android:id="@+id/ll_normal_invest_type_1" layout="@layout/part_home_index_invest_normal_item"/>
+        <View android:id="@+id/normal_invest_separate_line_1" android:background="@color/baseColorPrimarySeparator" android:layout_width="1px" android:layout_height="match_parent"/>
+        <include android:id="@+id/ll_normal_invest_type_2" layout="@layout/part_home_index_invest_normal_item"/>
+        <View android:id="@+id/normal_invest_separate_line_2" android:background="@color/baseColorPrimarySeparator" android:layout_width="1px" android:layout_height="match_parent"/>
+        <include android:id="@+id/ll_normal_invest_type_3" layout="@layout/part_home_index_invest_normal_item"/>
+    </LinearLayout>
+</com.huobi.view.roundview.RoundRelativeLayout>

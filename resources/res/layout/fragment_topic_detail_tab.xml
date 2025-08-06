@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/srl_tab_content" android:tag="layout/fragment_topic_detail_tab_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/srl_loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="400dp" app:empty_view="@layout/common_empty_item_layout" app:error_view="@layout/ht_exchange_error_view" app:loading_view="@layout/common_loading_view_balance">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_tab_content" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.hbg.lib.widgets.LoadingLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

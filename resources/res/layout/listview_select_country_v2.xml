@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/login_v2_bottom_background" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:isScrollContainer="true">
+    <RelativeLayout android:id="@+id/login_tool_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/close_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_30" android:src="@drawable/edge_engine_top_bar_back_normal" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_login_country_or_region" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/login_v2_content_bg_color" android:paddingTop="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/search_country_layout" android:layout_width="match_parent" android:layout_height="@dimen/dimen_34" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15">
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:id="@+id/choose_country_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_otc_new_otc_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:fontFamily="sans-serif"/>
+            <RelativeLayout android:background="@drawable/country_select_edit_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_12_5" android:layout_toLeftOf="@+id/choose_country_cancel">
+                <EditText android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_main_text_color" android:textColorHint="@color/baseColorSecondaryText050" android:id="@+id/choose_country_edit" android:background="@null" android:paddingLeft="@dimen/dimen_39" android:paddingRight="@dimen/dimen_60" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/choose_country_search_hint" android:singleLine="true" android:layout_centerVertical="true" android:textCursorDrawable="@drawable/color_cursor1"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_10" android:layout_marginBottom="@dimen/dimen_10" android:src="@drawable/btn_market_search" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <com.hbg.lib.widgets.LoadingLayout android:id="@+id/select_country_layout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/listview_country" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.hbg.lib.widgets.LoadingLayout>
+    </LinearLayout>
+</LinearLayout>

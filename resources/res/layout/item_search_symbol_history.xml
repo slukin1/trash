@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/item_search_symbol_layout" android:background="@drawable/selector_common_item_click" android:layout_width="match_parent" android:layout_height="@dimen/dimen_55">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_main_text_color" android:id="@+id/item_search_symbol_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium"/>
+        <ImageView android:id="@+id/item_search_symbol_collect" android:padding="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/star_common_light2" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_marginLeft="@dimen/dimen_15" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_search_result_title_area" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50" android:layout_marginTop="@dimen/dimen_30">
+        <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:text="@string/search_symbol_lastest_search" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:id="@+id/tv_search_clear" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/search_clear" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="219dp" android:width="375dp" android:viewportWidth="375" android:viewportHeight="219">
+    <path android:fillColor="@drawable/$bg_personal_center__0" android:pathData="M0,0h375v219h-375z"/>
+</vector>

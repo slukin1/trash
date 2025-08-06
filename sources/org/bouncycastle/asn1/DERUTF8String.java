@@ -1,0 +1,34 @@
+package org.bouncycastle.asn1;
+
+public class DERUTF8String extends ASN1UTF8String {
+    public DERUTF8String(String str) {
+        super(str);
+    }
+
+    public DERUTF8String(byte[] bArr, boolean z11) {
+        super(bArr, z11);
+    }
+
+    public static DERUTF8String getInstance(Object obj) {
+        if (obj == null || (obj instanceof DERUTF8String)) {
+            return (DERUTF8String) obj;
+        }
+        if (obj instanceof ASN1UTF8String) {
+            return new DERUTF8String(((ASN1UTF8String) obj).contents, false);
+        }
+        if (obj instanceof byte[]) {
+            try {
+                return (DERUTF8String) ASN1Primitive.fromByteArray((byte[]) obj);
+            } catch (Exception e11) {
+                throw new IllegalArgumentException("encoding error in getInstance: " + e11.toString());
+            }
+        } else {
+            throw new IllegalArgumentException("illegal object in getInstance: " + obj.getClass().getName());
+        }
+    }
+
+    public static DERUTF8String getInstance(ASN1TaggedObject aSN1TaggedObject, boolean z11) {
+        ASN1Primitive object = aSN1TaggedObject.getObject();
+        return (z11 || (object instanceof DERUTF8String)) ? getInstance(object) : new DERUTF8String(ASN1OctetString.getInstance(object).getOctets(), true);
+    }
+}

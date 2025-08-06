@@ -1,0 +1,5 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" gravity="center">
+  <TextView width="wrap_content" height="wrap_content" text="{{@data.word}}" textSize="22"/>
+ <TextView width="wrap_content" height="wrap_content" text="this is a demo" textSize="22"/>
+  <TextView marginTop="25" paddingLeft="10" paddingRight="10" width="wrap_content" height="40" text="Change Word" onClick="@event.changeWord()" textSize="15" background="#00CC33"/>
+</LinearLayout>

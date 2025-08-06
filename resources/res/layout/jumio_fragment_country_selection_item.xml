@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/holder_bg" android:background="@drawable/jumio_list_item_transparent" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="54dp" android:paddingStart="@dimen/jumio_padding_medium" android:paddingEnd="@dimen/jumio_padding_medium">
+    <androidx.appcompat.widget.AppCompatTextView android:textColor="?attr/jumio_text_foreground" android:gravity="center" android:id="@+id/tv_country" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

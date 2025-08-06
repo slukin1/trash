@@ -1,0 +1,165 @@
+<LinearLayout
+        background="@color/KBaseColorContentBackground"
+        height="430"
+        orientation="vertical"
+        topLeftRadius="8"
+        topRightRadius="8"
+        width="match_parent">
+    <FrameLayout
+            height="354"
+            width="match_parent">
+        <SliderView
+                autoScroll="false"
+                direction="horizontal"
+                height="match_parent"
+                scrollMode="Infinit"
+                scrollbars="true"
+                timeInterval="3"
+                typeKey="type"
+                currentIndex="@data.guidepop.currentIndex"
+                width="match_parent">
+            <For
+                    data="@data.guidepop.popData"
+                    itemKey="element">
+                <Cell
+                        height="match_parent"
+                        type="cell"
+                        width="match_parent">
+                    <LinearLayout
+                            height="match_parent"
+                            orientation="vertical"
+                            width="match_parent">
+                        <ImageView
+                                height="229"
+                                src="{{@element.image}}"
+                                width="match_parent" />
+                        <View
+                                background="@color/KBaseColorPrimarySeparator"
+                                height="1"
+                                width="match_parent" />
+                        <TextView
+                                height="wrap_content"
+                                marginLeft="16"
+                                marginTop="16"
+                                text="{{@element.title}}"
+                                textColor="@color/kColorPrimaryText"
+                                textFontWeight="500"
+                                textSize="16"
+                                width="match_parent" />
+                        <TextView
+                                height="wrap_content"
+                                marginLeft="16"
+                                marginTop="16"
+                                text="{{@element.content}}"
+                                textColor="@color/KBaseColorSecondaryText"
+                                textFontWeight="400"
+                                textSize="14"
+                                width="match_parent" />
+                    </LinearLayout>
+                </Cell>
+                <Cell
+                        height="match_parent"
+                        type="cell1"
+                        width="match_parent">
+                    <LinearLayout
+                            height="match_parent"
+                            orientation="vertical"
+                            width="match_parent">
+                        <ImageView
+                                height="229"
+                                src="{{@element.image}}"
+                                width="match_parent" />
+                        <View
+                                background="@color/KBaseColorPrimarySeparator"
+                                height="1"
+                                width="match_parent" />
+                        <TextView
+                                height="wrap_content"
+                                marginLeft="16"
+                                marginTop="16"
+                                text="{{@element.title}}"
+                                textColor="@color/kColorPrimaryText"
+                                textFontWeight="500"
+                                textSize="16"
+                                width="match_parent" />
+                        <TextView
+                                height="wrap_content"
+                                marginLeft="16"
+                                marginTop="16"
+                                text="{{@element.subTitle}}"
+                                textColor="@color/kColorPrimaryText"
+                                textFontWeight="500"
+                                textSize="16"
+                                width="match_parent" />
+                        <TextView
+                                height="wrap_content"
+                                marginLeft="16"
+                                marginTop="4"
+                                text="{{@element.content}}"
+                                textColor="@color/KBaseColorSecondaryText"
+                                textFontWeight="400"
+                                textSize="14"
+                                width="match_parent" />
+                    </LinearLayout>
+                </Cell>
+            </For>
+        </SliderView>
+        <ImageView
+                height="28"
+                layout_gravity="right"
+                marginRight="16"
+                marginTop="8"
+                src="@drawable/edge_engine_copy_trading_dialog_close"
+                width="28" />
+    </FrameLayout>
+    <LinearLayout
+            height="44"
+            marginBottom="16"
+            marginTop="16"
+            orientation="horizontal"
+            width="match_parent">
+        <TextView
+                background="@color/trade_current_price_container"
+                bottomLeftRadius="4"
+                bottomRightRadius="4"
+                gravity="center"
+                height="44"
+                marginLeft="16"
+                text="{{@i18n/n_exchange_guide_last}}"
+                onClick="@event.guidepop.last()"
+                visibility="@data.guidepop.lastSetUpVis"
+                textColor="@color/kColorPrimaryText"
+                textSize="14"
+                topLeftRadius="4"
+                topRightRadius="4"
+                width="100" />
+        <LinearLayout
+                background="@color/kColorMajorTheme100"
+                bottomLeftRadius="4"
+                bottomRightRadius="4"
+                gravity="center"
+                height="44"
+                marginLeft="16"
+                onClick="@event.guidepop.next()"
+                marginRight="16"
+                orientation="horizontal"
+                topLeftRadius="4"
+                topRightRadius="4"
+                weight="1"
+                width="0">
+            <TextView
+                    height="wrap_content"
+                    text="{{@i18n/n_exchange_guide_next}}"
+                    textColor="@color/KBaseTextColor"
+                    textSize="14"
+                    width="wrap_content" />
+            <TextView
+                    height="wrap_content"
+                    marginLeft="4"
+                    text="{{@data.guidepop.setupText}}"
+                    textColor="@color/otc_double_dialog_divide_color"
+                    textSize="14"
+                    width="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,136 @@
+{
+    "data": {
+        "hot": "",
+        "access": [{
+            "id": 40,
+            "show": 1,
+            "flag": 1,
+            "type": 1,
+            "name": "PrimeVote #2",
+            "sort": 1,
+            "title": "新币专区",
+            "summary": {
+                "content": "20个项目精彩角逐",
+                "color": ""
+            },
+            "imageUrl": "",
+            "frontImageUrl": "https://download.hbfile.net/hbg/img/202301061641/950e7a201fef42b4be76646904db0ffb/3393a45259ecb213489ae8ddb7cecc16.png",
+            "bgImageUrl": "",
+            "tagUrl": "",
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/assetactivity/primevote/detail?activityId=5&disableNav=YES&refresh=2&utm_source=home_tofu",
+                "jumpSymbol": null,
+                "title": "新币专区",
+                "needLogin": 0
+            },
+            "focusType": 1,
+            "focusContent": "投票上币",
+            "beginTime": 1673246785173,
+            "endTime": 0,
+            "style": 1,
+            "iconLabel": "",
+            "materialId": 0,
+            "extension": "",
+            "extensionText": ""
+        }, {
+            "id": 5,
+            "show": 1,
+            "flag": 1,
+            "type": 1,
+            "name": "Top Up-新版本",
+            "sort": 2,
+            "title": "快捷买币",
+            "summary": {
+                "content": "价格更好",
+                "color": ""
+            },
+            "imageUrl": "https://download.hbfile.net/hbg/img/2a1558cd1b9913e85cd51563a9f92f71.png",
+            "frontImageUrl": "https://download.hbfile.net/hbg/img/3357f05280dabde62f00b8fa62913272.png",
+            "bgImageUrl": "",
+            "tagUrl": "",
+            "url": {
+                "jumpMode": 39,
+                "jumpUrl": "",
+                "jumpSymbol": null,
+                "title": "快捷买币",
+                "needLogin": 0
+            },
+            "focusType": 1,
+            "focusContent": "充值/快捷购买",
+            "beginTime": 1673246785173,
+            "endTime": 0,
+            "style": 1,
+            "iconLabel": "",
+            "materialId": 0,
+            "extension": "",
+            "extensionText": ""
+        }, {
+            "id": 19,
+            "show": 1,
+            "flag": 1,
+            "type": 1,
+            "name": "huobi Earn-USDD18%活動",
+            "sort": 3,
+            "title": "火必理财",
+            "summary": {
+                "content": "轻松保本稳健赚",
+                "color": ""
+            },
+            "imageUrl": "",
+            "frontImageUrl": "https://download.hbfile.net/hbg/img/202212281511/ede450f03f1246f78f6a4434fb71c382/d690475906b1939d823bf723625224bd.gif",
+            "bgImageUrl": "",
+            "tagUrl": "",
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5?utm_source=home_tofu",
+                "jumpSymbol": null,
+                "title": "火必理财",
+                "needLogin": 0
+            },
+            "focusType": 1,
+            "focusContent": "USDD 18%年利率",
+            "beginTime": 1673246785173,
+            "endTime": 0,
+            "style": 1,
+            "iconLabel": "",
+            "materialId": 0,
+            "extension": "",
+            "extensionText": ""
+        }, {
+            "id": null,
+            "show": 1,
+            "flag": 1,
+            "type": 2,
+            "name": "直播-接口",
+            "sort": 4,
+            "title": "直播",
+            "summary": {
+                "content": "观看:368",
+                "color": ""
+            },
+            "imageUrl": "https://content-all-s3.hbfile.net/images/2022-12-13/IMG_CROP_20221213141808051.jpeg",
+            "frontImageUrl": "https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/df6b0e98-d76f-4b86-921a-9cd1e78acac6.gif",
+            "bgImageUrl": "https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/17230c3a-7c72-48ff-bcb9-227f9d6e4e55.gif",
+            "tagUrl": "https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/6e9ed9a4-0023-4e51-92af-4d075f56def9.png",
+            "url": {
+                "jumpMode": 201,
+                "jumpUrl": "holigeit://open/v1?login=0&url=ihuobiglobal://m.hbg.com/live/room?liveId=4496",
+                "jumpSymbol": null,
+                "title": "直播",
+                "needLogin": 0
+            },
+            "focusType": 1,
+            "focusContent": "现货布局合约指导",
+            "beginTime": 1673246785175,
+            "endTime": null,
+            "style": 1,
+            "iconLabel": "",
+            "materialId": 0,
+            "extension": "",
+            "extensionText": ""
+        }]
+    },
+    "code": 200,
+    "success": true
+}

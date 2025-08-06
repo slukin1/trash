@@ -1,0 +1,90 @@
+<LinearLayout width='match_parent'
+  height='wrap_content'>
+  <FrameLayout width='343'
+    height='52'
+    borderWidth='0.5'
+    borderColor='@color/eColorPrimarySeparator'
+    background='@color/KBaseColorContentBackground'
+    marginLeft='16'
+    marginRight='16'
+    cornerRadius='8'
+    visibility='{{@data.adActivityBanner.noticeVisibility | gone}}'>
+    <SliderView width='match_parent'
+      height='36'
+      direction='horizontal'
+      autoScroll='{{@data.adActivityBanner.autoScroll}}'
+      timeInterval='5'
+      marginTop='8'
+      scrollMode='infinite'
+      currentIndex='@data.adActivityBanner.currentNoticeIndex'
+      onSelected='@event.adActivityBanner.selectedNoticeIndex(@eventParams)'>
+      <For data='@data.adActivityBanner.noticeList'
+        itemKey='element'
+        typeKey='type'>
+        <Cell width='match_parent'
+          height='wrap_content'
+          type='1'>
+          <LinearLayout width='match_parent'
+            height='36'
+            gravity='centerVertical'
+            orientation='horizontal'
+            paddingLeft='12'
+            paddingRight='24'
+            onClick='@event.adActivityBanner.clickNoticeItem()'>
+            <TextView width='0'
+              weight='1'
+              height='wrap_content'
+              text='{{@element.title}}'
+              textColor='@color/kColorPrimaryText'
+              textFontWeight='500'
+              textSize='14'
+              maxLines='2' />
+            <ImageView width='30'
+              height='30'
+              marginLeft='24'
+              src='{{@element.currentImageURL}}' />
+          </LinearLayout>
+        </Cell>
+      </For>
+    </SliderView>
+    <FrameLayout width='18'
+      height='18'
+      layout_gravity='right'
+      onClick='@event.adActivityBanner.clickNoticeClose()'>
+      <ImageView width='10'
+        height='10'
+        layout_gravity='center'
+        src='@drawable/edge_engine_ad_close' />
+    </FrameLayout>
+    <LinearLayout width='match_parent'
+      height='wrap_content'
+      orientation='horizontal'
+      layout_gravity='bottom'
+      marginBottom='5'
+      visibility='{{@data.adActivityBanner.noticeIndicatorVisibility | gone}}'
+      marginLeft='12'>
+      <For data='@data.adActivityBanner.noticeIndicatorList'
+        itemKey='element'
+        typeKey='type'>
+        <Cell width='wrap_content'
+          height='wrap_content'
+          type='1'>
+          <FrameLayout width='6'
+            height='2'
+            background='@color/eColorPrimarySeparator'
+            marginRight='2'
+            cornerRadius='2' />
+        </Cell>
+        <Cell width='wrap_content'
+          height='wrap_content'
+          type='2'>
+          <FrameLayout width='2'
+            height='2'
+            background='@color/eColorPrimarySeparator'
+            marginRight='2'
+            cornerRadius='1' />
+        </Cell>
+      </For>
+    </LinearLayout>
+  </FrameLayout>
+</LinearLayout>

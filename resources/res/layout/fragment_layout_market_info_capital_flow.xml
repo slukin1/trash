@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/loading_layout_fund_situation" android:background="?attr/kline_content_background_color" android:layout_width="match_parent" android:layout_height="match_parent" app:empty_view="@layout/layout_trade_history_empty" app:error_view="@layout/kline_error_view">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_20">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_18" android:textColor="?attr/kline_primary_text_color" android:paddingTop="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_kline_money_flow_analyze" android:fontFamily="@font/roboto_medium"/>
+                <com.huobi.view.FontIconTextView android:textColor="?attr/kline_three_level_text_color" android:gravity="center" android:id="@+id/font_icon_text_view_fund_situation" android:paddingLeft="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="match_parent" android:text=""/>
+            </LinearLayout>
+            <RadioGroup android:orientation="horizontal" android:id="@+id/radio_group_fund_situation" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/radio_button_fund_situation_15_min" android:text="@string/n_kline_money_flow_period_15m" style="@style/kline_fund_situation_period"/>
+                <View android:layout_width="@dimen/dimen_7" android:layout_height="0dp"/>
+                <RadioButton android:id="@+id/radio_button_fund_situation_30_min" android:text="@string/n_kline_money_flow_period_30m" style="@style/kline_fund_situation_period"/>
+                <View android:layout_width="@dimen/dimen_7" android:layout_height="0dp"/>
+                <RadioButton android:id="@+id/radio_button_fund_situation_1_h" android:text="@string/n_kline_money_flow_period_1h" style="@style/kline_fund_situation_period"/>
+                <View android:layout_width="@dimen/dimen_7" android:layout_height="0dp"/>
+                <RadioButton android:id="@+id/radio_button_fund_situation_2_h" android:text="@string/n_kline_money_flow_period_2h" style="@style/kline_fund_situation_period"/>
+                <View android:layout_width="@dimen/dimen_7" android:layout_height="0dp"/>
+                <RadioButton android:id="@+id/radio_button_fund_situation_4_h" android:text="@string/n_kline_money_flow_period_4h" style="@style/kline_fund_situation_period"/>
+                <View android:layout_width="@dimen/dimen_7" android:layout_height="0dp"/>
+                <RadioButton android:id="@+id/radio_button_fund_situation_1_d" android:text="@string/n_kline_money_flow_period_1d" style="@style/kline_fund_situation_period"/>
+            </RadioGroup>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.huobi.view.barchart.BarChart android:id="@+id/bar_chart_market_fund_situation" android:layout_width="match_parent" android:layout_height="@dimen/dimen_220" app:center_text_color="?attr/kline_primary_text_color" app:center_text_size="@dimen/global_text_size_14" app:chart_color_1="#00a171" app:chart_color_2="#61e0ca" app:chart_color_3="#8af6e4" app:chart_color_4="#fdafbd" app:chart_color_5="#f5748c" app:chart_color_6="#e94359" app:chart_radius="@dimen/dimen_65" app:default_circle_color="?attr/kline_primary_separator_color" app:desc_text_color="?attr/kline_three_level_text_color" app:desc_text_size="@dimen/global_text_size_10" app:extended_line_length="@dimen/dimen_20" app:extended_line_width="@dimen/dimen_1" app:horizontal_extended_line_length="@dimen/dimen_90" app:label_text_color="?attr/kline_three_level_text_color" app:label_text_size="@dimen/global_text_size_10" app:line_text_margin="@dimen/dimen_2" app:percent_text_color="?attr/kline_primary_text_color" app:percent_text_size="@dimen/global_text_size_10" app:stroke_radius="@dimen/dimen_40"/>
+                <ImageView android:id="@+id/text_view_bar_chart_center_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?attr/kline_water_remark" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:background="?attr/kline_screening_criteria_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="@dimen/dimen_10" android:text="@string/n_kline_money_flow_order_type" style="@style/kline_fund_situation_table_head"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="@dimen/dimen_10" android:text="@string/n_kline_money_flow_large_order" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="@dimen/dimen_10" android:text="@string/n_kline_money_flow_mid_order" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="@dimen/dimen_10" android:text="@string/n_kline_money_flow_small_order" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="@dimen/dimen_10" android:text="@string/n_kline_money_flow_order_total" style="@style/kline_fund_situation_table_tab"/>
+                </LinearLayout>
+                <View android:background="?attr/kline_primary_separator_color" android:layout_width="@dimen/dimen_0_6" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_20" android:layout_marginBottom="@dimen/dimen_5"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:ellipsize="end" android:id="@+id/text_view_fund_situation_table_head_in" android:text="@string/n_kline_money_flow_order_buy" android:maxLines="1" style="@style/kline_fund_situation_table_head"/>
+                    <TextView android:id="@+id/text_view_fund_situation_large_in" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_mid_in" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_small_in" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_in" style="@style/kline_fund_situation_table_tab"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:ellipsize="end" android:id="@+id/text_view_fund_situation_table_head_out" android:text="@string/n_kline_money_flow_order_sell" android:maxLines="1" style="@style/kline_fund_situation_table_head"/>
+                    <TextView android:id="@+id/text_view_fund_situation_large_out" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_mid_out" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_small_out" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_out" style="@style/kline_fund_situation_table_tab"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:text="@string/n_kline_money_flow_total_in" style="@style/kline_fund_situation_table_head"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_large" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_mid" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_small" style="@style/kline_fund_situation_table_tab"/>
+                    <TextView android:id="@+id/text_view_fund_situation_total_total" style="@style/kline_fund_situation_table_tab"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="?attr/kline_primary_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_6" android:layout_marginTop="@dimen/dimen_20" android:layout_marginBottom="@dimen/dimen_5"/>
+            <com.hbg.module.kline.view.HistogramLayout android:id="@+id/histogram_chart_market_layout" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:background="?attr/kline_primary_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_6" android:layout_marginTop="@dimen/dimen_20" android:layout_marginBottom="@dimen/dimen_5"/>
+            <TextView android:textSize="@dimen/global_text_size_18" android:textColor="?attr/kline_primary_text_color" android:id="@+id/text_view_real_line_title" android:paddingTop="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:fontFamily="@font/roboto_medium"/>
+            <com.huobi.view.realline.RealLineChart android:id="@+id/real_line_chart_market_fund_situation" android:paddingTop="@dimen/dimen_25" android:paddingBottom="@dimen/dimen_25" android:layout_width="match_parent" android:layout_height="@dimen/dimen_180" app:grid_color="?attr/kline_primary_separator_color" app:grid_count="4" app:line_color="@color/baseColorMajorTheme100" app:line_over_y_label="false" app:line_width="@dimen/dimen_1" app:x_label_color="?attr/kline_four_level_text_color" app:x_label_count="4" app:x_label_text_size="@dimen/global_text_size_11" app:y_label_align_left="false" app:y_label_color="?attr/kline_primary_text_color" app:y_label_text_size="@dimen/global_text_size_10"/>
+        </LinearLayout>
+    </com.hbg.lib.widgets.LoadingLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/getui_notification,@drawable/yw_1222_0335,@drawable/yw_1222,@drawable/yw_1222.0670,@drawable/yw_1222_1d41,@drawable/hb_live_intro_close,@drawable/ic_tips_hollow_out,@drawable/ic_chevron_right,@drawable/edge_engine_*"/>
+

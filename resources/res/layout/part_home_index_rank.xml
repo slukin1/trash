@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/index_loading_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:error_view="@layout/home_loading_error_view">
+    <com.huobi.view.roundview.RoundRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" app:rv_cornerRadius="@dimen/dimen_8">
+        <include layout="@layout/layout_index_increase_currency_list"/>
+        <com.hbg.lib.widgets.SafeLottieView android:id="@+id/home_rank_skeleton_view_content" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.huobi.view.roundview.RoundRelativeLayout>
+</com.hbg.lib.widgets.LoadingLayout>

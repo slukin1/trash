@@ -1,0 +1,11 @@
+package com.squareup.javawriter;
+
+enum JavaWriter$Scope {
+    TYPE_DECLARATION,
+    ABSTRACT_METHOD,
+    NON_ABSTRACT_METHOD,
+    CONTROL_FLOW,
+    ANNOTATION_ATTRIBUTE,
+    ANNOTATION_ARRAY_VALUE,
+    INITIALIZER
+}

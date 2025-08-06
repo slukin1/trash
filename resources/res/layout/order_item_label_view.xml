@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_explain_text_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/label_left_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_amount_left"/>
+    <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/label_iv" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_explain_text_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/label_right_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_amount_right"/>
+</merge>

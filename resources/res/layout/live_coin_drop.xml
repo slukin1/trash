@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/live_large_gift_lottie" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_44" android:scaleType="fitEnd" app:lottie_repeatCount="0"/>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dimen_400">
+        <ImageView android:id="@+id/live_drop_coin_iv" android:visibility="gone" android:layout_width="110dp" android:layout_height="110dp" android:src="@drawable/content_live_get_free_coin"/>
+        <TextView android:textSize="@dimen/global_text_size_20" android:textColor="#edbf60" android:gravity="center" android:id="@+id/live_drop_coin_tv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_28" android:layout_marginRight="@dimen/dimen_28"/>
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="bottom" android:id="@+id/live_drop_coin_lottie" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dimen_350" android:scaleType="fitEnd" app:lottie_repeatCount="0"/>
+</merge>

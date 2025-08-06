@@ -1,0 +1,40 @@
+<LinearLayout height="wrap_content" paddingBottom="16" paddingLeft="16" orientation="vertical"
+    width="325" background="#FFFFFF" cornerRadius="8">
+    <LinearLayout gravity="centerVertical" height="wrap_content"
+        orientation="horizontal" width="match_parent">
+        <TextView height="20" marginTop="16" marginBottom="16"
+            text="{{@i18n/n_contract_trade_reminder_text}}"
+            textSize="16" textFontWeight="600"
+            width="0" weight="1" textColor="#000000" gravity="left" />
+
+        <ImageView
+            height="52"
+            width="44"
+            paddingTop="12"
+            paddingBottom="12"
+            paddingRight="16"
+            src="@drawable/edge_engine_live_redpacket_close"
+            onClick="@event.redPacket.closeAlert()" />
+    </LinearLayout>
+
+    <TextView width="match_parent" marginRight="16" marginBottom="4"
+        text="{{@i18n/n_live_gift_insufficient_balance}}"
+        textSize="14"
+        textFontWeight="400" height="wrap_content" textColor="#000000" maxLines="0" />
+
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="16" marginRight="16"
+        orientation="horizontal" width="match_parent">
+        <TextView background="#FAFAFA" gravity="center" height="40"
+            paddingBottom="11" paddingTop="11" marginRight="4"
+            text="{{@i18n/n_live_gift_transfer}}" textSize="14"
+            textFontWeight="500" width="0" weight="1" onClick="@event.redPacket.transfer()"
+            textColor="#0173E5"
+            cornerRadius="4" />
+            
+        <TextView background="#0173E5" gravity="center" height="40"
+            paddingBottom="11" paddingTop="11" marginLeft="4"
+            text="{{@i18n/n_live_gift_recharge}}"
+            textSize="14" textFontWeight="500" width="0" weight="1" onClick="@event.redPacket.deposit()"
+            textColor="#FFFFFF" cornerRadius="4" />
+    </LinearLayout>
+</LinearLayout>

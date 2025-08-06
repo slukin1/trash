@@ -1,0 +1,124 @@
+<LinearLayout
+		width="375"
+		height="wrap_content"
+		orientation="vertical"
+		gravity="center">
+	<!-- 设置赎回价 -->
+	<LinearLayout
+			gravity="centerVertical"
+			height="32"
+			width="match_parent"
+			marginLeft="8"
+			marginRight="8"
+			paddingLeft="8"
+			paddingRight="8"
+			cornerRadius="4"
+			paddingTop="8"
+			paddingBottom="8"
+			borderColor="{{@data.productsub.subBorderColor}}"
+			borderWidth="1"
+			background="@color/KBaseColorContentBackground">
+
+		<TextView
+				height="wrap_content"
+				text="{{@i18n/n_double_coin_set_withdraw_price}}"
+				textColor="@color/kColorThreeLevelText"
+				textSize="12"
+				width="wrap_content" />
+
+		<ImageView
+				height="12"
+				marginLeft="4"
+				src="@drawable/edge_engine_shark_info_icon"
+				width="12" />
+
+		<TextView
+				gravity="right"
+				height="wrap_content"
+				marginLeft="2"
+				text="{{@data.productsub.openCloseStr}}"
+				textColor="@color/kColorMajorTheme100"
+				textSize="12"
+				weight="1"
+				width="0" />
+
+		<ImageView
+				height="12"
+				marginLeft="4"
+				src="{{@data.productsub.openCloseRes}}"
+				width="12" />
+	</LinearLayout>
+
+	<ImageView
+			marginTop="8"
+			width="8"
+			height="4"
+			src="@drawable/edge_engine_earn_pop_up" />
+	<LinearLayout
+			width="240"
+			height="wrap_content"
+			orientation="vertical"
+			cornerRadius="8"
+			background="@color/KBaseColorContentBackground">
+		<TextView
+				width="wrap_content"
+				height="wrap_content"
+				marginTop="12"
+				marginLeft="12"
+				textSize="12"
+				textFontWeight="400"
+				textColor="@color/kColorSecondaryText"
+				text="2/3" />
+		<TextView
+				width="match_parent"
+				height="wrap_content"
+				marginTop="4"
+				marginLeft="12"
+				marginRight="12"
+				textSize="12"
+				textFontWeight="400"
+				maxLines="0"
+				maxWidth="216"
+				textColor="@color/kColorSecondaryText"
+				text="{{@i18n/n_double_coin_guide_step_2}}" />
+		<LinearLayout
+				marginTop="12"
+				marginLeft="12"
+				marginRight="12"
+				marginBottom="12"
+				width="match_parent"
+				height="24"
+				orientation="horizontal"
+				gravity="right"
+				layout_gravity="right">
+			<TextView
+					width="wrap_content"
+					height="match_parent"
+					paddingLeft="16"
+					paddingRight="16"
+					gravity="center"
+					background="@color/KBaseColorInputBackground"
+					cornerRadius="4"
+					textSize="12"
+					textFontWeight="500"
+					textColor="@color/kColorPrimaryText"
+					text="{{@i18n/n_exchange_guide_last}}"
+					onClick="@event.productsub.nextPop(1)" />
+			<TextView
+					width="wrap_content"
+					height="match_parent"
+					marginLeft="12"
+					paddingLeft="16"
+					paddingRight="16"
+					gravity="center"
+					background="@color/kColorMajorTheme100"
+					cornerRadius="4"
+					textSize="12"
+					textFontWeight="500"
+					textColor="@color/KBaseTextColor"
+					text="{{@i18n/n_exchange_guide_next}}"
+					onClick="@event.productsub.nextPop(3)" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+

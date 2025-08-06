@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title_layout" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp">
+        <RelativeLayout android:id="@+id/left_top_layout" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_centerVertical="true">
+            <TextView android:layout_gravity="center_vertical" android:id="@+id/left_top_image" android:background="@drawable/ali_vsdk_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_centerVertical="true"/>
+            <TextView android:textSize="16sp" android:textColor="#505156" android:gravity="center" android:id="@+id/left_top_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="3dp" android:text="@string/ali_vsdk_titlebar_back" android:layout_toRightOf="@+id/left_top_image" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView android:textSize="24sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/title_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ali_vsdk_titlebar_name" android:singleLine="true" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:background="@drawable/ali_vsdk_background" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.alibaba.verificationsdk.widgets.ALiLoadingView android:layout_gravity="center" android:id="@+id/check_login_loading" android:background="@drawable/ali_vsdk_shadu_icon_dengdai_center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/content" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="28sp" android:textStyle="normal" android:textColor="#000000" android:gravity="center" android:id="@+id/tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/ali_vsdk_tips" android:singleLine="true" android:drawableBottom="@drawable/ali_vsdk_lock_default" android:drawablePadding="20dp"/>
+            <TextView android:textSize="13sp" android:textColor="#000000" android:gravity="center" android:id="@+id/tips_sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:text="@string/ali_vsdk_tips_sub" android:maxLines="2" android:lineSpacingExtra="6dp"/>
+            <FrameLayout android:orientation="vertical" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <ImageView android:gravity="center" android:id="@+id/logo" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ali_vsdk_logo"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

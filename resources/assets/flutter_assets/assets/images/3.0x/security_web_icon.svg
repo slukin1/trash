@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="158px" height="158px" viewBox="0 0 158 158" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>security_web_icon</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="security_web_icon">
+            <circle id="椭圆形" fill="#0066ED" fill-rule="nonzero" cx="79" cy="79" r="79"></circle>
+            <rect id="矩形" stroke="#FFFFFF" stroke-width="4" x="40" y="44" width="78" height="56"></rect>
+            <line x1="58.3125" y1="118.438" x2="99.6875" y2="118.438" id="路径" stroke="#FFFFFF" stroke-width="4"></line>
+            <line x1="79" y1="98.9844" x2="79" y2="118" id="路径" stroke="#FFFFFF" stroke-width="4"></line>
+        </g>
+    </g>
+</svg>

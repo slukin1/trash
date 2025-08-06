@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bottom_menu_shape" android:paddingBottom="@dimen/dimen_30" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseColorPrimaryText" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:text="@string/setting_pricing_method" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorSecondaryText" android:id="@+id/tv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_15" android:text="@string/global_string_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_base_list_dialog_recyclerView" android:background="@color/app_bg" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

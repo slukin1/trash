@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="layout/item_zero_swap_open_position_footer_0" android:paddingLeft="@dimen/dimen_16" android:paddingTop="@dimen/dimen_18" android:paddingRight="@dimen/dimen_16" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/dimen_16">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView android:background="@drawable/edge_engine_asset_fall_coin_tips" android:layout_width="@dimen/dimen_12" android:layout_height="@dimen/dimen_12" android:layout_marginTop="@dimen/dimen_2"/>
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/kColorSecondaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_zero_swap_loss_prompt" android:layout_marginStart="@dimen/dimen_4" android:lineHeight="@dimen/dimen_16"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1"/>
+    <androidx.percentlayout.widget.PercentRelativeLayout android:id="@+id/gesture_panel" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.hbg.lib.widgets.GesturePwdLayout android:id="@+id/ninepoint_setview" android:layout_width="0dp" android:layout_height="0dp" android:layout_centerInParent="true" app:layout_widthPercent="80%"/>
+        <TextView android:textColor="@color/baseColorPrimaryText" android:id="@+id/gesture_top_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:text="@string/n_set_gesture_login_please_draw" android:layout_above="@+id/ninepoint_setview" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ninepoint_setview" android:layout_alignParentTop="true">
+            <TextView android:textSize="@dimen/gesture_top_name_text_size" android:textColor="@color/global_main_text_color" android:id="@+id/gesture_set_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_set_gesture_login" android:fontFamily="@font/roboto_medium"/>
+        </LinearLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+</LinearLayout>

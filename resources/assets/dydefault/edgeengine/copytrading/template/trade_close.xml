@@ -1,0 +1,119 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="wrap_content" topLeftRadius="8" topRightRadius="8" orientation="vertical" width="375">
+        <!--确认平仓title-->
+        <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="12" paddingLeft="16" paddingRight="16" orientation="horizontal" width="match_parent" bottom="10">
+
+                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_confirm_close_title}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="16" width="wrap_content"/>
+
+                <View height="0" weight="1" width="0"/>
+
+                <ImageView height="28" onClick="@event.tradeClose.close()" src="@drawable/trade_margin_coupon_title_close" width="28"/>
+        </LinearLayout>
+        <LinearLayout background="@color/KAssetTopHeaderContentBackground" height="wrap_content" orientation="horizontal" marginTop="12" paddingTop="10" paddingBottom="10" paddingLeft="16" paddingRight="16" width="match_parent">
+                <ImageView height="16" src="@drawable/edge_engine_ic_trader_tips" width="12"/>
+
+                <TextView height="wrap_content" lineSpacing="5" marginLeft="4" maxLines="0" text="{{@i18n/n_copytrading_position_close_tips}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="match_parent"/>
+        </LinearLayout>
+        <LinearLayout height="wrap_content" marginBottom="16" marginLeft="16" marginRight="16" orientation="vertical" width="match_parent">
+
+                <!--币种信息-->
+                <LinearLayout gravity="centerVertical" height="20" orientation="horizontal" marginTop="12" width="match_parent">
+
+                        <TextView height="wrap_content" width="wrap_content" text="{{@data.tradeClose.directionLabel}}" background="{{@data.tradeClose.directionColor}}" textColor="#FFFFFF" textFontWeight="500" textSize="10" paddingBottom="1" paddingTop="1" paddingLeft="2" paddingRight="2" cornerRadius="2"/>
+
+                        <TextView marginLeft="4" height="wrap_content" text="{{@data.tradeClose.symbolDesc}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" width="wrap_content" gravity="centerVertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="10">
+
+                        <TextView paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" cornerRadius="2" background="@color/baseColorInputBackground" width="wrap_content" height="wrap_content" text="{{@data.tradeClose.modeTypeName}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                        <TextView marginLeft="4" paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" width="wrap_content" height="wrap_content" cornerRadius="2" background="@color/baseColorInputBackground" text="{{@data.tradeClose.leverDesc}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                        <TextView marginLeft="4" paddingTop="2" paddingBottom="2" paddingLeft="4" paddingRight="4" width="wrap_content" height="wrap_content" cornerRadius="2" background="@color/baseColorInputBackground" text="{{@data.tradeClose.directionDesc}}" textSize="10" textColor="@color/kColorSecondaryText"/>
+                </LinearLayout>
+
+                <!-- 平仓类型 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_close_type}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="8" marginBottom="8" height="wrap_content" width="wrap_content" text="{{@i18n/n_copy_trading_market_price}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 开仓价格 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_contract_avg_position_price}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="10" height="wrap_content" width="wrap_content" text="{{@data.tradeClose.openPrice}}" isSubscript="true" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 合约数量 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_future_number}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="10" height="wrap_content" width="wrap_content" text="{{@data.tradeClose.futureNumber}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 最新价格 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_last_price}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="10" height="wrap_content" width="wrap_content" text="{{@data.tradeClose.marketPrice}}" isSubscript="true" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 滑点 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_closing_slippage}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="10" height="wrap_content" width="wrap_content" text="{{@data.tradeClose.slippage}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 预计盈亏 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="8" marginBottom="8" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_estimate_profit}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="14" maxWidth="160"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="10" height="wrap_content" width="wrap_content" text="{{@data.tradeClose.profit}}" textColor="{{@data.tradeClose.profitColor}}" textFontWeight="400" textSize="14" maxWidth="160" gravity="right"/>
+
+                </LinearLayout>
+
+                <!--确认-->
+                <LinearLayout background="#0173E5" bottomLeftRadius="4" bottomRightRadius="4" height="wrap_content" marginTop="20" onClick="@event.tradeClose.confirm()" orientation="horizontal" topLeftRadius="4" topRightRadius="4" width="match_parent">
+
+                        <View height="0" weight="1" width="0"/>
+
+
+                        <LinearLayout gravity="right" height="wrap_content" orientation="horizontal" paddingBottom="12" paddingTop="12" width="wrap_content">
+
+                                <TextView gravity="center" height="wrap_content" text="{{@i18n/n_copy_trading_confirm}}" textColor="#FFFFFF" textFontWeight="500" textSize="14" width="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <View height="0" weight="1" width="0"/>
+
+                </LinearLayout>
+
+                <View width="1" height="30"/>
+
+        </LinearLayout>
+</LinearLayout>

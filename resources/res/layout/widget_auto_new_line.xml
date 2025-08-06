@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/KBaseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.edgeengine.widget.view.FloatLayout android:id="@+id/og_group" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/iv_switch" android:paddingLeft="16dp" android:paddingTop="6dp" android:paddingRight="16dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edge_engine_strutured_arrow_up" android:layout_alignTop="@+id/og_group" android:layout_alignParentEnd="true" android:paddingHorizontal="16dp" android:paddingVertical="6dp"/>
+</RelativeLayout>

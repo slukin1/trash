@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="@color/baseColorModuleColumnClicked"/>
+            <corners android:radius="@dimen/dimen_10"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/lite_index_pressed_true"/>
+            <corners android:radius="@dimen/dimen_10"/>
+        </shape>
+    </item>
+</selector>

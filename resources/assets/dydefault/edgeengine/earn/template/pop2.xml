@@ -1,0 +1,41 @@
+<LinearLayout width="375" height="wrap_content" orientation="vertical">
+	<!-- 昨日收益 -->
+	<LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginLeft="8" paddingLeft="8" paddingTop="16" marginRight="8" paddingRight="8" paddingBottom="14" background="@color/KBaseColorContentBackground" cornerRadius="8">
+		<LinearLayout width="0" weight="1" height="wrap_content" gravity="centerVertical" orientation="vertical">
+
+			<LinearLayout width="match_parent" height="17" orientation="horizontal" gravity="centerVertical">
+
+				<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="12" gravity="center" text="{{@data.home.yesterdayIncome}}" textFontWeight="500"/>
+
+				<ImageView width="wrap_content" height="wrap_content" marginLeft="4" src="@drawable/edge_engine_icon_earn_home_jump"/>
+			</LinearLayout>
+
+			<TextView marginTop="2" width="match_parent" height="wrap_content" textColor="@color/kColorThreeLevelText" textSize="10" text="{{@data.home.totalIncome}}" textFontWeight="400"/>
+		</LinearLayout>
+		<!-- 自动赚币 -->
+		<LinearLayout width="wrap_content" height="24" paddingLeft="6" paddingRight="6" marginTop="2" cornerRadius="4" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" gravity="center">
+
+			<ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_earn_auto"/>
+
+			<TextView marginLeft="2" width="wrap_content" height="wrap_content" textColor="@color/kColorSecondaryText" textSize="11" text="{{@i18n/n_earn_auto_earn}}" textFontWeight="400"/>
+
+
+			<ImageView width="12" height="13" marginLeft="2" scaleType="fitXY" src="@drawable/edge_engine_earn_upgrade"/>
+
+			<LinearLayout width="wrap_content" height="13" paddingLeft="1" paddingRight="4" background="{{@data.home.upgradeBgColor}}" topRightRadius="8" bottomRightRadius="8" gravity="center">
+
+				<TextView autoSizeMinTextSize="7" autoSizeTextType="uniform" height="wrap_content" text="{{@i18n/n_asset_auto_to_yyb_upgrade}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="10" maxWidth="48" maxLines="1" width="wrap_content"/>
+
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<ImageView marginTop="8" marginLeft="26" width="8" height="4" src="@drawable/edge_engine_earn_pop_up"/>
+	<LinearLayout marginLeft="16" width="240" height="wrap_content" orientation="vertical" cornerRadius="8" background="@color/KBaseColorContentBackground">
+		<TextView width="wrap_content" height="wrap_content" marginTop="12" marginLeft="12" textSize="12" textFontWeight="400" textColor="@color/kColorSecondaryText" text="2/4"/>
+		<TextView width="match_parent" height="wrap_content" marginTop="4" marginLeft="12" marginRight="12" textSize="12" textFontWeight="400" maxLines="0" maxWidth="216" textColor="@color/kColorSecondaryText" text="{{@i18n/n_earnhome_guide_step_2}}"/>
+		<LinearLayout marginTop="12" marginLeft="12" marginRight="12" marginBottom="12" width="match_parent" height="24" orientation="horizontal" gravity="right" layout_gravity="right">
+			<TextView width="wrap_content" height="match_parent" paddingLeft="16" paddingRight="16" gravity="center" background="@color/KBaseColorInputBackground" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@i18n/n_exchange_guide_last}}" onClick="@event.home.nextPop(1)"/>
+			<TextView width="wrap_content" height="match_parent" marginLeft="12" paddingLeft="16" paddingRight="16" gravity="center" background="@color/kColorMajorTheme100" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/KBaseTextColor" text="{{@i18n/n_exchange_guide_next}}" onClick="@event.home.nextPop(3)"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

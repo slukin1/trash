@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.huobi.websocket.protobuf.source;
+option java_outer_classname = "Message";
+
+message Proto {
+
+   string id = 1;
+   int32 channel = 2;
+   int32 action = 3;
+   string content = 4;
+   int64 fromId = 5;
+   int32 format = 6;
+   string extra = 7;
+   int64 timestamp = 8;
+}
+	 

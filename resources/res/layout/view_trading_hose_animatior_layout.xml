@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="@dimen/dimen_100" android:layout_height="@dimen/dimen_100">
+    <View android:layout_gravity="center" android:id="@+id/breathe_bg_view" android:background="@drawable/lite_trading_house_breathe_shape" android:layout_width="@dimen/dimen_60" android:layout_height="@dimen/dimen_60"/>
+    <com.hbg.lite.trade.DonutProgressBar android:layout_gravity="center" android:id="@+id/confirm_order_donut_progress" android:layout_width="@dimen/dimen_82" android:layout_height="@dimen/dimen_82" app:donut_bar_background_color="@android:color/transparent" app:donut_bar_progress_color="@color/baseColorMajorTheme050" app:donut_bar_show_text="false" app:donut_bar_stroke_width="@dimen/dimen_3"/>
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/vendor_confirm_tv" android:background="@drawable/bg_lite_trading_hose_confirm_btn" android:layout_width="@dimen/dimen_70" android:layout_height="@dimen/dimen_70" android:text="@string/global_string_confirm" android:fontFamily="@font/roboto_medium"/>
+</FrameLayout>

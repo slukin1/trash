@@ -1,0 +1,67 @@
+<LinearLayout height="wrap_content" marginLeft="16" marginRight="16" orientation="vertical"
+    width="match_parent">
+	<View 
+		width="match_parent"  
+		height="0"
+		popTemplate="bot_create_confirm_pop.xml"
+		popShow="{{@data.botCreateConfirmPop.popShow}}"
+		onPopDismiss="@event.botCreateConfirmPop.confirmPopDismiss()"
+		popCancelOnTouchOutside="true"
+		popBackgroundDimmed="true"
+		popShowMode="modal"
+		popModalPositon="bottom" />
+	<View height="0" onPopDismiss="@event.commonPop.popDismiss()" popCancelOnTouchOutside="false"
+        popModalPositon="center" popShow="{{@data.commonPop.popShow}}" popShowMode="modal"
+        popTemplate="commonPop.xml" width="0"/>
+	<View 
+		width="0"  
+		height="0"
+		popTemplate="common_option_pop.xml"
+		popShow="{{@data.commonOptionPop.popShow}}"
+		onPopDismiss="@event.commonOptionPop.optionPopDismiss()"
+		popCancelOnTouchOutside="true"
+		popBackgroundDimmed="true"
+		popShowMode="modal"
+		popModalPositon="bottom" />
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginTop="8"
+        orientation="horizontal" width="match_parent">
+        <LinearLayout gravity="centerVertical" height="wrap_content"
+            onClick="@event.contractTopSymbol.showDrawer()" orientation="horizontal"
+            width="wrap_content">
+            <TextView height="wrap_content" text="{{@data.contractTopSymbol.symbolTitle}}"
+                textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="18"
+                width="wrap_content" />
+            <!-- 币对箭头 -->
+            <ImageView height="12" marginLeft="4"  src="@drawable/edge_engine_contract_grid_symbol_arrow"
+                width="12" />
+        </LinearLayout>
+        <!-- 间隔 -->
+        <View weight="1" />
+        <LinearLayout gravity="centerVertical" height="wrap_content"
+            orientation="horizontal"
+            width="wrap_content">
+            <!-- K线icon -->
+            <ImageView height="22" onClick="@event.contractTopSymbol.jumpToKline()" scaleType="fitCenter"
+                src="@drawable/edge_engine_contract_grid_kline" width="22" />
+            <!-- 图表icon -->
+            <ImageView 
+                height="22"  
+                onClick="@event.contractTopSymbol.expandCollapse()" 
+                marginLeft="8"
+                scaleType="fitCenter"
+                src="{{@data.contractTopSymbol.chartArrowRes}}" width="22" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout height="22"
+        orientation="horizontal" width="match_parent">
+
+        <TextView height="16" text="{{@data.contractTopSymbol.symbolPrice}}"
+            textColor="{{@data.contractTopSymbol.symbolRateColor}}" textFontWeight="500"
+            textSize="12" width="wrap_content" gravity="center" marginTop="6"/>
+
+        <TextView height="16" marginLeft="8" text="{{@data.contractTopSymbol.symbolRate}}"
+            textColor="{{@data.contractTopSymbol.symbolRateColor}}" textFontWeight="500"
+            textSize="12" width="wrap_content" gravity="center" marginTop="6"/>
+    </LinearLayout>
+</LinearLayout>

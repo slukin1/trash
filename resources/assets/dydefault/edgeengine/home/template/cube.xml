@@ -1,0 +1,135 @@
+<LinearLayout width="match_parent" height="wrap_content" paddingLeft="12" paddingRight="12" marginBottom="16" orientation="horizontal" background="@color/KBaseColorContentBackground" visibility="{{@data.cube.showData|gone}}">
+
+  <For data="@data.cube.listData" itemKey="element" typeKey="cubeType">
+
+    <!-- 倒计时 -->
+    <Cell marginLeft="4" marginRight="4" width="167.5" height="100" type="countDown">
+
+      <FrameLayout width="match_parent" height="match_parent" orientation="vertical" borderWidth="0.5" cornerRadius="8" paddingLeft="16" borderColor="@color/kHomeCubeBorderColor" background="@color/KBaseColorContentBackground" onClick="@event.cube.tapCubeAction('{{@element.index}}')">
+
+        <LinearLayout width="match_parent" height="match_parent" marginTop="12" orientation="vertical">
+
+          <LinearLayout width="match_parent" height="20" orientation="horizontal">
+
+            <TextView width="wrap_content" height="wrap_content" maxWidth="100" textSize="16" gravity="left" text="{{@element.title}}" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+            
+            <ImageView width="wrap_content" maxWidth="48" height="13" marginLeft="4" marginTop="2" marginRight="16" src="{{@element.tagUrl}}"/>
+
+          </LinearLayout>
+
+
+          <TextView width="wrap_content" height="wrap_content" maxWidth="92" marginTop="4" marginRight="2" textSize="12" maxLines="2" text="{{@element.summary.content}}" textColor="@color/kColorSecondaryText" weight="400"/>
+
+          <LinearLayout width="wrap_content" height="16" marginBottom="12" orientation="horizontal">
+
+            <TextView width="17" height="14" gravity="center" cornerRadius="2" textSize="11" text="{{@element.day}}" textColor="#FFFFFF" background="#FE8731" textFontWeight="600"/>
+
+            <TextView width="wrap_content" height="wrap_content" marginLeft="1.5" marginRight="1.5" gravity="center" text=":" textSize="12" textColor="#FE8731" textFontWeight="600"/>
+
+            <TextView width="17" height="14" gravity="center" cornerRadius="2" textSize="11" text="{{@element.hour}}" textColor="#FFFFFF" background="#FE8731" textFontWeight="600"/>
+
+            <TextView width="wrap_content" height="wrap_content" marginLeft="1.5" marginRight="1.5" gravity="center" text=":" textSize="12" textColor="#FE8731" textFontWeight="600"/>
+
+            <TextView width="17" height="14" gravity="center" text="{{@element.minute}}" textSize="11" cornerRadius="2" textColor="#FFFFFF" background="#FE8731" textFontWeight="600"/>
+
+            <TextView width="wrap_content" height="wrap_content" gravity="center" marginLeft="1.5" marginRight="1.5" text=":" textSize="12" textColor="#FE8731" textFontWeight="600"/>
+
+            <TextView width="17" height="14" gravity="center" text="{{@element.second}}" textSize="11" cornerRadius="2" textColor="#FFFFFF" background="#FE8731" textFontWeight="600"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout width="60" height="60" layout_gravity="right|bottom">
+
+          <ImageView width="60" height="60" cornerRadius="30" layout_gravity="center" tag="ApngDecoder" src="{{@element.bgImageUrl}}"/>
+
+          <ImageView width="40" height="40" cornerRadius="20" layout_gravity="center" src="{{@element.imageUrl}}"/>
+
+          <ImageView width="60" height="60" cornerRadius="30" layout_gravity="center" src="{{@element.frontImageUrl}}"/>
+
+        </FrameLayout>
+
+      </FrameLayout>
+
+    </Cell>
+
+    <!--普通 -->
+    <Cell marginLeft="4" marginRight="4" width="167.5" height="100" type="normal">
+
+      <FrameLayout width="match_parent" height="match_parent" borderWidth="0.5" cornerRadius="8" borderColor="@color/kHomeCubeBorderColor" background="@color/KBaseColorContentBackground" onClick="@event.cube.tapCubeAction('{{@element.index}}')">
+
+        <LinearLayout width="match_parent" height="match_parent" marginTop="12" marginLeft="16" orientation="vertical">
+          
+          <LinearLayout width="match_parent" height="20" orientation="horizontal">
+
+            <TextView width="wrap_content" height="wrap_content" maxWidth="100" textSize="16" gravity="left" text="{{@element.title}}" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+            
+            <ImageView width="wrap_content" maxWidth="48" height="13" marginLeft="4" marginTop="2" marginRight="16" src="{{@element.tagUrl}}"/>
+            
+          </LinearLayout>
+
+          <TextView width="wrap_content" height="wrap_content" maxWidth="92" marginTop="4" textSize="12" maxLines="2" text="{{@element.focusContent}}" textColor="@color/kColorSecondaryText" weight="400"/>
+
+          <TextView width="92" height="wrap_content" marginTop="5" marginBottom="12" marginRight="2" textSize="11" maxLines="1" text="{{@element.summary.content}}" textColor="@color/kColorThreeLevelText" textFontWeight="400"/>
+            
+        </LinearLayout>
+
+        <FrameLayout width="60" height="60" marginRight="2" marginBottom="2" layout_gravity="right|bottom">
+
+          <ImageView width="60" height="60" cornerRadius="30" layout_gravity="center" tag="ApngDecoder" src="{{@element.bgImageUrl}}"/>
+
+          <ImageView width="40" height="40" cornerRadius="20" layout_gravity="center" src="{{@element.imageUrl}}"/>
+
+          <ImageView width="60" height="60" cornerRadius="30" layout_gravity="center" src="{{@element.frontImageUrl}}"/>
+
+        </FrameLayout>
+
+      </FrameLayout>
+
+    </Cell>
+
+    <!--带button的 -->
+    <Cell marginLeft="4" marginRight="4" width="167.5" height="100" type="summaryButton">
+
+      <FrameLayout width="match_parent" height="match_parent" borderWidth="0.5" cornerRadius="8" borderColor="@color/kHomeCubeBorderColor" background="@color/KBaseColorContentBackground" onClick="@event.cube.tapCubeAction('{{@element.index}}')">
+
+        <LinearLayout width="match_parent" height="match_parent" marginTop="12" marginLeft="16" orientation="vertical">
+          
+          <LinearLayout width="match_parent" height="20" orientation="horizontal">
+
+            <TextView width="wrap_content" height="wrap_content" maxWidth="100" textSize="16" gravity="left" text="{{@element.title}}" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+            
+            <ImageView width="wrap_content" maxWidth="48" height="13" marginLeft="4" marginTop="2" marginRight="16" src="{{@element.tagUrl}}"/>
+            
+          </LinearLayout>
+
+          <TextView width="wrap_content" height="wrap_content" maxWidth="92" marginTop="4" textSize="12" maxLines="2" text="{{@element.summary.content}}" textColor="@color/kColorSecondaryText" weight="400"/>
+
+          <LinearLayout width="90" height="16" marginBottom="12" marginRight="2" orientation="horizontal">
+
+              <TextView width="wrap_content" maxWidth="77" height="wrap_content" textSize="11" text="{{@element.summary.content}}" textColor="@color/kColorThreeLevelText" textFontWeight="400"/>
+
+                <ImageView width="8" height="11" marginLeft="2" src="@drawable/edge_engine_home_cube_arrow"/>
+
+          </LinearLayout>
+
+            
+        </LinearLayout>
+
+        <FrameLayout width="60" height="60" marginRight="2" marginBottom="2" layout_gravity="right|bottom">
+
+          <ImageView width="60" height="60" tag="ApngDecoder" cornerRadius="30" src="{{@element.bgImageUrl}}"/>
+
+          <ImageView width="40" height="40" cornerRadius="20" layout_gravity="center" src="{{@element.imageUrl}}"/>
+
+          <ImageView width="60" height="60" cornerRadius="30" src="{{@element.frontImageUrl}}"/>
+
+        </FrameLayout>
+
+      </FrameLayout>
+
+    </Cell>
+  </For>
+
+</LinearLayout>

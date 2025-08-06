@@ -1,0 +1,15 @@
+<LinearLayout background="@color/kColorContentBackground" height="wrap_content" orientation="vertical" width="325" cornerRadius="8" paddingLeft="16" paddingRight="16">
+
+    <LinearLayout width="293" height="wrap_content" orientation="horizontal" gravity="centerVertical" marginTop="16">
+
+        <TextView width="0" weight="1" height="wrap_content" maxLines="0" textFontWeight="600" text="{{@data.purchaseTip.tipTitle}}" textColor="@color/kColorPrimaryText" textSize="16"/>
+
+        <ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_copy_trading_dialog_close" onClick="@event.flexible.clickPurchaseDialogClose()"/>
+                
+    </LinearLayout>
+
+    <RichTextView width="match_parent" height="wrap_content" marginTop="16" textSize="14" lineSpacing="6" lineHeight="14" maxLines="0" textColor="@color/kColorPrimaryText" richText="{{@data.purchaseTip.tipContent}}"/>
+
+    <TextView background="@color/kColorMajorTheme100" gravity="center" height="40" cornerRadius="4" textFontWeight="500" marginTop="16" marginBottom="16" onClick="@event.flexible.clickPurchaseDialogClose()" text="{{@i18n/n_known}}" textColor="@color/KBaseTextColor" textSize="14" width="match_parent"/>
+
+</LinearLayout>

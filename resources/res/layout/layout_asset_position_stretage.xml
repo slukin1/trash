@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/color_212632" android:padding="@dimen/dimen_4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16">
+    <LinearLayout android:id="@+id/layout_price_range" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/baseColorThreeLevelText" android:id="@+id/tv_price_range" android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/n_grid_trade_price_range_with_quote"/>
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/color_E9EAED" android:gravity="right" android:id="@+id/tv_price_range_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_vol_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8" app:layout_constraintTop_toBottomOf="@+id/layout_price_range">
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/baseColorThreeLevelText" android:id="@+id/tv_vol_amount" android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/n_grid_vol_amount"/>
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/color_E9EAED" android:gravity="right" android:id="@+id/tv_vol_amount_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_strategy_runtime" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8" app:layout_constraintTop_toBottomOf="@+id/layout_vol_amount">
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/baseColorThreeLevelText" android:id="@+id/tv_strategy_runtime" android:layout_width="100dp" android:layout_height="wrap_content" android:text="@string/n_grid_strategy_runtime"/>
+        <TextView android:textSize="@dimen/dimen_9" android:textColor="@color/color_E9EAED" android:gravity="right" android:id="@+id/tv_strategy_runtime_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<!-- 跟单头部卡片 模版 -->
+<LinearLayout background="@color/KAssetTopHeaderContentBackground" height="132" orientation="vertical" marginLeft="16" cornerRadius="8" marginRight="16" width="343">
+
+    <LinearLayout height="wrap_content" orientation="horizontal" marginTop="12" marginLeft="12" width="match_parent" gravity="centerVertical">
+        <LinearLayout height="24" width="wrap_content" padddingBottom="8">
+            <TextView text="{{@i18n/n_asset_contract_copy_trading_total}}" textColor="@color/kColorThreeLevelText" textSize="12" width="210" height="16" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+        </LinearLayout>
+        
+        <View width="0" height="0" weight="1"/>
+        <ImageView height="24" marginRight="10" onClick="@event.jump(53)" src="@drawable/ic_asset_tab_page_history_fait" width="24"/>
+    </LinearLayout>
+    
+    <TextView text="{{@data.copyTradingTotal}}" textColor="@color/kColorPrimaryText" textSize="16" height="21" marginLeft="12" textFontWeight="700" width="wrap_content"/>
+
+    <LinearLayout height="wrap_content" orientation="horizontal" marginTop="8" marginLeft="12" width="match_parent" gravity="centerVertical">
+
+        <TextView height="16" text="{{@i18n/asset_spot_table_top_income}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content" autoSizeMinTextSize="8" textFontWeight="400" autoSizeTextType="uniform"/>
+
+        <TextView height="16" text="{{@data.copyTradingHeaderIncome}}" textColor="@color/kColorPrimaryText" textSize="12" width="wrap_content" marginLeft="2" textFontWeight="400" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+    </LinearLayout>
+
+    <View background="@color/KBaseColorPrimarySeparator" height="0.5" marginTop="9" marginLeft="12" marginRight="12" width="match_parent"/>
+
+    <LinearLayout gravity="centerVertical" height="32" orientation="horizontal" marginLeft="12" marginRight="12" width="match_parent" onClick="@event.jump(53)">
+
+        <TextView height="wrap_content" text="{{@i18n/n_asset_contract_to_copy_trading}}" textColor="@color/kColorPrimaryText" textSize="12" width="wrap_content"/>
+
+        <View width="0" height="1" weight="1"/>
+
+        <ImageView height="14" src="@drawable/ic_asset_header_arrow_right" width="14"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:background="@color/zui_color_black_13" android:layout_width="24dp" android:layout_height="1dp" android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+    <LinearLayout android:orientation="horizontal" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+        <View android:layout_gravity="center_vertical" android:background="@color/zui_color_black_13" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <TextView android:textColor="@color/zui_color_black_38" android:gravity="center" android:autoLink="web" android:layout_gravity="center_vertical" android:id="@+id/zui_system_message_text" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+        <View android:layout_gravity="center_vertical" android:background="@color/zui_color_black_13" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+    </LinearLayout>
+    <View android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:background="@color/zui_color_black_13" android:layout_width="24dp" android:layout_height="1dp" android:layout_marginRight="16dp" android:layout_marginEnd="16dp"/>
+</FrameLayout>

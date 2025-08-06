@@ -1,0 +1,15 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="wrap_content" orientation="vertical" topLeftRadius="8" topRightRadius="8" width="375">
+    <LinearLayout gravity="centerVertical" height="28" marginLeft="16" marginRight="16" marginTop="8" orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" text="{{@i18n/n_order_filter_more}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" width="wrap_content"/>
+        <View height="0" weight="1" width="0"/>
+        <ImageView height="wrap_content" onClick="@event.capitalFlow.filterMorePopDismiss()" src="@drawable/edge_engine_copy_trading_dialog_close" width="wrap_content"/>
+    </LinearLayout>
+    <View background="@color/kColorPrimarySeparator" height="0.5" marginTop="8" width="match_parent"/>
+    <GirdView crossAxisItemCount="3" crossAxisSpace="12" data="@data.capitalFlow.filterTypes" height="180" itemKey="item" mainAxisSpace="12" marginBottom="16" marginLeft="16" marginRight="16" marginTop="16" orientation="vertical" typeKey="type" width="match_parent">
+        <GirdCell type="normal" height="36" width="106">
+            <LinearLayout background="{{@item.backColor}}" cornerRadius="4" gravity="centerVertical" height="36" onClick="@event.capitalFlow.filterType({{@item.tag}})" orientation="horizontal" width="106">
+                <TextView maxLines="2" gravity="center" height="wrap_content" marginLeft="6" text="{{@item.title}}" textColor="{{@item.titleColor}}" textFontWeight="500" textSize="12" width="match_parent"/>
+            </LinearLayout>
+        </GirdCell>
+    </GirdView>
+</LinearLayout>

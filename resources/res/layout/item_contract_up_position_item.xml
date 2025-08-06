@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorPrimaryText" android:gravity="center_vertical" android:id="@+id/tv_leverage_range" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="132" android:paddingHorizontal="12dp" android:lineHeight="@dimen/dimen_16"/>
+    <View android:background="@color/baseColorPrimarySeparator" android:layout_width="@dimen/dimen_0_5" android:layout_height="match_parent"/>
+    <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorPrimaryText" android:gravity="center_vertical" android:id="@+id/tv_adjustment_multiple" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="132" android:paddingHorizontal="12dp" android:lineHeight="@dimen/dimen_16"/>
+</LinearLayout>

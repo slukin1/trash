@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.kyc.huaweiliveness.camera.CameraSurfaceView android:id="@+id/face_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:id="@+id/head_cover" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/fixed_face_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <RelativeLayout android:id="@+id/rl_close" android:layout_width="@dimen/dimen_50" android:layout_height="@dimen/dimen_50">
+        <ImageView android:layout_width="@dimen/dimen_20" android:layout_height="@dimen/dimen_20" android:layout_marginTop="@dimen/dimen_12" android:src="@drawable/kyc_huaweiliveness_close" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_15"/>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/colorPrimaryTextBlack" android:layout_gravity="center_horizontal" android:id="@+id/detection_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_380" android:fontFamily="@font/dinpro_medium"/>
+</FrameLayout>

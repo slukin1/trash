@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/rl_market_info_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/layout_head_top" layout="@layout/layout_kline_header"/>
+    <FrameLayout android:id="@+id/currency_notice" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <FrameLayout android:background="?attr/kline_activity_background_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.hbg.lib.widgets.CommonTextListIndicator android:id="@+id/common_text_list_indicator" android:background="@drawable/shape_kline_top_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1" app:tab_current_position="0" app:tab_indicator_color="@color/market_info_secondary_sel_textcolor" app:tab_indicator_height="@dimen/dimen_2" app:tab_select_color="?attr/kline_index_setting_text_color" app:tab_text_size="@dimen/global_text_size_14" app:tab_unselect_color="?attr/kline_three_level_text_color" app:use_transparent_pic="true"/>
+    </FrameLayout>
+    <View android:background="?attr/kline_primary_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+    <com.huobi.view.ViewPagerFixed android:id="@+id/view_pager_kline_content" android:background="?attr/kline_content_background_color" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

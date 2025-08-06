@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/ll_quick_trade_bottom" android:background="@color/KAssetTopHeaderContentBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" app:layout_constraintStart_toStartOf="0">
+    <FrameLayout android:id="@+id/fl_buy" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="0dp" android:layout_height="@dimen/dimen_40" android:layout_weight="1" android:paddingHorizontal="@dimen/dimen_15">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_buy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_buy_in" android:drawablePadding="@dimen/dimen_8" android:drawableStart="@drawable/quick_trade_buy_green"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/fl_sell" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="0dp" android:layout_height="@dimen/dimen_40" android:layout_weight="1" android:paddingHorizontal="@dimen/dimen_15">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_sell" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_sell_out" android:drawablePadding="@dimen/dimen_8" android:drawableStart="@drawable/quick_trade_sell_red"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/fl_place_order" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="0dp" android:layout_height="@dimen/dimen_40" android:layout_weight="1" android:paddingHorizontal="@dimen/dimen_15">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_market_qicek_trade_position" android:drawablePadding="@dimen/dimen_8" android:drawableStart="@drawable/quick_trade_place_order"/>
+    </FrameLayout>
+</LinearLayout>

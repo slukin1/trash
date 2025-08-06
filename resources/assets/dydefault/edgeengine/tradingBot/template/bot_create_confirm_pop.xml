@@ -1,0 +1,244 @@
+<!-- <LinearLayout
+	width="match_parent"
+	height="match_parent"
+	gravity="centerVertical"
+	orientation="vertical">
+	<View width="match_parent" height="98"/> -->
+<!-- weight="1" -->
+	<LinearLayout
+		width="match_parent"
+		height="wrap_content"
+		gravity="centerVertical"
+		orientation="vertical"
+		topRightRadius="8"
+		topLeftRadius="8"
+		background="@color/KBaseColorContentBackground">
+		<View height="0" onPopDismiss="@event.botCreateConfirmPop.submitStatusPopDismiss()" popCancelOnTouchOutside="false"
+			popModalPositon="center" popShow="{{@data.botCreateConfirmPop.submitStatusPopShow}}" popShowMode="modal"
+			popTemplate="contract_edit_submit_alert_pop.xml" width="0"/>
+		<!-- 顶部标题+关闭按钮 -->
+		<LinearLayout
+			paddingLeft="16"
+			paddingRight="0"
+			width="match_parent"
+			height="44"
+			gravity="center"
+			orientation="horizontal">
+			<TextView
+				height="match_parent"
+				width="wrap_content"
+				gravity="center|left"
+				text="{{@i18n/n_bot_confirm_title}}"
+				textSize="16"
+				textColor="@color/kColorPrimaryText"
+				textFontWeight="500" />
+			<View weight="1" />
+			<LinearLayout
+				width="100"
+				height="44"
+				paddingRight="16"
+				gravity="center|right"
+				orientation="horizontal"
+				onClick="@event.botCreateConfirmPop.confirmPopDismiss()">
+				<ImageView
+					width="28"
+					height="28"
+					src="@drawable/edge_engine_copy_trading_dialog_close" />
+			</LinearLayout>
+		</LinearLayout>
+
+		<!-- 分割线 -->
+		<View
+			background="@color/kColorPrimarySeparator"
+			width="match_parent"
+			height="0.5" />
+
+		<LinearLayout
+			width="match_parent"
+			paddingLeft="16"
+			paddingRight="16"
+			paddingTop="10"
+			paddingBottom="10"
+			height="wrap_content"
+			gravity="left|top"
+			orientation="horizontal"
+			background="#14FE8731"
+			visibility="{{@data.botCreateConfirmPop.confirmPop.warningVisibility}}">
+			<ImageView width="12" height="16" gravity="center" scaleType="fitCenter" src="@drawable/edge_engine_copy_trading_tip"/>
+			<TextView 
+				width="0" 
+				height="wrap_content" 
+				marginLeft="4"
+				gravity="left|top"
+				textSize="12"
+				textFontWeight="400"
+				text="{{@data.botCreateConfirmPop.confirmPop.warningMsg}}"
+				textColor="@color/kColorPrimaryText"
+				maxLines="0"
+				weight="1"/>
+		</LinearLayout>
+
+		<LinearLayout
+			width="match_parent"
+			marginLeft="16"
+			marginRight="16"
+			marginTop="16"
+			marginBottom="6"
+			height="wrap_content"
+			gravity="left|center"
+			orientation="horizontal">
+			<TextView 
+				width="wrap_content" 
+				height="22" 
+				gravity="center"
+				textSize="16"
+				textFontWeight="500"
+				text="{{@data.botCreateConfirmPop.confirmPop.symbolDisplay}}"
+				textColor="@color/kColorPrimaryText"/>
+			<TextView 
+				width="wrap_content" 
+				height="16" 
+				gravity="center"
+				textSize="10"
+				textFontWeight="500"
+				paddingLeft="4"
+				paddingRight="4"
+				marginLeft="4"
+				cornerRadius="2"
+				borderWidth="0.5"
+				borderColor="@color/kColorPrimarySeparator"
+				text="{{@data.botCreateConfirmPop.confirmPop.gridModeDisplay}}"
+				textColor="@color/kColorSecondaryText" />
+			<TextView 
+				width="wrap_content" 
+				height="16" 
+				gravity="center"
+				textSize="10"
+				textFontWeight="500"
+				paddingLeft="4"
+				paddingRight="4"
+				marginLeft="4"
+				cornerRadius="2"
+				borderWidth="0.5"
+				borderColor="{{@data.botCreateConfirmPop.confirmPop.trendTypeBorderColor}}"
+				text="{{@data.botCreateConfirmPop.confirmPop.trendTypeDisplay}}"
+				textColor="{{@data.botCreateConfirmPop.confirmPop.trendTypeColor}}" />
+			<TextView 
+				width="wrap_content" 
+				height="16" 
+				gravity="center"
+				textSize="10"
+				textFontWeight="500"
+				paddingLeft="4"
+				paddingRight="4"
+				marginLeft="4"
+				cornerRadius="2"
+				borderWidth="0.5"
+				borderColor="@color/kColorPrimarySeparator"
+				text="{{@data.botCreateConfirmPop.confirmPop.leverDisplay}}"
+				textColor="@color/kColorSecondaryText"
+				/>
+		</LinearLayout>
+
+		<LinearLayout
+			width="match_parent"
+			height="wrap_content"
+			gravity="centerVertical"
+			orientation="vertical">
+			<For
+				data="@data.botCreateConfirmPop.confirmPop.paramsList"
+				itemKey="element"
+				typeKey="cellType">
+				<Cell
+					width="match_parent"
+					height="wrap_content"
+					type="1">
+					<LinearLayout
+						width="match_parent"
+						marginLeft="16"
+						marginRight="16"
+						height="32"
+						gravity="center"
+						orientation="horizontal">
+						<TextView
+							gravity="left|center"
+							height="match_parent"
+							width="wrap_content"
+							text="{{@element.title}}"
+							textColor="@color/kColorThreeLevelText"
+							textFontWeight="400"
+							textSize="14" />
+						<View weight="1" />
+						<TextView
+							gravity="right|center"
+							height="match_parent"
+							width="wrap_content"
+							text="{{@element.content}}"
+							textColor="@color/kColorPrimaryText"
+							textFontWeight="500"
+							textSize="14" />
+					</LinearLayout>
+				</Cell>
+				<Cell
+					width="match_parent"
+					height="12.5"
+					type="2">
+					<LinearLayout
+						width="match_parent"
+						marginLeft="16"
+						marginRight="16"
+						marginTop="6"
+						height="0.5"
+						gravity="center"
+						orientation="horizontal"
+						background="@color/kColorPrimarySeparator">
+					</LinearLayout>
+				</Cell>
+			</For>
+		</LinearLayout>
+		<LinearLayout
+			width="match_parent"
+			paddingLeft="16"
+			paddingRight="16"
+			paddingTop="6"
+			paddingBottom="16"
+			height="wrap_content"
+			gravity="left|top"
+			orientation="horizontal">
+			<TextView 
+				width="match_parent" 
+				height="wrap_content" 
+				gravity="left|top"
+				textSize="12"
+				textFontWeight="400"
+				textColor="@color/kColorSecondaryText"
+				text="{{@data.botCreateConfirmPop.confirmPop.remindMsg}}"
+				maxLines="0"/>
+		</LinearLayout>
+		<!-- </LinearLayout> -->
+		<!-- </Scroller> -->
+		<LinearLayout
+			width="match_parent"
+			height="44"
+			background="@color/kColorMajorTheme100"
+			gravity="center"
+			marginTop="16"
+			marginLeft="16"
+			marginRight="16"
+			cornerRadius="4"
+			orientation="horizontal"
+			onClick="@event.botCreateConfirmPop.confirmClick()">
+			<TextView 
+				height="match_parent" 
+				width="match_parent"
+				gravity="center"
+				text="{{@i18n/n_copy_trading_confirm}}"
+				textColor="@color/KBaseTextColor"
+				textFontWeight="500" 
+				textSize="14" />
+		</LinearLayout>
+		<View
+			width="match_parent"
+			height="34" />
+	</LinearLayout>
+<!-- </LinearLayout> -->

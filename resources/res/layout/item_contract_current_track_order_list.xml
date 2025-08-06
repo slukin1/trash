@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingBottom="@dimen/dimen_12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_expanded_title_margin_left" android:layout_marginRight="@dimen/global_expanded_title_margin_right">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dimen_46">
+        <TextView android:textSize="@dimen/dimen_16" android:textColor="@color/global_main_text_color" android:id="@+id/item_contract_order_tv_title_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textSize="@dimen/dimen_16" android:textColor="@color/global_quotation_down_color" android:id="@+id/item_contract_order_tv_title_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_3" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/global_default_sub_text_color" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_3" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:id="@+id/item_contract_order_tv_title_cancel" android:background="@drawable/shape_entrust_order_cancel_btn_bg" android:paddingLeft="@dimen/dimen_8" android:paddingTop="@dimen/dimen_4" android:paddingRight="@dimen/dimen_8" android:paddingBottom="@dimen/dimen_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dimen_50" android:text="@string/contract_entrust_order_cancel" android:paddingHorizontal="@dimen/dimen_8" android:paddingVertical="@dimen/dimen_4"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/item_contract_order_data_ll" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:id="@+id/item_contract_order_tv_order_volume_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contract_entrust_order_volume"/>
+            <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/item_contract_order_tv_order_volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:id="@+id/item_contract_order_tv_order_trigger_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_contract_track_order_unit"/>
+            <com.hbg.lib.widgets.SubscriptTextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/item_contract_order_tv_order_trigger" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:id="@+id/item_contract_order_tv_call_back_rate_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_contract_call_back_rate"/>
+            <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/item_contract_order_tv_call_back_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_11">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:id="@+id/item_contract_order_tv_order_price_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contract_entrust_order_price"/>
+            <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/item_contract_order_tv_order_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/kColorThreeLevelText" android:id="@+id/item_contract_order_tv_state_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/balance_detail_status"/>
+            <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/item_contract_order_tv_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/item_contract_order_tv_title_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10"/>
+</LinearLayout>

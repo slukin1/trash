@@ -1,0 +1,130 @@
+<LinearLayout width="match_parent"
+    height="match_parent"
+    orientation="vertical">
+
+    <LinearLayout width="match_parent"
+        height="32"
+        gravity="centerVertical"
+        orientation="horizontal"
+        marginLeft="16"
+        marginRight="16">
+
+        <TextView width="wrap_content"
+            height="wrap_content"
+            text="{{@data.marketCapListData.sectionHeader.leftTitle | Name}}"
+            textColor="@color/KBaseColorSecondaryText"
+            textSize="11"
+            weight="1" />
+
+        <TextView width="90"
+            height="wrap_content"
+            gravity="right"
+            text="{{@data.marketCapListData.sectionHeader.middleTitle | Last Price}}"
+            textColor="@color/KBaseColorSecondaryText"
+            marginRight="16"
+            autoSizeTextType="uniform"
+            textSize="11" />
+
+        <TextView width="80"
+            height="wrap_content"
+            gravity="right"
+            text="{{@data.marketCapListData.sectionHeader.rightTitle | Market Cap ($)}}"
+            textColor="@color/KBaseColorSecondaryText"
+            autoSizeTextType="uniform"
+            textSize="11" />
+
+    </LinearLayout>
+
+    <RecyclerView height="match_parent"
+        width="match_parent"
+        data="@data.marketCapListData.data"
+        itemKey="item"
+        typeKey="type"
+        indexKey="i">
+
+        <Cell type="2"
+            width="match_parent"
+            height="wrap_content">
+
+            <LinearLayout width="match_parent"
+                height="52"
+                paddingLeft="16"
+                paddingRight="16"
+                orientation="horizontal"
+                onClick="@event.goToKLine('{{@item.symbol}}')"
+                gravity="center">
+
+                <ImageView width="24"
+                    height="24"
+                    marginRight="12"
+                    gravity="right"
+                    src="{{@item.iconURL}}"
+                    placeholder="@drawable/home_coin_placeholder_24"
+                    cornerRadius="12"
+                    background="@color/baseCoinLockTipBg" />
+
+                <TextView height="24"
+                    width="wrap_content"
+                    maxWidth="95"
+                    text="{{@item.baseName}}"
+                    textSize="16"
+                    textFontWeight="500"
+                    gravity="center"
+                    autoSizeTextType="uniform"
+                    textColor="@color/kColorPrimaryText" />
+
+                <TextView
+                    height="wrap_content"
+                    width="wrap_content"
+                    text="0 fee"
+                    textSize="9"
+                    textFontWeight="500"
+                    marginLeft="3"
+                    paddingBottom="1"
+                    paddingTop="1"
+                    paddingLeft="2"
+                    paddingRight="2"
+                    gravity="center"
+                    textColor="@color/KBaseColorMajorTheme100"
+                    background="@color/KBaseColorMajorTheme006"
+                    cornerRadius="3"
+                    visibility="{{@item.isZeroFee}}"
+                />
+
+                <ImageView
+                    width="14"
+                    height="14"
+                    marginLeft="4"
+                    src="{{@item.flagURL}}"
+                    visibility="{{@item.flagViewVisibility}}"/>
+
+                <View
+                    width="1"
+                    height="1"
+                    weight="1" />
+
+                <TextView height="24"
+                    width="90"
+                    text="{{@item.price}}"
+                    isSubscript="true"
+                    textSize="16"
+                    textFontWeight="500"
+                    gravity="right|center"
+                    textColor="@color/kColorPrimaryText"
+                    autoSizeTextType="uniform"
+                    marginRight="16" />
+
+                <TextView height="28"
+                    width="80"
+                    text="{{@item.volume}}"
+                    textSize="16"
+                    textFontWeight="500"
+                    gravity="right|center"
+                    cornerRadius="3"
+                    autoSizeTextType="uniform"
+                    textColor="@color/kColorPrimaryText" />
+            </LinearLayout>
+        </Cell>
+    </RecyclerView>
+</LinearLayout>
+

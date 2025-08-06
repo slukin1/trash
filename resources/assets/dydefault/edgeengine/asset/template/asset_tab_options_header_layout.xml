@@ -1,0 +1,23 @@
+<!-- 期权头部卡片 模版 -->
+<LinearLayout background="@color/KBaseColorContentBackground" height="74" orientation="vertical" marginTop="24" width="match_parent">
+
+	<LinearLayout marginLeft="16" marginRight="16" height="16" orientation="horizontal" width="match_parent" gravity="centerVertical">
+
+		<TextView height="16" text="{{@data.optionsHeaderTitle}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+
+		<View width="0" height="0" weight="1"/>
+
+		<ImageView height="14" marginRight="4" onClick="@event.iconClick()" src="@drawable/history" visibility="{{@data.showRightIcon | gone}}" width="14"/>
+
+	</LinearLayout>
+
+	<LinearLayout marginTop="4" marginLeft="16" marginRight="16" width="match_parent" height="30" gravity="bottom" orientation="horizontal">
+
+		<TextView height="wrap_content" text="{{@data.optionsTotalAsset}}" textColor="@color/kColorPrimaryText" textSize="22" width="wrap_content" maxWidth="308" textFontWeight="500" autoSizeMinTextSize="12" autoSizeTextType="uniform"/>
+
+		<TextView height="17" marginLeft="4" text="USDT" textColor="@color/kColorPrimaryText" textSize="12" visibility="{{@data.usdtVis}}" width="wrap_content" textFontWeight="500"/>
+
+	</LinearLayout>
+
+	<View background="@color/KBaseColorPrimarySeparator" height="0.5" marginTop="23.5" width="match_parent"/>
+</LinearLayout>

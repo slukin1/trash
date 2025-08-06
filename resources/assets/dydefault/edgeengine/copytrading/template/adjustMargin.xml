@@ -1,0 +1,75 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="wrap_content" topLeftRadius="8" topRightRadius="8" width="375" orientation="vertical" onClick="@event.position.closeKeyBoard()">
+
+        <LinearLayout height="wrap_content" marginTop="12" marginBottom="12" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent" gravity="centerVertical">
+
+                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_adjust_position_margin}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" width="wrap_content"/>
+
+                <View height="0" weight="1" width="0"/>
+
+                <ImageView height="28" onClick="@event.position.onAdjustMarginClose()" src="@drawable/trade_margin_coupon_title_close" width="28"/>
+        </LinearLayout>
+
+        <LinearLayout height="wrap_content" marginBottom="16" marginLeft="16" marginRight="16" orientation="vertical" width="match_parent">
+                <!-- 增加 减少 -->
+                <LinearLayout background="@color/KBaseColorInputBackground" cornerRadius="4" gravity="centerVertical" height="36" marginTop="8" marginBottom="8" orientation="horizontal" width="match_parent">
+                        <TextView cornerRadius="4" background="{{@data.position.addBackColor}}" marginLeft="2" marginTop="2" marginBottom="2" gravity="center" height="match_parent" width="169" text="{{@i18n/n_copy_trading_position_add_margin}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" onClick="@event.position.onAdjustMargin(0)"/>
+                        <View height="0" weight="1" width="1"/>
+                        <TextView cornerRadius="4" background="{{@data.position.reduceBackColor}}" marginRight="2" marginTop="2" marginBottom="2" gravity="center" height="match_parent" width="169" text="{{@i18n/n_copy_trading_position_reduce_margin}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" onClick="@event.position.onAdjustMargin(1)"/>
+                </LinearLayout>
+                <!-- 数量 -->
+                <LinearLayout gravity="centerVertical" height="44" orientation="horizontal" width="match_parent">
+                        <LinearLayout background="@color/KBaseColorInputBackground" cornerRadius="4" gravity="centerVertical" height="match_parent" marginTop="4" marginBottom="4" orientation="horizontal" width="match_parent">
+                                <EditText weight="1" gravity="left" height="wrap_content" width="wrap_content" inputType="numberDecimal" marginLeft="8" marginTop="6" marginBottom="6" textColor="@color/kColorPrimaryText" textFontWeight="500" bindText="@data.position.amount" textSize="14" requestFocus="{{@data.position.amountFocus}}" onFocusChange="@event.position.onFocusChange(1,@eventParams)" onTextChange="@event.position.onTextChange(1,@eventParams)" textFilter="@dataParser.trade_parser(10,4,@eventParams)" hint="{{@i18n/n_contract_trade_input_amount}}" textColorHint="@color/eButtonUnenabledBgColor"/>
+                                <TextView marginLeft="12" gravity="center" height="match_parent" width="wrap_content" text="USDT" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14"/>
+                                <View background="@color/kColorPrimarySeparator" marginLeft="12" gravity="center" height="16" width="1"/>
+                                <TextView marginLeft="12" marginRight="8" gravity="center" height="match_parent" width="wrap_content" text="{{@i18n/n_otc_max}}" textColor="@color/baseColorMajorTheme100" textFontWeight="500" onClick="@event.position.onMax()" textSize="14"/>
+                        </LinearLayout>
+
+                </LinearLayout>
+                <!-- 当前仓位持仓保证金 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="4" marginBottom="4" width="wrap_content" height="wrap_content" text="{{@i18n/n_copy_trading_position_margin}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="12" maxWidth="180"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="4" height="wrap_content" width="wrap_content" text="{{ @data.position.marginPosition | -- }}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" maxWidth="140" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 最大可增加 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="4" marginBottom="4" width="wrap_content" height="wrap_content" text="{{@data.position.maxMargin}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="12" maxWidth="180"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="4" height="wrap_content" width="wrap_content" text="{{ @data.position.available | -- }}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" maxWidth="140" gravity="right"/>
+
+                </LinearLayout>
+
+                <!-- 调整后参考强平价 -->
+                <LinearLayout gravity="centerVertical" height="wrap_content" orientation="horizontal" width="match_parent">
+
+                        <TextView marginTop="4" marginBottom="4" width="wrap_content" height="wrap_content" text="{{@i18n/n_contract_refer_force_cose_price}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="400" textSize="12" maxWidth="180"/>
+
+                        <View weight="1" height="1"/>
+
+                        <TextView marginTop="4" height="wrap_content" width="wrap_content" text="{{ @data.position.liquidationPrice | -- }}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" maxWidth="140" gravity="right"/>
+
+                </LinearLayout>
+                <LinearLayout height="wrap_content" orientation="vertical" width="match_parent">
+
+                        <LinearLayout gravity="right" height="76" width="match_parent" orientation="vertical">
+
+                                <TextView cornerRadius="4" background="@color/baseColorMajorTheme100" marginTop="16" marginBottom="16" gravity="center" height="match_parent" width="match_parent" text="{{@i18n/n_copy_trading_confirm}}" textColor="#FFFFFF" textFontWeight="500" textSize="14" onClick="@event.position.onConfirm()"/>
+
+                        </LinearLayout>
+
+                        <View width="match_parent" height="20"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

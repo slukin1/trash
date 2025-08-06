@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="jumio_ic_clear_height">30dp</dimen>
+    <dimen name="jumio_ic_clear_width">30dp</dimen>
+</resources>

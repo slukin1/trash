@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/lever_scroll_view" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/dimen_3">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/indicator_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/title_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </FrameLayout>
+</HorizontalScrollView>

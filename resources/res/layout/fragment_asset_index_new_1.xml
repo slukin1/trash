@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/asset_page_status_bar" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_asset_top_header" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@color/transparent" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/header_layout" android:fitsSystemWindows="true" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="3" app:statusBarScrim="@android:color/transparent">
+                    <LinearLayout android:orientation="vertical" android:id="@+id/ll_asset_header" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.huobi.view.roundview.RoundLinearLayout android:gravity="center_vertical" android:id="@+id/ipRestrictionsTipsContainer" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_36" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:layout_marginBottom="@dimen/dimen_10" android:layout_marginHorizontal="@dimen/dimen_16" android:paddingHorizontal="@dimen/dimen_15" app:rv_backgroundColor="@color/login_ip_restrictions_tips_bg" app:rv_cornerRadius="@dimen/dimen_8">
+                            <ImageView android:layout_width="@dimen/dimen_12" android:layout_height="@dimen/dimen_12" android:src="@drawable/login_ip_restrictions_tips_icon"/>
+                            <com.hbg.lib.widgets.MarqueeView android:id="@+id/ipRestrictionsTips" android:layout_width="match_parent" android:layout_height="match_parent" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1" android:layout_marginStart="@dimen/dimen_8"/>
+                            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/ipRestrictionsTips_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dimen_10"/>
+                            <ImageView android:layout_width="@dimen/dimen_10" android:layout_height="match_parent" android:src="@drawable/ic_asset_header_detail_arrow"/>
+                        </com.huobi.view.roundview.RoundLinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <FrameLayout android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@+id/asset_index_top_navigation" android:background="@color/KBaseColorDeepestBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.google.android.material.tabs.TabLayout android:id="@+id/asset_tab_layout_new" android:background="@drawable/shape_common_base_content_top_radius_8" android:layout_width="match_parent" android:layout_height="62dp" app:tabGravity="1" app:tabMinWidth="0dp" app:tabMode="0" app:tabPaddingEnd="16dp" app:tabPaddingStart="16dp" app:tabRippleColor="@android:color/transparent" app:tabTextAppearance="@style/AssetTabLayout"/>
+                        <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+                    </LinearLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/clContractApyBubble" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8dp" android:layout_marginStart="@dimen/dimen_10">
+                        <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/KBaseTextColor" android:gravity="top" android:id="@+id/tvTag" android:background="@drawable/bg_asset_contract_apy" android:paddingLeft="@dimen/dimen_4" android:paddingTop="@dimen/dimen_2_5" android:paddingRight="@dimen/dimen_4" android:paddingBottom="@dimen/dimen_2_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_asset_contract_bubble_text" android:fontFamily="@font/roboto_medium" android:paddingHorizontal="@dimen/dimen_4" android:paddingVertical="@dimen/dimen_2_5" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/asset_contract_apy_arrown" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tvTag"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.core.widget.NestedScrollView android:background="@color/baseColorContentBackground" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.huobi.asset.widget.AssetLoadingView android:id="@+id/asset_index_top_loading" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/asset_tab_view_pager" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

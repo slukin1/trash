@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/global_item_bg" android:paddingLeft="@dimen/dimen_30" android:paddingRight="@dimen/dimen_30" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/global_text_size_24" android:textColor="@color/global_main_text_color" android:id="@+id/zone_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_46" android:layout_marginBottom="@dimen/dimen_11" android:text="@string/n_grid_strategy_risk_notice" android:fontFamily="@font/roboto_medium"/>
+    <View android:id="@+id/zone_divider_view" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_below="@+id/zone_title_tv"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_below="@+id/zone_divider_view">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_18" android:text="@string/n_grid_strategy_risk_notice_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_14_5">
+            <ImageView android:id="@+id/trade_risk_remider_check_iv" android:padding="@dimen/dimen_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/marquee_unselected"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_main_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_grid_strategy_risk_i_awared"/>
+        </LinearLayout>
+        <include layout="@layout/layout_dialog_action"/>
+    </LinearLayout>
+</LinearLayout>

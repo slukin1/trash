@@ -1,0 +1,7 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="4" height="wrap_content" orientation="vertical" paddingBottom="16" paddingLeft="16" paddingRight="16" paddingTop="16" width="325">
+    <TextView height="wrap_content" maxLines="99" text="{{@data.copySetting.popContent}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" width="293"/>
+    <LinearLayout background="#0173E5" cornerRadius="4" gravity="center" height="44" marginTop="20" onClick="@event.copySetting.popTipsDismiss()" width="293">
+        <TextView height="wrap_content" text="{{@i18n/n_copy_trading_me_know}}" textColor="#FFFFFF" textFontWeight="500" textSize="14" width="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

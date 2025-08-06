@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/otc_currency_select_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/search_currency_header" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginTop="@dimen/dimen_12_5" android:layout_marginStart="@dimen/dimen_15" android:layout_marginEnd="@dimen/dimen_15">
+        <LinearLayout android:layout_gravity="center_vertical" android:background="@drawable/hot_search_input_bg" android:layout_width="@dimen/dimen_0" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:src="@drawable/search_symbol_search"/>
+            <com.hbg.lib.widgets.input.ClearEditText android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:textColorHint="@color/global_default_text_color" android:gravity="center_vertical" android:id="@+id/search_currency_input" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_5" android:hint="@string/n_otc_hint_input_coin" android:maxLines="1" android:inputType="text" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/color_cursor1" android:paddingEnd="@dimen/dimen_10"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_gravity="center_vertical" android:id="@+id/search_currency_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_otc_new_otc_cancel" android:layout_marginStart="@dimen/dimen_10"/>
+    </LinearLayout>
+    <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/id_trade_order_loading_layout" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_13" android:layout_below="@+id/search_currency_header">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_otc_trade_currency_rv" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_otc_trade_currency_search_result_rv" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </com.hbg.lib.widgets.LoadingLayout>
+</RelativeLayout>

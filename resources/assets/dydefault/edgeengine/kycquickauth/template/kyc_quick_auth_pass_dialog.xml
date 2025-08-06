@@ -1,0 +1,92 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="wrap_content"
+    orientation="vertical" width="match_parent" topLeftRadius="8" topRightRadius="8">
+    <!--L1基础认证-->
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" width="0" weight="1" marginBottom="12"  marginTop="12"
+            text="{{@data.title}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" />
+
+        <ImageView height="16" width="16" src="@drawable/icon_hbg_dialog_top_close" onClick="@event.kycCloseView()" />
+    </LinearLayout>
+    <!--分割线-->
+    <View background="@color/KCommon_widget_stroke_color" width="match_parent" height="0.5" marginBottom="20.5" />
+
+    <LinearLayout gravity="centerHorizontal" height="wrap_content" visibility="{{@data.showPassIcon | gone}}"
+        orientation="vertical" width="match_parent" marginLeft="16" marginRight="16">
+        <!--认证通过图标-->
+        <ImageView height="60" width="60" src="@drawable/kyc_quick_auth_pass" />
+        <!--认证通过-->
+        <TextView height="wrap_content" width="match_parent" marginTop="14" maxLines="0" gravity="center"
+            text="{{@i18n/n_kyc_quick_title}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" />
+        <!--认证通过副标题-->
+        <TextView height="wrap_content" width="match_parent" marginBottom="20"  marginTop="4" maxLines="0" gravity="center"
+            text="{{@data.detailTitle}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+
+    <LinearLayout background="@color/KBaseColorDeepestBackground" height="wrap_content" marginLeft="16" marginRight="16" marginBottom="36"
+        paddingBottom="14" paddingTop="14" orientation="vertical" width="match_parent" cornerRadius="4">
+
+        <!--个人信息-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+             orientation="horizontal" gravity="centerVertical" marginTop="8" marginBottom="8">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_info}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" />
+            <ImageView height="20" width="20" src="@drawable/kyc_quick_auth_edit" onClick="@event.kycClickedEdit()" />
+        </LinearLayout>
+
+        <!--国籍-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+            orientation="horizontal" gravity="centerVertical" marginTop="6" marginBottom="6" visibility="{{@data.showCountry | visible}}">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_nationality}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" />
+            <ImageView height="16" width="wrap_content" src="{{@data.flagUrlPass}}" background="@color/KBaseColorDeepestBackground" />
+            <TextView height="wrap_content" width="wrap_content"
+                text="{{@data.countryNamePass}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" />
+        </LinearLayout>
+
+        <!--firstname-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+            orientation="horizontal" gravity="centerVertical" marginTop="6" marginBottom="6">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_firstname}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" />
+            <TextView height="wrap_content" width="wrap_content"
+                text="{{@data.firstNamePass}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" />
+        </LinearLayout>
+
+        <!--lastname-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+            orientation="horizontal" gravity="centerVertical" marginTop="6" marginBottom="6">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_lastname}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" />
+            <TextView height="wrap_content" width="wrap_content"
+                text="{{@data.lastNamePass}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" />
+        </LinearLayout>
+
+        <!--证件号-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+            orientation="horizontal" gravity="centerVertical" marginTop="6" marginBottom="6">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_certificate_number}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" />
+            <TextView height="wrap_content" width="wrap_content"
+                text="{{@data.cardNumberPass}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" />
+        </LinearLayout>
+
+        <!--生日-->
+        <LinearLayout  height="wrap_content" width="match_parent" marginLeft="16" marginRight="16"
+            orientation="horizontal" gravity="centerVertical" marginTop="6" marginBottom="6">
+            <TextView height="wrap_content" width="0" weight="1" maxLines="0"
+                text="{{@i18n/n_kyc_quick_birthday}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" />
+            <TextView height="wrap_content" width="wrap_content"
+                text="{{@data.birthdayString | MM/DD/YYYY}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--按钮-->
+    <LinearLayout background="@color/kColorMajorTheme100" cornerRadius="4" gravity="center" height="44" marginBottom="16"
+        marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent" onClick="@event.kycClickedSubmit()">
+
+        <TextView height="wrap_content" width="wrap_content" text="{{@data.buttonTitle}}"
+            textColor="#FFFFFF" textFontWeight="500" textSize="14" />
+
+    </LinearLayout>
+    <View width="match_parent" height="{{@data.bottomOffset}}" />
+</LinearLayout>
+

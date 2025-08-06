@@ -1,0 +1,19 @@
+<LinearLayout height="wrap_content" marginBottom="16" marginLeft="16" marginRight="16"
+    marginTop="16" orientation="vertical" width="293">
+    <LinearLayout gravity="centerVertical" height="wrap_content"
+        orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" text="{{@i18n/n_live_gift_introduction}}" textSize="16" textWeight="600"
+            width="wrap_content" textColor="#000000" />
+        <View height="0" weight="1" width="0" />
+        <ImageView height="16" src="@drawable/hb_live_intro_close" width="16" onClick="@event.closeAlert()" />
+    </LinearLayout>
+    <TextView height="wrap_content" marginTop="23" text="{{@data.likeTitle}}" textSize="14" textWeight="400"
+        width="wrap_content" textColor="#8A8A8E"/>
+    <TextView height="wrap_content" marginTop="14" text="{{@data.watchTitle}}" textSize="14" textWeight="400"
+        width="wrap_content" textColor="#8A8A8E"/>
+    <TextView height="wrap_content" marginTop="14" text="{{@data.sendGiftTitle}}" textSize="14" textWeight="400"
+        width="wrap_content" textColor="#8A8A8E"/>
+    <CornerView background="#0173E5" gravity="center" height="40" marginTop="23" text="{{@i18n/n_known}}"
+        textSize="14" textWeight="500" width="293" onClick="@event.closeAlert()" textColor="#FFFFFF" cornerRadius="4"/>
+</LinearLayout>
+

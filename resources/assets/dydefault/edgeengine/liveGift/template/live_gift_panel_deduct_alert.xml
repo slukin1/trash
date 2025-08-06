@@ -1,0 +1,17 @@
+<FrameLayout height="240" width="325">
+    <LinearLayout gravity="centerHorizontal" height="240" marginLeft="16" marginRight="16" marginTop="24"
+        orientation="vertical" width="293">
+        <TextView height="wrap_content" text="{{@i18n/n_live_gift_account_tips}}" textSize="18" textWeight="500"
+            width="wrap_content" textColor="#000000" />
+        <TextView height="wrap_content" marginTop="4" text="{{@i18n/n_live_gift_spot_tips}}" textSize="12"
+            textWeight="400" width="wrap_content" textColor="#8A8A8E" />
+        <ImageView height="44" marginTop="18" src="@drawable/live_gift_consume_alert"
+            width="44" />
+        <TextView height="wrap_content" marginTop="5" text="{{@i18n/n_live_gift_spot_account}}" textSize="14" textWeight="500"
+            width="wrap_content" textColor="#000000" />
+        <CornerView background="#0173E5" gravity="center" height="40" marginTop="19" text="{{@i18n/n_live_gift_continue_give}}" textSize="14"
+            textWeight="500" width="293" onClick="@event.continueSendGift()" textColor="#FFFFFF" cornerRadius="4"/>
+    </LinearLayout>
+    <ImageView height="16" marginLeft="293" marginTop="18" src="@drawable/hb_live_intro_close" width="16" onClick="@event.closeAlert()" />
+</FrameLayout>
+

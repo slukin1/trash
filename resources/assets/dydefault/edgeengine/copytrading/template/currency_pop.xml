@@ -1,0 +1,32 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="600" orientation="vertical" topLeftRadius="8" topRightRadius="8" width="375">
+    <LinearLayout height="600" orientation="vertical" width="375">
+        <LinearLayout gravity="centerVertical" height="28" marginLeft="16" marginRight="16" marginTop="8" orientation="horizontal" width="match_parent">
+            <TextView height="wrap_content" text="{{@i18n/n_margin_select_currency_pair}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" width="wrap_content"/>
+            <View height="0" weight="1" width="0"/>
+            <ImageView height="wrap_content" onClick="@event.capitalFlow.currencyPopDismiss()" src="@drawable/edge_engine_copy_trading_dialog_close" width="wrap_content"/>
+        </LinearLayout>
+        <View background="@color/kColorPrimarySeparator" height="0.5" marginTop="8" width="match_parent"/>
+        <!-- 搜索视图 -->
+        <LinearLayout background="@color/KBaseColorInputBackground" borderColor="{{@data.capitalFlow.borderColor}}" borderWidth="1" cornerRadius="18" gravity="centerVertical" height="36" marginBottom="8" marginLeft="16" marginRight="16" marginTop="8" orientation="horizontal" width="match_parent">
+            <ImageView height="20" marginLeft="8" src="@drawable/edge_engine_search" width="20"/>
+            <EditText bindText="@data.capitalFlow.searchWord" height="match_parent" hint="{{@i18n/n_margin_search_currency}}" imeOptions="actionSearch" marginLeft="8" onFocusChange="@event.capitalFlow.onFocusChange(@eventParams)" onReturn="@event.capitalFlow.onReturn()" requestFocus="{{@data.capitalFlow.isFocus}}" singleLine="true" textColor="@color/kColorPrimaryText" textColorHint="@color/baseColorThreeLevelText" textSize="14" weight="1"/>
+            <ImageView height="20" marginRight="8" onClick="@event.capitalFlow.clickedClear()" src="@drawable/edge_engine_close" visibility="{{@data.capitalFlow.clearVisible | invisible}}" width="20"/>
+        </LinearLayout>
+        <FrameLayout height="0" weight="1" width="match_parent">
+            <RecyclerView data="@data.capitalFlow.contractSymbolList" height="match_parent" itemKey="item" orientation="vertical" visibility="{{@data.capitalFlow.currencyListVisible | invisible}}" width="match_parent">
+                <Cell height="wrap_content" marginLeft="16" marginRight="16" type="normal" width="match_parent">
+                    <LinearLayout gravity="centerVertical" height="48" onClick="@event.capitalFlow.filterCurrency('{{@item.index}}')" orientation="horizontal" width="match_parent">
+                        <TextView height="wrap_content" text="{{@item.symbolTitle}}" textColor="{{@item.titleColor}}" textFontWeight="500" textSize="14" width="wrap_content"/>
+                        <View height="0" weight="1" width="0"/>
+                        <ImageView height="16" src="@drawable/edge_engine_marquee_selected" visibility="{{@item.currencySelected | gone}}" width="16"/>
+                    </LinearLayout>
+                </Cell>
+            </RecyclerView>
+            <!-- 空样式 -->
+            <LinearLayout gravity="center" height="match_parent" orientation="vertical" visibility="{{@data.capitalFlow.currencyEmptyVisible | gone}}" width="match_parent">
+                <ImageView height="60" src="@drawable/edge_engine_empty" width="60"/>
+                <TextView gravity="center" height="wrap_content" marginTop="8" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

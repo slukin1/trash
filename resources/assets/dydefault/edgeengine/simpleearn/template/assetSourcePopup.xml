@@ -1,0 +1,37 @@
+<!-- <LinearLayout
+		width="375"
+		height="wrap_content"
+		orientation="vertical"
+		background="@color/kColorThreeLevelText" 
+		cornerRadius="4"
+		gravity="center">
+
+		<LinearLayout
+			width="177"
+			height="wrap_content"
+			orientation="vertical"
+		>
+		
+		</LinearLayout>
+	 <TextView
+				width="wrap_content"
+				height="wrap_content"
+				marginTop="4"
+				marginLeft="8"
+				marginRight="8"
+				marginBottom="4"
+				textSize="14"
+				textFontWeight="400"
+				maxWidth="177"
+				textColor="@color/KBaseTextColor"
+				text="{{@i18n/n_use_usdt_purchase}}" />
+</LinearLayout> -->
+
+<LinearLayout width="375" height="wrap_content" paddingRight="18" orientation="vertical">
+	
+	<LinearLayout width="wrap_content" height="wrap_content" orientation="vertical" layout_gravity="right" cornerRadius="4" background="#5E5E61">
+		<TextView width="wrap_content" height="wrap_content" marginTop="5" marginLeft="8" marginRight="8" marginBottom="5" textSize="14" textFontWeight="400" maxLines="0" maxWidth="224" textColor="@color/KBaseTextColor" text="{{@i18n/n_use_usdt_purchase}}"/>
+	</LinearLayout>
+
+	<ImageView width="8" height="4" layout_gravity="right" marginBottom="8" marginRight="10" src="@drawable/edge_engine_strutured_pop_arrow_down"/>
+</LinearLayout>

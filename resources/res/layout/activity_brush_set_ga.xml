@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/hb_title_bar_securyti_link" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:titleText="@string/n_login_bind_google_auth"/>
+    <androidx.core.widget.NestedScrollView android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include android:id="@+id/rl_ga_area" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_bind_ga"/>
+    </androidx.core.widget.NestedScrollView>
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/text_white" android:gravity="center" android:id="@+id/btn_action" android:background="@drawable/btn_4_radius_enable_selector" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginTop="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:layout_marginBottom="@dimen/dimen_16" android:text="@string/n_go_verify"/>
+</LinearLayout>

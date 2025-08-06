@@ -1,0 +1,15 @@
+<LinearLayout width="325" height="wrap_content" marginTop="11" gravity="centerVertical" orientation="vertical" background="@color/KBaseColorContentBackground" cornerRadius="8" paddingBottom="16" paddingLeft="16" paddingRight="16" paddingTop="16">
+
+    <TextView width="wrap_content" height="20" text="{{@i18n/n_copy_trading_cancel_order}}" textSize="16" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+        
+    <TextView height="wrap_content" maxLines="99" marginTop="20" text="{{@i18n/n_copy_cancel_pop_tips}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" width="293"/>
+
+    <LinearLayout width="match_parent" height="40" marginTop="20" orientation="horizontal" gravity="centerVertical">
+        <TextView height="match_parent" gravity="center" text="{{@i18n/n_cancel}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="14" width="142.5" background="@color/eContentNavUnselectedBackground" cornerRadius="4" onClick="@event.myTrader.onTipClose()"/>
+
+        <View height="0" weight="1" width="0"/>
+                    
+        <TextView height="match_parent" gravity="center" text="{{@i18n/n_sure}}" textColor="@color/eContentTabDialogBackground" textFontWeight="500" textSize="14" width="142.5" background="@color/baseColorMajorTheme100" cornerRadius="4" onClick="@event.myTrader.tipConfirm()"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/market_page_status_bar" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_25"/>
+    <include android:id="@+id/layout_market_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/market_page_status_bar" layout="@layout/market_title_bar"/>
+    <FrameLayout android:id="@+id/fl_body" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/layout_market_title">
+        <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_16"/>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/rl_content" android:background="@drawable/shape_market_indicate_top_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/indicatorLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/tab_sort_view" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/market_tab_sort_new"/>
+                <include android:id="@+id/marketOptionTopLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/market_option_top_layout"/>
+                <include android:id="@+id/marketCollectionTopLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/market_collection_top_layout"/>
+                <ImageView android:id="@+id/market_stare_iv" android:paddingRight="@dimen/dimen_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_marginTop="@dimen/dimen_5" android:src="@drawable/market_icon_stare" android:scaleType="centerInside" android:layout_alignParentRight="true"/>
+                <ImageView android:id="@+id/market_edit_iv" android:visibility="gone" android:layout_width="@dimen/dimen_36" android:layout_height="@dimen/dimen_40" android:layout_marginTop="@dimen/dimen_5" android:src="@drawable/market_icon_edit" android:scaleType="centerInside" android:layout_toLeftOf="@+id/market_stare_iv"/>
+            </RelativeLayout>
+            <include android:id="@+id/layContent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/indicatorLayout" layout="@layout/lay_content_view"/>
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/home_market_refresh" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/indicatorLayout">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constrain_layout_layout_market_contract_indicator_box_usdt" android:background="@color/app_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+                        <HorizontalScrollView android:id="@+id/horizontal_scroll_view_market_filter_usdt" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0">
+                            <RadioGroup android:orientation="horizontal" android:id="@+id/radio_group_market_option_filter_usdt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </HorizontalScrollView>
+                        <ImageView android:id="@+id/image_view_market_contract_indicator_arrow_right_usdt" android:layout_width="wrap_content" android:layout_height="0dp" android:src="@drawable/market_indicator_shadow" android:scaleType="centerCrop" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                        <View android:id="@+id/contract_indicator_divider1" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" app:layout_constraintBottom_toBottomOf="0"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constrain_layout_layout_market_contract_indicator_box" android:background="@color/app_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+                        <HorizontalScrollView android:id="@+id/horizontal_scroll_view_market_filter" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0">
+                            <RadioGroup android:orientation="horizontal" android:id="@+id/radio_group_market_option_filter" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </HorizontalScrollView>
+                        <ImageView android:id="@+id/image_view_market_contract_indicator_arrow_right" android:layout_width="wrap_content" android:layout_height="0dp" android:src="@drawable/market_indicator_shadow" android:scaleType="centerCrop" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                        <View android:id="@+id/contract_indicator_divider2" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" app:layout_constraintBottom_toBottomOf="0"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.huobi.homemarket.view.MarketOptionTopView android:id="@+id/marketOptionTopView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/constrain_layout_layout_market_contract_indicator_box"/>
+                    <com.huobi.homemarket.ui.MarketSortLayout android:id="@+id/market_contract_sort" android:background="@color/baseColorContentBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_below="@+id/marketOptionTopView"/>
+                    <androidx.viewpager.widget.ViewPager android:id="@+id/market_vp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/market_contract_sort"/>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/market_collection_cointypes_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/market_contract_sort"/>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/market_collection_contract_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/market_contract_sort"/>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/market_collection_watching_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/market_contract_sort"/>
+                    <RelativeLayout android:id="@+id/market_contract_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/market_contract_sort">
+                        <include android:id="@+id/market_contract_empty" android:visibility="gone" layout="@layout/common_empty_view"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/market_contract_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/market_usdt_contract_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                        <FrameLayout android:id="@+id/market_option_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <View android:id="@+id/optionTopDivider" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+                            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dimen_35">
+                                <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:id="@+id/tv_left_title" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                                <com.wtree.scrolltable.SyncHorizontalScrollView android:id="@+id/scrollView_title" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toRightOf="@+id/tv_left_title" android:overScrollMode="never">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/lin_right_title_parent" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                                </com.wtree.scrolltable.SyncHorizontalScrollView>
+                                <View android:id="@+id/leftTitleDivider" android:background="@color/baseColorPrimarySeparator" android:layout_width="@dimen/dimen_0_5" android:layout_height="match_parent" android:layout_toRightOf="@+id/tv_left_title"/>
+                                <View android:id="@+id/dividerTitleShadow" android:background="@drawable/strike_price_shadow" android:layout_width="@dimen/dimen_12" android:layout_height="match_parent" android:layout_toRightOf="@+id/leftTitleDivider"/>
+                            </RelativeLayout>
+                            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35dp">
+                                <androidx.recyclerview.widget.RecyclerView android:id="@+id/listview_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:overScrollMode="never"/>
+                                <com.wtree.scrolltable.LockHorizontalScrollView android:id="@+id/scrollView_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/listview_left" android:overScrollMode="never">
+                                    <com.wtree.scrolltable.MyExpandRecycleView android:id="@+id/listview_right" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+                                </com.wtree.scrolltable.LockHorizontalScrollView>
+                                <View android:id="@+id/leftDivider" android:background="@color/baseColorPrimarySeparator" android:layout_width="@dimen/dimen_0_5" android:layout_height="wrap_content" android:layout_toRightOf="@+id/listview_left" android:layout_alignTop="@+id/listview_left" android:layout_alignBottom="@+id/listview_left"/>
+                                <View android:id="@+id/dividerShadow" android:background="@drawable/strike_price_shadow" android:layout_width="@dimen/dimen_12" android:layout_height="wrap_content" android:layout_toRightOf="@+id/leftDivider" android:layout_alignTop="@+id/listview_left" android:layout_alignBottom="@+id/listview_left"/>
+                            </RelativeLayout>
+                        </FrameLayout>
+                    </RelativeLayout>
+                    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/market_filter_safeguard_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/constrain_layout_layout_market_contract_indicator_box"/>
+                    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/market_safeguard_layout" android:background="@color/baseColorContentBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <com.huobi.view.MarketSkeletonView android:id="@+id/market_skeleton_view_contract" android:background="@color/app_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </RelativeLayout>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            <com.hbg.lib.widgets.LoadingLayout android:id="@+id/market_loading_layout" android:background="@color/baseColorContentBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_46"/>
+        </RelativeLayout>
+        <com.huobi.view.MarketSkeletonView android:id="@+id/market_skeleton_view_index_market" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/market_square_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_44" android:layout_below="@+id/market_page_status_bar"/>
+</RelativeLayout>

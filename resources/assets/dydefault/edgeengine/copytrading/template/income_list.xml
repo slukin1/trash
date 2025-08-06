@@ -1,0 +1,64 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical">
+    <LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+        <LinearLayout height="16" orientation="horizontal" marginLeft="16" marginRight="16" marginTop="16" width="match_parent">
+            <LinearLayout height="wrap_content" orientation="horizontal" marginTop="1" marginLeft="0" width="match_parent">
+                <TextView height="wrap_content" text="{{@data.income.totalRevenueTitle}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                <LinearLayout height="12" marginTop="1" orientation="horizontal" width="40" onClick="@event.income.totalProfitShow()">
+                    <ImageView height="12" width="12" src="@drawable/edge_engine_copy_alert"/>
+                </LinearLayout>
+                <View width="0" height="0" weight="1"/>
+                <TextView height="wrap_content" width="wrap_content" gravity="right" marginRight="0" text="{{@data.income.totalRevenue}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" autoSizeTextType="uniform"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout height="16" orientation="horizontal" marginLeft="16" marginRight="16" marginTop="10" width="match_parent">
+            <LinearLayout height="wrap_content" orientation="horizontal" marginTop="1" marginLeft="0" width="match_parent">
+                <TextView height="wrap_content" text="{{@data.income.todayEarningsTitle}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                <View width="0" height="0" weight="1"/>
+                <TextView height="wrap_content" width="wrap_content" gravity="right" marginRight="0" text="{{@data.income.todayEarnings}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" autoSizeTextType="uniform"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout height="16" orientation="horizontal" marginLeft="16" marginRight="16" marginTop="10" width="match_parent">
+            <LinearLayout height="wrap_content" orientation="horizontal" marginTop="1" marginLeft="0" width="match_parent">
+                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_historical_income}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                <View width="0" height="0" weight="1"/>
+                <TextView height="wrap_content" width="wrap_content" gravity="right" marginRight="0" text="{{@data.income.historicalReturn}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" autoSizeTextType="uniform"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout height="28" orientation="horizontal" marginLeft="16" marginRight="16" marginTop="20" width="match_parent">
+            <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent">
+                <TextView height="wrap_content" text="{{@i18n/n_copytrading_revenue_details}}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500" width="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout height="28" orientation="horizontal" marginLeft="16" marginRight="16" width="match_parent">
+            <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent">
+                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_income}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+                <View width="0" height="0" weight="1"/>
+                <TextView height="wrap_content" width="wrap_content" gravity="right" marginRight="0" text="{{@i18n/n_balance_detail_date}}" textColor="@color/kColorThreeLevelText" textSize="12" textFontWeight="400" autoSizeTextType="uniform"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <FrameLayout width="match_parent" height="0" weight="1">
+        <!-- 列表数据 -->
+        <RecyclerView height="match_parent" width="match_parent" gravity="centerVertical" orientation="vertical" data="@data.income.orderList" itemKey="item" typeKey="type" loadMoreStatus="{{@data.income.loadMoreStatus}}" onLoadMore="@event.income.onLoadMore()" visibility="{{@data.income.listVisible | invisible}}">
+            <Cell type="1" width="match_parent" height="28">
+                <LinearLayout width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" orientation="horizontal">
+                    <TextView height="wrap_content" text="{{@item.income}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" width="wrap_content"/>
+                    <View width="0" height="0" weight="1"/>
+                    <TextView height="wrap_content" width="wrap_content" gravity="right" marginRight="0" text="{{@item.time}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="400" autoSizeTextType="uniform"/>
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+        <!-- 空样式 -->
+        <LinearLayout gravity="centerHorizontal" height="wrap_content" orientation="vertical" visibility="{{@data.income.emptyVisible | gone}}" width="match_parent">
+            <ImageView height="60" marginTop="40" src="@drawable/edge_engine_empty" width="60"/>
+            <TextView gravity="center" height="wrap_content" marginTop="8" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/eBaseColorThreeLevelText" textSize="12" width="match_parent"/>
+            <LinearLayout background="@color/eContentNavUnselectedBackground" cornerRadius="4" height="40" gravity="center" paddingLeft="40" paddingRight="40" marginTop="20" width="wrap_content">
+                <TextView gravity="center" height="18" text="{{@i18n/n_live_recommend_copy}}" textColor="@color/kColorMajorTheme100" textSize="14" textFontWeight="500" width="wrap_content" onClick="@event.income.gotoCopyTrading()"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <View width="match_parent" height="0" popCancelOnTouchOutside="false" popShowMode="modal" popModalPositon="center" onPopDismiss="@event.income.popDismiss()" popShow="{{@data.income.tipsShow}}" popTemplate="fok_reason_pop.xml" background="@color/KBaseColorInputBackground"/>
+    <TextView width="0" height="0" text="" popTemplate="total_profits_pop.xml" popShow="{{@data.income.totalProfitShow|false}}" onPopDismiss="@event.income.totalProfitDismiss()" popCancelOnTouchOutside="true" popBackgroundDimmed="true" popShowMode="modal" popModalPositon="center"/>
+</LinearLayout>

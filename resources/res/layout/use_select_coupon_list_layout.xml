@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/select_coupon_list_root_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/title_rl" android:background="@drawable/otc_select_coupon_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_63_5" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseColorPrimaryText" android:id="@+id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/otc_coupon" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_15"/>
+        <ImageView android:id="@+id/back_image" android:padding="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bottom_dialog_back_icon" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_10"/>
+        <View android:id="@+id/line1" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_1" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_root_view" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/title_rl">
+        <androidx.core.widget.NestedScrollView android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dimen_435">
+                <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/coupon_list_rv" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <RelativeLayout android:id="@+id/unused_coupon_rl" android:background="@drawable/shape_coupon_list_unused_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15">
+                    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10" android:layout_marginBottom="@dimen/dimen_10" android:text="@string/n_coupon_not_used" android:layout_marginStart="@dimen/dimen_15"/>
+                    <ImageView android:id="@+id/select_payment_iv" android:layout_width="@dimen/dimen_16" android:layout_height="@dimen/dimen_16" android:src="@drawable/marquee_unselected" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dimen_3" android:layout_marginEnd="@dimen/dimen_15" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout android:id="@+id/select_coupon_btn" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/lite_setting_pasd_btn_selector" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15" android:layout_marginBottom="@dimen/dimen_15" android:layout_centerInParent="true">
+                <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_sure" android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

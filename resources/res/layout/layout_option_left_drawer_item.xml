@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/id_contract_left_drawer_item_symbol_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/global_margin_left" android:paddingRight="@dimen/global_margin_right" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_main_text_color" android:id="@+id/id_contract_left_drawer_item_symbol_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/global_main_text_color" android:id="@+id/id_contract_left_drawer_item_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/id_contract_left_drawer_item_symbol_name" android:layout_alignBaseline="@+id/id_contract_left_drawer_item_symbol_name"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/global_huobi_color" android:gravity="end" android:id="@+id/id_contract_left_drawer_item_symbol_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/global_quotation_down_color" android:gravity="end" android:id="@+id/id_contract_left_drawer_item_symbol_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/v_bottom_line" android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_alignParentBottom="true"/>
+</LinearLayout>

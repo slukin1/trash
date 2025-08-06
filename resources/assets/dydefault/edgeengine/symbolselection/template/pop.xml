@@ -1,0 +1,41 @@
+<LinearLayout 
+    height="wrap_content"
+    orientation="vertical"
+    gravity="top | left"
+    marginLeft = "16"
+    width="wrap_content">
+    
+    <ImageView 
+        gravity="left" 
+        height="wrap_content" 
+        orientation="horizontal" 
+        marginLeft="10" 
+        src="@drawable/edge_engine_strutured_pop_arrow"
+        width="wrap_content">
+    </ImageView>
+
+    <LinearLayout 
+        gravity="left" 
+        height="wrap_content" 
+        orientation="horizontal" 
+        paddingLeft="8" 
+        paddingRight="8"
+        paddingTop="4"
+        paddingBottom="4"
+        background="#5E5E61" 
+        cornerRadius="4"
+        borderColor="#5E5E61"
+        width="wrap_content">
+        <TextView 
+            width="wrap_content"
+            height="wrap_content"
+            text="{{@data.symbolMenu.sectionHeader.leftTitle.popStr}}"
+            textColor="#FFFFFF"
+            textSize="12"
+            textFontWeight="400"
+            gravity="left"
+            maxWidth="240"
+            maxLines="0"
+        />
+    </LinearLayout>
+</LinearLayout>

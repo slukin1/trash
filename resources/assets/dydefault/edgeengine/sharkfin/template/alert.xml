@@ -1,0 +1,58 @@
+<LinearLayout
+        width="325"
+        height="wrap_content"
+        marginTop="11"
+        gravity="centerVertical"
+        orientation="vertical"
+        background="@color/KBaseColorContentBackground"
+        cornerRadius="8">
+    <TextView
+            height="wrap_content"
+            width="325"
+            text="{{@data.alert.title}}"
+            textColor="@color/kColorPrimaryText"
+            textFontWeight="500"
+            textSize="16"
+            marginLeft="16"
+            marginTop="16" />
+    <TextView
+            height="wrap_content"
+            width="293"
+            text="{{@data.alert.content | }}"
+            textColor="@color/kColorPrimaryText"
+            textFontWeight="400"
+            textSize="14"
+            marginLeft="16"
+            marginBottom="4"
+            marginTop="16"
+            marginRight="16"
+            maxLines="0"
+            lineSpacing="4" />
+    <!--确认-->
+    <LinearLayout
+            height="wrap_content"
+            orientation="vertical"
+            width="match_parent">
+        <LinearLayout
+                gravity="right"
+                height="76"
+                width="match_parent"
+                orientation="vertical">
+            <TextView
+                    cornerRadius="4"
+                    background="#0173E5"
+                    marginTop="16"
+                    marginBottom="16"
+                    marginLeft="16"
+                    marginRight="16"
+                    gravity="center"
+                    height="match_parent"
+                    width="match_parent"
+                    text="{{@i18n/n_copy_trading_confirm}}"
+                    textColor="#FFFFFF"
+                    textFontWeight="500"
+                    textSize="14"
+                    onClick="@event.alert.confirm()" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

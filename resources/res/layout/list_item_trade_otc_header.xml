@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dimen_35">
+    <LinearLayout android:gravity="center_vertical" android:paddingLeft="@dimen/global_margin_left" android:paddingRight="@dimen/global_margin_right" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_jump_btn_color" android:gravity="center_vertical" android:id="@+id/id_list_item_trade_otc_header_tv" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <View android:id="@+id/v_contest_divider" android:background="@color/global_divider_color" android:layout_width="@dimen/dimen_0_5" android:layout_height="@dimen/dimen_10" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/market_tab_partiton_textcolor" android:gravity="center" android:id="@+id/tv_activity_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contract_trade_contest" android:drawableLeft="@drawable/trade_master" android:drawablePadding="@dimen/dimen_3"/>
+    </LinearLayout>
+    <View android:id="@+id/id_list_item_trade_otc_header_line" android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>
+</LinearLayout>

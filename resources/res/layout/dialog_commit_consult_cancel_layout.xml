@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingBottom="@dimen/dimen_25" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15">
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/id_reason_tv" android:background="@drawable/otc_blue_tips_bg" android:paddingTop="@dimen/dimen_10" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15"/>
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/id_consult_content_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15" android:text="@string/n_otc_order_detail_consult_tip"/>
+    <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginTop="@dimen/dimen_13"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_13">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_1_5" android:src="@drawable/otc_cancel_heart"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/id_fist_desc_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_5"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_1_5" android:src="@drawable/otc_cancel_order"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/id_second_desc_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_5"/>
+    </LinearLayout>
+</LinearLayout>

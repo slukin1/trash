@@ -1,0 +1,30 @@
+<!-- 逐仓杠杆 Item 模版 -->
+<LinearLayout background="@color/KBaseColorContentBackground" height="48" orientation="vertical" width="match_parent">
+
+    <LinearLayout height="58" marginLeft="16" marginRight="16" orientation="horizontal" gravity="centerVertical" width="match_parent">
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="horizontal" width="233">
+
+            <ImageView height="20" src="{{@initData.symbolIcon}}" width="20"/>
+            <LinearLayout orientation="vertical" height="wrap_content" width="wrap_content">
+
+                <LinearLayout height="wrap_content" orientation="horizontal" width="wrap_content">
+                    <TextView height="wrap_content" marginLeft="4" text="{{@initData.baseSymbolName}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="12" width="wrap_content"/>
+                    <TextView height="wrap_content" text="{{@initData.quoteSymbolName}}" textColor="@color/kColorSecondaryText" textFontWeight="600" textSize="12" width="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout background="{{@initData.riskTextBg}}" height="wrap_content" marginLeft="4" orientation="horizontal" width="wrap_content">
+
+                    <TextView height="wrap_content" marginBottom="1" marginLeft="4" marginTop="1" marginRight="4" text="{{@initData.riskText}}" textColor="{{@initData.riskTextColor}}" textFontWeight="500" textSize="10" width="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView height="wrap_content" text="{{@initData.marginPrice}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" marginLeft="10" gravity="right" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+    </LinearLayout>
+
+</LinearLayout>

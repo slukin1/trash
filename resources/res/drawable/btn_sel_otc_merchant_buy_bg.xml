@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true" android:drawable="@drawable/btn_otc_merchant_buy_press_bg"/>
+    <item android:state_enabled="true" android:drawable="@drawable/btn_otc_merchant_buy_bg"/>
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/baseColorMajorTheme100"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+</selector>

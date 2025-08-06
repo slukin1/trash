@@ -1,0 +1,36 @@
+<!-- 现货trading Bot 展开部分模版 -->
+<LinearLayout background="@color/KAssetTopHeaderContentBackground" gravity="centerVertical" height="51" orientation="horizontal" width="match_parent">
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(12, {{@initData.index}})" orientation="vertical" width="94">
+
+        <ImageView height="20" src="@drawable/asst_exc_tradingbot_detailsnew" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_asset_position_qu_deposit}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(13, {{@initData.index}})" orientation="vertical" width="94">
+
+        <ImageView height="20" src="@drawable/edge_engine_assets_exc_details" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_asset_expand_detail}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(203, {{@initData.index}})" orientation="vertical" width="94">
+
+        <ImageView height="20" src="@drawable/edge_engine_asst_exc_tradingbot_close" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_grid_user_guide_close}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(14, {{@initData.index}})" orientation="vertical" width="93">
+
+        <ImageView height="20" src="@drawable/edge_engine_assets_exc_share" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_share_sys_share}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

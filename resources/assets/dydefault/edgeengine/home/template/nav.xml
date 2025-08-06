@@ -1,0 +1,44 @@
+<LinearLayout width="375" height="44" orientation="horizontal" background="@color/KBaseColorContentBackground" gravity="center">
+
+	<!-- 头像组件 -->
+	<FrameLayout width="56" height="36" onClick="@event.nav.goToUser()">
+		<AccountAvatar width="36" height="36" marginLeft="12" marginRight="8" gravity="center" refreshStatus="{{@data.nav.refreshAvatar}}"/>
+
+		<!-- 小红点 -->
+		<View width="6" height="6" cornerRadius="3" marginTop="4" marginRight="10" layout_gravity="right" background="@color/kColorPriceRed" visibility="{{@data.nav.redDotVisible|gone}}"/>
+
+		<!-- 数字小红点 -->
+		<TextView width="wrap_content" height="14" paddingLeft="4" paddingRight="4" cornerRadius="7" background="@color/kColorPriceRed" marginTop="2" marginLeft="{{@data.nav.numRedDotLeft|36}}" layout_gravity="left" text="{{@data.nav.redDotNum|1}}" textColor="@color/KBaseTextColor" textSize="10" textFontWeight="500" gravity="center" visibility="{{@data.nav.numRedDotVisible|gone}}"/>
+	</FrameLayout>
+
+	<LinearLayout width="375" height="36" weight="1" cornerRadius="18" orientation="horizontal" background="@color/KBaseColorInputBackground" onClick="@event.nav.goToSearch()">
+
+		<ImageView width="28" height="28" marginLeft="8" marginRight="4" marginTop="4" src="@drawable/edge_engine_home_nav_search"/>
+
+		<SliderView width="375" height="match_parent" direction="vertical" autoScroll="true" timeInterval="5" scrollMode="infinite" weight="1" visibility="{{@data.nav.hotVisibility|gone}}" onSelected="@event.nav.hotIndexChange(@eventParams)">
+			<For data="@data.nav.searchData.hotWordContext.hotWords" itemKey="element" typeKey="cellType">
+				<Cell width="match_parent" height="match_parent" type="1">
+					<TextView width="match_parent" height="match_parent" text="{{@element.word}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="14" gravity="center|left" onClick="@event.nav.goToSearch('{{@element.wrodIndex}}')"/>
+				</Cell>
+			</For>
+		</SliderView>
+
+	</LinearLayout>
+
+	<ImageView width="28" height="28" gravity="center" marginLeft="8" marginRight="6" src="@drawable/edge_engine_home_nav_scan" onClick="@event.nav.goToScan()"/>
+
+	<FrameLayout width="wrap_content" height="44" marginLeft="6" marginRight="6" visibility="{{@data.nav.rewardsVisibility|gone}}" onClick="@event.nav.goToRewards()">
+		<ImageView width="28" height="28" marginTop="8" src="{{@data.nav.rewardsImage}}" placeholder="@drawable/edge_engine_home_nav_rewards"/>
+		<View width="6" height="6" cornerRadius="3" marginTop="8" marginLeft="20" background="@color/KBaseRiskTextColorHigh" visibility="{{@data.nav.rewardsRedDotVisibility|gone}}"/>
+	</FrameLayout>
+
+	<FrameLayout width="wrap_content" height="44" marginLeft="6" marginRight="12" onClick="@event.nav.goToIM()">
+		<ImageView width="28" height="28" marginTop="8" src="@drawable/edge_engine_home_nav_msg"/>
+
+		<View width="6" height="6" cornerRadius="3" marginTop="8" marginLeft="20" background="@color/KBaseRiskTextColorHigh" visibility="{{@data.nav.noticeVisibility}}"/>
+
+		<TextView width="wrap_content" height="13" cornerRadius="6.5" marginTop="5" marginLeft="20" paddingTop="1" paddingLeft="4" paddingRight="4" text="{{@data.nav.messageCount}}" textColor="@color/KBaseTextColor" background="@color/KBaseRiskTextColorHigh" textSize="10" visibility="{{@data.nav.messageVisibility}}"/>
+
+	</FrameLayout>
+
+</LinearLayout>

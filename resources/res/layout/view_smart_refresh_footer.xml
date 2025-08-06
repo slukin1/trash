@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50">
+    <View android:id="@+id/classic_footer_divider" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/classic_footer_ll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.hbg.lib.widgets.SafeLottieView android:layout_gravity="center" android:id="@+id/classic_footer_progressbar" android:layout_width="@dimen/dimen_13" android:layout_height="@dimen/dimen_13" android:layout_marginRight="@dimen/dimen_4" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/d_bottom"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_default_text_color" android:id="@+id/classic_footer_title" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/image_view_common_empty_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_90" android:src="?attr/kline_history_empty"/>
+    <TextView android:textSize="@dimen/dimen_14" android:textColor="?attr/kline_four_level_text_color" android:id="@+id/text_view_common_empty_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trade_no_record"/>
+</LinearLayout>

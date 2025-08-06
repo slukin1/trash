@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/dimen_20">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shape_otc_coupon_float_bg" android:paddingLeft="@dimen/dimen_11" android:paddingTop="@dimen/dimen_10" android:paddingRight="@dimen/dimen_11" android:paddingBottom="@dimen/dimen_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/dimen_11" android:paddingVertical="@dimen/dimen_10">
+        <ImageView android:id="@+id/float_icon_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/coupon_float_bg_icon"/>
+        <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/baseColorPrimaryText" android:gravity="center_horizontal" android:id="@+id/float_desc_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4" android:text="@string/n_coupon_draw_btn_title" android:maxLines="1" android:layout_marginStart="@dimen/dimen_3" android:layout_marginEnd="@dimen/dimen_3"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/count_down_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>

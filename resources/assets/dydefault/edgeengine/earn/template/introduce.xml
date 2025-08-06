@@ -1,0 +1,131 @@
+<LinearLayout width="375" height="match_parent" orientation="vertical" background="@color/KBaseColorContentBackground">
+    <FrameLayout width="match_parent" height="match_parent">
+        <LinearLayout width="match_parent" height="match_parent" marginTop="44">
+            <SliderView width="match_parent" height="match_parent" direction="horizontal" autoScroll="false" scrollMode="reverse" onSelected="@event.introduce.resetTitleSelectTab(@eventParams)" currentIndex="@data.introduce.currentIndex" startIndex="1" disableCache="true">
+                <For data="@data.introduce.sliderData" itemKey="item" typeKey="listType">
+					<Cell width="match_parent" height="match_parent" type="sliderCell">
+						<LinearLayout width="match_parent" height="match_parent" orientation="vertical">
+							<Scroller width="match_parent" height="wrap_content" orientation="horizontal" visibility="{{@item.headerVisib|gone}}">
+								<LinearLayout marginLeft="10" marginRight="10" width="wrap_content" height="wrap_content" orientation="horizontal">
+									<For data="@item.headerData" itemKey="element" typeKey="type">
+										<Cell width="wrap_content" height="wrap_content" type="header" onClick="@event.introduce.headerClicked({{@element.index}})">
+											<TextView marginLeft="6" marginRight="6" marginTop="16" marginBottom="8" paddingLeft="8" paddingRight="8" text="{{@element.text}}" textSize="14" textFontWeight="500" textColor="{{@element.textColor}}" width="wrap_content" height="32" borderWidth="0.5" gravity="center" cornerRadius="4" borderColor="{{@element.borderColor}}" background="{{@element.backColor}}"/>
+										</Cell>
+									</For>
+								</LinearLayout>
+							</Scroller>
+							<LinearLayout width="match_parent" height="0" weight="1" orientation="vertical">
+								<RecyclerView width="match_parent" height="match_parent" data="@item.cellData" itemKey="element" typeKey="type" orientation="vertical">
+									<Header marginTop="8" width="match_parent" height="wrap_content">
+									</Header>
+									<!-- H1 -->
+									<Cell width="match_parent" height="wrap_content" type="H1">
+										<TextView marginTop="16" marginLeft="16" marginRight="16" text="{{@element.text}}" textSize="20" textFontWeight="500" maxLines="0" textColor="@color/kColorPrimaryText" width="match_parent" height="wrap_content"/>
+									</Cell>
+									<!-- H2 -->
+									<Cell width="match_parent" height="wrap_content" type="H2">
+										<TextView marginTop="16" marginLeft="16" marginRight="16" marginBottom="12" text="{{@element.text}}" textSize="14" textFontWeight="500" maxLines="0" textColor="@color/kColorPrimaryText" width="match_parent" height="wrap_content"/>
+									</Cell>
+									<!-- H3 -->
+									<Cell width="match_parent" height="wrap_content" type="H3">
+										<TextView marginTop="4" marginBottom="12" marginLeft="16" marginRight="16" text="{{@element.text}}" textSize="14" textFontWeight="400" maxLines="0" textColor="@color/kColorPrimaryText" width="match_parent" height="wrap_content"/>
+									</Cell>
+									<!-- Text -->
+									<Cell width="match_parent" height="wrap_content" type="text">
+										<TextView marginLeft="16" marginRight="16" marginBottom="8" text="{{@element.text}}" textSize="14" textFontWeight="400" maxLines="0" textColor="@color/kColorSecondaryText" width="match_parent" height="wrap_content" lineSpacing="4"/>
+									</Cell>
+									<!-- Text_l -->
+									<Cell width="match_parent" height="wrap_content" type="text_l">
+										<LinearLayout marginLeft="16" marginRight="16" marginBottom="{{@element.bottomHeight|0}}" width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+											<View width="4" height="4" cornerRadius="2" background="@color/kColorSecondaryText">
+											</View>
+											<TextView marginLeft="4" text="{{@element.text}}" textSize="14" textFontWeight="400" maxLines="0" textColor="@color/kColorSecondaryText" width="match_parent" height="wrap_content"/>
+										</LinearLayout>
+									</Cell>
+									<!-- QA -->
+									<Cell type="QA" width="match_parent" height="wrap_content">
+										<LinearLayout width="375" height="wrap_content" background="@color/KBaseColorContentBackground">
+											<LinearLayout width="match_parent" height="wrap_content" marginLeft="16" marginRight="16" orientation="vertical">
+												<!-- Q -->
+												<LinearLayout paddingTop="16" width="match_parent" height="wrap_content" orientation="horizontal" onClick="@event.introduce.clickQA({{@element.index}})">
+													<TextView width="16" height="16" cornerRadius="4" textSize="12" gravity="center" textFontWeight="500" textColor="@color/kColorSecondaryText" background="@color/KBaseColorInputBackground" text="Q"/>
+
+													<TextView width="279" height="wrap_content" marginLeft="12" marginRight="24" textSize="14" textFontWeight="500" maxLines="0" textColor="@color/kColorPrimaryText" text="{{@element.Q}}"/>
+
+													<ImageView width="16" height="16" layout_gravity="right" src="{{@element.qaIcon}}"/>
+
+												</LinearLayout>
+												<!-- A -->
+												<LinearLayout width="match_parent" height="wrap_content" marginTop="12" orientation="vertical" visibility="{{@element.answerVisable|gone}}">
+													<LinearLayout width="match_parent" height="wrap_content">
+														<TextView width="16" height="16" cornerRadius="4" textSize="12" textFontWeight="500" gravity="center" textColor="@color/kColorSecondaryText" background="@color/KBaseColorInputBackground" text="A"/>
+														<TextView width="315" height="wrap_content" marginLeft="12" textSize="14" textFontWeight="400" textColor="@color/kColorSecondaryText" maxLines="0" lineSpacing="4" text="{{@element.A}}"/>
+													</LinearLayout>
+												</LinearLayout>
+												<View width="match_parent" height="0.5" marginTop="16" background="@color/kColorEBEBEB"/>
+											</LinearLayout>
+										</LinearLayout>
+									</Cell>
+									<!-- 鲨鱼鳍图 -->
+									<Cell width="match_parent" height="wrap_content" type="APY_Est">
+										<LinearLayout marginLeft="16" marginRight="16" marginBottom="12" width="match_parent" height="wrap_content" orientation="vertical">
+											<TextView text="{{@i18n/n_shark_fin_APY_Est}}" textSize="12" maxLines="0" textFontWeight="400" textColor="@color/eContentNavUnselected" width="match_parent" height="wrap_content"/>
+											<LinearLayout width="match_parent" height="wrap_content" orientation="horizontal">
+												<LinearLayout width="45" height="144" orientation="vertical">
+													<TextView text="36.00%" textSize="12" width="wrap_content" height="wrap_content" marginTop="8" textFontWeight="400" textColor="@color/kColorSecondaryText"/>
+													<TextView text="6.00%" textSize="12" marginTop="80" width="wrap_content" height="wrap_content" textFontWeight="400" textColor="@color/kColorSecondaryText"/>
+
+												</LinearLayout>
+												<LinearLayout width="0" height="144" weight="1">
+													<ImageView marginTop="15" width="wrap_content" height="wrap_content" src="{{@element.src}}"/>
+												</LinearLayout>
+											</LinearLayout>
+											<LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="8">
+												<TextView text="$30,000" textSize="12" width="wrap_content" height="wrap_content" marginLeft="102" textFontWeight="400" textColor="@color/kColorSecondaryText"/>
+												<TextView text="$33,000" textSize="12" width="wrap_content" height="wrap_content" marginLeft="66" textFontWeight="400" textColor="@color/kColorSecondaryText"/>
+												<TextView text="{{@i18n/n_shark_fin_price}}" textSize="12" width="wrap_content" height="wrap_content" marginLeft="63" textFontWeight="400" textColor="@color/kColorSecondaryText"/>
+											</LinearLayout>
+										</LinearLayout>
+									</Cell>
+									<Footer width="match_parent" height="60">
+									</Footer>
+								</RecyclerView>
+							</LinearLayout>
+						</LinearLayout>
+					</Cell>
+                </For>
+            </SliderView>
+        </LinearLayout>
+        <Scroller width="match_parent" height="44" paddingLeft="0" paddingRight="0" orientation="horizontal">
+            <FrameLayout orientation="vertical" width="wrap_content" height="match_parent">
+				<View layout_gravity="bottom" height="0.5" width="375" background="@color/KBaseColorPrimarySeparator"/>
+                <LinearLayout width="wrap_content" height="match_parent" marginLeft="8" marginRight="8" gravity="center" orientation="horizontal">
+                    <For data="@data.introduce.titleData" itemKey="element" typeKey="element">
+                        <Cell width="wrap_content" height="match_parent" marginLeft="8" marginRight="8">
+							<LinearLayout width="wrap_content" height="match_parent" orientation="vertical" gravity="centerHorizontal" onClick="@event.introduce.tabClick('{{@element.tag}}')">
+								<TextView marginTop="12" width="wrap_content" height="20" gravity="center" text="{{@element.title}}" textSize="16" textColor="{{@element.titleColor}}" textFontWeight="500" tag="{{@element.tag}}"/>
+								<View marginTop="10" width="16" height="2" cornerRadius="2" background="@color/kColorMajorTheme100" visibility="{{@element.selectedline|gone}}"/>
+							</LinearLayout>
+                        </Cell>
+                    </For>
+                </LinearLayout>
+            </FrameLayout>
+        </Scroller>
+		<LinearLayout width="match_parent" height="2000" orientation="vertical" background="#80000000" visibility="{{@data.introduce.navContainer|gone}}">
+			<LinearLayout paddingTop="6" paddingBottom="6" width="match_parent" height="wrap_content" orientation="vertical" bottomLeftRadius="8" bottomRightRadius="8" background="@color/KBaseColorContentBackground">
+				<For data="@data.introduce.navData" itemKey="element" typeKey="type">
+					<Cell width="match_parent" height="wrap_content" type="normal">
+						<LinearLayout width="match_parent" height="53" paddingLeft="16" paddingRight="16" orientation="horizontal" gravity="centerVertical" onClick="@event.introduce.navClicked({{@element.index}}, true)">
+							<ImageView width="24" height="24" src="{{@element.icon}}"/>
+							<LinearLayout marginLeft="16" width="263" height="wrap_content" orientation="vertical">
+								<TextView width="263" height="17" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12" maxWidth="263" autoSizeTextType="uniform" autoSizeMinTextSize="10" text="{{@element.name}}"/>
+								<TextView marginTop="2" width="263" height="15" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="11" maxWidth="263" text="{{@element.desc}}"/>
+							</LinearLayout>
+							<ImageView marginLeft="16" width="24" height="24" src="@drawable/edge_engine_strutured_selected" visibility="{{@element.selected}}"/>
+						</LinearLayout>
+					</Cell>
+				</For>
+			</LinearLayout>
+		</LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,106 @@
+package io.reactivex.rxjava3.internal.operators.maybe;
+
+import h00.f;
+import h00.g;
+import io.reactivex.rxjava3.disposables.b;
+import io.reactivex.rxjava3.exceptions.CompositeException;
+import io.reactivex.rxjava3.internal.disposables.DisposableHelper;
+import j00.h;
+import j00.k;
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReference;
+
+final class MaybeFlatMapNotification$FlatMapMaybeObserver<T, R> extends AtomicReference<b> implements f<T>, b {
+    private static final long serialVersionUID = 4375739915521278546L;
+    public final f<? super R> downstream;
+    public final k<? extends g<? extends R>> onCompleteSupplier;
+    public final h<? super Throwable, ? extends g<? extends R>> onErrorMapper;
+    public final h<? super T, ? extends g<? extends R>> onSuccessMapper;
+    public b upstream;
+
+    public final class a implements f<R> {
+        public a() {
+        }
+
+        public void onComplete() {
+            MaybeFlatMapNotification$FlatMapMaybeObserver.this.downstream.onComplete();
+        }
+
+        public void onError(Throwable th2) {
+            MaybeFlatMapNotification$FlatMapMaybeObserver.this.downstream.onError(th2);
+        }
+
+        public void onSubscribe(b bVar) {
+            DisposableHelper.setOnce(MaybeFlatMapNotification$FlatMapMaybeObserver.this, bVar);
+        }
+
+        public void onSuccess(R r11) {
+            MaybeFlatMapNotification$FlatMapMaybeObserver.this.downstream.onSuccess(r11);
+        }
+    }
+
+    public MaybeFlatMapNotification$FlatMapMaybeObserver(f<? super R> fVar, h<? super T, ? extends g<? extends R>> hVar, h<? super Throwable, ? extends g<? extends R>> hVar2, k<? extends g<? extends R>> kVar) {
+        this.downstream = fVar;
+        this.onSuccessMapper = hVar;
+        this.onErrorMapper = hVar2;
+        this.onCompleteSupplier = kVar;
+    }
+
+    public void dispose() {
+        DisposableHelper.dispose(this);
+        this.upstream.dispose();
+    }
+
+    public boolean isDisposed() {
+        return DisposableHelper.isDisposed((b) get());
+    }
+
+    public void onComplete() {
+        try {
+            Object obj = this.onCompleteSupplier.get();
+            Objects.requireNonNull(obj, "The onCompleteSupplier returned a null MaybeSource");
+            g gVar = (g) obj;
+            if (!isDisposed()) {
+                gVar.a(new a());
+            }
+        } catch (Throwable th2) {
+            io.reactivex.rxjava3.exceptions.a.b(th2);
+            this.downstream.onError(th2);
+        }
+    }
+
+    public void onError(Throwable th2) {
+        try {
+            Object apply = this.onErrorMapper.apply(th2);
+            Objects.requireNonNull(apply, "The onErrorMapper returned a null MaybeSource");
+            g gVar = (g) apply;
+            if (!isDisposed()) {
+                gVar.a(new a());
+            }
+        } catch (Throwable th3) {
+            io.reactivex.rxjava3.exceptions.a.b(th3);
+            this.downstream.onError(new CompositeException(th2, th3));
+        }
+    }
+
+    public void onSubscribe(b bVar) {
+        if (DisposableHelper.validate(this.upstream, bVar)) {
+            this.upstream = bVar;
+            this.downstream.onSubscribe(this);
+        }
+    }
+
+    public void onSuccess(T t11) {
+        try {
+            Object apply = this.onSuccessMapper.apply(t11);
+            Objects.requireNonNull(apply, "The onSuccessMapper returned a null MaybeSource");
+            g gVar = (g) apply;
+            if (!isDisposed()) {
+                gVar.a(new a());
+            }
+        } catch (Throwable th2) {
+            io.reactivex.rxjava3.exceptions.a.b(th2);
+            this.downstream.onError(th2);
+        }
+    }
+}

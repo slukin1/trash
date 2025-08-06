@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:shape="rectangle">
+    <solid android:color="@android:color/transparent"/>
+    <size android:width="48dp"/>
+    <padding android:left="@dimen/jumio_padding_medium" android:top="@dimen/jumio_padding_medium" android:right="@dimen/jumio_padding_medium" android:bottom="@dimen/jumio_padding_medium"/>
+</shape>

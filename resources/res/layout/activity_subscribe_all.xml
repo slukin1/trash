@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edge_engine_top_bar_back_normal" android:layout_marginStart="@dimen/dimen_16"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:layout_gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/dinpro_medium"/>
+    </FrameLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.huobi.view.radiogroup.RadioGroupContainer android:orientation="horizontal" android:id="@+id/tab_container" android:background="@color/baseColorContentBackground" android:paddingLeft="@dimen/dimen_16" android:paddingRight="@dimen/dimen_16" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" android:paddingHorizontal="@dimen/dimen_16" app:itemBackground="@null"/>
+            <FrameLayout android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:layout_marginHorizontal="@dimen/dimen_16"/>
+            </FrameLayout>
+            <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

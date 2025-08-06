@@ -1,0 +1,21 @@
+<LinearLayout width="375" height="wrap_content" orientation="vertical" gravity="right">
+	<LinearLayout marginRight="16" width="240" height="wrap_content" orientation="vertical" cornerRadius="8" background="@color/KBaseColorContentBackground">
+		<TextView width="wrap_content" height="wrap_content" marginTop="12" marginLeft="12" textSize="12" textFontWeight="400" textColor="@color/kColorSecondaryText" text="4/4"/>
+		<TextView width="match_parent" height="wrap_content" marginTop="4" marginLeft="12" marginRight="12" textSize="12" textFontWeight="400" maxLines="0" maxWidth="216" textColor="@color/kColorSecondaryText" text="{{@i18n/n_earnhome_guide_step_4}}"/>
+		<LinearLayout marginTop="12" marginLeft="12" marginRight="12" marginBottom="12" width="match_parent" height="24" orientation="horizontal" gravity="right" layout_gravity="right">
+			<TextView width="wrap_content" height="match_parent" paddingLeft="16" paddingRight="16" gravity="center" background="@color/KBaseColorInputBackground" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@i18n/n_exchange_guide_last}}" onClick="@event.home.nextPop(3)"/>
+			<TextView width="wrap_content" height="match_parent" marginLeft="12" paddingLeft="16" paddingRight="16" gravity="center" background="@color/kColorMajorTheme100" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/KBaseTextColor" text="{{@i18n/n_new_user_guide_enter}}" onClick="@event.home.hidePop()"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView marginRight="26" marginBottom="8" width="8" height="4" src="@drawable/edge_engine_earn_pop_down"/>
+
+	<!--精选推荐-->
+	<LinearLayout width="wrap_content" height="wrap_content" paddingLeft="8" paddingTop="8" marginRight="8" paddingRight="8" paddingBottom="8" gravity="center" layout_gravity="right" orientation="horizontal" background="@color/KBaseColorContentBackground" cornerRadius="8">
+
+		<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorThreeLevelText" textSize="12" text="{{@data.home.nextTitle}}" textFontWeight="400"/>
+
+		<ImageView width="wrap_content" height="wrap_content" marginLeft="4" src="@drawable/edge_engine_icon_earn_home_jump"/>
+
+	</LinearLayout>
+</LinearLayout>

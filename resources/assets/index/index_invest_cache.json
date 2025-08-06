@@ -1,0 +1,63 @@
+{
+    "data": {
+        "show": true,
+        "dual": {
+            "show": true,
+            "productTypeId": 6,
+            "productName": "BTC-USDT",
+            "hookPrice": "17250",
+            "expireTime": 1673337600000,
+            "apy": "0.88244225",
+            "currency": "btc",
+            "covertCurrency": "usdt",
+            "symbol": null,
+            "showTitleText": "双币投资",
+            "url": "holigeit://open/v1?login=1&url=https://www.huobi.com.bo/zh-cn/otc-option/win/h5"
+        },
+        "tradingToEarn": {
+            "show": false,
+            "activityStatus": null,
+            "symbol": null,
+            "startTime": null,
+            "endTime": null,
+            "systemTime": null,
+            "personNum": null,
+            "apyPercent": null,
+            "prizeAmount": null,
+            "prizeCurrency": null,
+            "allocatedScore": null,
+            "url": null,
+            "activityId": null,
+            "showTitleText": null,
+            "showScheduleText": null,
+            "durationOfActivity": null,
+            "showActivityTimeText": null,
+            "showParticipantsText": null,
+            "showBonusText": null
+        },
+        "spot": {
+            "show": true,
+            "userId": 40731133,
+            "totalProfitAmount": "$2802.6258",
+            "nick": "apkw5de9a.verse",
+            "img": "https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/1f6e2d36-e665-4447-b8fb-390fc7bcd243.png",
+            "url": "holigeit://open/v1?login=1&url=https://www.huobi.com.bo/zh-cn/tradingbot/h5/spot-grid?tab=mp&timeRangeType=2",
+            "showTitleText": "现货网格",
+            "showContentText": "30天内收益"
+        },
+        "martingale": {
+            "show": true,
+            "userId": 41916085,
+            "totalProfitAmount": "$88.9682",
+            "nick": "170****@qq.com",
+            "img": "https://app-static-1306115679.file.myqcloud.com/nuwa/static/prod/1f6e2d36-e665-4447-b8fb-390fc7bcd243.png",
+            "url": "holigeit://open/v1?login=1&url=https://www.huobi.com.bo/zh-cn/tradingbot/h5/spot-grid?strategyType=2&tab=mp&timeRangeType=2",
+            "showTitleText": "马丁格尔",
+            "showContentText": "30天内收益"
+        },
+        "showTitleText": "投资",
+        "url": "holigeit://open/v1?login=1&url=https://www.huobi.com.bo/zh-cn/tradingbot/h5/?utm_source=homeDrawer"
+    },
+    "code": 200,
+    "success": true
+}

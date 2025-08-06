@@ -1,0 +1,19 @@
+package nn;
+
+import com.hbg.lib.network.retrofit.exception.APIStatusErrorException;
+import com.huobi.login.presenter.LoginPresenter;
+import rx.functions.Action1;
+
+public final /* synthetic */ class z0 implements Action1 {
+
+    /* renamed from: b  reason: collision with root package name */
+    public final /* synthetic */ LoginPresenter f58687b;
+
+    public /* synthetic */ z0(LoginPresenter loginPresenter) {
+        this.f58687b = loginPresenter;
+    }
+
+    public final void call(Object obj) {
+        this.f58687b.a1((APIStatusErrorException) obj);
+    }
+}

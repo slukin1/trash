@@ -1,0 +1,609 @@
+<LinearLayout 
+    width="match_parent"
+    height="match_parent"
+    background="{{@data.symbolMenu.colorContentBackground}}"
+    orientation="vertical">
+
+        <FrameLayout
+                width="match_parent"
+                height = "match_parent">
+                <LinearLayout 
+                        width="match_parent"
+                        height="match_parent"
+                        background="{{@data.symbolMenu.colorContentBackground}}"
+                        orientation="vertical"
+                        visibility="{{@data.symbolMenu.dataShow | gone}}">
+
+                        <LinearLayout
+                                width="match_parent"
+                                height="44"
+                                paddingLeft="16"
+                                paddingRight="16"
+                                marginTop="5"
+                                gravity="centerVertical">
+                                <FrameLayout
+                                        weight="1"
+                                        width="0"
+                                        cornerRadius="18"
+                                        paddingLeft="9"
+                                        paddingRight="9"
+                                        background="{{@data.symbolMenu.baseColorInputBackground}}"
+                                        borderColor="{{@data.symbolMenu.searchBorderColor}}"
+                                        borderWidth="1"
+                                        height="36" >
+                                        <!-- 搜索 -->
+                                        <LinearLayout 
+                                                width="match_parent"
+                                                gravity="centerVertical"
+                                                height="match_parent" >
+
+                                                <ImageView
+                                                        width="28"
+                                                        height="28"
+                                                        src="{{@data.symbolMenu.searchIcon}}" />   
+                                                <EditText
+                                                        width="0"
+                                                        height="match_parent"
+                                                        weight="1"
+                                                        onTextChange="@event.updateSearch(@eventParams)"
+                                                        onFocusChange="@event.onFocusChange(@eventParams)"
+                                                        requestFocus="{{@data.symbolMenu.requestFocus}}"
+                                                        hint="{{@i18n/n_search_coin}}"
+                                                        textSize="14"
+                                                        textColorHint="{{@data.symbolMenu.baseColorThreeLevelText}}"
+                                                        imeOptions="actionDone"
+                                                        singleLine="true"
+                                                        textColor="{{@data.symbolMenu.colorPrimaryText}}"
+                                                        text="{{@data.symbolMenu.searchText}}"/>    
+                                                <ImageView
+                                                        width="20"
+                                                        height="20"
+                                                        marginRight="2"
+                                                        visibility="{{@data.symbolMenu.showClearIcon | gone}}"
+                                                        onClick="@event.clearText()"
+                                                        src="{{@data.symbolMenu.searchClearIcon}}" />           
+                                                                
+                                        </LinearLayout> 
+                                        
+                                </FrameLayout>
+                                <TextView
+                                        width="wrap_content"
+                                        height="wrap_content"
+                                        visibility="{{@data.symbolMenu.showCancel | gone}}"
+                                        marginLeft="16"
+                                        onClick="@event.cancelSearch()"
+                                        textSize="14"
+                                        textColor="{{@data.symbolMenu.colorPrimaryText}}"
+                                        text="{{@i18n/n_cancel}}"
+                                        />
+                        </LinearLayout>        
+
+                        <!-- 1级 -->
+                        <!-- 榜单标题 tab view  -->
+                        <Scroller
+                                width="match_parent"
+                                height="35"
+                                paddingLeft="0"
+                                paddingRight="0"
+                                orientation="horizontal" 
+                                visibility="{{@data.symbolMenu.showNormal | visible}}" >
+                                <LinearLayout
+                                        width="wrap_content"
+                                        height="match_parent"
+                                        marginLeft="8"
+                                        marginRight="8"
+                                        gravity="centerVertical|left"
+                                        orientation="horizontal" >
+
+                                        <For
+                                                data="@data.symbolMenu.titleData"
+                                                itemKey="element"
+                                                typeKey="element">
+
+                                                <Cell
+                                                width="wrap_content"
+                                                height="match_parent"
+                                                marginLeft="8"
+                                                marginRight="8" >
+                                                        <LinearLayout
+                                                        width="wrap_content"
+                                                        height="match_parent"
+                                                        gravity="centerVertical|left"
+                                                        background="{{@element.background}}"
+                                                        orientation="vertical">
+
+                                                                <TextView
+                                                                width="wrap_content"
+                                                                height="0"
+                                                                weight="1"
+                                                                gravity="center"
+                                                                text="{{@element.title}}"
+                                                                textSize="14"
+                                                                textColor="{{@element.textColor}}"
+                                                                textFontWeight="500"
+                                                                tag="{{@element.tag}}"
+                                                                onClick="@event.symbolMenu.tabClick('{{@element.index}}')"
+                                                                background="{{@data.symbolMenu.colorContentBackground}}" />
+
+                                                                <View
+                                                                width="wrap_content"
+                                                                height="2"/>
+
+                                                        </LinearLayout>
+                                                </Cell>
+                                        </For>
+                                </LinearLayout>
+                        </Scroller>
+
+                        <View visibility="{{@data.symbolMenu.showNormal | visible}}" width="match_parent" height="0.5" background="{{@data.symbolMenu.colorPrimarySeparator}}" />
+
+                        <!-- 2级 -->
+                        <Scroller
+                                width="match_parent"
+                                height="40"
+                                orientation="horizontal"
+                                visibility="{{@data.symbolMenu.secondTitleVisibility|gone}}"  >
+                                <LinearLayout
+                                        width="wrap_content"
+                                        height="match_parent"
+                                        marginLeft="12"
+                                        marginRight="12"
+                                        gravity="centerVertical|left"
+                                        orientation="horizontal">
+
+                                        <For
+                                                data="@data.symbolMenu.secondTitleData"
+                                                itemKey="element"
+                                                typeKey="element">
+
+                                                <Cell
+                                                width="wrap_content"
+                                                height="22"
+                                                marginLeft="4"
+                                                marginRight="4"
+                                                marginTop="9">
+
+                                                        <LinearLayout
+                                                        width="wrap_content"
+                                                        height="22"
+                                                        gravity="centerVertical|left"
+                                                        orientation="horizontal"
+                                                        onClick="@event.symbolMenu.tabSecondClick('{{@element.index}}')">
+
+                                                                <TextView
+                                                                paddingLeft="8"
+                                                                paddingRight="8"
+                                                                paddingTop="4"
+                                                                paddingBottom="4"
+                                                                cornerRadius="4"
+                                                                width="wrap_content"
+                                                                height="wrap_content"
+                                                                gravity="center"
+                                                                text="{{@element.title}}"
+                                                                textSize="12"
+                                                                textColor="{{@element.textColor}}"
+                                                                textFontWeight="400"
+                                                                tag="{{@element.tag}}"                                                
+                                                                background="{{@element.background}}" />
+                                                        </LinearLayout>
+                                                </Cell>
+                                        </For>
+                                </LinearLayout>
+                        </Scroller>
+
+                        <View visibility="{{@data.symbolMenu.showNormal | visible}}" width="match_parent" height="2" />
+
+                        <!-- 提示 -->
+                        <LinearLayout
+                                width="match_parent"
+                                height="wrap_content"
+                                orientation="horizontal"
+                                gravity="top"
+                                visibility="{{@data.symbolMenu.maintainTipsShow | gone}}"
+                                background="{{@data.symbolMenu.colorTipsBackground}}" >
+                                <ImageView
+                                        width="12"
+                                        height="12"
+                                        marginTop="13"
+                                        marginLeft="16"
+                                        src="{{@data.symbolMenu.maintainTip}}" />
+                                <TextView 
+                                        width="0"
+                                        weight="1"
+                                        height="wrap_content"
+                                        text="{{@data.symbolMenu.maintainTips}}"
+                                        textColor="{{@data.symbolMenu.colorPrimaryText}}"
+                                        textSize="12"
+                                        textFontWeight="400"
+                                        gravity="left"
+                                        marginTop="12"
+                                        marginLeft="5"
+                                        marginRight="16"
+                                        marginBottom="12"
+                                        maxLines="0" />
+                        </LinearLayout>
+
+                        <!-- 筛选的header -->
+                        <LinearLayout 
+                                width="match_parent"
+                                height="28"
+                                gravity="centerVertical"
+                                orientation="horizontal"
+                                visibility="{{@data.symbolMenu.showHeader | visible}}"
+                                marginRight="16"
+                                marginTop="9" >
+                                <FrameLayout
+                                    width="wrap_content"
+                                    height="wrap_content">
+                                        <View
+                                            width="0"
+                                            height="20"
+                                            popShow="{{@data.symbolMenu.sectionHeader.leftTitle.showPop}}"
+                                            popArrowDirection="up"
+                                            popArrowHeight="0"
+                                            popArrowWidth="0"
+                                            popBackgroundDimmed="false"
+                                            popModalPositon="bottom"
+                                            popCancelOnTouchOutside="true"
+                                            popShowMode="anchor"
+                                            popTemplate="pop.xml" />
+                                        <TextView
+                                            width="wrap_content"
+                                            height="wrap_content"
+                                            text="{{@data.symbolMenu.sectionHeader.leftTitle.title}}"
+                                            visibility="{{@data.symbolMenu.sectionHeader.leftTitle.titleShow | visible}}"
+                                            textColor="{{@data.symbolMenu.baseColorSecondaryText}}"
+                                            textSize="12"
+                                            textFontWeight="400"
+                                            marginLeft="16"
+                                            weight="1"
+                                            gravity="left"
+                                        />
+                                        <BottomLineTextView
+                                            width="100"
+                                            marginLeft="16"
+                                            height="wrap_content"
+                                            text="{{@data.symbolMenu.sectionHeader.leftTitle.titleCoin}}"
+                                            visibility="{{@data.symbolMenu.sectionHeader.leftTitle.titleCoinShow | gone}}"
+                                            textColor="@color/KBaseColorSecondaryText"
+                                            textSize="12"
+                                            textFontWeight="400"
+                                            weight="1"
+                                            gravity="left"
+                                            onClick="@event.symbolMenu.showPop()"
+                                        />
+                                </FrameLayout>
+
+                                <View
+                                        width="0"
+                                        height="match_parent"
+                                        weight="1"/>
+                                <LinearLayout
+                                        width="wrap_content"
+                                        height="match_parent"
+                                        orientation="horizontal"
+                                        gravity="centerVertical">
+
+                                        <LinearLayout 
+                                                width="wrap_content"
+                                                height="match_parent"
+                                                orientation="horizontal"
+                                                onClick="@event.symbolMenu.lastPriceSort()"
+                                                gravity="centerVertical" >
+
+                                                <TextView 
+                                                width="wrap_content"
+                                                height="wrap_content"
+                                                gravity="right"
+                                                text="{{@data.symbolMenu.sectionHeader.middleTitle.title}}"
+                                                textColor="{{@data.symbolMenu.baseColorSecondaryText}}"
+                                                marginRight="4"
+                                                textSize="12"
+                                                autoSizeTextType="uniform"
+                                                textFontWeight="400" />
+
+                                                <ImageView 
+                                                width="5"
+                                                height="8"
+                                                marginRight="4"
+                                                gravity="center"
+                                                src="{{@data.symbolMenu.sectionHeader.middleTitle.image}}" />
+
+                                        </LinearLayout>
+
+                                        <TextView 
+                                                width="5"
+                                                height="wrap_content"
+                                                gravity="center"
+                                                text="/"
+                                                textColor="{{@data.symbolMenu.colorPrimarySeparator}}"
+                                                textSize="11"
+                                                marginRight="4"
+                                                textFontWeight="400" />
+
+                                        <LinearLayout 
+                                                width="wrap_content"
+                                                height="match_parent"
+                                                orientation="horizontal"
+                                                onClick="@event.symbolMenu.upDownSort()"
+                                                gravity="centerVertical" >
+
+                                                <TextView 
+                                                width="wrap_content"
+                                                height="wrap_content"
+                                                gravity="right"
+                                                text="{{@data.symbolMenu.sectionHeader.rightTitle.title}}"
+                                                textColor="{{@data.symbolMenu.baseColorSecondaryText}}"
+                                                marginRight="4"
+                                                textSize="12"
+                                                autoSizeTextType="uniform"
+                                                textFontWeight="400" />
+
+                                                <ImageView 
+                                                width="5"
+                                                height="8"
+                                                gravity="center"
+                                                src="{{@data.symbolMenu.sectionHeader.rightTitle.image}}" />
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- 搜索历史 -->
+                        <LinearLayout 
+                                width="match_parent"
+                                height="30"
+                                orientation="horizontal"
+                                visibility="{{@data.symbolMenu.showSearchHistory | gone}}"
+                                marginTop="12"
+                                marginLeft="16"
+                                marginRight="16" >
+                                <TextView 
+                                        width="wrap_content"
+                                        height="wrap_content"
+                                        text="{{@i18n/n_new_search_history_title}}"
+                                        textColor="{{@data.symbolMenu.baseColorSecondaryText}}"
+                                        textSize="12"
+                                        textFontWeight="400"
+                                        gravity="left"/>
+                                <View
+                                        width="0"
+                                        weight="1"
+                                        height="wrap_content"/>
+                                <ImageView
+                                        width="18"
+                                        height="18"
+                                        visibility="{{@data.symbolMenu.showSearchHistoryIcon | visible}}"
+                                        onClick="@event.clearHistory()"
+                                        src="{{@data.symbolMenu.clearHistoryIcon}}"/>
+
+                        </LinearLayout>
+                         <LinearLayout
+                                weight="1"
+                                height="0"
+                                width="match_parent"
+                                orientation="vertical">
+                                <FrameLayout
+                                        width="match_parent"
+                                        height = "match_parent">
+                                        <RecyclerView 
+                                                width="match_parent"
+                                                height="match_parent"
+                                                data="@data.symbolMenu.list"
+                                                itemKey="item"
+                                                typeKey="type"
+                                                indexKey="i" >
+                                                <Cell 
+                                                        type="normal"
+                                                        width="375"
+                                                        height="60"
+                                                        background="{{@item.cellBackground}}">
+
+                                                        <LinearLayout
+                                                                width="match_parent"
+                                                                height="match_parent"
+                                                                paddingLeft="16"
+                                                                paddingRight="16"
+                                                                paddingTop="10"
+                                                                paddingBottom="10"
+                                                                orientation="horizontal"
+                                                                gravity="centerVertical"
+                                                                onClick="@event.symbolMenu.currencySelected('{{@item.symbol}}', '{{@item.contractShortType}}')"> 
+
+                                                                        <!-- 收藏 -->
+                                                                        <ImageView 
+                                                                                width="20"
+                                                                                height="20"
+                                                                                marginRight="8"
+                                                                                gravity="left"
+                                                                                src="{{@item.favoriteIcon}}"
+                                                                                onClick="@event.symbolMenu.favriteAction('{{@item.symbol}}', '{{@item.contractShortType}}', '{{@item.isFavorite}}')"
+                                                                                visibility="{{@item.favoriteShow|gone}}" />
+                                                                        <ImageView 
+                                                                                width="24"
+                                                                                height="24"
+                                                                                marginRight="8"
+                                                                                gravity="right"
+                                                                                src="{{@item.icon}}"
+                                                                                placeholder="{{@data.symbolMenu.placeHolderIcon}}"
+                                                                                cornerRadius="12"
+                                                                                background="@color/baseCoinLockTipBg" />
+                                                                        <LinearLayout
+                                                                                        width="wrap_content"
+                                                                                        height="22"
+                                                                                        orientation="horizontal"
+                                                                                        gravity="center">
+
+                                                                                <TextView
+                                                                                        height="24"
+                                                                                        width="wrap_content"
+                                                                                        maxWidth="120"
+                                                                                        text="{{@item.baseCurrency}}"
+                                                                                        textSize="16"
+                                                                                        textFontWeight="500"
+                                                                                        gravity="center"
+                                                                                        marginRight="0"
+                                                                                        autoSizeTextType="uniform"
+                                                                                        textColor="{{@item.baseCurrencyColor}}" />
+
+                                                                                <TextView
+                                                                                        height="24"
+                                                                                        width="wrap_content"
+                                                                                        maxWidth="65"
+                                                                                        text="{{@item.quoteCurrency}}"
+                                                                                        textFontWeight="400"
+                                                                                        autoSizeTextType="uniform"
+                                                                                        textSize="14"
+                                                                                        gravity="center"
+                                                                                        textColor="{{@item.quoteCurrencyColor}}" />
+                                                                        </LinearLayout>
+
+                                                                        <!-- 倍数 -->
+                                                                        <TextView
+                                                                                height="wrap_content"
+                                                                                width="wrap_content"
+                                                                                text="{{@item.leverage}}"
+                                                                                textSize="10"
+                                                                                textFontWeight="400"
+                                                                                marginLeft="4"
+                                                                                paddingBottom="1"
+                                                                                paddingTop="1"
+                                                                                paddingLeft="4"
+                                                                                paddingRight="4"
+                                                                                gravity="center"
+                                                                                textColor="{{@data.symbolMenu.colorSecondaryText}}"
+                                                                                background="{{@data.symbolMenu.baseColorInputBackground}}"
+                                                                                cornerRadius="3"
+                                                                                visibility="{{@item.leverageShow|gone}}" />
+                                                                        
+                                                                        <!-- fee -->
+                                                                        <TextView
+                                                                                height="wrap_content"
+                                                                                width="wrap_content"
+                                                                                text="0 fee"
+                                                                                textSize="10"
+                                                                                textFontWeight="500"
+                                                                                marginLeft="4"
+                                                                                paddingBottom="1"
+                                                                                paddingTop="1"
+                                                                                paddingLeft="4"
+                                                                                paddingRight="4"
+                                                                                gravity="center"
+                                                                                textColor="@color/KBaseColorMajorTheme100"
+                                                                                background="@color/KBaseColorMajorTheme006"
+                                                                                cornerRadius="3"
+                                                                                visibility="{{@item.isZeroFee|gone}}"
+                                                                        />
+                                                                        <!-- 合约类型 -->
+                                                                        <TextView
+                                                                                height="wrap_content"
+                                                                                width="wrap_content"
+                                                                                text="{{@item.swapQuoteCurrency}}"
+                                                                                textSize="10"
+                                                                                textFontWeight="500"
+                                                                                marginLeft="4"
+                                                                                paddingBottom="1"
+                                                                                paddingTop="1"
+                                                                                paddingLeft="4"
+                                                                                paddingRight="4"
+                                                                                gravity="center"
+                                                                                textColor="{{@data.symbolMenu.colorSecondaryText}}"
+                                                                                background="{{@data.symbolMenu.baseColorInputBackground}}"
+                                                                                cornerRadius="3"
+                                                                                visibility="{{@item.showContractType|gone}}"
+                                                                        />
+
+                                                                        <View
+                                                                                width="1"
+                                                                                height="1"
+                                                                                weight="1" 
+                                                                        />
+
+                                                                        <!-- 价格 -->
+                                                                        <LinearLayout
+                                                                                height="wrap_content"
+                                                                                width="90"
+                                                                                gravity="center"
+                                                                                orientation="vertical"
+                                                                                >
+                                                                                <TextView
+                                                                                height="24"
+                                                                                width="match_parent"
+                                                                                text="{{@item.price}}"
+                                                                                isSubscript="true"
+                                                                                textSize="16"
+                                                                                textFontWeight="500"
+                                                                                gravity="right|center"
+                                                                                textColor="{{@item.priceColor}}"
+                                                                                autoSizeTextType="uniform"
+                                                                                />
+                                                                                <TextView
+                                                                                height="wrap_content"
+                                                                                width="match_parent"
+                                                                                text="{{@item.riseFall}}"
+                                                                                textSize="12"
+                                                                                textFontWeight="400"
+                                                                                gravity="right|center"
+                                                                                marginBottom="3"
+                                                                                autoSizeTextType="uniform"
+                                                                                textColor="{{@item.riseFallColor}}" />
+                                                                        </LinearLayout>
+                                                        
+
+                                                        </LinearLayout>
+                                                </Cell>
+                                        </RecyclerView>
+                                        <LinearLayout 
+                                                width="match_parent"
+                                                height="match_parent"
+                                                gravity="centerHorizontal"
+                                                visibility="{{@data.symbolMenu.showEmpty | gone}}"
+                                                background="{{@data.symbolMenu.colorContentBackground}}"
+                                                orientation="vertical">
+
+                                                <ImageView
+                                                        width="60"
+                                                        height="60"
+                                                        marginTop="120"
+                                                        src="{{@data.symbolMenu.emptyIcon}}" />
+
+                                                <TextView
+                                                        width="wrap_content"
+                                                        height="wrap_content"
+                                                        marginTop="16"
+                                                        text="{{@i18n/n_contract_trade_no_record}}"
+                                                        textColor="{{@data.symbolMenu.baseColorThreeLevelText}}"
+                                                        textSize="12" />
+                                        </LinearLayout>
+                                </FrameLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout 
+                        width="match_parent"
+                        height="match_parent"
+                        gravity="centerHorizontal"
+                        visibility="{{@data.symbolMenu.maintain | gone}}"
+                        background="{{@data.symbolMenu.colorContentBackground}}"
+                        orientation="vertical">
+
+                        <ImageView
+                                width="60"
+                                height="60"
+                                marginTop="180"
+                                src="{{@data.symbolMenu.contractMaintain}}" />
+
+                        <TextView
+                                width="wrap_content"
+                                height="wrap_content"
+                                marginTop="16"
+                                text="{{@data.symbolMenu.maintainText}}"
+                                textColor="{{@data.symbolMenu.baseColorThreeLevelText}}"
+                                textSize="12"
+                                maxLines="0"  />
+                </LinearLayout>
+        
+        </FrameLayout>
+</LinearLayout>

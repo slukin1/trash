@@ -1,0 +1,182 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="600" orientation="vertical"
+    topLeftRadius="8" topRightRadius="8" width="375">
+    <LinearLayout height="600" orientation="vertical" width="375">
+
+        <LinearLayout gravity="centerVertical" height="28" marginLeft="16" marginRight="16"
+            marginTop="8" orientation="horizontal" width="match_parent">
+
+            <TextView height="wrap_content" text="{{@data.selectCurrencyPop.popTitle}}"
+                textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16"
+                width="wrap_content" />
+
+            <View height="0" weight="1" width="0" />
+
+            <ImageView height="wrap_content" onClick="@event.selectCurrencyPop.currencyPopDismiss()"
+                src="@drawable/edge_engine_copy_trading_dialog_close" width="wrap_content" />
+        </LinearLayout>
+
+        <View background="@color/kColorPrimarySeparator" height="0.5" marginTop="8"
+            width="match_parent" />
+        <!-- 搜索视图 -->
+        <LinearLayout background="@color/KBaseColorInputBackground"
+            borderColor="{{@data.selectCurrencyPop.borderColor}}" borderWidth="1" cornerRadius="18"
+            gravity="centerVertical" height="36" marginBottom="8" marginLeft="16" marginRight="16"
+            marginTop="8" orientation="horizontal" width="match_parent">
+
+            <ImageView height="20" marginLeft="8" src="@drawable/edge_engine_search" width="20" />
+
+            <EditText bindText="@data.selectCurrencyPop.searchWord" height="match_parent"
+                hint="{{@data.selectCurrencyPop.searchHint}}" imeOptions="actionSearch"
+                marginLeft="8" onFocusChange="@event.selectCurrencyPop.onFocusChange(@eventParams)"
+                onTextChange="@event.selectCurrencyPop.onTextChange(@eventParams)"
+                requestFocus="{{@data.selectCurrencyPop.isFocus}}" singleLine="true"
+                textColor="@color/kColorPrimaryText" textColorHint="@color/baseColorThreeLevelText"
+                textSize="14" weight="1" />
+
+            <ImageView height="20" marginRight="8" onClick="@event.selectCurrencyPop.clickedClear()"
+                src="@drawable/edge_engine_close"
+                visibility="{{@data.selectCurrencyPop.clearVisible | invisible}}" width="20" />
+        </LinearLayout>
+
+        <LinearLayout height="wrap_content" marginLeft="16" marginRight="16" orientation="vertical"
+            visibility="{{@data.selectCurrencyPop.showHistory | gone}}" width="match_parent">
+
+            <LinearLayout gravity="centerVertical" height="42" orientation="horizontal"
+                width="match_parent">
+                <TextView height="wrap_content" text="{{@i18n/n_new_search_history_title}}"
+                    textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12"
+                    weight="1" width="0" />
+
+                <ImageView height="18" onClick="@event.selectCurrencyPop.clearHistory()"
+                    src="@drawable/edge_engine_history_clear" width="18" />
+            </LinearLayout>
+
+            <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent">
+                <For data="@data.selectCurrencyPop.historySearchList" itemKey="item">
+                    <Cell height="wrap_content" marginRight="8" type="normal" width="wrap_content">
+                        <TextView background="@color/kColorInputFill" cornerRadius="4"
+                            gravity="center" height="28" marginBottom="8"
+                            onClick="@event.selectCurrencyPop.clickHistory('{{@item.text}}')"
+                            paddingLeft="12" paddingRight="12" text="{{@item.text}}"
+                            textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="12"
+                            width="wrap_content" />
+                    </Cell>
+                </For>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout gravity="centerVertical" height="wrap_content" marginLeft="16"
+            marginRight="16" marginTop="20" orientation="horizontal" width="match_parent">
+
+            <TextView height="wrap_content" text="{{@data.selectCurrencyPop.titleText}}"
+                textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12"
+                weight="1" width="0" />
+
+            <TextView height="wrap_content" text="{{@data.selectCurrencyPop.titleDesc}}"
+                textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12"
+                width="wrap_content" />
+        </LinearLayout>
+
+        <FrameLayout height="0" weight="1" width="match_parent">
+            <RecyclerView data="@data.selectCurrencyPop.popData" height="match_parent"
+                itemKey="item" orientation="vertical"
+                visibility="{{@data.selectCurrencyPop.currencyListVisible | invisible}}"
+                width="match_parent">
+
+                <Cell height="wrap_content" marginLeft="16" marginRight="16" type="cross"
+                    width="match_parent">
+
+                    <LinearLayout gravity="centerVertical" height="60"
+                        onClick="@event.selectCurrencyPop.filterCurrency('{{@item.index}}')"
+                        orientation="horizontal" width="match_parent">
+
+                        <ImageView cornerRadius="12" height="24" src="{{@item.icon}}" width="24" />
+
+                        <TextView height="wrap_content" marginLeft="8" text="{{@item.currencyText}}"
+                            textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16"
+                            width="wrap_content" />
+
+                        <View height="0" weight="1" width="0" />
+
+                        <LinearLayout gravity="right" height="wrap_content" orientation="vertical"
+                            width="wrap_content">
+
+                            <TextView height="wrap_content" text="{{@item.debt}}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="500"
+                                textSize="16" width="wrap_content" />
+
+                            <TextView gravity="center" height="16" text="{{@item.debtAmount}}"
+                                textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                                textSize="12" width="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </Cell>
+
+                <Cell height="wrap_content" marginLeft="16" marginRight="16" type="isolated"
+                    width="match_parent">
+
+                    <LinearLayout gravity="centerVertical" height="60"
+                        onClick="@event.selectCurrencyPop.filterCurrency('{{@item.index}}')"
+                        orientation="horizontal" width="match_parent">
+
+                        <ImageView cornerRadius="12" height="24" src="{{@item.icon}}" width="24" />
+
+                        <TextView height="wrap_content" marginLeft="8" text="{{@item.currencyText}}"
+                            textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16"
+                            width="wrap_content" />
+
+                        <TextView height="wrap_content" text="/"
+                            textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                            textSize="14" width="wrap_content" />
+
+                        <TextView height="wrap_content" text="{{@item.quotaCurrency}}"
+                            textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                            textSize="14" width="wrap_content" />
+
+                        <View height="0" weight="1" width="0" />
+
+                        <LinearLayout gravity="right" height="wrap_content" orientation="vertical"
+                            width="wrap_content">
+
+                            <LinearLayout gravity="center" height="wrap_content"
+                                orientation="horizontal" width="wrap_content">
+                                <TextView height="wrap_content" text="{{@item.baseDebt}}"
+                                    textColor="@color/kColorPrimaryText" textFontWeight="500"
+                                    textSize="16" width="wrap_content" />
+                                <TextView height="wrap_content" text="/"
+                                    textColor="@color/kColorPrimaryText" textFontWeight="500"
+                                    textSize="16" width="wrap_content" />
+                                <TextView height="wrap_content" text="{{@item.quotaDebt}}"
+                                    textColor="@color/kColorPrimaryText" textFontWeight="500"
+                                    textSize="16" width="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout gravity="center" height="16" orientation="horizontal"
+                                width="wrap_content">
+                                <TextView height="wrap_content" text="{{@item.baseDebtAmount}}"
+                                    textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                                    textSize="12" width="wrap_content" />
+                                <TextView height="wrap_content" text="/"
+                                    textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                                    textSize="12" width="wrap_content" />
+                                <TextView height="wrap_content" text="{{@item.quotaDebtAmount}}"
+                                    textColor="@color/kColorThreeLevelText" textFontWeight="400"
+                                    textSize="12" width="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </Cell>
+            </RecyclerView>
+            <!-- 空样式 -->
+            <LinearLayout gravity="center" height="match_parent" orientation="vertical"
+                visibility="{{@data.selectCurrencyPop.currencyEmptyVisible | gone}}"
+                width="match_parent">
+                <ImageView height="60" src="@drawable/edge_engine_empty" width="60" />
+                <TextView gravity="center" height="wrap_content" marginTop="8"
+                    text="{{@i18n/n_contract_trade_no_record}}"
+                    textColor="@color/eBaseColorThreeLevelText" textSize="12"
+                    width="match_parent" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

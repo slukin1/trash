@@ -1,0 +1,28 @@
+<FrameLayout width="275" height="420" orientation="vertical" background="#161616">
+	<ImageView width="match_parent" height="match_parent" src="@drawable/edge_engine_copytrading_share_trader_cn"/>
+    <LinearLayout width="235" height="408" marginTop="12" marginLeft="20" marginRight="20" orientation="vertical">
+        <LinearLayout width="match_parent" height="wrap_content" marginRight="0" gravity="right" orientation="vertical">
+            <TextView width="wrap_content" height="20" gravity="right | center" text="{{@data.order.time}}" textColor="#5E5E61" textSize="10" textFontWeight="400"/>
+        </LinearLayout>
+        
+        <LinearLayout width="match_parent" height="40" marginTop="32" gravity="centerVertical" orientation="horizontal">
+            <ImageView marginTop="0" marginLeft="0" width="40" height="40" src="{{@data.order.imgUrl}}" scaleType="center_crop" cornerRadius="20"/>
+            <TextView width="wrap_content" height="20" marginLeft="10" text="{{@data.order.nickName}}" textColor="#E6E6E6" textSize="16" textFontWeight="500" maxWidth="235"/>
+            <LinearLayout height="14" marginLeft="6" width="wrap_content" orientation="horizontal" gravity="centerVertical" background="#0038FF" cornerRadius="7">
+                <TextView width="wrap_content" height="wrap_content" marginLeft="6" marginRight="6" text="{{@i18n/n_copy_trading_trader}}" textColor="#FFFFFF" textSize="9" textFontWeight="400"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView width="wrap_content" marginTop="31" height="18" text="{{@data.order.symbol}}" textColor="#FFFFFF" textSize="16" textFontWeight="500"/>
+        <LinearLayout height="18" marginLeft="0" marginTop="10" width="wrap_content" orientation="horizontal" gravity="centerVertical">
+            <TextView width="wrap_content" height="wrap_content" text="{{@data.order.directionDesc}}" textColor="{{@data.order.directionColor}}" textSize="12" textFontWeight="700"/>
+            <View width="0.5" height="10" marginLeft="10" background="#8C8C93"/>
+            <TextView width="wrap_content" height="wrap_content" marginLeft="10" text="{{@data.order.leverDesc}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        </LinearLayout>
+        <TextView width="wrap_content" marginTop="24" height="18" text="{{@data.order.profitRateTitle}}" textColor="#8C8C93" textSize="10" textFontWeight="500"/>
+        <TextView width="wrap_content" height="59" text="{{@data.order.profitRateStr}}" textColor="{{@data.order.profitColor}}" textSize="45" textFontWeight="500"/>
+        <TextView width="wrap_content" height="17" marginTop="20" text="{{@data.order.openPriceTitle}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="17" text="{{@data.order.openPriceStr}}" textColor="#E6E6E6" textSize="12" textFontWeight="600"/>
+        <TextView width="wrap_content" height="17" marginTop="10" text="{{@data.order.newestPriceTitle}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" height="17" marginTop="7" text="{{@data.order.newestPriceStr}}" textColor="#E6E6E6" textSize="12" textFontWeight="600"/>
+    </LinearLayout>
+</FrameLayout>

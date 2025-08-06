@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:navigationIcon="@drawable/selector_top_bar_back"/>
+    <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_40" android:src="@drawable/otc_caveat_icon"/>
+            <TextView android:textSize="@dimen/global_text_size_28" android:textColor="@color/otc_face_result_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_45" android:text="@string/otc_risk_warning"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_25" android:text="@string/n_otc_tips_riskcontrol_warning" android:paddingStart="@dimen/dimen_46" android:paddingEnd="@dimen/dimen_46"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorSecondaryText" android:layout_gravity="center_vertical" android:id="@+id/warning_content_one_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:text="@string/n_otc_describe_riskcontrol_warning" android:lineSpacingExtra="@dimen/dimen_5" android:layout_marginStart="@dimen/dimen_46" android:layout_marginEnd="@dimen/dimen_46"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <CheckBox android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorSecondaryText" android:id="@+id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/otc_risk_i_have_read" android:paddingStart="@dimen/dimen_6" style="@style/EditCollCustomCheckboxTheme"/>
+        <TextView android:textColor="@color/baseColorMajorTheme100" android:id="@+id/user_agreement_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/otc_user_agreement"/>
+    </LinearLayout>
+    <Button android:textSize="@dimen/global_text_size_16" android:textColor="@color/white" android:id="@+id/next_btn" android:background="@drawable/common_blue_5_radius_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_15" android:text="@string/otc_risk_begin" style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

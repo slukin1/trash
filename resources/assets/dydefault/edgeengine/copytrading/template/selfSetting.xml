@@ -1,0 +1,30 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="8" height="wrap_content" marginRight="16" orientation="vertical" paddingBottom="8" paddingTop="8" width="180">
+
+    <LinearLayout gravity="centerVertical" height="50" onClick="@event.meTopPage.toSetting()" orientation="horizontal" paddingLeft="16" paddingRight="16" visibility="{{@data.meTopPage.popTraderShow | gone}}" width="match_parent">
+
+        <ImageView height="20" src="@drawable/edge_engine_pop_setting" width="20"/>
+
+        <TextView height="wrap_content" marginLeft="8" maxLines="0" maxWidth="120" text="{{@i18n/n_user_center_setting_page}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="16" width="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout gravity="centerVertical" height="50" onClick="@event.meTopPage.toTransferHistory()" orientation="horizontal" paddingLeft="16" paddingRight="16" width="match_parent">
+
+        <ImageView height="20" src="@drawable/edge_engine_pop_history" width="20"/>
+
+        <TextView height="wrap_content" marginLeft="8" maxLines="0" maxWidth="120" text="{{@i18n/n_copy_trading_transfer_history}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="16" width="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout gravity="centerVertical" height="50" onClick="@event.meTopPage.toCapitalFlow()" orientation="horizontal" paddingLeft="16" paddingRight="16" width="match_parent">
+
+        <ImageView height="20" src="@drawable/edge_engine_pop_flow" width="20"/>
+
+        <TextView height="wrap_content" marginLeft="8" maxLines="0" maxWidth="120" text="{{@i18n/n_copytrading_flow_record}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="16" width="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout gravity="centerVertical" height="50" onClick="@event.meTopPage.shareAction()" orientation="horizontal" paddingLeft="16" paddingRight="16" visibility="{{@data.meTopPage.isTraderShow | gone}}" width="match_parent">
+
+        <ImageView height="20" src="@drawable/edge_engine_pop_share" width="20"/>
+
+        <TextView height="wrap_content" marginLeft="8" maxLines="0" maxWidth="120" text="{{@i18n/n_share_sys_share}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="16" width="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

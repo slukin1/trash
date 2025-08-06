@@ -1,0 +1,24 @@
+<FrameLayout width="275" height="420" orientation="vertical" background="#161616">
+	<ImageView width="match_parent" height="match_parent" src="@drawable/edge_engine_copytrading_share_trader_cn"/>
+    <LinearLayout width="235" height="408" marginTop="12" marginLeft="20" marginRight="20" orientation="vertical">
+        <LinearLayout width="match_parent" height="wrap_content" marginRight="0" gravity="right" orientation="vertical">
+            <TextView width="wrap_content" height="20" gravity="right | center" text="{{@data.traderInfo.time}}" textColor="#5E5E61" textSize="10" textFontWeight="400"/>
+        </LinearLayout>
+        
+        <LinearLayout width="match_parent" height="40" marginTop="32" gravity="centerVertical" orientation="horizontal">
+            <ImageView marginTop="0" marginLeft="0" width="40" height="40" src="{{@data.traderInfo.imgUrl}}" scaleType="center_crop" cornerRadius="20"/>
+            <TextView width="wrap_content" height="20" marginLeft="10" text="{{@data.traderInfo.nickName}}" textColor="#E6E6E6" textSize="16" textFontWeight="500" maxWidth="235"/>
+            <LinearLayout height="14" marginLeft="6" width="wrap_content" orientation="horizontal" gravity="centerVertical" background="#0038FF" cornerRadius="7">
+                <TextView width="wrap_content" height="wrap_content" marginLeft="6" marginRight="6" text="{{@i18n/n_copy_trading_trader}}" textColor="#FFFFFF" textSize="9" textFontWeight="400"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView width="wrap_content" marginTop="31" height="18" text="{{@i18n/n_copy_trading_total_revenue_rate}}" textColor="#8C8C93" textSize="10" textFontWeight="500"/>
+        <TextView width="wrap_content" height="59" text="{{@data.traderInfo.profitRate}}" textColor="{{@data.traderInfo.profitColor}}" textSize="45" textFontWeight="500"/>
+        <TextView width="wrap_content" marginTop="20" height="16" text="{{@data.traderInfo.totalProfitTitle}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="14" text="{{@data.traderInfo.totalProfit}}" textColor="#BCBCBC" textSize="12" textFontWeight="600"/>
+        <TextView width="wrap_content" marginTop="10" height="16" text="{{@i18n/copy_trading_win_rate}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="14" text="{{@data.traderInfo.winRate}}" textColor="#BCBCBC" textSize="12" textFontWeight="600"/>
+        <TextView width="wrap_content" marginTop="10" height="16" text="{{@i18n/n_copytrading_accumulated_follower_num}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="14" text="{{@data.traderInfo.copyOrderNum}}" textColor="#BCBCBC" textSize="12" textFontWeight="600"/>
+    </LinearLayout>
+</FrameLayout>

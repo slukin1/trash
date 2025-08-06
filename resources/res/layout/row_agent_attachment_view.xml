@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/attachment_document" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/row_attachment_document_view"/>
+    <FrameLayout android:id="@+id/attachment_image_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/attachment_progress" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/attachment_thumbnail" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/bg_picasso_placeholder" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,191 @@
+<LinearLayout width="375" height="wrap_content" orientation="vertical">
+	<!-- banner与推荐位 -->
+	<LinearLayout width="match_parent" orientation="horizontal" height="204" paddingTop="8" paddingBottom="8" marginLeft="8" marginRight="8" paddingLeft="8" paddingRight="8" background="@color/KBaseColorContentBackground" cornerRadius="8">
+
+		<LinearLayout width="0" height="match_parent" weight="1" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="1" cornerRadius="8">
+
+			<For data="@data.home.bannerList" itemKey="element">
+
+				<!-- 新人福利 -->
+				<Cell height="match_parent" width="match_parent" type="1">
+
+					<FrameLayout width="match_parent" height="match_parent" background="@color/kColorFFF9EB" cornerRadius="8">
+
+						<ImageView width="wrap_content" height="wrap_content" layout_gravity="end|bottom" src="@drawable/edge_engine_icon_earn_home_banner_bg"/>
+
+						<LinearLayout width="match_parent" height="match_parent" orientation="vertical">
+
+							<TextView width="wrap_content" height="wrap_content" marginLeft="16" marginTop="16" textSize="16" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@element.project.proj}}"/>
+
+							<LinearLayout width="match_parent" height="23" orientation="vertical" marginTop="4">
+
+								<FrameLayout width="wrap_content" height="wrap_content" paddingLeft="6" paddingRight="6" paddingTop="2" paddingBottom="2" background="@color/kColorF79826" cornerRadius="9" marginLeft="67" visibility="{{@element.project.originApyVis}}">
+
+									<TextView width="wrap_content" height="wrap_content" textSize="12" textFontWeight="500" layout_gravity="center" textColor="@color/KBaseColorContentBackground" text="{{@element.project.originApy}}"/>
+
+									<View width="50" height="1" layout_gravity="center" background="@color/KBaseColorContentBackground"/>
+
+								</FrameLayout>
+
+								<ImageView width="wrap_content" height="wrap_content" marginLeft="92" visibility="{{@element.project.originApyVis}}" src="@drawable/edge_engine_icon_earn_home_tag_tail"/>
+
+							</LinearLayout>
+
+							<TextView width="wrap_content" height="wrap_content" marginLeft="16" textSize="20" textFontWeight="900" textColor="@color/kColorF79826" text="{{@element.project.apy}}"/>
+
+							<TextView marginTop="2" width="wrap_content" height="wrap_content" marginLeft="16" textSize="13" textFontWeight="400" textColor="@color/kColorPrimaryText" text="{{@element.project.desc}}" maxLines="2" lineSpacing="{{@data.home.newLineSpacing}}" maxWidth="138" marginRight="16"/>
+
+							<LightingAnimationWidget height="wrap_content" width="wrap_content" text="{{@element.project.bt}}" textSize="11" marginTop="20" marginLeft="16" background="@color/kColorPrimaryText" textColor="@color/KBaseColorContentBackground" paddingHorizontal="12" paddingVertical="5" gravity="center" textFontWeight="500" cornerRadius="12"/>
+
+						</LinearLayout>
+
+					</FrameLayout>
+
+				</Cell>
+
+				<!-- 鲨鱼鳍 -->
+				<Cell height="match_parent" width="match_parent" type="2">
+
+					<LinearLayout width="match_parent" height="match_parent" paddingLeft="16" paddingRight="16" paddingTop="16" orientation="vertical" cornerRadius="8">
+
+						<LinearLayout width="wrap_content" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+
+							<ImageView width="24" height="24" src="{{@element.project.iconUrl}}"/>
+
+							<TextView width="wrap_content" height="wrap_content" textSize="16" textColor="@color/kColorPrimaryText" textFontWeight="500" text="{{@element.project.currency}}" marginLeft="8"/>
+
+						</LinearLayout>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPriceGreen" textFontWeight="500" marginTop="10" textSize="20" text="{{@element.project.apy}}"/>
+
+						<View width="match_parent" height="0.5" marginTop="12" background="@color/kColorEBEBEB"/>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorSecondaryText" textFontWeight="400" marginTop="14" textSize="14" text="{{@element.project.proj}}"/>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kSecurityMiddleLevelColor" textFontWeight="400" marginTop="4" textSize="11" text="{{@element.project.countDownStr}}"/>
+
+						<FrameLayout width="match_parent" height="18" marginTop="8" borderColor="@color/kColorEBEBEB" borderWidth="1" cornerRadius="9">
+
+							<LinearLayout width="match_parent" height="match_parent">
+
+								<View width="0" weight="{{@element.project.firstProgress}}" height="match_parent" cornerRadius="9" background="@color/kColorEBEBEB"/>
+
+								<View width="0" weight="{{@element.project.secondProgress}}" height="match_parent"/>
+
+							</LinearLayout>
+
+							<LinearLayout width="match_parent" height="match_parent" gravity="centerVertical" orientation="horizontal" marginLeft="4">
+
+								<TextView width="wrap_content" height="wrap_content" textSize="11" textColor="@color/kColorPrimaryText" textFontWeight="400" text="{{@element.project.raising}}"/>
+
+								<TextView width="wrap_content" height="wrap_content" textSize="11" marginLeft="4" textColor="@color/kColorThreeLevelText" textFontWeight="400" text="{{@element.project.raiseGoal}}"/>
+
+							</LinearLayout>
+
+						</FrameLayout>
+
+					</LinearLayout>
+
+				</Cell>
+
+				<!-- 其余所有project -->
+				<Cell height="match_parent" width="match_parent" type="3">
+
+					<LinearLayout width="match_parent" height="match_parent" paddingLeft="16" paddingRight="16" paddingTop="16" orientation="vertical" cornerRadius="8">
+
+						<LinearLayout width="wrap_content" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+
+							<ImageView width="24" height="24" src="{{@element.project.iconUrl}}"/>
+
+							<TextView width="wrap_content" height="wrap_content" textSize="16" textColor="@color/kColorPrimaryText" textFontWeight="500" text="{{@element.project.currency}}" marginLeft="8"/>
+
+						</LinearLayout>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPriceGreen" textFontWeight="500" marginTop="10" textSize="20" text="{{@element.project.apy}}"/>
+
+						<View width="match_parent" height="0.5" marginTop="12" background="@color/kColorEBEBEB"/>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorSecondaryText" textFontWeight="400" marginTop="14" textSize="14" text="{{@element.project.proj}}"/>
+
+						<TextView width="wrap_content" height="wrap_content" textColor="@color/kSecurityMiddleLevelColor" textFontWeight="400" marginTop="4" textSize="11" text="{{@element.project.desc}}"/>
+
+						<LightingAnimationWidget height="wrap_content" width="wrap_content" text="{{@element.project.bt}}" textSize="11" marginTop="8" background="@color/kColorPrimaryText" textColor="@color/KBaseColorContentBackground" paddingHorizontal="12" paddingVertical="5" gravity="center" textFontWeight="500" cornerRadius="12"/>
+
+					</LinearLayout>
+
+				</Cell>
+
+				<!-- 普通banner -->
+				<Cell height="match_parent" width="match_parent" type="4">
+
+					<LinearLayout width="match_parent" height="match_parent" cornerRadius="8">
+
+						<ImageView width="match_parent" height="match_parent" src="{{@element.banner.bannerPic}}"/>
+
+					</LinearLayout>
+
+				</Cell>
+			</For>
+		</LinearLayout>
+
+		<LinearLayout width="0" height="match_parent" marginLeft="8" weight="1" orientation="vertical">
+
+			<LinearLayout width="match_parent" height="0" weight="1" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" cornerRadius="8" orientation="vertical" paddingLeft="16" paddingRight="16">
+
+				<LinearLayout width="match_parent" height="wrap_content" marginTop="16" gravity="centerVertical" orientation="horizontal">
+
+					<ImageView width="24" height="24" src="{{@data.home.recommend1IconUrl}}"/>
+
+					<TextView width="wrap_content" height="wrap_content" marginLeft="8" text="{{@data.home.recommend1Currency}}" textColor="@color/kColorPrimaryText" textSize="16" textFontWeight="500"/>
+
+					<!-- 推荐位标签1 -->
+					<TextView width="wrap_content" height="wrap_content" marginLeft="4" text="{{@data.home.recommend1TagName}}" paddingLeft="6" paddingRight="6" paddingTop="2" paddingBottom="2" cornerRadius="9" textColor="{{@data.home.recommend1TagTextColor}}" textSize="11" background="{{@data.home.recommend1TagBg}}" textFontWeight="500"/>
+
+				</LinearLayout>
+
+				<LinearLayout width="match_parent" height="wrap_content" marginTop="10" gravity="bottom" orientation="horizontal">
+
+					<TextView width="wrap_content" height="wrap_content" text="{{@data.home.recommend1Apy}}" textColor="@color/kColorPriceGreen" textSize="20" textFontWeight="500"/>
+
+					<TextView width="wrap_content" height="wrap_content" marginLeft="4" text="{{@data.home.recommend1Proj}}" textColor="@color/kColorThreeLevelText" marginBottom="2" textSize="11" textFontWeight="400"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+			<View width="0" height="8"/>
+			<LinearLayout width="match_parent" height="0" weight="1" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" cornerRadius="8" orientation="vertical" paddingLeft="16" paddingRight="16">
+
+				<LinearLayout width="match_parent" height="wrap_content" marginTop="16" gravity="centerVertical" orientation="horizontal">
+
+					<ImageView width="24" height="24" src="{{@data.home.recommend2IconUrl}}"/>
+
+					<TextView width="wrap_content" height="wrap_content" marginLeft="8" text="{{@data.home.recommend2Currency}}" textColor="@color/kColorPrimaryText" textSize="16" textFontWeight="500"/>
+
+					<!-- 推荐位标签2 -->
+					<TextView width="wrap_content" height="wrap_content" marginLeft="4" text="{{@data.home.recommend2TagName}}" paddingLeft="6" paddingRight="6" paddingTop="2" paddingBottom="2" cornerRadius="9" textColor="{{@data.home.recommend2TagTextColor}}" textSize="11" background="{{@data.home.recommend2TagBg}}" textFontWeight="500"/>
+
+				</LinearLayout>
+
+				<LinearLayout width="match_parent" height="wrap_content" marginTop="10" gravity="bottom" orientation="horizontal">
+
+					<TextView width="wrap_content" height="wrap_content" text="{{@data.home.recommend2Apy}}" textColor="@color/kColorPriceGreen" textSize="20" textFontWeight="500"/>
+
+					<TextView width="wrap_content" height="wrap_content" marginLeft="4" text="{{@data.home.recommend2Proj}}" textColor="@color/kColorThreeLevelText" textSize="11" marginBottom="2" textFontWeight="400"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+	<ImageView marginTop="8" marginLeft="26" width="8" height="4" src="@drawable/edge_engine_earn_pop_up"/>
+	<LinearLayout marginLeft="16" width="240" height="wrap_content" orientation="vertical" cornerRadius="8" background="@color/KBaseColorContentBackground">
+		<TextView width="wrap_content" height="wrap_content" marginTop="12" marginLeft="12" textSize="12" textFontWeight="400" textColor="@color/kColorSecondaryText" text="3/4"/>
+		<TextView width="match_parent" height="wrap_content" marginTop="4" marginLeft="12" marginRight="12" textSize="12" textFontWeight="400" maxLines="0" maxWidth="216" textColor="@color/kColorSecondaryText" text="{{@i18n/n_earnhome_guide_step_3}}"/>
+		<LinearLayout marginTop="12" marginLeft="12" marginRight="12" marginBottom="12" width="match_parent" height="24" orientation="horizontal" gravity="right" layout_gravity="right">
+			<TextView width="wrap_content" height="match_parent" paddingLeft="16" paddingRight="16" gravity="center" background="@color/KBaseColorInputBackground" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@i18n/n_exchange_guide_last}}" onClick="@event.home.nextPop(2)"/>
+			<TextView width="wrap_content" height="match_parent" marginLeft="12" paddingLeft="16" paddingRight="16" gravity="center" background="@color/kColorMajorTheme100" cornerRadius="4" textSize="12" textFontWeight="500" textColor="@color/KBaseTextColor" text="{{@i18n/n_exchange_guide_next}}" onClick="@event.home.nextPop(4)"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

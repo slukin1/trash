@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_stop_price" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:id="@+id/tv_stop_price_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_trigger_condition" android:layout_weight="2"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/tv_stop_price_value" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:id="@+id/tv_order_price_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_entrust_price" android:layout_weight="2"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/tv_order_price_value" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:gravity="start" android:id="@+id/tv_order_size_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_entrust_amount" android:layout_weight="2"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/tv_order_size_value" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_field_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryTextNew" android:gravity="start" android:id="@+id/tv_order_field_amount_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_completed" android:layout_weight="2"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/tv_order_field_amount_value" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4"/>
+    </LinearLayout>
+</LinearLayout>

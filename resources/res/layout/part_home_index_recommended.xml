@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huobi.view.roundview.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/frame_layout_idnex_recommended" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_8" app:rv_backgroundColor="@color/baseColorContentBackground" app:rv_cornerRadius="@dimen/dimen_8">
+    <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/rv_index_recommended" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+</com.huobi.view.roundview.RoundFrameLayout>

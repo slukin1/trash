@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="bottom" android:orientation="vertical" android:id="@+id/id_on_chain_root_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/bg_on_chain_addr_mgr_head" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:layout_width="match_parent" android:layout_height="@dimen/dimen_64" layout="@layout/dialog_on_chain_addr_mgr_head"/>
+        <FrameLayout android:id="@+id/id_on_chain_content_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.huobi.finance.address.BindAddressView android:id="@+id/id_on_chain_bind_layout" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <com.huobi.finance.address.ManageAddressView android:id="@+id/id_on_chain_manage_layout" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+    <include android:id="@+id/id_on_chain_loadingView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/dialog_fragment_loading"/>
+</FrameLayout>

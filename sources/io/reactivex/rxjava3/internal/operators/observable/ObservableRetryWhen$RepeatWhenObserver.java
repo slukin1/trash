@@ -1,0 +1,108 @@
+package io.reactivex.rxjava3.internal.operators.observable;
+
+import h00.j;
+import h00.k;
+import io.reactivex.rxjava3.disposables.b;
+import io.reactivex.rxjava3.internal.disposables.DisposableHelper;
+import io.reactivex.rxjava3.internal.util.AtomicThrowable;
+import io.reactivex.rxjava3.internal.util.e;
+import io.reactivex.rxjava3.subjects.Subject;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
+
+final class ObservableRetryWhen$RepeatWhenObserver<T> extends AtomicInteger implements k<T>, b {
+    private static final long serialVersionUID = 802743776666017014L;
+    public volatile boolean active;
+    public final k<? super T> downstream;
+    public final AtomicThrowable error = new AtomicThrowable();
+    public final ObservableRetryWhen$RepeatWhenObserver<T>.InnerRepeatObserver inner = new InnerRepeatObserver();
+    public final Subject<Throwable> signaller;
+    public final j<T> source;
+    public final AtomicReference<b> upstream = new AtomicReference<>();
+    public final AtomicInteger wip = new AtomicInteger();
+
+    public final class InnerRepeatObserver extends AtomicReference<b> implements k<Object> {
+        private static final long serialVersionUID = 3254781284376480842L;
+
+        public InnerRepeatObserver() {
+        }
+
+        public void onComplete() {
+            ObservableRetryWhen$RepeatWhenObserver.this.innerComplete();
+        }
+
+        public void onError(Throwable th2) {
+            ObservableRetryWhen$RepeatWhenObserver.this.innerError(th2);
+        }
+
+        public void onNext(Object obj) {
+            ObservableRetryWhen$RepeatWhenObserver.this.innerNext();
+        }
+
+        public void onSubscribe(b bVar) {
+            DisposableHelper.setOnce(this, bVar);
+        }
+    }
+
+    public ObservableRetryWhen$RepeatWhenObserver(k<? super T> kVar, Subject<Throwable> subject, j<T> jVar) {
+        this.downstream = kVar;
+        this.signaller = subject;
+        this.source = jVar;
+    }
+
+    public void dispose() {
+        DisposableHelper.dispose(this.upstream);
+        DisposableHelper.dispose(this.inner);
+    }
+
+    public void innerComplete() {
+        DisposableHelper.dispose(this.upstream);
+        e.a(this.downstream, this, this.error);
+    }
+
+    public void innerError(Throwable th2) {
+        DisposableHelper.dispose(this.upstream);
+        e.c(this.downstream, th2, this, this.error);
+    }
+
+    public void innerNext() {
+        subscribeNext();
+    }
+
+    public boolean isDisposed() {
+        return DisposableHelper.isDisposed(this.upstream.get());
+    }
+
+    public void onComplete() {
+        DisposableHelper.dispose(this.inner);
+        e.a(this.downstream, this, this.error);
+    }
+
+    public void onError(Throwable th2) {
+        DisposableHelper.replace(this.upstream, (b) null);
+        this.active = false;
+        this.signaller.onNext(th2);
+    }
+
+    public void onNext(T t11) {
+        e.e(this.downstream, t11, this, this.error);
+    }
+
+    public void onSubscribe(b bVar) {
+        DisposableHelper.replace(this.upstream, bVar);
+    }
+
+    public void subscribeNext() {
+        if (this.wip.getAndIncrement() == 0) {
+            while (!isDisposed()) {
+                if (!this.active) {
+                    this.active = true;
+                    this.source.subscribe(this);
+                }
+                if (this.wip.decrementAndGet() == 0) {
+                    return;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+<!-- 现货头部卡片 模版 -->
+<LinearLayout background="@color/KAssetTopHeaderContentBackground" cornerRadius="8" height="wrap_content" marginLeft="16" marginRight="16" orientation="vertical" width="match_parent">
+
+
+    <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent">
+
+        <LinearLayout height="wrap_content" orientation="vertical" width="210">
+
+            <TextView autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" marginLeft="12" marginRight="12" marginTop="12" text="{{@data.totalAsset}}" textColor="@color/kColorPrimaryText" textFontWeight="700" textSize="16" width="match_parent"/>
+
+
+            <LinearLayout height="wrap_content" marginBottom="12" marginLeft="12" marginRight="12" marginTop="10" orientation="horizontal" width="match_parent">
+
+                <TextView height="wrap_content" text="{{@i18n/n_today_profit}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+
+                <TextView height="wrap_content" marginLeft="4" text="{{@data.todayPlNumber}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="12" width="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View height="1" weight="1" width="0"/>
+        <TextView gravity="right" height="wrap_content" marginLeft="2" marginRight="12" marginTop="12" maxLines="2" onClick="@event.jump(7)" text="{{@data.asset_small_coin_title}}" textColor="@color/kColorMajorTheme100" textSize="12" width="110"/>
+
+    </LinearLayout>
+
+
+    <View background="@color/KBaseColorPrimarySeparator" height="0.5" marginLeft="12" marginRight="12" visibility="{{@data.openTextVisible | gone}}" width="match_parent"/>
+
+    <LinearLayout gravity="centerVertical" height="32" marginLeft="12" marginRight="12" onClick="@event.jump(137)" orientation="horizontal" tag="-987" visibility="{{@data.openTextVisible | gone}}" width="match_parent">
+
+        <TextView height="wrap_content" text="{{@i18n/n_asset_cash_auto_to_yyb}}" textColor="@color/kColorPrimaryText" textSize="12" width="wrap_content"/>
+
+        <View height="1" weight="1" width="0"/>
+
+        <TextView height="wrap_content" text="{{@data.openText}}" textColor="{{@data.openTextColor}}" textSize="12" width="wrap_content"/>
+
+        <ImageView height="14" src="@drawable/ic_asset_header_arrow_right" width="14"/>
+
+		<LinearLayout width="0" height="0" visibility="{{data.spotOpenGuidevisibility | gone}}">
+			<View width="0" height="0" popArrowDirection="down" popArrowHeight="0" popArrowWidth="0" popShowMode="anchor" popCancelOnTouchOutside="true" popBackgroundDimmed="false" popShow="{{@data.spotOpenGuideShow}}" popTemplate="asset_tab_spot_open_guide.xml"/>
+		</LinearLayout>
+		
+    </LinearLayout>
+
+
+</LinearLayout>

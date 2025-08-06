@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>分组</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E2E7ED" offset="0%"></stop>
+            <stop stop-color="#F6F7FB" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="40" cy="40" r="40"></circle>
+        <filter x="-13.1%" y="-13.1%" width="126.2%" height="126.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="52.9050128%" y1="63.1072113%" x2="52.9050128%" y2="133.208866%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EAEDF4" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="9" width="56" height="60" rx="4"></rect>
+        <filter x="-28.6%" y="-23.3%" width="157.1%" height="153.3%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="订单-空" transform="translate(-920.000000, -310.000000)">
+            <g id="分组-2" transform="translate(920.000000, 310.000000)">
+                <g id="分组">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero">
+                        <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                    </g>
+                    <g mask="url(#mask-3)" fill-rule="nonzero">
+                        <g transform="translate(14.000000, 13.000000)">
+                            <rect id="矩形" fill="#D3D9E7" transform="translate(40.982467, 32.762454) rotate(6.000000) translate(-40.982467, -32.762454) " x="12.982467" y="2.76245383" width="56" height="60" rx="4"></rect>
+                            <g id="矩形" fill="none">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                <use fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                            </g>
+                            <rect id="矩形" fill="#E9ECF3" x="8" y="33" width="40" height="4" rx="1"></rect>
+                            <rect id="矩形-copy-4" fill="#E9ECF3" x="22" y="19" width="26" height="6" rx="1"></rect>
+                            <rect id="合并形状-copy" fill="#0173E5" x="8" y="17" width="10" height="10" rx="2"></rect>
+                            <rect id="矩形-copy" fill="#E9ECF3" x="8" y="41" width="40" height="4" rx="1"></rect>
+                            <rect id="矩形-copy-2" fill="#E9ECF3" x="8" y="49" width="40" height="4" rx="1"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

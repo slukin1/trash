@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.sumsub.sns.core.widget.SNSSubtitle1TextView android:id="@+id/sns_label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sns_margin_medium" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <com.sumsub.sns.core.widget.SNSSubtitle2TextView android:id="@+id/sns_example" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sns_margin_small" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/sns_label"/>
+    <com.sumsub.sns.core.widget.SNSRadioGroup android:orientation="vertical" android:id="@+id/sns_radiogroup" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/sns_example"/>
+    <com.sumsub.sns.core.widget.SNSTextView android:id="@+id/sns_error" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/sns_radiogroup" app:sns_textColor="?attr/colorOnError"/>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_main_text_color" android:layout_gravity="center" android:id="@+id/id_setting_list_item_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/roboto_regular"/>
+        <ImageView android:id="@+id/id_setting_list_item_dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5" android:src="@drawable/upgrade_dot"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:id="@+id/id_setting_list_item_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5" android:fontFamily="@font/roboto_regular"/>
+        <ImageButton android:gravity="center" android:layout_gravity="center" android:id="@+id/id_setting_list_item_arrow" android:background="@drawable/form_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View android:id="@+id/id_setting_list_item_divider" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_marginLeft="@dimen/dimen_15"/>
+</LinearLayout>

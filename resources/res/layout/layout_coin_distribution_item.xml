@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.appcompat.widget.LinearLayoutCompat android:paddingTop="@dimen/dimen_12" android:paddingBottom="@dimen/dimen_12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginRight="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="?attr/kline_primary_text_color" android:layout_gravity="center_vertical" android:id="@+id/tv_coin_distribution_name" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10" android:layout_weight="17"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="?attr/kline_primary_text_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_coin_distribution_percent" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10" android:layout_weight="15"/>
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="?attr/kline_primary_text_color" android:gravity="right" android:layout_gravity="center_vertical" android:id="@+id/tv_coin_distribution_time" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="29"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

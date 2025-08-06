@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <HorizontalScrollView android:id="@+id/title_horizontal_scroll" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.huobi.view.TitleLayout android:layout_gravity="center_vertical" android:id="@+id/tb_title_layout" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </HorizontalScrollView>
+    <ImageView android:layout_gravity="end" android:id="@+id/shadow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/market_indicator_shadow" android:scaleType="centerCrop"/>
+</FrameLayout>

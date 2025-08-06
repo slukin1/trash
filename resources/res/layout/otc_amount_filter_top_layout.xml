@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8" android:layout_marginBottom="@dimen/dimen_2" android:paddingStart="@dimen/dimen_15" android:paddingEnd="@dimen/dimen_15">
+    <com.huobi.view.HBSearchView android:gravity="center_vertical" android:id="@+id/filter_edit_text" android:background="@null" android:layout_width="match_parent" android:layout_height="@dimen/dimen_32" android:maxLines="1" android:inputType="numberDecimal" android:imeOptions="actionSearch" app:textHint="@string/n_otc_new_advert_choice_money_tip" app:textHintColor="@color/global_market_compare_about_light_color"/>
+</LinearLayout>

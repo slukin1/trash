@@ -1,0 +1,14 @@
+<LinearLayout
+    height="wrap_content"
+    width="wrap_content">
+  <View
+      width="1"
+      height="1"
+      popCancelOnTouchOutside="true"
+      popBackgroundDimmed="true"
+      popShowMode="modal"
+      popModalPositon="bottom"
+      onPopDismiss="@event.brrowAndRepayTypePop.popDismiss()"
+      popShow="{{@data.brrowAndRepayTypePop.popShow}}"
+      popTemplate="brrowAndRepayTypePop.xml" />
+</LinearLayout>

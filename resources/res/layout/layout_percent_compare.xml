@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/dimen_40" android:textColor="@color/green" android:gravity="center_vertical" android:id="@+id/tv_left" android:layout_width="wrap_content" android:layout_height="match_parent" android:fontFamily="@font/roboto_regular"/>
+    <View android:layout_gravity="center_vertical" android:id="@+id/v_left" android:background="@color/green" android:layout_width="0dp" android:layout_height="@dimen/dimen_8" android:layout_weight="0.5" android:layout_marginStart="@dimen/dimen_2_5"/>
+    <View android:id="@+id/v_middle" android:layout_width="@dimen/dimen_4" android:layout_height="wrap_content"/>
+    <View android:layout_gravity="center_vertical" android:id="@+id/v_right" android:background="@color/color_red" android:layout_width="0dp" android:layout_height="@dimen/dimen_8" android:layout_weight="0.5"/>
+    <TextView android:textSize="@dimen/dimen_40" android:textColor="@color/color_red" android:gravity="center_vertical" android:id="@+id/tv_right" android:layout_width="wrap_content" android:layout_height="match_parent" android:fontFamily="@font/roboto_regular" android:layout_marginStart="@dimen/dimen_2_5"/>
+</LinearLayout>

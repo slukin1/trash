@@ -1,0 +1,61 @@
+<LinearLayout
+    width="match_parent"
+    height="wrap_content"
+    onClick="@event.showMoreAction()"
+    background="{{@data.containerBg}}"
+    orientation="horizontal">
+
+    <ImageView
+        width="12"
+        height="12"
+        marginTop="15"
+        marginLeft="16"
+        src="{{@data.tipsImg}}"/>
+
+    <LinearLayout
+        width="0"
+        height="wrap_content"
+        weight="1"
+        marginTop="12"
+        marginLeft="8"
+        marginRight="8"
+        marginBottom="12"
+        orientation="vertical">
+
+        <TextView
+            width="match_parent"
+            height="wrap_content"
+            textSize="12"
+            maxLines="{{@data.bodyLines}}"
+            textFontWeight="400"
+            textColor="{{@data.bodyColor}}"
+            text="{{@data.messageBody | }}"/>
+
+        <TextView
+            width="wrap_content"
+            height="wrap_content"
+            marginTop="4"
+            textSize="12"
+            visibility="{{@data.showMoreVisibility | gone}}"
+            textFontWeight="500"
+            textColor="{{@data.moreColor}}"
+            text="{{@data.buttonText | }}"/>
+    </LinearLayout>
+
+    <FrameLayout
+        width="20"
+        height="20"
+        onClick="@event.currencyNoticeClose()"
+        marginTop="12"
+        marginRight="12">
+        <ImageView
+            width="12"
+            height="12"
+            marginLeft="4"
+            marginRight="4"
+            marginTop="4"
+            marginBottom="4"
+            src="{{@data.closeImg}}"/>
+    </FrameLayout>
+</LinearLayout>
+

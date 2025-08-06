@@ -1,0 +1,176 @@
+package com.sumsub.sns.internal.videoident.videoident.chat;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.r;
+import kotlin.jvm.internal.x;
+import kotlinx.serialization.UnknownFieldException;
+import kotlinx.serialization.encoding.c;
+import kotlinx.serialization.encoding.d;
+import kotlinx.serialization.f;
+import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor;
+import kotlinx.serialization.internal.d0;
+import kotlinx.serialization.internal.h1;
+import kotlinx.serialization.internal.q1;
+import kotlinx.serialization.internal.v1;
+
+@Metadata(bv = {}, d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0004\b\b\u0018\u0000 \u001c2\u00020\u0001:\u0002\b\u0012B\u0013\u0012\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\t¢\u0006\u0004\b\u0017\u0010\u0014B'\b\u0017\u0012\u0006\u0010\u0018\u001a\u00020\f\u0012\n\b\u0001\u0010\n\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u001a\u001a\u0004\u0018\u00010\u0019¢\u0006\u0004\b\u0017\u0010\u001bJ!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005HÇ\u0001J\u000b\u0010\b\u001a\u0004\u0018\u00010\tHÆ\u0003J\u0015\u0010\b\u001a\u00020\u00002\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\tHÆ\u0001J\t\u0010\u000b\u001a\u00020\tHÖ\u0001J\t\u0010\r\u001a\u00020\fHÖ\u0001J\u0013\u0010\u0010\u001a\u00020\u000f2\b\u0010\u000e\u001a\u0004\u0018\u00010\u0001HÖ\u0003R*\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u000e¢\u0006\u0018\n\u0004\b\b\u0010\u0011\u0012\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0012\u0010\u0014¨\u0006\u001d"}, d2 = {"Lcom/sumsub/sns/internal/videoident/videoident/chat/h;", "", "self", "Lkotlinx/serialization/encoding/b;", "output", "Lkotlinx/serialization/descriptors/f;", "serialDesc", "", "a", "", "codec", "toString", "", "hashCode", "other", "", "equals", "Ljava/lang/String;", "b", "()Ljava/lang/String;", "(Ljava/lang/String;)V", "getCodec$annotations", "()V", "<init>", "seen1", "Lkotlinx/serialization/internal/q1;", "serializationConstructorMarker", "(ILjava/lang/String;Lkotlinx/serialization/internal/q1;)V", "Companion", "idensic-mobile-sdk-aar_release"}, k = 1, mv = {1, 7, 1})
+@f
+public final class h {
+    public static final b Companion = new b((r) null);
+
+    /* renamed from: a  reason: collision with root package name */
+    public String f37080a;
+
+    public static final class a implements d0<h> {
+
+        /* renamed from: a  reason: collision with root package name */
+        public static final a f37081a;
+
+        /* renamed from: b  reason: collision with root package name */
+        public static final /* synthetic */ kotlinx.serialization.descriptors.f f37082b;
+
+        static {
+            a aVar = new a();
+            f37081a = aVar;
+            PluginGeneratedSerialDescriptor pluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.sumsub.sns.internal.videoident.videoident.chat.VideoIdentConfig", aVar, 1);
+            pluginGeneratedSerialDescriptor.k("codec", true);
+            f37082b = pluginGeneratedSerialDescriptor;
+        }
+
+        /* renamed from: a */
+        public h deserialize(c cVar) {
+            Object obj;
+            kotlinx.serialization.descriptors.f descriptor = getDescriptor();
+            kotlinx.serialization.encoding.a b11 = cVar.b(descriptor);
+            int i11 = 1;
+            if (b11.k()) {
+                obj = b11.j(descriptor, 0, v1.f57779a, null);
+            } else {
+                obj = null;
+                int i12 = 0;
+                while (i11 != 0) {
+                    int w11 = b11.w(descriptor);
+                    if (w11 == -1) {
+                        i11 = 0;
+                    } else if (w11 == 0) {
+                        obj = b11.j(descriptor, 0, v1.f57779a, obj);
+                        i12 |= 1;
+                    } else {
+                        throw new UnknownFieldException(w11);
+                    }
+                }
+                i11 = i12;
+            }
+            b11.c(descriptor);
+            return new h(i11, (String) obj, (q1) null);
+        }
+
+        public kotlinx.serialization.b<?>[] childSerializers() {
+            return new kotlinx.serialization.b[]{h10.a.u(v1.f57779a)};
+        }
+
+        public kotlinx.serialization.descriptors.f getDescriptor() {
+            return f37082b;
+        }
+
+        public kotlinx.serialization.b<?>[] typeParametersSerializers() {
+            return d0.a.a(this);
+        }
+
+        /* renamed from: a */
+        public void serialize(d dVar, h hVar) {
+            kotlinx.serialization.descriptors.f descriptor = getDescriptor();
+            kotlinx.serialization.encoding.b b11 = dVar.b(descriptor);
+            h.a(hVar, b11, descriptor);
+            b11.c(descriptor);
+        }
+    }
+
+    public static final class b {
+        public /* synthetic */ b(r rVar) {
+            this();
+        }
+
+        public final kotlinx.serialization.b<h> serializer() {
+            return a.f37081a;
+        }
+
+        public b() {
+        }
+    }
+
+    public h() {
+        this((String) null, 1, (r) null);
+    }
+
+    public static /* synthetic */ void c() {
+    }
+
+    public final String a() {
+        return this.f37080a;
+    }
+
+    public final String b() {
+        return this.f37080a;
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        return (obj instanceof h) && x.b(this.f37080a, ((h) obj).f37080a);
+    }
+
+    public int hashCode() {
+        String str = this.f37080a;
+        if (str == null) {
+            return 0;
+        }
+        return str.hashCode();
+    }
+
+    public String toString() {
+        return "VideoIdentConfig(codec=" + this.f37080a + ')';
+    }
+
+    public /* synthetic */ h(int i11, String str, q1 q1Var) {
+        if ((i11 & 0) != 0) {
+            h1.a(i11, 0, a.f37081a.getDescriptor());
+        }
+        if ((i11 & 1) == 0) {
+            this.f37080a = null;
+        } else {
+            this.f37080a = str;
+        }
+    }
+
+    public final h a(String str) {
+        return new h(str);
+    }
+
+    public final void b(String str) {
+        this.f37080a = str;
+    }
+
+    public h(String str) {
+        this.f37080a = str;
+    }
+
+    public static /* synthetic */ h a(h hVar, String str, int i11, Object obj) {
+        if ((i11 & 1) != 0) {
+            str = hVar.f37080a;
+        }
+        return hVar.a(str);
+    }
+
+    public static final void a(h hVar, kotlinx.serialization.encoding.b bVar, kotlinx.serialization.descriptors.f fVar) {
+        if (bVar.q(fVar, 0) || hVar.f37080a != null) {
+            bVar.y(fVar, 0, v1.f57779a, hVar.f37080a);
+        }
+    }
+
+    /* JADX INFO: this call moved to the top of the method (can break code semantics) */
+    public /* synthetic */ h(String str, int i11, r rVar) {
+        this((i11 & 1) != 0 ? null : str);
+    }
+}

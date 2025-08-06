@@ -1,0 +1,13 @@
+<LinearLayout height="match_parent" background="{{@data.nativeRes.nativeRes.baseColorContentBackground}}" paddingLeft="16" paddingRight="16" paddingTop="16" paddingBottom="20" orientation="vertical" width="match_parent" bottomLeftRadius="8" bottomRightRadius="8">
+    <GirdView height="match_parent" width="match_parent" data="@data.nav.girdDataList" itemKey="item" typeKey="cellType" orientation="vertical" mainAxisSpace="16"
+        crossAxisSpace="8" crossAxisItemCount="3">
+        <GirdCell cellType="1" width="match_parent" height="wrap_content">
+            <LinearLayout width="109" height="28" background="{{@item.backgroundColor}}" gravity="center" cornerRadius="2" onClick="@event.nav.onItemClick({{@item.index}})">
+                <TextView height="wrap_content"  width="match_parent" text="{{@item.title}}" gravity="center" textColor="{{@item.textColor}}" textSize="12" textWeight="400" autoSizeMinTextSize="10" autoSizeTextType="uniform">
+                </TextView>
+            </LinearLayout>
+        </GirdCell>
+    </GirdView>
+</LinearLayout>
+
+

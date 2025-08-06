@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="13sp" android:textColor="@color/tuibarrage_color_white" android:ellipsize="end" android:id="@+id/tv_msg_content" android:background="@drawable/bg_live_chat_public_screen" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="4dp" android:paddingStart="10dp" android:paddingEnd="10dp"/>
+</LinearLayout>

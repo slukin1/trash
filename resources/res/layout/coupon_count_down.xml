@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <com.huobi.otc.widget.CouponCountDownView android:layout_gravity="center_vertical" android:id="@+id/prime_count_down_aim_view_hour" android:background="@drawable/shape_count_down_item" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15"/>
+    <com.huobi.otc.widget.CouponCountDownView android:layout_gravity="center_vertical" android:id="@+id/prime_count_down_aim_view_hour_1" android:background="@drawable/shape_count_down_item" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15" android:layout_marginLeft="@dimen/dimen_3"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:text=":" android:fontFamily="@font/roboto_medium"/>
+    <com.huobi.otc.widget.CouponCountDownView android:layout_gravity="center_vertical" android:id="@+id/prime_count_down_aim_view_min" android:background="@drawable/shape_count_down_item" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15"/>
+    <com.huobi.otc.widget.CouponCountDownView android:layout_gravity="center_vertical" android:id="@+id/prime_count_down_aim_view_min_1" android:background="@drawable/shape_count_down_item" android:layout_width="@dimen/dimen_15" android:layout_height="@dimen/dimen_15" android:layout_marginLeft="@dimen/dimen_3"/>
+</merge>

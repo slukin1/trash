@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_root" android:tag="layout/activity_contract_grid_0" android:background="@color/KBaseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/vTopBar" android:layout_width="match_parent" android:layout_height="0dp"/>
+    <RelativeLayout android:id="@+id/titleLayout" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_below="@+id/vTopBar">
+        <TextView android:textSize="18sp" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/n_trade_bot_contract_grid" android:maxLines="1" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_128" android:layout_marginEnd="@dimen/dimen_128"/>
+        <ImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/edge_engine_top_bar_back_normal" android:scaleType="centerInside" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+        <ImageView android:id="@+id/ivSearch" android:layout_width="@dimen/dimen_28" android:layout_height="match_parent" android:src="@drawable/edge_engine_trading_bot_title_search" android:scaleType="centerInside" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+        <ImageView android:id="@+id/ivTutorial" android:layout_width="@dimen/dimen_28" android:layout_height="match_parent" android:src="@drawable/edge_engine_trading_bot_title_question" android:scaleType="centerInside" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/ivSearch"/>
+        <ImageView android:id="@+id/ivAvatar" android:layout_width="@dimen/dimen_28" android:layout_height="match_parent" android:src="@drawable/edge_engine_grid_avatar" android:scaleType="centerInside" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/ivTutorial"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/titleLayout" app:srlEnableLoadMore="false" app:srlEnableRefresh="true">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_behavior="com.huochat.community.widget.FlingBehavior">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="1">
+                    <LinearLayout android:orientation="vertical" android:id="@+id/llBotTopAdBannerPage" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/llBotTopPage" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/kline_wrapper_container" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0">
+                        <View android:id="@+id/trade_kline_line" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_marginTop="@dimen/dimen_8"/>
+                        <com.huobi.tradenew.ui.kline.KlineView android:id="@+id/klineViewWrapper_rl" android:layout_width="match_parent" android:layout_height="@dimen/dimen_300"/>
+                        <View android:id="@+id/klineViewWrapper_bottom_divider" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/llBotTabPage" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/llBotSort" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
+                </LinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <LinearLayout android:orientation="vertical" android:id="@+id/llBotFirstPage" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <FrameLayout android:id="@+id/llBotSecondPage" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/llBotBottom" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_76" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

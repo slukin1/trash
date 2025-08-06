@@ -1,0 +1,235 @@
+{
+  "/v1/trade/fast/quote": {
+    "begin": {
+      "key": "otc_fast_trade_lock_begin",
+      "valueKeys": [
+        "amount",
+        "quoteAsset",
+        "cryptoAsset",
+        "side",
+        "type",
+        "couponsId"
+      ]
+    },
+    "success": {
+      "key": "otc_fast_trade_lock_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "otc_fast_trade_lock_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/fast/order": {
+    "begin": {
+      "key": "otc_fast_trade_order_begin",
+      "valueKeys": [
+        "quoteToken"
+      ]
+    },
+    "success": {
+      "key": "otc_fast_trade_order_success",
+      "isAll": false,
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "failure": {
+      "key": "otc_fast_trade_order_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/free/quote": {
+    "begin": {
+      "key": "otc_normal_trade_lock_begin",
+      "valueKeys": [
+        "tradeId"
+      ]
+    },
+    "success": {
+      "key": "otc_normal_trade_lock_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "otc_normal_trade_lock_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/free/order": {
+    "begin": {
+      "key": "otc_normal_trade_order_begin",
+      "valueKeys": [
+        "amount",
+        "type",
+        "quoteToken",
+        "couponsId"
+      ]
+    },
+    "success": {
+      "key": "otc_normal_trade_order_success",
+      "isAll": false,
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "failure": {
+      "key": "otc_normal_trade_order_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/order": {
+    "begin": {
+      "key": "otc_order_detail_begin",
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_success",
+      "isAll": false,
+      "valueKeys": [
+        "orderId",
+        "orderStatus"
+      ]
+    },
+    "failure": {
+      "key": "otc_order_detail_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/order/pay": {
+    "begin": {
+      "key": "otc_order_detail_pay_begin",
+      "valueKeys": [
+        "orderId",
+        "paymentId"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_pay_success",
+      "isAll": false,
+      "valueKeys": []
+    },
+    "failure": {
+      "key": "otc_order_detail_pay_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/order/cancel": {
+    "begin": {
+      "key": "otc_order_detail_cancel_begin",
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_cancel_success",
+      "isAll": false,
+      "valueKeys": []
+    },
+    "failure": {
+      "key": "otc_order_detail_cancel_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/order/finish": {
+    "begin": {
+      "key": "otc_order_detail_release_begin",
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_release_success",
+      "isAll": false,
+      "valueKeys": []
+    },
+    "failure": {
+      "key": "otc_order_detail_release_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/fast/settle/quote": {
+    "begin": {
+      "key": "otc_order_detail_small_coin_get_last_price_begin",
+      "valueKeys": [
+        "orderId"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_small_coin_get_last_price_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "otc_order_detail_small_coin_get_last_price_failure",
+      "isAll": true
+    }
+  },
+  "/v1/trade/fast/settle/expire": {
+    "begin": {
+      "key": "otc_order_detail_small_coin_deal_begin",
+      "valueKeys": [
+        "orderId",
+        "quoteToken",
+        "assetName"
+      ]
+    },
+    "success": {
+      "key": "otc_order_detail_small_coin_deal_success",
+      "isAll": false,
+      "valueKeys": []
+    },
+    "failure": {
+      "key": "otc_order_detail_small_coin_deal_failure",
+      "isAll": true
+    }
+  },
+  "/v1/face/verify/portal": {
+    "begin": {
+      "key": "pro_face_vertify_get_portal_begin",
+      "valueKeys": [
+        "scene",
+        "type"
+      ]
+    },
+    "success": {
+      "key": "pro_face_vertify_get_portal_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "pro_face_vertify_get_portal_failure",
+      "isAll": true
+    }
+  },
+  "/v1/face/verify/portal/identity": {
+    "begin": {
+      "key": "lite_face_vertify_get_portal_begin",
+      "valueKeys": []
+    },
+    "success": {
+      "key": "lite_face_vertify_get_portal_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "lite_face_vertify_get_portal_failure",
+      "isAll": true
+    }
+  },
+  "/v1/face/verify/result": {
+    "begin": {
+      "key": "face_upload_result_begin",
+      "valueKeys": [
+        "bizId"
+      ]
+    },
+    "success": {
+      "key": "face_upload_result_success",
+      "isAll": true
+    },
+    "failure": {
+      "key": "face_upload_result_failure",
+      "isAll": true
+    }
+  }
+}
+

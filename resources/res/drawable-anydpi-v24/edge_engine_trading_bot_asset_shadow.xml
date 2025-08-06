@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="116dp" android:width="50dp" android:viewportWidth="50" android:viewportHeight="116">
+    <path android:fillColor="@drawable/$edge_engine_trading_bot_asset_shadow__0" android:pathData="M0,0h50v116h-50z"/>
+</vector>

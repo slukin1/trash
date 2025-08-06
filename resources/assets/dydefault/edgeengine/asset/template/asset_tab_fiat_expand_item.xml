@@ -1,0 +1,28 @@
+<!--  法币Item 模版 -->
+<LinearLayout background="@color/KAssetTopHeaderContentBackground" gravity="centerVertical" height="51" orientation="horizontal" width="match_parent">
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(19, {{@initData.index}})" orientation="vertical" width="124">
+
+        <ImageView height="20" src="@drawable/asst_exc_exc_tradenew" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_new_user_guide_trade}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(20, {{@initData.index}})" orientation="vertical" width="125">
+
+        <ImageView height="20" src="@drawable/asst_futures_u_transfernew" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_balance_contract_transfer}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout gravity="center" height="match_parent" onClick="@event.jump(21, {{@initData.index}})" orientation="vertical" width="124">
+
+        <ImageView height="20" src="@drawable/asst_exc_exc_detailsnew" width="20"/>
+
+        <TextView height="wrap_content" marginTop="3" text="{{@i18n/n_asset_expand_detail}}" textColor="@color/kColorSecondaryText" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

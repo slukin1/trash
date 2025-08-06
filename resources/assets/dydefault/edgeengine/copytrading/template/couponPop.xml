@@ -1,0 +1,44 @@
+<LinearLayout topLeftRadius="8" topRightRadius="8" width="375" height="wrap_content" background="@color/KBaseColorContentBackground" orientation="vertical">
+        <LinearLayout width="375" height="380" orientation="vertical">
+                <LinearLayout width="match_parent" height="28" marginTop="8" marginLeft="16" marginRight="16" gravity="centerVertical" orientation="horizontal">
+                        <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_copytrading_experience_coupon}}" textSize="16" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+                        <View weight="1" height="0" width="0"/>
+                        <ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_copy_trading_dialog_close" onClick="@event.couponPop.popDismiss()"/>
+                </LinearLayout>
+                <View marginTop="8" height="0.5" background="@color/kColorPrimarySeparator" width="match_parent"/>
+                <FrameLayout width="match_parent" height="0" weight="1">
+                        <RecyclerView height="match_parent" width="match_parent" orientation="vertical" data="@data.couponPop.coupons" itemKey="item">
+                                <Cell type="normal" marginTop="16" marginLeft="16" marginRight="16" width="match_parent" height="wrap_content">
+                                        <LinearLayout width="match_parent" height="wrap_content" background="@color/KBaseColorInputBackground" cornerRadius="4" gravity="centerVertical" orientation="vertical" paddingLeft="12" paddingRight="12" paddingTop="12" paddingBottom="12">
+                                                <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" onClick="@event.couponPop.couponTapAction('{{@item.index}}')">
+                                                        <LinearLayout width="0" weight="1" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+                                                                <LinearLayout width="200" height="wrap_content" gravity="centerVertical" orientation="vertical">
+                                                                        <TextView width="match_parent" height="wrap_content" text="{{@item.title}}" maxLines="2" textSize="14" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+                                                                        <TextView width="match_parent" height="wrap_content" marginTop="2" text="{{@item.time}}" textSize="10" textColor="@color/KBaseColorSecondaryText" textFontWeight="400"/>
+                                                                </LinearLayout>
+                                                                <LinearLayout height="24" width="0" weight="1" marginRight="16" gravity="centerVertical" orientation="horizontal">
+                                                                        <TextView width="0" height="wrap_content" weight="1" text="{{@item.amount}}" textSize="24" marginRight="2" gravity="right" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+                                                                        <TextView width="wrap_content" height="wrap_content" marginTop="6" text="{{@item.baseCurrency}}" textSize="12" gravity="right" textColor="@color/eAssetBlackButtonColor" textFontWeight="400"/>
+                                                                </LinearLayout>
+                                                        </LinearLayout>
+                                                        <ImageView width="16" height="16" visibility="{{@item.unSelectedImageVisibility | visible}}" src="@drawable/icon_copytrading_currency_selection_n"/>
+                                                        <ImageView width="16" height="16" visibility="{{@item.selectedImageVisibility | gone}}" src="@drawable/icon_copytrading_currency_selection_s"/>
+                                                </LinearLayout>
+                                                <View marginTop="12" height="0.5" background="@color/kColorPrimarySeparator" width="match_parent"/>
+                                                <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" marginTop="12" orientation="horizontal" visibility="{{@item.foldVisibility | visible}}" onClick="@event.couponPop.unfoldRulesTapAction('{{@item.index}}')">
+                                                        <TextView width="0" weight="1" height="wrap_content" text="{{@item.rules}}" textSize="10" textColor="@color/KBaseColorSecondaryText" textFontWeight="400"/>
+                                                        <ImageView gravity="centerVertical" height="8" marginLeft="3" src="@drawable/edge_engine_arrow_down" width="8"/>
+                                                </LinearLayout>
+                                                <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" marginTop="12" orientation="horizontal" visibility="{{@item.unfoldVisibility | gone}}" onClick="@event.couponPop.unfoldRulesTapAction('{{@item.index}}')">
+                                                        <TextView width="0" weight="1" height="wrap_content" text="{{@item.rules}}" textSize="10" maxLines="0" textColor="@color/KBaseColorSecondaryText" textFontWeight="400"/>
+                                                        <ImageView gravity="centerVertical" height="8" marginLeft="3" src="@drawable/edge_engine_arrow_up" width="8"/>
+                                                </LinearLayout>
+                                        </LinearLayout>
+                                </Cell>
+                        </RecyclerView>
+                </FrameLayout>
+                <LinearLayout background="{{@data.couponPop.backgroundColor}}" cornerRadius="4" width="match_parent" onClick="@event.couponPop.convertTapAction()" marginTop="16" marginBottom="16" marginLeft="16" marginRight="16" gravity="center" height="40">
+                        <TextView text="{{@i18n/n_sure}}" textColor="{{@data.couponPop.textColor}}" textSize="14" height="wrap_content" width="wrap_content" textFontWeight="500"/>
+                </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

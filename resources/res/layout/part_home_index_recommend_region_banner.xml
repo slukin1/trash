@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/roll_view_pager_rl" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/bannerPlaceHolder" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/bg_recommend_region_banner_empty" android:scaleType="centerCrop"/>
+    <com.huobi.view.rollviewpager.RollPagerView android:id="@+id/recommend_region_banner_view" android:layout_width="match_parent" android:layout_height="match_parent" app:rollviewpager_hint_paddingBottom="@dimen/dimen_10" app:rollviewpager_play_delay="3000"/>
+    <TextView android:textSize="12sp" android:gravity="bottom" android:id="@+id/banner_indicator_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7dp" android:layout_alignParentBottom="true" android:layout_marginStart="15dp"/>
+    <TextView android:textSize="9sp" android:gravity="bottom" android:id="@+id/banner_indicator_total" android:layout_width="wrap_content" android:layout_height="11dp" android:layout_marginBottom="8dp" android:layout_alignParentBottom="true" android:layout_toEndOf="@+id/banner_indicator_index"/>
+</RelativeLayout>

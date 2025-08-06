@@ -1,0 +1,117 @@
+<LinearLayout width="match_parent"
+    height="match_parent"
+    orientation="vertical">
+
+    <RecyclerView height="match_parent"
+        width="match_parent"
+        data="@data.newListData.data"
+        itemKey="item"
+        typeKey="type"
+        indexKey="i">
+
+        <Cell type="4"
+            width="match_parent"
+            height="wrap_content">
+
+            <LinearLayout width="match_parent"
+                height="52"
+                paddingLeft="16"
+                paddingRight="16"
+                orientation="horizontal"
+                onClick="@event.goToKLine('{{@item.symbol}}')"
+                gravity="center">
+
+                <ImageView width="24"
+                    height="24"
+                    marginRight="12"
+                    gravity="right"
+                    src="{{@item.iconURL}}"
+                    placeholder="@drawable/home_coin_placeholder_24"
+                    cornerRadius="12"
+                    background="@color/baseCoinLockTipBg" />
+
+                <TextView height="24"
+                    width="wrap_content"
+                    maxWidth="66"
+                    text="{{@item.baseName}}"
+                    textSize="16"
+                    textFontWeight="500"
+                    gravity="left|center"
+                    autoSizeTextType="uniform"
+                    textColor="@color/kColorPrimaryText"/>
+
+                <TextView
+                    height="wrap_content"
+                    width="wrap_content"
+                    text="0 fee"
+                    textSize="10"
+                    textFontWeight="500"
+                    marginLeft="4"
+                    paddingBottom="1"
+                    paddingTop="1"
+                    paddingLeft="2"
+                    paddingRight="2"
+                    gravity="center"
+                    textColor="@color/KBaseColorMajorTheme100"
+                    background="@color/KBaseColorMajorTheme006"
+                    cornerRadius="3"
+                    visibility="{{@item.isZeroFee|gone}}"
+                />
+
+                <ImageView
+                    width="14"
+                    height="14"
+                    marginLeft="4"
+                    src="{{@item.flagURL}}"
+                    visibility="{{@item.flagViewVisibility}}"/>
+
+                <View
+                    width="1"
+                    height="1"
+                    weight="1" />
+
+                <TextView height="24"
+                    width="90"
+                    text="{{@item.price}}"
+                    isSubscript="true"
+                    textSize="16"
+                    textFontWeight="500"
+                    gravity="right|center"
+                    textColor="@color/kColorPrimaryText"
+                    autoSizeTextType="uniform"
+                    marginRight="16" />
+
+                <LinearLayout
+                    height="wrap_content"
+                    width="80"
+                    marginRight="2"
+                    gravity="center"
+                    orientation="vertical"
+                    >
+                    <TextView
+                        height="wrap_content"
+                        width="80"
+                        text="{{@item.ratio}}"
+                        textSize="16"
+                        textFontWeight="500"
+                        gravity="right|center"
+                        marginBottom="3"
+                        autoSizeTextType="uniform"
+                        textColor="{{@item.colorHex|#E94359}}" />
+
+                    <TextView
+                        height="wrap_content"
+                        width="match_parent"
+                        text="{{@item.beginDateStr}}"
+                        textSize="10"
+                        textFontWeight="500"
+                        gravity="right|center"
+                        cornerRadius="3"
+                        textColor="@color/home_rank_new_symbol_begin_trade_date_color"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </Cell>
+    </RecyclerView>
+</LinearLayout>
+

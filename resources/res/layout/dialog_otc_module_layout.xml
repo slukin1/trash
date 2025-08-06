@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/view_top" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/ll_dialog_content" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_weight="1"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_dialog_content" android:background="@drawable/shape_module_guide_dialog_bg" android:paddingTop="@dimen/dimen_4" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/dimen_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl">
+            <ImageView android:id="@+id/iv_close" android:paddingTop="@dimen/dimen_20" android:paddingBottom="@dimen/dimen_18" android:layout_width="@dimen/dimen_65" android:layout_height="@dimen/dimen_63" android:src="@drawable/otc_module_guide_close" android:paddingStart="@dimen/dimen_20" android:paddingEnd="@dimen/dimen_20"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:gravity="left" android:id="@+id/tv_user" android:paddingLeft="@dimen/dimen_20" android:paddingTop="@dimen/dimen_25" android:paddingBottom="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="hi,xxx 欢迎来到自选区" android:layout_centerVertical="true" android:fontFamily="@font/roboto_regular"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dimen_20">
+            <ImageView android:id="@+id/iv_right" android:layout_width="@dimen/dimen_170" android:layout_height="@dimen/dimen_144" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/iv_right" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/global_text_size_20" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_des" android:paddingBottom="@dimen/dimen_7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="无需购买，直接充值" android:layout_centerVertical="true" android:fontFamily="@font/roboto_regular"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_des_detail" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_video" android:background="@drawable/shape_otc_module_guide_button_bg" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_11" android:paddingRight="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_25" android:layout_marginBottom="@dimen/dimen_30">
+                    <ImageView android:id="@+id/iv_play" android:layout_width="@dimen/dimen_18" android:layout_height="@dimen/dimen_18" android:layout_marginRight="@dimen/dimen_5" android:src="@drawable/otc_module_guide_play_icon"/>
+                    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/tv_video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

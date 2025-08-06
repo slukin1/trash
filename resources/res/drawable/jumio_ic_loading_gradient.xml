@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="@dimen/jumio_ic_loading_gradient_height" android:width="@dimen/jumio_ic_loading_gradient_width" android:autoMirrored="true" android:viewportWidth="112" android:viewportHeight="112">
+    <path android:fillColor="@drawable/$jumio_ic_loading_gradient__0" android:pathData="M56,56m-56,0a56,56 0,1 1,112 0a56,56 0,1 1,-112 0"/>
+</vector>

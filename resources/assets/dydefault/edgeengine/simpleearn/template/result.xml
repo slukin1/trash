@@ -1,0 +1,45 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/KBaseColorContentBackground">
+
+  <ImageView height="28" width="28" marginLeft="16" marginTop="8" onClick="@event.result.backClick()" gravity="left" src="@drawable/edge_engine_sharkfin_close"/>
+
+  <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" gravity="centerHorizontal" background="@color/KBaseColorContentBackground">
+
+    <LottieView width="375" height="187" loop="false" playStatus="@data.result.loadingLottieStatus" resource="@raw/edge_engine_earn_result"/>
+
+    <TextView autoSizeMinTextSize="25" autoSizeTextType="uniform" text="{{@data.result.resultStr}}" marginTop="19" width="match_parent" height="wrap_content" textSize="36" textFontWeight="500" gravity="center" textColor="@color/kColorPrimaryText"/>
+
+    <TextView text="{{@i18n/n_shark_fin_deposit_success}}" width="wrap_content" height="wrap_content" textSize="16" textFontWeight="400" textColor="@color/kColorPrimaryText"/>
+
+    <TextView text="{{@i18n/n_simple_earn_result_tips}}" width="264" height="wrap_content" marginTop="16" marginLeft="16" marginRight="16" maxLines="0" gravity="center" textSize="12" textFontWeight="400" textColor="@color/kColorThreeLevelText" visibility="{{@data.result.tipsShow}}"/>
+
+    <LinearLayout width="match_parent" height="wrap_content" marginTop="36" gravity="center">
+      <TextView text="{{@i18n/n_simple_earn_result_view_assets}}" width="130" height="44" textSize="14" textFontWeight="500" paddingTop="13" paddingBottom="13" gravity="center" onClick="@event.result.checkMyOrder()" textColor="@color/kColorPrimaryText" cornerRadius="4" background="@color/kTextFieldMainBgColor"/>
+      <TextView text="{{@i18n/n_double_coin_continue_buy}}" width="130" height="44" textSize="14" marginLeft="12" textFontWeight="500" paddingTop="13" paddingBottom="13" onClick="@event.result.continueBuy()" cornerRadius="4" gravity="center" textColor="#FFFFFF" background="#0173E5"/>
+    </LinearLayout>
+  </LinearLayout>
+
+  <View width="match_parent" height="0" weight="1"/>
+
+  <!-- 推荐 -->
+  <LinearLayout width="match_parent" height="60" marginBottom="40" borderColor="@color/KBaseColorPrimarySeparator" borderWidth="0.5" cornerRadius="8" orientation="horizontal" paddingLeft="16" paddingRight="16" marginLeft="24" marginRight="24" gravity="centerVertical" visibility="{{@data.result.recommendShow}}" onClick="@event.result.recommendClick()">
+
+    <LinearLayout width="0" weight="1" height="wrap_content" orientation="vertical">
+
+      <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" gravity="centerVertical">
+
+        <ImageView width="20" height="20" src="{{@data.result.iconUrl}}"/>
+
+        <TextView marginLeft="8" width="wrap_content" height="wrap_content" textSize="16" textColor="@color/kColorPrimaryText" text="{{@data.result.currency}}" letterSpacing="0.01" textFontWeight="500"/>
+
+        <ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_simpleearn_result_label" visibility="{{@data.result.labelShow}}"/>
+
+      </LinearLayout>
+
+      <TextView width="wrap_content" height="wrap_content" textSize="11" textFontWeight="400" marginTop="4" textColor="@color/kColorThreeLevelText" text="{{@data.result.descrbe}}"/>
+
+    </LinearLayout>
+
+    <TextView width="wrap_content" height="wrap_content" textSize="20" textFontWeight="500" textColor="@color/kColorPriceGreen" text="{{@data.result.apy}}" letterSpacing="0.01"/>
+
+  </LinearLayout>
+</LinearLayout>

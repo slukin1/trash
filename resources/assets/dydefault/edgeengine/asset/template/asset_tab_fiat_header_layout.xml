@@ -1,0 +1,23 @@
+<!-- 法币头部卡片 模版 -->
+<LinearLayout background="@color/KBaseColorContentBackground" height="76" orientation="vertical" marginTop="22" width="match_parent">
+
+	<LinearLayout height="20" orientation="horizontal" width="match_parent" marginLeft="16" marginRight="16" gravity="centerVertical">
+
+		<TextView height="16" text="{{@data.fiatHeaderTitle}}" textColor="@color/kColorThreeLevelText" textSize="12" width="wrap_content"/>
+
+		<View width="0" height="0" weight="1"/>
+
+		<ImageView height="wrap_content" onClick="@event.jump(40)" src="@drawable/ic_asset_tab_page_history_fait" width="wrap_content"/>
+
+	</LinearLayout>
+
+	<LinearLayout marginTop="2" width="match_parent" height="30" gravity="bottom" marginLeft="16" marginRight="16" orientation="horizontal">
+
+		<TextView height="wrap_content" text="{{@data.otcTotalAsset}}" textColor="@color/kColorPrimaryText" textSize="22" width="wrap_content" maxWidth="308" textFontWeight="500" autoSizeMinTextSize="12" autoSizeTextType="uniform"/>
+
+		<TextView height="17" marginLeft="4" text="USDT" textColor="@color/kColorPrimaryText" textSize="12" visibility="{{@data.usdtVis}}" width="wrap_content" textFontWeight="500"/>
+
+	</LinearLayout>
+
+	<View background="@color/KBaseColorPrimarySeparator" height="0.5" marginTop="23.5" width="match_parent"/>
+</LinearLayout>

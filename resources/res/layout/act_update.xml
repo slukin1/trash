@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_withdraw_input_bg" android:layout_width="280dp" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="@dimen/global_text_size_20" android:textColor="@color/color_289ef5" android:layout_gravity="center_horizontal" android:padding="@dimen/dimen_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/update_found_new_version"/>
+        <View android:background="@color/color_289ef5" android:layout_width="match_parent" android:layout_height="@dimen/dimen_1" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <ScrollView android:padding="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_888888" android:id="@+id/update_version" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5" android:text="@string/update_new_version_code"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_888888" android:id="@+id/update_version_size" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5" android:text="@string/update_new_version_size"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_888888" android:id="@+id/update_content" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/dimen_5" android:text="更新内容:"/>
+            </LinearLayout>
+        </ScrollView>
+        <CheckBox android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_888888" android:id="@+id/update_ignored" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:checked="false" android:text="@string/update_ignored"/>
+        <LinearLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textSize="@dimen/global_text_size_18" android:textColor="@color/white" android:gravity="center" android:id="@+id/update_now" android:background="@drawable/selector_button" android:padding="@dimen/dimen_12" android:focusable="true" android:layout_width="@dimen/dimen_0" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5" android:text="@string/update_now" android:layout_weight="1"/>
+            <Button android:textSize="@dimen/global_text_size_18" android:textColor="@color/white" android:gravity="center" android:id="@+id/update_later" android:background="@drawable/selector_button" android:padding="@dimen/dimen_12" android:focusable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5" android:text="@string/update_later" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

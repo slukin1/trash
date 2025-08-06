@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/flyt_title_bar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:titleText=""/>
+    <RelativeLayout android:id="@+id/rlyt_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

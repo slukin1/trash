@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_new_hand_area" android:background="@color/white" android:layout_width="match_parent" android:layout_height="151dp">
+    <View android:id="@+id/view_new_hand_area_close" android:layout_width="24dp" android:layout_height="24dp"/>
+    <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_new_hand_area_sector"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:src="@drawable/ic_new_hand_area_close" android:layout_marginStart="2dp"/>
+    <TextView android:textSize="8sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tv_new_hand_area_new_user_exclusive" android:background="@color/baseColorMajorTheme100" android:layout_width="wrap_content" android:layout_height="12dp" android:text="@string/n_new_hand_area_new_user_exclusive" android:layout_alignParentEnd="true"/>
+    <RelativeLayout android:id="@+id/rl_new_hand_area_countdown_timer_container" android:layout_width="62dp" android:layout_height="12dp" android:layout_toStartOf="@+id/tv_new_hand_area_new_user_exclusive">
+        <ImageView android:id="@+id/iv_new_hand_area_countdown_timer_triangle" android:background="@drawable/ic_new_hand_area_triangle_180_black" android:layout_width="3dp" android:layout_height="12dp"/>
+        <TextView android:textSize="8sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tv_new_hand_area_countdown_timer" android:background="#000000" android:layout_width="62dp" android:layout_height="12dp" android:layout_toRightOf="@+id/iv_new_hand_area_countdown_timer_triangle"/>
+    </RelativeLayout>
+    <ImageView android:background="@drawable/ic_new_hand_area_triangle_180_green" android:layout_width="3dp" android:layout_height="12dp" android:layout_toStartOf="@+id/tv_new_hand_area_new_user_exclusive"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="18dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+        <ImageView android:id="@+id/iv_new_hand_area_new_hand" android:layout_width="49dp" android:layout_height="40dp"/>
+        <TextView android:textSize="16sp" android:textColor="#14181f" android:id="@+id/tv_new_hand_area_benefit_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_marginStart="12dp" android:layout_toEndOf="@+id/iv_new_hand_area_new_hand"/>
+        <TextView android:textSize="12sp" android:textColor="#000000" android:id="@+id/tv_new_hand_area_benefit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginStart="12dp" android:layout_toEndOf="@+id/iv_new_hand_area_new_hand"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="62dp" android:layout_marginBottom="13dp" android:layout_alignParentBottom="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+        <include android:id="@+id/ll_new_hand_area_project_1" layout="@layout/part_home_index_new_hand_area_a_info_item"/>
+        <View android:visibility="invisible" android:layout_width="8dp" android:layout_height="match_parent"/>
+        <include android:id="@+id/ll_new_hand_area_project_2" layout="@layout/part_home_index_new_hand_area_a_info_item"/>
+        <View android:visibility="invisible" android:layout_width="8dp" android:layout_height="match_parent"/>
+        <include android:id="@+id/ll_new_hand_area_project_3" layout="@layout/part_home_index_new_hand_area_a_info_item"/>
+    </LinearLayout>
+    <com.huobi.view.RectangleScaleToCircleView android:id="@+id/rectangle_scale_to_circle_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</RelativeLayout>

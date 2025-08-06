@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:empty_view="@layout/mining_empty_view_balance" app:error_view="@layout/common_error_view_balance" app:loading_view="@layout/balance_loading_view_balance">
+    <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_asset_grid_recyclerView" android:background="@drawable/shape_dialog_top_bg" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</com.hbg.lib.widgets.LoadingLayout>

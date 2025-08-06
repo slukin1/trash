@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/action_okhttp" android:orderInCategory="100" android:title="只看okhttp" app:showAsAction="never"/>
+    <item android:id="@+id/action_web" android:orderInCategory="100" android:title="只看webview" app:showAsAction="never"/>
+    <item android:id="@+id/action_custom" android:orderInCategory="100" android:title="只看自定义" app:showAsAction="never"/>
+    <item android:id="@+id/action_reload" android:orderInCategory="100" android:title="reload" app:showAsAction="never"/>
+    <item android:id="@+id/action_open" android:orderInCategory="100" android:title="OpenUrl" app:showAsAction="never"/>
+    <item android:id="@+id/action_clean" android:orderInCategory="100" android:title="clean" app:showAsAction="never"/>
+    <item android:id="@+id/action_finish" android:orderInCategory="100" android:title="finish" app:showAsAction="never"/>
+</menu>

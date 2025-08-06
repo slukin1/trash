@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layoutDirection="ltr">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/progress_container" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmall"/>
+        <TextView android:padding="@dimen/chat_default_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_loading_message"/>
+    </LinearLayout>
+    <include android:id="@+id/no_connection_error" android:visibility="gone" layout="@layout/no_connection_error_view"/>
+    <include android:id="@+id/no_agents" android:visibility="gone" layout="@layout/no_agents_view"/>
+    <include android:id="@+id/could_not_connect_error" android:visibility="gone" layout="@layout/could_not_connect_error_view"/>
+</RelativeLayout>

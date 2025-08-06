@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/index_page_status_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_25" android:scaleType="centerCrop"/>
+    <View android:id="@+id/index_page_status_bar_shadow" android:layout_width="match_parent" android:layout_height="@dimen/dimen_25" android:scaleType="centerCrop"/>
+    <View android:id="@+id/index_page_search_bar_shadow" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_below="@+id/index_page_status_bar"/>
+    <include android:id="@+id/search_area" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_below="@+id/index_page_status_bar" layout="@layout/part_home_index_top"/>
+</RelativeLayout>

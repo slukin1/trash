@@ -1,0 +1,26 @@
+<LinearLayout width="match_parent" height="wrap_content" marginTop="11" gravity="centerVertical" orientation="vertical" topRightRadius="8" topLeftRadius="8" paddingTop="8" background="@color/KBaseColorContentBackground">
+    <!-- 顶部标题+关闭按钮 -->
+    <LinearLayout paddingLeft="16" paddingRight="16" width="match_parent" height="44" gravity="center" orientation="horizontal">
+        <TextView height="match_parent" width="wrap_content" gravity="center|left" text="{{@i18n/n_copy_trading_followsetting_trader_setting_maximum}}" textSize="16" textColor="@color/kColorPrimaryText" textFontWeight="500"/>
+        <View weight="1"/>
+        <LinearLayout width="44" height="44" gravity="center|right" orientation="horizontal" onClick="@event.followNumbers.clickedClose()">
+            <ImageView width="28" height="28" src="@drawable/edge_engine_copy_trading_dialog_close"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 跟单人数选项菜单 -->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="vertical" onclick="@event.followNumbers.clickedItem()">
+        <For data="@data.followNumbers.modelList" itemKey="element" typeKey="type">
+            <Cell width="match_parent" height="wrap_content" type="1">
+                <LinearLayout width="match_parent" marginLeft="16" marginRight="16" height="48" gravity="center" orientation="horizontal" onClick="@event.followNumbers.clickedMenuItem({{@element.index}})">
+                    <TextView gravity="left|center" height="48" width="wrap_content" text="{{@element.followNum}}" textColor="{{@element.textColor}}" textFontWeight="500" textSize="14"/>
+                    <View weight="1"/>
+                    <ImageView width="16" height="16" src="@drawable/edge_engine_trader_list_sort_selected" visibility="{{@element.selImageVisibility}}"/>
+                </LinearLayout>
+            </Cell>
+        </For>
+    </LinearLayout>
+    <View height="16"/>
+    <TextView gravity="center" height="48" marginLeft="16" marginRight="16" cornerRadius="4" text="{{@i18n/n_contract_string_confirm}}" textColor="@color/kColorWhiteText" textFontWeight="500" textSize="14" width="match_parent" background="@color/kColorMajorTheme100" onClick="@event.followNumbers.clickedDone()"/>
+    <View width="match_parent" height="34"/>
+</LinearLayout>

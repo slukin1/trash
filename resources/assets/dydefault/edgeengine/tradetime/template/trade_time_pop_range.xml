@@ -1,0 +1,8 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="4" height="wrap_content" orientation="vertical" paddingBottom="13"
+    paddingLeft="13" paddingRight="13" paddingTop="13" width="wrap_content">
+    <TextView height="wrap_content" onClick="@event.onClickRangeCount()" text="{{@i18n/n_exchange_timing_price_range}}"
+        textColor="@color/kColorPrimaryText" textSize="14" textWeight="400" width="wrap_content" />
+    <TextView height="wrap_content" marginTop="13" onClick="@event.onClickRangeRatio()" text="{{@i18n/n_exchange_timing_ratio}}"
+        textColor="@color/kColorPrimaryText" textSize="14" textWeight="400" width="wrap_content" />
+</LinearLayout>
+

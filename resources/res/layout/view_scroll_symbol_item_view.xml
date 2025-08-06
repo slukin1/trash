@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/left_icon_iv" android:layout_width="@dimen/dimen_18" android:layout_height="@dimen/dimen_18"/>
+    <include android:id="@+id/id_search_scroll_symbol_group_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_8" android:layout_toRightOf="@+id/left_icon_iv" layout="@layout/view_symbol_pair"/>
+    <include android:id="@+id/id_search_scroll_symbol_group_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_toRightOf="@+id/id_search_scroll_symbol_group_left" layout="@layout/view_symbol_pair_append"/>
+    <include android:id="@+id/id_search_scroll_symbol_group_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_toRightOf="@+id/id_search_scroll_symbol_group_center" layout="@layout/view_symbol_pair_append"/>
+</RelativeLayout>

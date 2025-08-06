@@ -1,0 +1,74 @@
+<LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+
+    <LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+
+        <LinearLayout width="match_parent" height="46" marginLeft="16" marginRight="16" orientation="horizontal">
+
+            <!-- 钱包余额 -->
+            <LinearLayout height="match_parent" width="0" weight="1" orientation="vertical">
+
+                <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_asset_contract_wallet_balance}}" textFontWeight="400" textColor="@color/kColorThreeLevelText" textSize="12"/>
+
+                <TextView marginTop="2" width="wrap_content" height="wrap_content" text="{{@initData.marginAvailable}}" textFontWeight="400" textColor="@color/kColorPrimaryText" textSize="12"/>
+
+            </LinearLayout>
+
+            <!-- 可转 -->
+            <LinearLayout height="match_parent" width="0" weight="1" orientation="vertical">
+
+                <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_asset_contract_transferable}}" textFontWeight="400" textColor="@color/kColorThreeLevelText" textSize="12"/>
+
+                <TextView marginTop="2" width="wrap_content" height="wrap_content" text="{{@initData.withdrawAvailable}}" textFontWeight="400" textColor="@color/kColorPrimaryText" textSize="12"/>
+
+            </LinearLayout>
+
+            <!-- 未实现盈亏 -->
+            <LinearLayout height="match_parent" width="0" weight="1" gravity="right" orientation="vertical">
+
+                <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_asset_contract_profit_unreal}}" textFontWeight="400" textColor="@color/kColorThreeLevelText" textSize="12"/>
+
+                <TextView marginTop="2" width="wrap_content" height="wrap_content" text="{{@initData.profitUnreal}}" textFontWeight="400" textColor="{{@initData.profitUnrealRiseColor}}" textSize="12"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 体验金 -->
+        <LinearLayout visibility="{{@initData.voucherVis}}" width="match_parent" height="46" marginLeft="16" marginRight="16" orientation="vertical">
+
+            <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_transfer_trial_fund}}" textFontWeight="400" textColor="@color/kColorThreeLevelText" textSize="12"/>
+
+            <TextView margintop="2" width="wrap_content" height="wrap_content" text="{{@initData.voucherAvailable}}" textFontWeight="400" textColor="@color/kColorPrimaryText" textSize="12"/>
+
+        </LinearLayout>
+
+        <LinearLayout width="match_parent" height="51" gravity="center" background="@color/KAssetTopHeaderContentBackground" orientation="horizontal">
+
+            <LinearLayout width="124.5" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(42, {{@initData.index}}, {{@initData.type}})">
+
+                <ImageView width="20" height="20" src="@drawable/asst_exc_exc_marknew"/>
+
+                <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_market_info_quotes_main_title}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+            </LinearLayout>
+
+            <LinearLayout width="125" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(43, {{@initData.index}}, {{@initData.type}})">
+
+                <ImageView width="20" height="20" src="@drawable/asst_futures_u_transfernew"/>
+
+                <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_balance_contract_transfer}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+            </LinearLayout>
+
+            <LinearLayout width="124.5" height="match_parent" gravity="center" orientation="vertical" onClick="@event.jump(44, {{@initData.index}}, {{@initData.type}})">
+
+                <ImageView width="20" height="20" src="@drawable/asst_exc_exc_detailsnew"/>
+
+                <TextView width="wrap_content" marginTop="3" height="wrap_content" text="{{@i18n/n_asset_expand_detail}}" textColor="@color/kColorSecondaryText" textSize="10"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

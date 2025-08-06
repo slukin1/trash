@@ -1,0 +1,42 @@
+<LinearLayout
+    width="match_parent"
+    height="32"
+    marginTop="16"
+    marginRight="16"
+    marginLeft="16"
+    background="@color/KBaseColorDeepestBackground"
+    cornerRadius="4"
+    gravity="center"
+    orientation="horizontal">
+    <TextView
+        gravity="center"
+        width="0"
+        weight="1"
+        height="26"
+        marginTop="3"
+        marginBottom="3"
+        marginLeft="3"
+        textSize="14"
+        text="{{@i18n/n_contract_grid_recommend_bot}}"
+        textColor="{{@data.contractGridPage.tab0.textColor}}"
+        textFontWeight="500"
+        background="{{@data.contractGridPage.tab0.background}}"
+        cornerRadius="4"
+        onClick="@event.contractGridPage.tabClicked('0',true)" />
+    <TextView
+        gravity="center"
+        width="0"
+        weight="1"
+        height="26"
+        marginLeft="2"
+        marginTop="3"
+        marginRight="3"
+        marginBottom="3"
+        textSize="14"
+        text="{{@i18n/n_contract_grid_manual_config}}"
+        textColor="{{@data.contractGridPage.tab1.textColor}}"
+        textFontWeight="500"
+        background="{{@data.contractGridPage.tab1.background}}"
+        cornerRadius="4"
+        onClick="@event.contractGridPage.tabClicked('1',true)" />
+</LinearLayout>

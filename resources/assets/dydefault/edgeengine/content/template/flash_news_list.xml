@@ -1,0 +1,171 @@
+<LinearLayout height="match_parent" orientation="vertical" width="match_parent">
+
+    <RecyclerView background="{{@data.nativeRes.nativeRes.baseColorContentBackground}}"
+        data="@data.flashNews.allContentList" height="match_parent" indexKey="i" itemKey="item"
+        loadMoreStatus="{{@data.flashNews.listLoadMoreStatus}}"
+        onLoadMore="@event.flashNews.onLoadMore()" onRefresh="@event.flashNews.onRefresh()"
+        refreshStatus="{{@data.flashNews.listRefreshStatus}}" width="match_parent">
+
+        <Cell height="wrap_content" type="1" width="match_parent">
+
+            <LinearLayout background="{{@data.nativeRes.nativeRes.baseColorContentBackground}}"
+                height="wrap_content" onClick="@event.flashNews.itemClick('{{@item.id}}', false)"
+                orientation="horizontal" width="375">
+
+                <LinearLayout gravity="centerHorizontal" height="match_parent" marginLeft="16"
+                    orientation="vertical" width="wrap_content">
+                    <ImageView height="6" src="{{@item.circle}}" width="6" />
+                    <View background="{{@item.timeLine}}" height="0" weight="1" width="1" />
+                </LinearLayout>
+
+                <LinearLayout height="wrap_content" marginLeft="9" orientation="vertical"
+                    width="330">
+                    <TextView height="16" marginTop="8" text="{{@item.showTime | }}"
+                        textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryText}}"
+                        textSize="12" textWeight="400" width="wrap_content" />
+
+                    <TextView height="wrap_content" marginTop="4" maxLines="2"
+                        text="{{@item.title | }}"
+                        textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}" textSize="18"
+                        textWeight="700" width="match_parent" />
+
+                    <TextView height="wrap_content" marginTop="4" maxLines="4"
+                        text="{{@item.content | }}"
+                        textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText070}}"
+                        textSize="16" textWeight="400" width="match_parent" />
+
+                    <LinearLayout height="22" marginTop="12" orientation="horizontal"
+                        visibility="{{@item.tagShowStatus | gone}}" width="match_parent">
+                        <LinearLayout
+                            background="{{@data.nativeRes.nativeRes.baseColorInputBackground}}"
+                            gravity="centerVertical" height="22"
+                            onClick="@event.flashNews.coinTagClick('{{@item.firstTag.symbol}}')"
+                            orientation="horizontal" visibility="{{@item.firstShowStatus | gone}}"
+                            width="wrap_content">
+                            <ImageView height="12" marginLeft="8" src="{{@item.firstTag.icon}}"
+                                width="12" />
+
+                            <TextView height="wrap_content" marginLeft="3"
+                                text="{{@item.firstTag.coin | }}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                            <TextView height="wrap_content" marginLeft="3" marginRight="8"
+                                text="{{@item.firstTag.percent}}"
+                                textColor="{{@item.firstTag.color}}" textSize="12" textWeight="400"
+                                width="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            background="{{@data.nativeRes.nativeRes.baseColorInputBackground}}"
+                            gravity="centerVertical" height="22" marginLeft="8"
+                            onClick="@event.flashNews.coinTagClick('{{@item.sndTag.symbol}}')"
+                            orientation="horizontal" visibility="{{@item.sndShowStatus | gone}}"
+                            width="wrap_content">
+                            <ImageView height="12" marginLeft="8" src="{{@item.sndTag.icon}}"
+                                width="12" />
+
+                            <TextView height="wrap_content" marginLeft="3"
+                                text="{{@item.sndTag.coin | }}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                            <TextView height="wrap_content" marginLeft="3" marginRight="8"
+                                text="{{@item.sndTag.percent}}" textColor="{{@item.sndTag.color}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            background="{{@data.nativeRes.nativeRes.baseColorInputBackground}}"
+                            gravity="centerVertical" height="22" marginLeft="8"
+                            onClick="@event.flashNews.coinTagClick('{{@item.thrTag.symbol}}')"
+                            orientation="horizontal" visibility="{{@item.thrShowStatus | gone}}"
+                            width="wrap_content">
+                            <ImageView height="12" marginLeft="8" src="{{@item.thrTag.icon}}"
+                                width="12" />
+
+                            <TextView height="wrap_content" marginLeft="3"
+                                text="{{@item.thrTag.coin | }}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                            <TextView height="wrap_content" marginLeft="3" marginRight="8"
+                                text="{{@item.thrTag.percent}}" textColor="{{@item.thrTag.color}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout gravity="centerVertical" height="41" orientation="horizontal"
+                        width="match_parent">
+
+                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                            onClick="@event.flashNews.shareFlash('{{@item.itemIndex}}')" weight="1"
+                            width="0dp">
+
+                            <ImageView height="20"
+                                src="{{@data.nativeRes.nativeRes.informationShare}}" width="20" />
+
+                            <TextView height="wrap_content" marginLeft="2" text="{{@item.shared}}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryTextNew}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                            onClick="@event.flashNews.itemClick('{{@item.id}}', true)" weight="1"
+                            width="0dp">
+
+                            <ImageView height="20"
+                                src="{{@data.nativeRes.nativeRes.informationComment}}" width="20" />
+
+                            <TextView height="wrap_content" marginLeft="2" text="{{@item.comments}}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryTextNew}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                            onClick="@event.flashNews.like('{{@item.itemIndex}}')" weight="1"
+                            width="0dp">
+
+                            <ImageView height="20" src="{{@item.praiseIcon}}" width="20" />
+
+                            <TextView height="wrap_content" marginLeft="2"
+                                text="{{@item.praiseNum}}"
+                                textColor="{{@data.nativeRes.nativeRes.baseColorSecondaryTextNew}}"
+                                textSize="12" textWeight="400" width="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout gravity="right" height="wrap_content" weight="1" width="0dp">
+                            <ImageView height="20" src="@drawable/ic_new_content_more" visibility="gone"
+                                width="20" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout background="{{@data.nativeRes.nativeRes.bg_hot_comment}}"
+                        height="wrap_content" marginBottom="16"
+                        onClick="@event.flashNews.itemClick('{{@item.id}}', true)"
+                        orientation="vertical" paddingBottom="8" paddingLeft="8" paddingRight="8"
+                        paddingTop="8" visibility="{{@item.firstHotStatus | gone}}"
+                        width="match_parent">
+
+                        <TextView height="wrap_content" maxLines="2"
+                            onClick="@event.flashNews.itemClick('{{@item.id}}', true)"
+                            richText="{{@item.firstHot}}" width="match_parent" />
+                        <TextView height="wrap_content" marginTop="4" maxLines="2"
+                            onClick="@event.flashNews.itemClick('{{@item.id}}', true)"
+                            richText="{{@item.sndHot}}" visibility="{{@item.sndHotStatus | gone}}"
+                            width="match_parent" />
+                        <TextView height="wrap_content" marginTop="4" maxLines="2"
+                            onClick="@event.flashNews.itemClick('{{@item.id}}', true)"
+                            richText="{{@item.thrHot}}" visibility="{{@item.thrHotStatus | gone}}"
+                            width="match_parent" />
+                    </LinearLayout>
+
+                    <View background="{{@data.nativeRes.nativeRes.baseColorPrimarySeparator}}"
+                        height="0.5" width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </Cell>
+    </RecyclerView>
+</LinearLayout>
+

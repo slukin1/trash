@@ -1,0 +1,40 @@
+<!-- 合约 Item 模版 -->
+<LinearLayout width="match_parent" height="58" background="@color/KBaseColorContentBackground" orientation="vertical">
+
+    <LinearLayout width="match_parent" height="58" marginLeft="16" marginRight="16" orientation="horizontal">
+
+        <LinearLayout height="match_parent" orientation="horizontal" width="132" gravity="centerVertical">
+
+            <ImageView height="20" width="20" src="{{@initData.symbolIcon}}"/>
+
+            <LinearLayout height="match_parent" orientation="horizontal" width="112" marginLeft="4" gravity="centerVertical">
+
+                <TextView width="wrap_content" height="wrap_content" textSize="14" textFontWeight="600" textColor="@color/kColorPrimaryText" text="{{@initData.symbolName}}"/>
+                <TextView width="wrap_content" height="wrap_content" marginLeft="4" textSize="11" textFontWeight="400" textColor="@color/kColorSecondaryText" text="{{@initData.secondSymbolName}}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout height="match_parent" orientation="vertical" width="100" gravity="centerVertical">
+
+            <TextView width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" textSize="14" textFontWeight="600" gravity="left" textColor="@color/kColorPrimaryText" text="{{@initData.spotNumberEquivalent}}"/>
+
+        </LinearLayout>
+
+        <View width="0" height="match_parent" marginLeft="11" weight="1"/>
+
+        <LinearLayout height="match_parent" orientation="vertical" width="wrap_content" gravity="right">
+
+
+            <TextView width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" marginTop="10" textSize="14" textFontWeight="600" gravity="right" textColor="@color/kColorPrimaryText" text="{{@initData.spotYield}}"/>
+
+
+            <TextView width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" textSize="12" textFontWeight="400" gravity="right" textColor="@color/kColorSecondaryText" text="{{@initData.spotYieldRate}}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

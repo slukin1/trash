@@ -1,0 +1,48 @@
+<LinearLayout width="375" height="wrap_content" topLeftRadius="6" topRightRadius="8" background="@color/KBaseColorContentBackground" orientation="vertical">
+
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal">
+
+        <TextView width="wrap_content" height="wrap_content" marginLeft="16" marginTop="12" marginBottom="12" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" text="{{@data.leverPicker.title}}"/>
+
+        <View width="0" height="0" weight="1"/>
+
+        <ImageView width="wrap_content" height="wrap_content" onClick="@event.tradePanel.leverPopClose()" marginRight="16" src="@drawable/edge_engine_copy_trading_dialog_close"/>
+
+    </LinearLayout>
+
+    <LinearLayout width="match_parent" height="wrap_content" background="@color/KBaseColorDeepestBackground" orientation="horizontal" paddingLeft="16" paddingTop="8" paddingRight="16" paddingBottom="8">
+
+        <ImageView width="wrap_content" height="wrap_content" marginTop="2" src="@drawable/edge_engine_copy_trading_cp_lev"/>
+
+        <TextView width="match_parent" height="wrap_content" marginLeft="8" textSize="12" maxLines="2" text="{{@i18n/n_copy_trading_lev_tips}}" textColor="@color/kColorPrimaryText"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout width="match_parent" height="wrap_content" marginTop="32" marginBottom="12" gravity="center" orientation="horizontal">
+
+        <ImageView width="wrap_content" height="wrap_content" onClick="@event.leverPicker.decreaseLever()" src="@drawable/edge_engine_ic_lev_sub_cp"/>
+
+        <TextView width="wrap_content" height="wrap_content" marginLeft="16" marginRight="16" text="{{@data.leverPicker.currentLeverText}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="24"/>
+
+        <ImageView width="wrap_content" height="wrap_content" onClick="@event.leverPicker.increaseLever()" src="@drawable/edge_engine_ic_lev_add_cp"/>
+
+    </LinearLayout>
+
+    <SeekBar bubbleTextColor="@color/white" bubbleTextSize="11" height="36" onValueChange="@event.leverPicker.sliderValueChanged(@eventParams)" bindProgress="@data.leverPicker.currentProgress" min="1" max="{{@data.leverPicker.maxLever}}" sectionCount="5" unit="X" width="match_parent" marginLeft="16" marginRight="16"/>
+
+    <LinearLayout width="match_parent" height="12" orientation="horizontal" marginLeft="16" marginRight="16">
+
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles1}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" marginStart="2" textSize="10" weight="1" width="0"/>
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles2}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" marginLeft="3" textSize="10" weight="1" width="0"/>
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles3}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" marginLeft="3" textSize="10" weight="1" width="0"/>
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles4}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" marginLeft="3" textSize="10" weight="1" width="0"/>
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles5}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" marginLeft="3" textSize="10" weight="1" width="0"/>
+        <TextView height="match_parent" text="{{@data.leverPicker.leverTitles6}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="10" width="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView width="match_parent" height="44" background="@color/baseColorMajorTheme100" marginLeft="16" marginRight="16" textColor="#FFFFFF" onClick="@event.tradePanel.updateLever()" marginBottom="16" cornerRadius="4" gravity="center" marginTop="16" textSize="14" textFontWeight="500" text="{{@i18n/n_otc_balance_trade_deal_confirm}}"/>
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+{
+    "code": 200,
+    "message": "请求成功",
+    "data": {
+        "show": 1,
+        "title": "理财",
+        "contents": [{
+            "projectId": 622,
+            "projectName": "Prime Earn",
+            "projectDesc": null,
+            "iconUrl": "https://saving-doc.s3.ap-northeast-1.amazonaws.com/prd/20210426/56c3b3a85e2144798a792d3d9ee243ba.png",
+            "rate": "0.08000000",
+            "currency": "USDT",
+            "term": 14,
+            "shelfType": 1,
+            "projectStatus": 3,
+            "startTime": 1654599600000,
+            "endTime": 1654858800000,
+            "currentTime": 1673257636066,
+            "totalAmount": 20000000,
+            "finishAmount": 12024554,
+            "coupon": null,
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5/detail?projectType=1",
+                "title": null
+            },
+            "forceRecommend": null,
+            "isShow": 0
+        }, {
+            "projectId": 924,
+            "projectName": "新币高息",
+            "projectDesc": null,
+            "iconUrl": "https://saving-doc.s3.ap-northeast-1.amazonaws.com/prd/20220316/deb5816a90f840e286b23561aefed4d7.jpg",
+            "rate": "2.00000000",
+            "currency": "ZBC",
+            "term": 30,
+            "shelfType": 3,
+            "projectStatus": 1,
+            "startTime": 1671976800000,
+            "endTime": 1674655200000,
+            "currentTime": 1673257636066,
+            "totalAmount": 35100000,
+            "finishAmount": 25437714,
+            "coupon": null,
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5/detail?projectType=1",
+                "title": null
+            },
+            "forceRecommend": null,
+            "isShow": 1
+        }, {
+            "projectId": 848,
+            "projectName": "优选定期",
+            "projectDesc": null,
+            "iconUrl": "https://saving-doc.s3.ap-northeast-1.amazonaws.com/prd/20220923/e2daa99ff08d48bd9baa990082c4a07e.png",
+            "rate": "1.50000000",
+            "currency": "SYLO",
+            "term": 42,
+            "shelfType": 2,
+            "projectStatus": 1,
+            "startTime": 1663934400000,
+            "endTime": 1948536000000,
+            "currentTime": 1673257636066,
+            "totalAmount": 150000000.00000000,
+            "finishAmount": 93278312.00000000,
+            "coupon": null,
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5/detail?projectType=2",
+                "title": null
+            },
+            "forceRecommend": null,
+            "isShow": 1
+        }, {
+            "projectId": null,
+            "projectName": "余币宝",
+            "projectDesc": "灵活存取\n稳定收益",
+            "iconUrl": "https://download.hbfile.net/hbg/img/202210151920/5adce7b3b0d64985af6ed72e184c97a3/c74f31400ec739091f10843bbe985546.png",
+            "rate": null,
+            "currency": "BTC",
+            "term": null,
+            "shelfType": 4,
+            "projectStatus": null,
+            "startTime": null,
+            "endTime": null,
+            "currentTime": 1673257636066,
+            "totalAmount": null,
+            "finishAmount": null,
+            "coupon": null,
+            "url": {
+                "jumpMode": 1,
+                "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5/detail?projectType=5",
+                "title": null
+            },
+            "forceRecommend": null,
+            "isShow": 1
+        }],
+        "more": {
+            "jumpMode": 1,
+            "jumpUrl": "https://www.huobi.com.bo/zh-cn/financial/earn/h5",
+            "title": null
+        },
+        "language": null
+    },
+    "success": true
+}

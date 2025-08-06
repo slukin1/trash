@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
+    <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/position_top_container_cover" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1">
+        <com.hbg.lib.widgets.CommonSwitchButton android:id="@+id/position_show_symbol_iv_cover" android:layout_width="@dimen/dimen_28" android:layout_height="@dimen/dimen_16" android:layout_marginLeft="@dimen/global_margin_left" android:layout_centerVertical="true" app:ballCheckedColor="@color/baseColorContentBackground" app:ballUnCheckedColor="@color/baseColorContentBackground" app:ball_radius="@dimen/dimen_6" app:checkedBackgroundColor="@color/baseColorMajorTheme100" app:corner_radius="@dimen/dimen_8" app:is_checked="false" app:unCheckedBackgroundColor="@color/baseColorPrimarySeparator"/>
+        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_secondary_text_color" android:id="@+id/contract_position_lever_label_tv_cover" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:text="@string/n_contract_position_only_current" android:layout_centerVertical="true"/>
+    </LinearLayout>
+</LinearLayout>

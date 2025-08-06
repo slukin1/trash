@@ -1,0 +1,573 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="match_parent"
+    orientation="vertical" width="375">
+    <LinearLayout gravity="centerVertical" height="44" orientation="horizontal"
+        width="match_parent">
+        <ImageView height="28" marginLeft="16" onClick="@event.home.back()"
+            src="edge_engine_top_bar_back_normal" width="28" />
+        <!-- 标题  -->
+        <LinearLayout gravity="center" height="match_parent" orientation="horizontal" weight="1"
+            width="0">
+            <LinearLayout gravity="center" height="match_parent" orientation="horizontal"
+                width="wrap_content">
+                <For data="@data.home.titleData" itemKey="element">
+                    <Cell height="wrap_content" marginLeft="8" marginRight="8" type="normal"
+                        width="wrap_content">
+                        <LinearLayout gravity="left" height="wrap_content" orientation="horizontal"
+                            width="wrap_content">
+                            <TextView gravity="center" height="wrap_content"
+                                onClick="@event.home.tabClick('{{@element.tag}}')"
+                                tag="{{@element.tag}}" text="{{@element.title}}"
+                                textColor="{{@element.titleColor}}" textFontWeight="500"
+                                textSize="16" width="wrap_content" />
+                        </LinearLayout>
+                    </Cell>
+                </For>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView height="28" marginRight="16" onClick="@event.home.history()"
+            src="edge_engine_market_history_btn" width="28" />
+    </LinearLayout>
+
+    <LinearLayout height="0" marginTop="8" orientation="vertical" weight='1' width="match_parent">
+        <SliderView autoScroll="false" currentIndex="@data.home.currentIndex" direction="horizontal"
+            height="match_parent" onSelected="@event.home.resetTitleSelectTab(@eventParams)"
+            scrollMode="reverse" width="match_parent">
+            <For data="@data.home.pageData" itemKey="element">
+                <Cell height="match_parent" type="normal" width="match_parent">
+                    <LinearLayout height="match_parent" orientation="vertical" width="375">
+
+                    </LinearLayout>
+                </Cell>
+                <Cell height="match_parent" type="loan" width="match_parent">
+                    <LinearLayout height="match_parent" orientation="vertical" width="375">
+                        <LinearLayout background="@color/kColorTipsBackground" height="wrap_content"
+                            orientation="horizontal" paddingBottom="8" paddingLeft="16"
+                            paddingRight="16" paddingTop="8" width="match_parent">
+
+                            <ImageView height="16" src="@drawable/edge_engine_ic_trader_tips"
+                                width="12" />
+
+                            <TextView height="wrap_content" lineSpacing="5" marginLeft="4"
+                                maxLines="0" richText="{{@data.home.tipsText}}"
+                                textColor="@color/kColorPrimaryText" textFontWeight="400"
+                                textSize="12" width="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout background="@color/KBaseColorDeepestBackground"
+                            cornerRadius="4" gravity="centerVertical" height="36" marginLeft="16"
+                            marginRight="16" marginTop="8" paddingBottom="4" paddingLeft="4"
+                            paddingRight="4" paddingTop="4" width="match_parent">
+                            <TextView background="{{@data.home.loanCrossCheckBtnBg}}"
+                                cornerRadius="4" gravity="center" height="28"
+                                onClick="@event.home.loanChangeType(1, false)"
+                                text="{{@i18n/n_contract_super_margin}}"
+                                textColor="{{@data.home.loanCrossCheckBtnTextColor}}"
+                                textFontWeight="500" textSize="14" weight="1" width="0" />
+                            <TextView background="{{@data.home.loanIsolatedCheckBtnBg}}"
+                                cornerRadius="4" gravity="center" height="28"
+                                onClick="@event.home.loanChangeType(2, false)"
+                                text="{{@i18n/n_contract_trade_margin}}"
+                                textColor="{{@data.home.loanIsolatedCheckBtnTextColor}}"
+                                textFontWeight="500" textSize="14" weight="1" width="0" />
+                        </LinearLayout>
+
+                        <LinearLayout height="0" marginLeft="16" marginRight="16" marginTop="16"
+                            orientation="vertical" weight="1" width="match_parent">
+
+                                <Scroller height="match_parent" orientation="vertical"
+                                    width="match_parent">
+
+                                    <LinearLayout height="wrap_content" orientation="vertical"
+                                        width="match_parent">
+
+                                        <TextView height="wrap_content" marginBottom="8"
+                                            text="{{@i18n/n_margin_currency}}"
+                                            textColor="@color/kColorPrimaryText"
+                                            textFontWeight="400" textSize="12"
+                                            visibility="{{@element.showIsolatedTitle | gone}}"
+                                            width="match_parent" />
+
+                                        <LinearLayout background="@color/kColorInputFill"
+                                            cornerRadius="4" gravity="centerVertical" height="44"
+                                            onClick="@event.home.showCurrencyPop()" paddingLeft="12"
+                                            paddingRight="12" width="match_parent">
+                                            <ImageView cornerRadius="10" height="20"
+                                                src="{{@element.icon}}"
+                                                visibility="{{@element.iconVisible | gone}}"
+                                                width="20" />
+                                            <TextView height="wrap_content" marginLeft="4"
+                                                text="{{@element.symbol}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="500" textSize="14" weight="1"
+                                                width="0" />
+                                            <ImageView height="12"
+                                                src="@drawable/edge_engine_arrow_down" width="12" />
+                                        </LinearLayout>
+
+                                        <LinearLayout height="68" marginTop="16"
+                                            orientation="horizontal"
+                                            visibility="{{@element.showTwoCurrency | gone}}"
+                                            width="match_parent">
+                                            <LinearLayout
+                                                background="{{@data.home.loanBaseBtnBgColor}}"
+                                                borderColor="{{@data.home.loanBaseBorderColor}}"
+                                                borderWidth="1" cornerRadius="4"
+                                                height="match_parent"
+                                                onClick="@event.home.changeLoanIsolatedType(1)"
+                                                orientation="vertical" paddingBottom="12"
+                                                paddingLeft="12" paddingRight="12" paddingTop="12"
+                                                width="166.5">
+
+                                                <LinearLayout gravity="centerVertical"
+                                                    height="wrap_content" orientation="horizontal"
+                                                    width="match_parent">
+                                                    <ImageView cornerRadius="10" height="20"
+                                                        src="{{@element.baseIcon}}" width="20" />
+
+                                                    <TextView height="wrap_content" marginLeft="4"
+                                                        text="{{@element.baseCurrency}}"
+                                                        textColor="@color/kColorPrimaryText"
+                                                        textFontWeight="500" textSize="14"
+                                                        weight="1" width="0" />
+                                                </LinearLayout>
+
+                                                <View height="0" weight="1" width="1" />
+
+                                                <TextView height="wrap_content"
+                                                    text="{{@i18n/n_margin_for_short_selling}}"
+                                                    textColor="@color/kColorPrimaryText"
+                                                    textFontWeight="400" textSize="12"
+                                                    width="match_parent" />
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                background="{{@data.home.loanQuotaBtnBgColor}}"
+                                                borderColor="{{@data.home.loanQuotaBorderColor}}"
+                                                borderWidth="1" cornerRadius="4"
+                                                height="match_parent" marginLeft="10"
+                                                onClick="@event.home.changeLoanIsolatedType(2)"
+                                                orientation="vertical" paddingBottom="12"
+                                                paddingLeft="12" paddingRight="12" paddingTop="12"
+                                                width="166.5">
+
+                                                <LinearLayout gravity="centerVertical"
+                                                    height="wrap_content" orientation="horizontal"
+                                                    width="match_parent">
+                                                    <ImageView cornerRadius="10" height="20"
+                                                        src="{{@element.quotaIcon}}" width="20" />
+
+                                                    <TextView height="wrap_content" marginLeft="4"
+                                                        text="{{@element.quotaCurrency}}"
+                                                        textColor="@color/kColorPrimaryText"
+                                                        textFontWeight="500" textSize="14"
+                                                        weight="1" width="0" />
+                                                </LinearLayout>
+
+                                                <View height="0" weight="1" width="1" />
+
+                                                <TextView height="wrap_content"
+                                                    text="{{@i18n/n_margin_for_long}}"
+                                                    textColor="@color/kColorPrimaryText"
+                                                    textFontWeight="400" textSize="12"
+                                                    width="match_parent" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="16" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_asset_position_borrow}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.alreadyLoan}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <BottomLineTextView gravity="left" height="18"
+                                                onClick="@event.home.interestRulesTips()"
+                                                opacity="1"
+                                                text="{{@i18n/n_margin_currency_interest_rate}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="150" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.interestRate}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <BottomLineTextView gravity="left" height="18"
+                                                onClick="@event.home.maximumLoanExplainedTips()"
+                                                opacity="1"
+                                                text="{{@i18n/n_margin_maximum_loan_amount}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="150" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.maxLoanLimit}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="24" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_margin_loan_amount}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                onClick="@event.home.toLoanLimit()"
+                                                text="{{@i18n/n_margin_loan_limit}}"
+                                                textColor="@color/kColorMajorTheme100"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout background="@color/kColorInputFill"
+                                            borderColor="{{@data.home.loanEditBorderColor}}"
+                                            borderWidth="1" cornerRadius="4"
+                                            gravity="centerVertical" height="44" marginTop="8"
+                                            paddingLeft="12" paddingRight="12" width="match_parent">
+                                            <EditText bindText="@data.home.loanEditText"
+                                                gravity="centerVertical" height="match_parent"
+                                                hint="{{@element.editHint}}"
+                                                inputType="numberDecimal"
+                                                onFocusChange="@event.home.onLoanEditFocusChange(@eventParams)"
+                                                onTextChange="@event.home.onLoanTextChange(@eventParams)"
+                                                requestFocus="{{@data.home.isLoanEditFocus}}"
+                                                singleLine="true"
+                                                textColor="@color/kColorPrimaryText"
+                                                textColorHint="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="14" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.currency}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="500" textSize="14"
+                                                width="wrap_content" />
+                                            <ImageView
+                                                background="@color/KBaseColorPrimarySeparator"
+                                                height="16" marginLeft="12" marginRight="12"
+                                                width="1" />
+                                            <TextView height="wrap_content"
+                                                onClick="@event.home.loanAllBalance()"
+                                                text="{{@i18n/n_balance_all}}"
+                                                textColor="@color/kColorMajorTheme100"
+                                                textFontWeight="500" textSize="14"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <TextView height="wrap_content" marginTop="8"
+                                            text="{{@data.home.loanErrorTips}}"
+                                            textColor="@color/kColorPriceRed" textFontWeight="400"
+                                            textSize="12"
+                                            visibility="{{@data.home.loanErrorVisible | gone}}"
+                                            width="match_parent" />
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_margin_can_loan}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.maxLoanAmount}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                            <LinearLayout gravity="center" height="28"
+                                                onClick="@event.home.transfer()" paddingLeft="4"
+                                                width="16">
+                                                <ImageView height="12"
+                                                    src="@drawable/edge_engine_copy_trading_transfer"
+                                                    width="12" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <TextView background="{{@data.home.loanConfirmBtnBg}}" cornerRadius="4"
+                                            gravity="center" height="40" marginBottom="16" marginTop="16"
+                                            onClick="@event.home.loanConfirm()" text="{{@i18n/n_margin_loan}}"
+                                            textColor="{{@data.home.loanConfirmBtnTextColor}}"
+                                            textFontWeight="500" textSize="14" width="match_parent" />
+                                    </LinearLayout>
+                                </Scroller>
+                        </LinearLayout>
+                    </LinearLayout>
+                </Cell>
+
+                <Cell height="match_parent" type="repay" width="match_parent">
+                    <LinearLayout height="match_parent" orientation="vertical" width="375">
+                        <LinearLayout background="@color/KBaseColorDeepestBackground"
+                            cornerRadius="4" gravity="centerVertical" height="36" marginLeft="16"
+                            marginRight="16" paddingBottom="4" paddingLeft="4" paddingRight="4"
+                            paddingTop="4" width="match_parent">
+                            <TextView background="{{@data.home.repayCrossCheckBtnBg}}"
+                                cornerRadius="4" gravity="center" height="28"
+                                onClick="@event.home.repayChangeType(1, false)"
+                                text="{{@i18n/n_contract_super_margin}}"
+                                textColor="{{@data.home.repayCrossCheckBtnTextColor}}"
+                                textFontWeight="500" textSize="14" weight="1" width="0" />
+                            <TextView background="{{@data.home.repayIsolatedCheckBtnBg}}"
+                                cornerRadius="4" gravity="center" height="28"
+                                onClick="@event.home.repayChangeType(2, false)"
+                                text="{{@i18n/n_contract_trade_margin}}"
+                                textColor="{{@data.home.repayIsolatedCheckBtnTextColor}}"
+                                textFontWeight="500" textSize="14" weight="1" width="0" />
+                        </LinearLayout>
+
+                        <LinearLayout height="0" marginLeft="16" marginRight="16" marginTop="16"
+                            orientation="vertical" weight="1" width="match_parent">
+
+                                <Scroller height="match_parent" orientation="vertical"
+                                    width="match_parent">
+
+                                    <LinearLayout height="wrap_content" orientation="vertical"
+                                        width="match_parent">
+
+                                        <TextView height="wrap_content" marginBottom="8"
+                                            text="{{@i18n/n_margin_currency}}"
+                                            textColor="@color/kColorPrimaryText"
+                                            textFontWeight="400" textSize="12"
+                                            visibility="{{@element.showIsolatedTitle | gone}}"
+                                            width="match_parent" />
+
+                                        <LinearLayout background="@color/kColorInputFill"
+                                            cornerRadius="4" gravity="centerVertical" height="44"
+                                            onClick="@event.home.showCurrencyPop()" paddingLeft="12"
+                                            paddingRight="12" width="match_parent">
+                                            <ImageView cornerRadius="10" height="20"
+                                                src="{{@element.icon}}"
+                                                visibility="{{@element.iconVisible | gone}}"
+                                                width="20" />
+                                            <TextView height="wrap_content" marginLeft="4"
+                                                text="{{@element.symbol}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="500" textSize="14" weight="1"
+                                                width="0" />
+                                            <ImageView height="12"
+                                                src="@drawable/edge_engine_arrow_down" width="12" />
+                                        </LinearLayout>
+
+                                        <LinearLayout height="68" marginTop="16"
+                                            orientation="horizontal"
+                                            visibility="{{@element.showTwoCurrency | gone}}"
+                                            width="match_parent">
+                                            <LinearLayout
+                                                background="{{@data.home.repayBaseBtnBgColor}}"
+                                                borderColor="{{@data.home.repayBaseBorderColor}}"
+                                                borderWidth="1" cornerRadius="4"
+                                                height="match_parent"
+                                                onClick="@event.home.changeRepayIsolatedType(1)"
+                                                orientation="vertical" paddingBottom="12"
+                                                paddingLeft="12" paddingRight="12" paddingTop="12"
+                                                width="166.5">
+
+                                                <LinearLayout gravity="centerVertical"
+                                                    height="wrap_content" orientation="horizontal"
+                                                    width="match_parent">
+                                                    <ImageView cornerRadius="10" height="20"
+                                                        src="{{@element.baseIcon}}" width="20" />
+
+                                                    <TextView height="wrap_content" marginLeft="4"
+                                                        text="{{@element.baseCurrency}}"
+                                                        textColor="@color/kColorPrimaryText"
+                                                        textFontWeight="500" textSize="14"
+                                                        weight="1" width="0" />
+                                                </LinearLayout>
+
+                                                <View height="0" weight="1" width="1" />
+
+                                                <TextView height="wrap_content"
+                                                    text="{{@i18n/n_margin_for_short_selling}}"
+                                                    textColor="@color/kColorPrimaryText"
+                                                    textFontWeight="400" textSize="12"
+                                                    width="match_parent" />
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                background="{{@data.home.repayQuotaBtnBgColor}}"
+                                                borderColor="{{@data.home.repayQuotaBorderColor}}"
+                                                borderWidth="1" cornerRadius="4"
+                                                height="match_parent" marginLeft="10"
+                                                onClick="@event.home.changeRepayIsolatedType(2)"
+                                                orientation="vertical" paddingBottom="12"
+                                                paddingLeft="12" paddingRight="12" paddingTop="12"
+                                                width="166.5">
+
+                                                <LinearLayout gravity="centerVertical"
+                                                    height="wrap_content" orientation="horizontal"
+                                                    width="match_parent">
+                                                    <ImageView cornerRadius="10" height="20"
+                                                        src="{{@element.quotaIcon}}" width="20" />
+
+                                                    <TextView height="wrap_content" marginLeft="4"
+                                                        text="{{@element.quotaCurrency}}"
+                                                        textColor="@color/kColorPrimaryText"
+                                                        textFontWeight="500" textSize="14"
+                                                        weight="1" width="0" />
+                                                </LinearLayout>
+
+                                                <View height="0" weight="1" width="1" />
+
+                                                <TextView height="wrap_content"
+                                                    text="{{@i18n/n_margin_for_long}}"
+                                                    textColor="@color/kColorPrimaryText"
+                                                    textFontWeight="400" textSize="12"
+                                                    width="match_parent" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="16" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_asset_position_borrow}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.alreadyLoan}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_margin_currency_interest}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.interest}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <BottomLineTextView gravity="left" height="18"
+                                                onClick="@event.home.totalDebtExplainedTips()"
+                                                opacity="1"
+                                                text="{{@i18n/n_margin_total_liabilities}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="150" />
+                                            <TextView height="wrap_content" text="{{@element.debt}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <TextView height="wrap_content" marginTop="24"
+                                            text="{{@i18n/n_margin_repay_amount}}"
+                                            textColor="@color/kColorPrimaryText"
+                                            textFontWeight="400" textSize="12"
+                                            width="match_parent" />
+
+                                        <LinearLayout background="@color/kColorInputFill"
+                                            cornerRadius="4" gravity="centerVertical" height="44"
+                                            marginTop="8" paddingLeft="12" paddingRight="12"
+                                            width="match_parent">
+                                            <EditText bindText="@data.home.repayEditText"
+                                                gravity="centerVertical" height="match_parent"
+                                                hint="{{@i18n/n_copy_trading_enter_amount}}"
+                                                inputType="numberDecimal"
+                                                onFocusChange="@event.home.onRepayEditFocusChange(@eventParams)"
+                                                onTextChange="@event.home.onRepayTextChange(@eventParams)"
+                                                requestFocus="{{@data.home.isRepayEditFocus}}"
+                                                singleLine="true"
+                                                textColor="@color/kColorPrimaryText"
+                                                textColorHint="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="14" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.currency}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="500" textSize="14"
+                                                width="wrap_content" />
+                                            <ImageView
+                                                background="@color/KBaseColorPrimarySeparator"
+                                                height="16" marginLeft="12" marginRight="12"
+                                                width="1" />
+                                            <TextView height="wrap_content"
+                                                onClick="@event.home.repayAllBalance()"
+                                                text="{{@i18n/n_balance_all}}"
+                                                textColor="@color/kColorMajorTheme100"
+                                                textFontWeight="500" textSize="14"
+                                                width="wrap_content" />
+                                        </LinearLayout>
+
+                                        <TextView height="wrap_content" marginTop="8"
+                                            text="{{@data.home.repayErrorTipText}}"
+                                            textColor="@color/kColorPriceRed" textFontWeight="400"
+                                            textSize="12"
+                                            visibility="{{@data.home.repayErrorVisible | gone}}"
+                                            width="match_parent" />
+
+                                        <LinearLayout gravity="centerVertical" height="wrap_content"
+                                            marginTop="8" orientation="horizontal"
+                                            width="match_parent">
+                                            <TextView height="wrap_content"
+                                                text="{{@i18n/n_balance_otc_avaiable}}"
+                                                textColor="@color/kColorThreeLevelText"
+                                                textFontWeight="400" textSize="12" weight="1"
+                                                width="0" />
+                                            <TextView height="wrap_content"
+                                                text="{{@element.trade}}"
+                                                textColor="@color/kColorPrimaryText"
+                                                textFontWeight="400" textSize="12"
+                                                width="wrap_content" />
+                                            <LinearLayout gravity="center" height="28"
+                                                onClick="@event.home.transfer()" paddingLeft="4"
+                                                width="16">
+                                                <ImageView height="12"
+                                                    src="@drawable/edge_engine_copy_trading_transfer"
+                                                    width="12" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <TextView background="{{@data.home.repayConfirmBtnBg}}" cornerRadius="4"
+                                            gravity="center" height="40" marginBottom="16" marginTop="16"
+                                            onClick="@event.home.repayConfirm()" text="{{@i18n/n_margin_repay}}"
+                                            textColor="{{@data.home.repayConfirmBtnTextColor}}"
+                                            textFontWeight="500" textSize="14" width="match_parent" />
+                                    </LinearLayout>
+                                </Scroller>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </Cell>
+            </For>
+        </SliderView>
+    </LinearLayout>
+    <View height="0" onPopDismiss="@event.selectCurrencyPop.currencyPopDismiss()"
+        popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true"
+        popCancelOnTouchOutside="false" popModalPositon="bottom"
+        popShow="{{@data.selectCurrencyPop.showCurrencyPop}}" popShowMode="modal"
+        popTemplate="select_currency_pop.xml" width="0" />
+    <View height="0" onPopDismiss="@event.commonPop.popDismiss()" popArrowDirection="up"
+        popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true"
+        popCancelOnTouchOutside="false" popModalPositon="center"
+        popShow="{{@data.commonPop.popShow}}" popShowMode="modal" popTemplate="commonPop.xml"
+        width="0" />
+</LinearLayout>

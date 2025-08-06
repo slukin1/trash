@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape>
+            <solid android:color="@color/trade_buy_end_color"/>
+        </shape>
+    </item>
+    <item android:left="@dimen/dimen_1" android:top="@dimen/dimen_1" android:right="@dimen/dimen_1" android:bottom="@dimen/dimen_1">
+        <shape>
+            <solid android:color="@color/color_trade_button_container"/>
+            <padding android:left="@dimen/dimen_2" android:top="@dimen/dimen_2" android:right="@dimen/dimen_2" android:bottom="@dimen/dimen_2"/>
+        </shape>
+    </item>
+</layer-list>

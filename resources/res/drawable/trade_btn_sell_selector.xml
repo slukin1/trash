@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/trade_sell_press_color"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/trade_sell_press_color"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/trade_sell_press_color"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/baseColorShadeButtonUnEnableRedStart"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="@color/trade_sell_start_color" android:endColor="@color/trade_sell_end_color" android:angle="45"/>
+            <corners android:radius="@dimen/dimen_4"/>
+        </shape>
+    </item>
+</selector>

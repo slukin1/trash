@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_cl" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:id="@+id/all_currency_record_appbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:layout_scrollFlags="3" app:theme="@style/Theme.CollapsingToolbar">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_28" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_55" android:text="@string/trade_record" android:fontFamily="@font/roboto_medium"/>
+                <net.lucode.hackware.magicindicator.MagicIndicator android:id="@+id/single_record_indicator" android:background="@drawable/lite_shape_record_indicator_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/all_currency_record_toolbar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/record_filter_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginRight="@dimen/dimen_15" android:src="@drawable/sel_lite_assets_screening" android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@+id/tab_content" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dimen_44">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/toolbar_center_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+        <View android:id="@+id/toolbar_divider_view" android:background="@color/baseColorSecondarySeparator" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

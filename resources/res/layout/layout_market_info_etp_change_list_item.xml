@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_18" android:textColor="?attr/kline_primary_text_color" android:id="@+id/id_market_info_etp_change_item_title" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="?attr/kline_three_level_text_color" android:id="@+id/id_market_info_etp_change_item_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/ll_index_recommend_left" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+    <include android:id="@+id/banner_and_notice_bar_container" layout="@layout/part_home_index_recommend_region_banner"/>
+</LinearLayout>

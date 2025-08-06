@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/asset_huobi_earn_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_10" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.hbg.lib.widgets.tablayout.TabItemLayoutIndicator android:id="@+id/tab_item_layout" android:background="@drawable/shape_trade_auto_tab_bg" android:padding="@dimen/dimen_3" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginBottom="@dimen/dimen_5" android:layout_marginStart="@dimen/global_margin_left" android:layout_marginEnd="@dimen/global_margin_right" app:middle_tab_text_size="@dimen/global_text_size_12" app:tab_check_bg="@drawable/shape_trade_auto_tab_item_check_bg" app:tab_check_color="@color/baseColorPrimaryText" app:tab_unCheck_color="@color/baseColorSecondaryText"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.huobi.view.NoHorizontalScrollViewPager android:id="@+id/vp_mining" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

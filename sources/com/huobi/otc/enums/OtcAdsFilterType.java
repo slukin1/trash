@@ -1,0 +1,12 @@
+package com.huobi.otc.enums;
+
+public enum OtcAdsFilterType {
+    PAY_METHOD_FILTER,
+    AMOUNT_FILTER,
+    ACCEPT_ORDER_FILTER,
+    BLUE_SHIELD_FILTER,
+    MERCHANT_LEVEL_FILTER,
+    AVAILABLE_FILTER,
+    BLOCK_FILTER,
+    PAY_METHOD_FILTER_NEW
+}

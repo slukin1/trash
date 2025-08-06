@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/left_icon_iv" android:layout_width="@dimen/dimen_15" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_15" android:src="@drawable/home_news_image"/>
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/dimen_5">
+        <com.hbg.lib.widgets.TopScrollItemView android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view1" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <com.hbg.lib.widgets.TopScrollItemView android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view2" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <View android:layout_gravity="end" android:id="@+id/cover_view" android:background="@drawable/market_indicator_shadow" android:visibility="gone" android:layout_width="@dimen/dimen_24" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/index_notice_more" android:paddingLeft="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/dimen_18" android:src="@drawable/home_notice_more"/>
+</LinearLayout>

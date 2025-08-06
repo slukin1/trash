@@ -1,0 +1,42 @@
+package com.hbg.lib.resources;
+
+public final class R$raw {
+    public static final int activity_zero_success = 2131951616;
+    public static final int airdrop_animation_open = 2131951617;
+    public static final int airdrop_animation_result = 2131951618;
+    public static final int airdrop_animation_side = 2131951619;
+    public static final int check_in_success = 2131951631;
+    public static final int community_likes_feed = 2131951632;
+    public static final int community_likes_tabbar_new = 2131951633;
+    public static final int coupon_float = 2131951634;
+    public static final int earn_home_1 = 2131951638;
+    public static final int earn_home_2 = 2131951639;
+    public static final int earn_home_3 = 2131951640;
+    public static final int earn_home_4 = 2131951641;
+    public static final int earn_home_5 = 2131951642;
+    public static final int edge_engine_earn_result = 2131951643;
+    public static final int feed_comment_anim = 2131951648;
+    public static final int feed_comment_anim_light = 2131951649;
+    public static final int feed_comment_anim_night = 2131951650;
+    public static final int group_chat_voice_live_green = 2131951676;
+    public static final int hotcoin_radar_loading = 2131951684;
+    public static final int huobi_live_business = 2131951689;
+    public static final int huobi_live_gift_batter_bg_blue = 2131951690;
+    public static final int huobi_live_gift_blue = 2131951691;
+    public static final int huobi_live_icon_glow = 2131951692;
+    public static final int live_follow = 2131951701;
+    public static final int newflash_green_fall_day = 2131951712;
+    public static final int newflash_green_fall_night = 2131951713;
+    public static final int newflash_green_rise_day = 2131951714;
+    public static final int newflash_green_rise_night = 2131951715;
+    public static final int newflash_red_fall_day = 2131951716;
+    public static final int newflash_red_fall_night = 2131951717;
+    public static final int newflash_red_rise_day = 2131951718;
+    public static final int newflash_red_rise_night = 2131951719;
+    public static final int publish_anim = 2131951739;
+    public static final int refresh_header = 2131951740;
+    public static final int rewards_box_button = 2131951741;
+    public static final int rewards_hub_box_unlock = 2131951742;
+    public static final int skeleton_balance_heco = 2131951745;
+    public static final int skeleton_balance_heco_night = 2131951746;
+}

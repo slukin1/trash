@@ -1,0 +1,64 @@
+<LinearLayout
+	width="match_parent"
+	height="wrap_content"
+	gravity="centerVertical"
+	orientation="vertical"
+	topRightRadius="8"
+	topLeftRadius="8"
+	background="@color/KBaseColorContentBackground">
+    <LinearLayout
+		width="match_parent"
+		height="wrap_content"
+		gravity="centerVertical"
+		orientation="vertical">
+        <For
+			data="@data.contractEditPage.pop.popOptionList"
+			itemKey="element"
+			typeKey="cellType">
+            <Cell
+				width="match_parent"
+				height="wrap_content"
+				type="1">
+                <LinearLayout
+					width="match_parent"
+					marginLeft="16"
+					marginRight="16"
+					height="48"
+					gravity="center"
+					orientation="horizontal"
+					onClick="@event.contractEditPage.optionClick({{@element.index}})">
+                    <TextView
+						gravity="left|center"
+						height="48"
+						width="wrap_content"
+						text="{{@element.title}}"
+						textColor="{{@element.textColor}}"
+						textFontWeight="500"
+						textSize="14" />
+                    <View weight="1" />
+                    <ImageView
+						width="16"
+						height="16"
+						src="@drawable/edge_engine_trader_list_sort_selected"
+						visibility="{{@element.selImageVisibility}}" />
+                </LinearLayout>
+            </Cell>
+        </For>
+    </LinearLayout>
+    <View
+		width="match_parent"
+		height="8"
+		background="@color/KBaseColorDeepestBackground" />
+    <TextView
+		gravity="center"
+		height="48"
+		text="{{@i18n/n_contract_cancel}}"
+		textColor="@color/KBaseColorSecondaryText"
+		textFontWeight="500"
+		textSize="14"
+		width="match_parent"
+		onClick="@event.contractEditPage.optionPopDismiss()" />
+    <View
+		width="match_parent"
+		height="34" />
+</LinearLayout>

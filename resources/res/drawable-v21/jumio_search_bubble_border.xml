@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="@dimen/jumio_radius_medium"/>
+            <stroke android:width="@dimen/jumio_stroke_small" android:color="?attr/colorPrimary"/>
+            <padding android:left="@dimen/jumio_padding_extra_small" android:top="@dimen/jumio_padding_extra_small" android:right="@dimen/jumio_padding_extra_small" android:bottom="@dimen/jumio_padding_extra_small"/>
+        </shape>
+    </item>
+    <item android:state_selected="false">
+        <shape>
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="@dimen/jumio_radius_medium"/>
+            <stroke android:width="@dimen/jumio_stroke_small" android:color="?attr/jumio_search_bubble_background"/>
+            <padding android:left="@dimen/jumio_padding_extra_small" android:top="@dimen/jumio_padding_extra_small" android:right="@dimen/jumio_padding_extra_small" android:bottom="@dimen/jumio_padding_extra_small"/>
+        </shape>
+    </item>
+</selector>

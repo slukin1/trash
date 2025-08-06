@@ -1,0 +1,5 @@
+<!--banner，需要映射到原生组件上-->
+<LinearLayout width="375" height="wrap_content" orientation="vertical" background="{{@data.p2pMainTab.containerBgColor}}">
+    <OtcBannerView datas="{{@data.otcBanner.normal.datas}}" width="match_parent" height="{{@data.otcBanner.normal.contentHeight}}"/>
+    <View height="{{@data.otcBanner.normal.bottomPadding}}"/>
+</LinearLayout>

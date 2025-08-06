@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/baseColorDeepestBackground" android:paddingBottom="@dimen/dimen_5" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50">
+    <View android:id="@+id/lend_action_divider" android:layout_width="match_parent" android:layout_height="@dimen/dimen_5" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <FrameLayout android:background="@drawable/shape_margin_top_risk_bar_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/lend_action_divider">
+        <com.hbg.lib.widgets.CommonTextListIndicator android:id="@+id/c2c_lend_action_view_indicator" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/c2c_lend_action_view_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/icon_indicator_arrow"/>
+    </FrameLayout>
+</RelativeLayout>

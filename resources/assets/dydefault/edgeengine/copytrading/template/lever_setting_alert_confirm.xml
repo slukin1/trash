@@ -1,0 +1,9 @@
+<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="8" width="325" height="wrap_content" orientation="vertical" paddingBottom="16" paddingLeft="16" paddingRight="16" paddingTop="16">
+    <TextView text="{{@data.leverSetting.alertTitle}}" textSize="14" width="wrap_content" maxWidth="293" height="wrap_content" textFontWeight="400" marginTop="16" maxLines="0" textColor="@color/kColorPrimaryText"/>
+    <LinearLayout width="293" marginTop="16" gravity="center" orientation="horizontal" height="44">
+        <TextView text="{{@i18n/n_cancel}}" cornerRadius="4" textColor="@color/kColorPrimaryText" textSize="14" height="44" width="142" textFontWeight="500" gravity="center" background="@color/kTextFieldMainBgColor" onClick="@event.leverSetting.dismiss()"/>
+        <View width="8"/>
+        <TextView text="{{@i18n/n_coupon_select_confirm}}" cornerRadius="4" textColor="#FFFFFF" textSize="14" height="44" width="142" gravity="center" textFontWeight="500" background="@color/kColorMajorTheme100" onClick="@event.leverSetting.confirm()"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/sel_item_city_choose" android:paddingLeft="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="center_vertical" android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50" android:layout_marginRight="@dimen/dimen_15"/>
+    <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/global_border_size"/>
+</LinearLayout>

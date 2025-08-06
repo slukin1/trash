@@ -1,0 +1,43 @@
+<LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/KBaseColorContentBackground">
+        <!-- 全部跟单者 -->
+        <LinearLayout width="match_parent" height="28">
+                <TextView marginLeft="16" width="150" height="match_parent" gravity="centerVertical" text="{{@i18n/n_copy_trading_all_followers}}" textSize="12" textColor="@color/kColorSecondaryText"/>
+                <LinearLayout width="0" height="match_parent" gravity="right" weight="1" onClick="@event.myFollower.onFilterChange()">
+                        <TextView marginRight="4" width="wrap_content" height="match_parent" gravity="center" text="{{@i18n/n_copy_trading_sorting_of_total_shares}}" textSize="12" textColor="@color/kColorSecondaryText"/>
+                        <ImageView marginRight="16" marginTop="10" width="5" height="8" src="{{@data.myFollower.filterImg}}"/>
+                </LinearLayout>
+        </LinearLayout>
+        <FrameLayout width="match_parent" height="0" weight="1">
+                <!-- 列表数据 -->
+                <RecyclerView height="match_parent" width="match_parent" gravity="centerVertical" orientation="horizontal" data="@data.myFollower.list" itemKey="item" typeKey="type" onLoadMore="@event.myFollower.onLoadMore()" loadMoreStatus="{{@data.myFollower.loadMoreStatus}}" visibility="{{@data.myFollower.listVisible | invisible}}">
+                        <Cell type="normal" marginTop="12" marginLeft="16" marginRight="16" width="match_parent" height="wrap_content">
+                                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+                                        <LinearLayout width="match_parent" height="28" orientation="horizontal" gravity="centerVertical">
+                                                <ImageView cornerRadius="10" height="28" scaleType="fitXY" src="{{@item.imgUrl}}" width="28"/>
+                                                <TextView height="wrap_content" text="{{@item.nickName}}" textColor="@color/kColorPrimaryText" textFontWeight="500" marginLeft="8" textSize="14" width="wrap_content"/>
+                                                <LinearLayout width="100" height="wrap_content" weight="1" gravity="right" onClick="@event.myFollower.onRemove({{@item.index}})">
+                                                        <ImageView width="20" height="20" src="@drawable/edge_engine_copytrading_delete"/>
+                                                </LinearLayout>
+                                        </LinearLayout>
+                                        <LinearLayout width="match_parent" height="20" marginTop="12" orientation="horizontal">
+                                                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_total_share_follower}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                                <View height="0" weight="1" width="0"/>
+                                                <TextView height="wrap_content" text="{{@i18n/n_copy_trading_latest_tracking_time}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                        </LinearLayout>
+                                        <LinearLayout width="match_parent" height="20" orientation="horizontal">
+                                                <TextView height="wrap_content" text="{{@item.totalTakeDes}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                                <View height="0" weight="1" width="0"/>
+                                                <TextView height="wrap_content" text="{{@item.lastCopyTime}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" width="wrap_content"/>
+                                        </LinearLayout>
+                                        <!-- 分割线 -->
+                                        <TextView marginTop="12" width="match_parent" height="0.5" background="@color/KBaseColorPrimarySeparator"/>
+                                </LinearLayout>
+                        </Cell>
+                </RecyclerView>
+                <!-- 空样式 -->
+                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" gravity="centerHorizontal" visibility="{{@data.myFollower.emptyVisible | gone}}">
+                        <ImageView marginTop="40" width="60" height="60" src="@drawable/edge_engine_empty"/>
+                        <TextView marginTop="8" width="match_parent" height="wrap_content" gravity="center" textSize="12" text="{{@i18n/n_contract_trade_no_record}}" textColor="@color/kColorThreeLevelText"/>
+                </LinearLayout>
+        </FrameLayout>
+</LinearLayout>

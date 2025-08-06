@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_u1000_item_bg" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="@dimen/dimen_69" android:layout_marginTop="@dimen/dimen_4" android:layout_marginBottom="@dimen/dimen_4" android:layout_marginVertical="@dimen/dimen_4" android:paddingHorizontal="@dimen/dimen_15">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/u1000_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="奖励明细" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/otc_trade_tv_unselected_color" android:id="@+id/u1000_detail_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:text="time"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/u1000_item_by_online" android:layout_width="@dimen/dimen_25" android:layout_height="@dimen/dimen_25" android:src="@drawable/otc_1000u_item_oday"/>
+        <ImageView android:id="@+id/u1000_item_by_order" android:layout_width="@dimen/dimen_25" android:layout_height="@dimen/dimen_25" android:src="@drawable/otc_1000u_item_order"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_4">
+        <TextView android:textColor="@color/otc_new_fast_best" android:id="@+id/u1000_item_by_online_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_day" android:fontFamily="@font/roboto_medium"/>
+        <TextView android:textColor="@color/otc_operation_lottery_red" android:id="@+id/u1000_item_by_order_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ 10" android:fontFamily="@font/roboto_medium"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<FrameLayout width="275" height="420" orientation="vertical" background="#161616">
+	<ImageView width="match_parent" height="match_parent" src="@drawable/edge_engine_copytrading_share_trader_cn"/>
+    <LinearLayout width="235" height="408" marginTop="12" marginLeft="20" marginRight="20" orientation="vertical">
+        <LinearLayout width="match_parent" height="wrap_content" marginRight="0" gravity="right" orientation="vertical">
+            <TextView width="wrap_content" height="20" gravity="right | center" text="{{@data.historyFollowOrders.time}}" textColor="#5E5E61" textSize="10" textFontWeight="400"/>
+        </LinearLayout>
+        
+        <TextView width="wrap_content" marginTop="31" height="18" text="{{@data.historyFollowOrders.symbol}}" textColor="#FFFFFF" textSize="16" textFontWeight="500"/>
+        <LinearLayout height="18" marginLeft="0" marginTop="10" width="wrap_content" orientation="horizontal" gravity="centerVertical">
+            <TextView width="wrap_content" height="wrap_content" text="{{@data.historyFollowOrders.directionDesc}}" textColor="{{@data.historyFollowOrders.directionColor}}" textSize="12" textFontWeight="700"/>
+            <View width="0.5" height="10" marginLeft="10" background="#8C8C93"/>
+            <TextView width="wrap_content" height="wrap_content" marginLeft="10" text="{{@data.historyFollowOrders.leverDesc}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        </LinearLayout>
+        <TextView width="wrap_content" marginTop="24" height="18" text="{{@data.historyFollowOrders.profitRateTitle}}" textColor="#8C8C93" textSize="10" textFontWeight="500"/>
+        <TextView width="wrap_content" height="59" text="{{@data.historyFollowOrders.profitRateStr}}" textColor="{{@data.historyFollowOrders.profitColor}}" textSize="45" textFontWeight="500"/>
+        <TextView width="wrap_content" marginTop="20" height="17" text="{{@data.historyFollowOrders.openPriceTitle}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="17" text="{{@data.historyFollowOrders.openPriceStr}}" textColor="#E6E6E6" textSize="12" textFontWeight="600"/>
+        <TextView width="wrap_content" marginTop="20" height="17" text="{{@data.historyFollowOrders.closePriceTitle}}" textColor="#8C8C93" textSize="12" textFontWeight="400"/>
+        <TextView width="wrap_content" marginTop="7" height="17" text="{{@data.historyFollowOrders.closePriceStr}}" textColor="#E6E6E6" textSize="12" textFontWeight="600"/>
+    </LinearLayout>
+</FrameLayout>

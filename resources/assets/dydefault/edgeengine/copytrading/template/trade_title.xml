@@ -1,0 +1,15 @@
+<LinearLayout width="match_parent" height="44" marginLeft="16" marginRight="8" orientation="horizontal" gravity="center" background="@color/KBaseColorContentBackground">
+
+    <!-- 切换币种菜单 -->
+    <ImageView marginTop="10" marginBottom="10" height="24" width="24" scaleType="fitXY" src="@drawable/edge_engine_symbol_more" onClick="@event.drawer.start()"/>
+    <!-- 标题 -->
+    <TextView width="wrap_content" height="wrap_content" text="{{@data.tradeTitle.symbolTitle}}" textFontWeight="600" textColor="@color/kColorPrimaryText" textSize="20"/>
+
+    <!-- 涨跌幅 -->
+    <TextView marginLeft="4" paddingLeft="4" paddingRight="4" paddingTop="1" paddingBottom="1" textFontWeight="500" width="wrap_content" height="wrap_content" textSize="11" text="{{@data.tradeTitle.ad}}" gravity="left" cornerRadius="2" textColor="{{@data.tradeTitle.adColor}}" background="{{@data.tradeTitle.adBackgroundColor}}"/>
+
+    <!-- 间隔 -->
+    <TextView width="0" height="match_parent" weight="1"/>
+    <!-- 收益计算 -->
+    <ImageView marginTop="8" marginBottom="8" height="28" width="28" scaleType="fitXY" src="@drawable/edge_engine_common_calc" onClick="@event.tradeTitle.jumpToIncomingCalc()"/>
+</LinearLayout>

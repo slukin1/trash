@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_root_view" android:background="@color/common_white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huochat.community.widget.CommonToolbar android:id="@+id/common_tool_bar_circle_detail" android:layout_width="match_parent" android:layout_height="wrap_content" app:leftIconFilterColor="@color/color_14181F" app:leftIconVisible="0" app:leftTextVisible="8" app:rightIconVisible="8" app:rightTextVisible="8" app:title="@string/community_dynamic_detail_title" app:titleVisible="0"/>
+    <View android:id="@+id/vMomentDtailTopLine" android:background="@color/color_f4f4f4" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/llContentContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.hbg.lib.widgets.MyNestedScrollView android:id="@+id/msv_moment_detail_scrollview" android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/coordinator_layout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <com.google.android.material.appbar.AppBarLayout android:theme="@style/Community.Theme.AppBarLayout" android:orientation="vertical" android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="com.huochat.community.widget.FlingBehavior">
+                            <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_scrollFlags="3">
+                                <LinearLayout android:orientation="vertical" android:id="@+id/ll_community_base_info_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <FrameLayout android:id="@+id/ff_moment_type_container" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="1"/>
+                                    <TextView android:textSize="@dimen/dimen_12" android:textColor="?attr/communityDetailDisclaimerTextColor" android:id="@+id/tv_disclaimer" android:background="?attr/communityDetailDisclaimerTextColor" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_12" android:paddingRight="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_12" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="1"/>
+                                    <View android:id="@+id/v_divider_content" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="0dp"/>
+                                </LinearLayout>
+                            </com.google.android.material.appbar.CollapsingToolbarLayout>
+                            <LinearLayout android:id="@+id/llTopFloatContainer" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <net.lucode.hackware.magicindicator.MagicIndicator android:layout_gravity="center_vertical" android:id="@+id/magic_indicatator" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="1"/>
+                            </LinearLayout>
+                            <View android:id="@+id/vMagicLine" android:background="@color/color_f4f4f4" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                        </com.google.android.material.appbar.AppBarLayout>
+                        <com.huochat.community.widget.momentdetail.MomentCommentListView android:id="@+id/mclv_comment_list_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </LinearLayout>
+            </com.hbg.lib.widgets.MyNestedScrollView>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_edit_oprate_panel" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textSize="14dp" android:textColor="@color/color_C5CFD5" android:gravity="center_vertical" android:id="@+id/tvMomentDetailCommentInput" android:background="@drawable/community_shape_f7f7fb_r20" android:paddingLeft="15dp" android:layout_width="0dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:text="写评论" android:maxLines="1" android:layout_weight="1"/>
+                <TextView android:textSize="14dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@+id/tv_commment_button" android:background="@drawable/selector_comment_button_click" android:layout_width="wrap_content" android:layout_height="30dp" android:minWidth="70dp" android:text="@string/text_comment"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/flErrorContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/detailEmptyContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/view_community_empty"/>
+            <com.huochat.community.widget.skeleton.CommunityDetailSkeletonView android:id="@+id/cdsvDetailSkeleton" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

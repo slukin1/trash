@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingTop="@dimen/dimen_18" android:paddingBottom="@dimen/dimen_18" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/global_padding_left" android:paddingEnd="@dimen/global_padding_right">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_trade_time"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_time_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_type"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_order_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_trade_price"/>
+        <com.hbg.lib.widgets.SubscriptTextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_price_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_trade_amount"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_amount_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_fee"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_fee_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_order_amount_type"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/tv_order_deal_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_point_consume"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_card_consume_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:id="@+id/item_detail_order_deduct_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_detail_ht_deduction"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_deduct_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/item_detail_order_trigger_condition_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16">
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_trigger_condition"/>
+        <com.hbg.lib.widgets.SubscriptTextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="end" android:id="@+id/item_detail_order_trigger_condition_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

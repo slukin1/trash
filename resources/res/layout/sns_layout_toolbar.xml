@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+    <com.sumsub.sns.core.widget.SNSImageButton android:id="@+id/sns_button_close" android:padding="@dimen/sns_image_button_padding" android:layout_width="@dimen/sns_min_button_size" android:layout_height="@dimen/sns_min_button_size" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <com.sumsub.sns.core.widget.SNSImageButton android:id="@+id/sns_button_option" android:padding="@dimen/sns_image_button_padding" android:layout_width="@dimen/sns_min_button_size" android:layout_height="@dimen/sns_min_button_size" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+</merge>

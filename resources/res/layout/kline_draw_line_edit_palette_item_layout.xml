@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/kline_draw_palette_item_bg" android:padding="@dimen/dimen_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/paletteColorImage" android:layout_width="@dimen/dimen_17" android:layout_height="@dimen/dimen_17" android:src="@drawable/kline_edit_color_palette_1"/>
+</LinearLayout>

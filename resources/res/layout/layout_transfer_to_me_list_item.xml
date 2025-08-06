@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:gravity="bottom" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:id="@+id/tv_points_transfer_order_account" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15">
+                <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/points_buy_confirm_dialog_amount" android:layout_weight="1"/>
+                <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_status" android:layout_weight="1"/>
+                <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:gravity="end" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/points_history_details_date" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_12" android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_points_transfer_order_size" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_points_transfer_order_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="end" android:id="@+id/tv_points_transfer_order_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/item_balance_detail_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10" android:layout_marginBottom="@dimen/dimen_17" android:src="@drawable/balance_asset_detail" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0"/>
+    </LinearLayout>
+    <View android:background="@color/global_large_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>
+</LinearLayout>

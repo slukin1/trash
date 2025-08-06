@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/id_common_tips_dialog_root" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:layout_gravity="center_horizontal" android:background="@drawable/bubble_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_common_tips_dialog_recyclerView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_8" android:layout_marginRight="@dimen/dimen_8"/>
+    </FrameLayout>
+</FrameLayout>

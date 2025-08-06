@@ -1,0 +1,26 @@
+package com.google.android.gms.internal.measurement;
+
+public final class zzps implements zzpr {
+    public static final zzib zza;
+    public static final zzib zzb;
+    public static final zzib zzc;
+
+    static {
+        zzhy zza2 = new zzhy(zzhq.zza("com.google.android.gms.measurement")).zzb().zza();
+        zza = zza2.zzf("measurement.item_scoped_custom_parameters.client", true);
+        zzb = zza2.zzf("measurement.item_scoped_custom_parameters.service", false);
+        zzc = zza2.zzd("measurement.id.item_scoped_custom_parameters.service", 0);
+    }
+
+    public final boolean zza() {
+        return true;
+    }
+
+    public final boolean zzb() {
+        return ((Boolean) zza.zzb()).booleanValue();
+    }
+
+    public final boolean zzc() {
+        return ((Boolean) zzb.zzb()).booleanValue();
+    }
+}

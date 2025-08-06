@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hbg.lib.widgets.LoadingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/loading_root" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/pwd_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:background="@color/global_item_bg" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/global_text_size_20" android:textColor="@color/otc_place_order_header_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_otc_new_find_verification" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium"/>
+            <TextView android:textColor="@color/otc_place_order_2nd_text_color" android:id="@+id/pwd_btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/otc_market_largebitcoin_icon" android:text="@string/n_otc_new_otc_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/otc_order_detail_card_body_bg_color" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/otc_place_order_header_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_cloud_wallet_security_update_otc_trade_pwd_title"/>
+            <com.huobi.view.CardInputEditText android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:textColorHint="@color/otc_place_order_edit_text_hint_color" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pwd_edit_text" android:background="@drawable/selector_common_eidtext_botton_line_bg" android:layout_width="match_parent" android:layout_height="40dp" android:hint="@string/n_cloud_wallet_fund_pwd_hint" android:singleLine="true" android:inputType="textPassword" android:textCursorDrawable="@drawable/color_cursor1"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/otc_forgot_psw" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="@dimen/dimen_10" style="@style/TextView.forgotPassword"/>
+                <TextView android:gravity="end" android:id="@+id/otc_use_verification" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_otc_use_verification_code" android:layout_weight="1" style="@style/TextView.forgotPassword"/>
+            </LinearLayout>
+            <Button android:enabled="false" android:textSize="@dimen/global_text_size_16" android:textColor="@color/lite_state_text_color" android:gravity="center" android:id="@+id/pwd_btn_ok" android:background="@drawable/btn_sel_otc_merchant_buy_bg" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="30dp" android:text="@string/otc_button_ok" android:textAllCaps="false" android:fontFamily="@font/roboto_medium"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/otc_pop_loading_layout"/>
+</com.hbg.lib.widgets.LoadingRelativeLayout>

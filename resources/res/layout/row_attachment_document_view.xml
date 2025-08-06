@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center" android:id="@+id/attachment_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chat_attachment_pdf"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <TextView android:id="@+id/attachment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" style="@style/attachment_document_title"/>
+        <TextView android:id="@+id/attachment_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" style="@style/attachment_document_subtitle"/>
+    </LinearLayout>
+</LinearLayout>

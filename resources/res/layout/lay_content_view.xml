@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_behavior="com.hbg.module.libkt.custom.coord.AppBarLayoutBehavior">
+        <androidx.constraintlayout.widget.ConstraintLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="1">
+            <ImageView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintDimensionRatio="H,125:42" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.hbg.module.libkt.custom.indicator.CoIndicator android:id="@+id/coIndicator" android:scrollbars="none" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_toLeftOf="@+id/iv_notive_setting" android:overScrollMode="never"/>
+            <View android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_below="@+id/coIndicator"/>
+            <ImageView android:id="@+id/iv_notice_mask" android:visibility="gone" android:layout_width="40dp" android:layout_height="match_parent" android:layout_marginRight="43dp" android:src="@drawable/icon_notice_setting_mask" android:scaleType="fitXY" android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/iv_notive_setting" android:visibility="gone" android:layout_width="28dp" android:layout_height="29dp" android:layout_marginRight="15dp" android:src="@drawable/icon_notice_setting" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/vpContent" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <com.hbg.lib.widgets.LoadingLayout android:layout_gravity="center" android:id="@+id/contentLoadingView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_46"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

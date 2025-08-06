@@ -1,0 +1,63 @@
+package i4;
+
+import android.util.SparseIntArray;
+import android.view.View;
+import androidx.databinding.b;
+import androidx.databinding.f;
+import com.business.common.R$id;
+import com.huobi.view.roundview.RoundConstraintLayout;
+
+public class h extends g {
+    public static final f.i G = null;
+    public static final SparseIntArray H;
+    public final RoundConstraintLayout E;
+    public long F;
+
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        H = sparseIntArray;
+        sparseIntArray.put(R$id.ivSymbol, 1);
+        sparseIntArray.put(R$id.tvName, 2);
+        sparseIntArray.put(R$id.tvValue, 3);
+    }
+
+    public h(b bVar, View view) {
+        this(bVar, view, f.w(bVar, view, 4, G, H));
+    }
+
+    public void i() {
+        synchronized (this) {
+            this.F = 0;
+        }
+    }
+
+    public boolean r() {
+        synchronized (this) {
+            if (this.F != 0) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    public void t() {
+        synchronized (this) {
+            this.F = 1;
+        }
+        B();
+    }
+
+    public boolean x(int i11, Object obj, int i12) {
+        return false;
+    }
+
+    public h(b bVar, View view, Object[] objArr) {
+        super(bVar, view, 0, objArr[1], objArr[2], objArr[3]);
+        this.F = -1;
+        RoundConstraintLayout roundConstraintLayout = objArr[0];
+        this.E = roundConstraintLayout;
+        roundConstraintLayout.setTag((Object) null);
+        G(view);
+        t();
+    }
+}

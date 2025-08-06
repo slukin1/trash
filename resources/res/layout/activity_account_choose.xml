@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bg_white_top_tab_radius_16_copy_trader_tab" android:layout_width="match_parent" android:layout_height="@dimen/dimen_590">
+    <View android:layout_gravity="center_horizontal" android:background="@drawable/shape_account_choose_top" android:layout_width="@dimen/dimen_37" android:layout_height="@dimen/dimen_5" android:layout_marginTop="@dimen/dimen_12" android:layout_marginBottom="@dimen/dimen_4"/>
+    <com.huobi.view.title.HbTitleBar android:id="@+id/htb" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:showBack="false" app:titleText="@string/transfer_account_choose_title"/>
+    <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/rcv" android:background="@color/app_bg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ExpandableListView android:id="@+id/expandableListView" android:background="@color/app_bg" android:layout_width="wrap_content" android:layout_height="match_parent" android:childDivider="@null" android:divider="@null"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.sumsub.sns.core.widget.SNSSubtitle1TextView android:id="@+id/sns_label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sns_margin_medium" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <com.sumsub.sns.core.widget.SNSSubtitle2TextView android:id="@+id/sns_example" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sns_margin_small" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/sns_label"/>
+    <com.sumsub.sns.core.widget.SNSDateInputLayout android:id="@+id/sns_data_date" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sns_margin_tiny" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/sns_example" style="@style/Widget.SNSDateInputLayout">
+        <com.sumsub.sns.core.widget.SNSTextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:cursorVisible="false" style="@style/Widget.SNSTextEdit"/>
+    </com.sumsub.sns.core.widget.SNSDateInputLayout>
+</merge>

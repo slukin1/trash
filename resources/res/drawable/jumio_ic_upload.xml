@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="15dp" android:width="21dp" android:autoMirrored="true" android:viewportWidth="21" android:viewportHeight="15">
+    <path android:fillColor="?attr/jumio_primary_button_foreground" android:pathData="M10.052,0.429C13.102,0.429 15.64,2.649 16.209,5.606C18.387,5.76 20.105,7.594 20.105,9.857C20.105,12.223 18.228,14.143 15.916,14.143H5.026C2.253,14.143 0,11.837 0,9C0,6.352 1.96,4.166 4.482,3.892C5.529,1.834 7.631,0.429 10.052,0.429ZM11.728,11.572V8.143H14.241L10.052,3.857L5.864,8.143H8.377V11.572H11.728Z" android:fillType="1"/>
+</vector>

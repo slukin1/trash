@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/error_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_m_18" android:src="@drawable/common_no_network_icon"/>
+    <TextView android:textSize="@dimen/common_error_tip_text_size" android:textColor="@color/global_default_text_color" android:id="@+id/error_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_error_tip_margin_top" android:text="@string/common_no_internet_access" android:layout_centerHorizontal="true"/>
+    <TextView android:textColor="@color/global_jump_btn_color" android:gravity="center" android:id="@+id/viewErrorRetry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_error_reload_margin_top" android:text="@string/common_reloading" android:layout_centerHorizontal="true"/>
+</LinearLayout>

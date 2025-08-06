@@ -1,0 +1,52 @@
+<LinearLayout
+    width="343"
+    height="wrap_content"
+    orientation="horizontal" >
+    <TagView
+        data="@data.coinTags.tagList" 
+        height="wrap_content"
+        itemKey="element"
+        typeKey="type"
+        mainAxisSpace="8"
+        crossAxisSpace="8"
+        width="match_parent">
+      <TagCell
+          type="1"
+          width="wrap_content"
+          height="wrap_content" >
+        <LinearLayout
+            height="36"
+            width="wrap_content"
+            orientation="horizontal"
+            onClick="@event.coinTags.jumpToKline('{{@element.index}}')"
+            background="@color/eContentNavUnselectedBackground" 
+            borderColor="@color/kColorEBEBEB" 
+            borderWidth="1"
+            cornerRadius="18" >
+          <ImageView 
+              height="20" 
+              marginTop="8"
+              marginLeft="12"
+              src="{{@element.icon}}" 
+              width="20" />
+            <TextView
+                marginLeft="4"
+                width="wrap_content"
+                height="36"
+                text="{{@element.coin}}"
+                textColor="{{@data.nativeRes.nativeRes.baseColorPrimaryText}}"
+                textSize="12"
+                gravity="left|center" />
+            <TextView
+                marginLeft="4"
+                marginRight="12"
+                width="wrap_content"
+                height="36"
+                text="{{@element.upDown}}"
+                textSize="12"
+                gravity="left|center"
+                textColor="{{@element.ratioColor}}" />
+        </LinearLayout>
+      </TagCell>
+    </TagView>
+</LinearLayout>

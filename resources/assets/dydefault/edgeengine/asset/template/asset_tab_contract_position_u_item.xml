@@ -1,0 +1,40 @@
+<!-- 合约持仓 Item 模版 -->
+<LinearLayout width="375" height="wrap_content" background="@color/KBaseColorContentBackground" orientation="vertical">
+    <LinearLayout width="match_parent" height="58" marginLeft="16" marginRight="16" orientation="horizontal">
+        <LinearLayout height="match_parent" orientation="vertical" width="132" gravity="centerVertical">
+            <LinearLayout height="wrap_content" orientation="horizontal" width="wrap_content" gravity="centerVertical">
+                <LinearLayout width="wrap_content" height="wrap_content" paddingStart="4" paddingEnd="4" background="{{@initData.longOrShortBackGroundColor}}" marginBottom="1" marginLeft="3" marginRight="3" paddingTop="1" paddingBottom="1" cornerRadius="2">
+                    <TextView width="wrap_content" height="wrap_content" textSize="10" textFontWeight="400" textColor="{{@initData.longOrShortColor}}" text="{{@initData.longOrShort}}"/>
+                </LinearLayout>
+
+                <TextView width="wrap_content" height="wrap_content" textSize="14" textFontWeight="600" textColor="@color/kColorPrimaryText" text="{{@initData.symbolName}}"/>
+
+                <TextView width="wrap_content" height="wrap_content" marginLeft="4" textSize="11" textFontWeight="400" textColor="@color/kColorSecondaryText" text="{{@initData.secondSymbolName}}"/>
+            </LinearLayout>
+
+            <LinearLayout height="wrap_content" orientation="horizontal" width="wrap_content" gravity="centerVertical">
+
+                <TextView width="wrap_content" height="wrap_content" textSize="10" textFontWeight="500" textColor="@color/kColorPrimaryText" text="{{@initData.isolated}}"/>
+
+                <TextView width="wrap_content" height="wrap_content" textSize="10" textFontWeight="400" textColor="@color/trade_risk_level_low" text="{{@initData.isolatedNumber}}"/>
+
+                <TextView width="wrap_content" height="wrap_content" textSize="10" textFontWeight="400" textColor="@color/kColorPrimaryText" text="{{@initData.isolatedName}}"/>
+
+            </LinearLayout>
+
+            <LinearLayout height="14" orientation="horizontal" width="wrap_content" gravity="centerVertical" marginLeft="2" marginRight="2" marginTop="4" background="@color/trade_st_color_bg" visibility="{{@initData.isRisk | gone}}">
+
+                <ImageView width="8" height="8" src="@drawable/contract_bell"/>
+
+                <TextView width="wrap_content" height="wrap_content" textSize="10" marginLeft="2" marginRight="2" textFontWeight="500" textColor="@color/trade_st_color" text="{{@i18n/n_asset_contract_inquidation}}"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout height="match_parent" orientation="vertical" width="100" gravity="centerVertical">
+            <TextView width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" textSize="13" textFontWeight="600" layout_grivity="left" textColor="{{@initData.spotRiseColor}}" text="{{@initData.spotNumberEquivalent}}"/>
+        </LinearLayout>
+        <View width="0" height="0" weight="1"/>
+        <LinearLayout height="match_parent" orientation="vertical" width="wrap_content" gravity="centerVertical">
+            <TextView width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform" height="wrap_content" textSize="13" textFontWeight="600" gravity="right" textColor="{{@initData.spotRiseColor}}" text="{{@initData.spotYield}}"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

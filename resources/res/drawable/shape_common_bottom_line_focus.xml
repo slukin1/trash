@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:left="@dimen/global_divider_width_rev" android:top="@dimen/global_divider_width_rev" android:right="@dimen/global_divider_width_rev">
+        <shape>
+            <stroke android:width="@dimen/global_divider_width" android:color="@color/global_small_area_bg_color"/>
+            <solid android:color="@color/otc_order_detail_card_body_bg_color"/>
+        </shape>
+    </item>
+</layer-list>

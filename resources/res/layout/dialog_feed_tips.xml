@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huobi.view.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:padding="10dp" android:layout_width="@dimen/dimen_150" android:layout_height="@dimen/dimen_84" app:rv_backgroundColor="@color/baseColorContentBackground">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/llReport" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="@dimen/dimen_150" android:layout_height="@dimen/dimen_44" android:minWidth="159dp">
+        <ImageView android:layout_width="@dimen/dimen_16" android:layout_height="@dimen/dimen_16" android:src="@drawable/icon_comment_warning" android:layout_marginStart="8dp"/>
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_content_report" android:layout_marginStart="@dimen/dimen_12"/>
+    </LinearLayout>
+</com.huobi.view.roundview.RoundLinearLayout>

@@ -1,0 +1,623 @@
+<FrameLayout
+		width="match_parent"
+		height="match_parent"
+		background="@color/KBaseColorContentBackground">
+
+	<FrameLayout
+			width="375"
+			height="236"
+			orientation="vertical">
+
+		<ImageView
+				width="match_parent"
+				height="236"
+				src="@drawable/edge_engine_shark_home_header_bg" />
+
+	</FrameLayout>
+
+	<LinearLayout
+			width="match_parent"
+			height="match_parent"
+			orientation="vertical">
+
+		<!-- nav 区域 -->
+		<LinearLayout
+				width="match_parent"
+				height="44"
+				marginTop="{{@data.commonData.statusHeight}}"
+				gravity="center"
+				orientation="horizontal">
+			<ImageView
+					width="29"
+					height="29"
+					marginLeft="15"
+					gravity="center"
+					src="@drawable/edge_engine_shark_home_header_back_icon"
+					onClick="@event.home.goBack()" />
+
+			<TextView
+					width="0"
+					height="match_parent"
+					weight="1"
+					gravity="center"
+					text="{{@i18n/n_shark_fin}}"
+					textSize="18"
+					textFontWeight="500"
+					textColor="@color/kColorPrimaryText" />
+
+			<ImageView
+					width="29"
+					height="29"
+					marginRight="15"
+					gravity="center"
+					src="@drawable/edge_engine_shark_home_header_right_icon"
+					onClick="@event.home.goIntroduce()" />
+		</LinearLayout>
+
+		<!-- banner 区域 -->
+		<FrameLayout
+				width="match_parent"
+				height="78"
+				marginTop="16"
+				marginBottom="16">
+
+			<TextView
+					width="198"
+					height="match_parent"
+					marginLeft="15"
+					gravity="left"
+					text="{{@i18n/n_shark_get_earnings}}"
+					textSize="24"
+					lineSpacing="10"
+					maxLines="3"
+					autoSizeMinTextSize="16"
+					autoSizeTextType="uniform"
+					layout_gravity="left|center"
+					textFontWeight="500"
+					textColor="@color/kColorPrimaryText" />
+
+			<TextView
+					width="79"
+					height="24"
+					gravity="left|center"
+					layout_gravity="right"
+					marginTop="3"
+					topLeftRadius="12"
+					bottomLeftRadius="12"
+					paddingLeft="12"
+					paddingRight="3"
+					text="{{@i18n/n_shark_fin_hold}}"
+					textColor="#FFFFFF"
+					textSize="12"
+					background="#80000000"
+					autoSizeTextType="uniform"
+					onClick="@event.home.goMyProperties()" />
+		</FrameLayout>
+
+		<Scroller
+				width="match_parent"
+				height="0"
+				weight="1"
+				topLeftRadius="8"
+				topRightRadius="8"
+				background="@color/KBaseColorContentBackground"
+				orientation="vertical">
+
+			<LinearLayout
+					width="match_parent"
+					height="wrap_content"
+					orientation="vertical"
+					paddingLeft="16"
+					paddingRight="16">
+
+        <LinearLayout
+            width="match_parent"
+            height="36"
+            marginTop="16"
+            marginBottom="4"
+            background="@color/KBaseColorDeepestBackground"
+            cornerRadius="4"
+            gravity="center"
+            orientation="horizontal"
+            visibility="{{@data.home.tabVisable|gone}}">
+          <TextView
+              gravity="center"
+              width="0"
+              weight="1"
+              height="28"
+              marginTop="4"
+              marginBottom="4"
+              marginLeft="4"
+              textSize="14"
+              text="{{@data.home.tab0.tabValue}}"
+              textColor="{{@data.home.tab0.textColor}}"
+              textFontWeight="500"
+              background="{{@data.home.tab0.background}}"
+              cornerRadius="4"
+              onClick="@event.home.tabClicked('{{@data.home.tab0.tabKey}}')" />
+          <TextView
+              gravity="center"
+              width="0"
+              weight="1"
+              height="28"
+              marginTop="4"
+              marginRight="4"
+              marginBottom="4"
+              textSize="14"
+              text="{{@data.home.tab1.tabValue}}"
+              textColor="{{@data.home.tab1.textColor}}"
+              textFontWeight="500"
+              background="{{@data.home.tab1.background}}"
+              cornerRadius="4"
+              onClick="@event.home.tabClicked('{{@data.home.tab1.tabKey}}')" />
+        </LinearLayout>
+        
+				<LinearLayout
+						width="343"
+						height="wrap_content"
+            marginTop="16"
+						marginBottom="12"
+						orientation="vertical"
+						visibility="{{@data.home.contentVisable|gone}}">
+
+          <!-- 申购倒计时区域 -->
+					<LinearLayout
+							width="343"
+							height="wrap_content"
+							orientation="horizontal">
+
+						<LinearLayout
+								width="wrap_content"
+								height="wrap_content"
+								orientation="vertical">
+
+							<TextView
+									width="wrap_content"
+									height="wrap_content"
+									textSize="14"
+									maxLines="1"
+									text="{{@data.home.subscriptionTitle}}"
+									textColor="@color/kColorPrimaryText"
+									textFontWeight="400" />
+
+							<TextView
+									width="wrap_content"
+									height="wrap_content"
+									textSize="12"
+									maxLines="1"
+									marginTop="4"
+									text="{{@data.home.subscriptionDate}}"
+									textColor="@color/kColorThreeLevelText"
+									textFontWeight="400"
+									visibility="{{@data.home.subscriptionDateVisable|gone}}" />
+
+						</LinearLayout>
+
+						<View
+								width="0"
+								height="1"
+								weight="1" />
+
+            <!-- 倒计时 -->
+						<LinearLayout
+								width="wrap_content"
+								height="20"
+								layout_gravity="center|right"
+								gravity="centerVertical"
+								orientation="horizontal"
+								visibility="{{@data.home.countdownVisable|gone}}">
+
+							<TextView
+									width="20"
+									height="20"
+									gravity="center"
+									cornerRadius="2"
+									textSize="12"
+									text="{{@data.home.countdown.day}}"
+									textColor="@color/KBaseColorContentBackground"
+									background="@color/kColorPrimaryText"
+									textFontWeight="400"
+									visibility="{{@data.home.countdown.showDay|gone}}" />
+
+							<TextView
+									width="wrap_content"
+									height="wrap_content"
+									marginLeft="3"
+									marginRight="3"
+									gravity="center"
+									text="{{@i18n/n_mining_day_text}}"
+									textSize="12"
+									textColor="@color/kColorSecondaryText"
+									textFontWeight="400"
+									visibility="{{@data.home.countdown.showDay|gone}}" />
+
+							<TextView
+									width="20"
+									height="20"
+									gravity="center"
+									cornerRadius="2"
+									textSize="12"
+									text="{{@data.home.countdown.hour}}"
+									textColor="@color/KBaseColorContentBackground"
+									background="@color/kColorPrimaryText"
+									textFontWeight="400" />
+
+							<TextView
+									width="10"
+									height="wrap_content"
+									gravity="center"
+									text=":"
+									textSize="12"
+									textColor="@color/kColorSecondaryText"
+									textFontWeight="600" />
+
+							<TextView
+									width="20"
+									height="20"
+									gravity="center"
+									text="{{@data.home.countdown.minute}}"
+									textSize="12"
+									cornerRadius="2"
+									textColor="@color/KBaseColorContentBackground"
+									background="@color/kColorPrimaryText"
+									textFontWeight="400" />
+
+							<TextView
+									width="10"
+									height="wrap_content"
+									gravity="center"
+									text=":"
+									textSize="12"
+									textColor="@color/kColorSecondaryText"
+									textFontWeight="600" />
+
+							<TextView
+									width="20"
+									height="20"
+									gravity="center"
+									text="{{@data.home.countdown.second}}"
+									textSize="12"
+									cornerRadius="2"
+									textColor="@color/KBaseColorContentBackground"
+									background="@color/kColorPrimaryText"
+									textFontWeight="400" />
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+          <!-- 进度条 -->
+					<LinearLayout
+							width="343"
+							height="4"
+							orientation="horizontal"
+							cornerRadius="2"
+							marginTop="10"
+							background="@color/kHomeInvestProgreesRemainingColor"
+							visibility="{{@data.home.progressVisable|gone}}">
+
+						<View
+								width="0"
+								height="match_parent"
+								background="@color/kColorPrimaryText"
+								cornerRadius="2"
+								weight="{{@data.home.finishProportion|1}}" />
+
+						<View
+								width="0"
+								height="match_parent"
+								background="@color/KBaseColorPrimarySeparator"
+								cornerRadius="2"
+								weight="{{@data.home.usedProportion|1}}" />
+					</LinearLayout>
+
+          <!-- 进度状态 -->
+					<LinearLayout
+							width="wrap_content"
+							height="wrap_content"
+							marginTop="6"
+							orientation="horizontal"
+							visibility="{{@data.home.progressVisable|gone}}">
+
+						<TextView
+								gravity="left"
+								width="wrap_content"
+								height="wrap_content"
+								marginRight="4"
+								textSize="12"
+								text="{{@data.home.depositAmountTitle}}"
+								textColor="@color/kColorThreeLevelText"
+								textFontWeight="400" />
+						<TextView
+								gravity="left"
+								width="wrap_content"
+								height="wrap_content"
+								marginRight="4"
+								textSize="12"
+								text="{{@data.home.finishAmount}}"
+								textColor="@color/kColorPrimaryText"
+								textFontWeight="400" />
+						<TextView
+								gravity="left"
+								width="wrap_content"
+								height="wrap_content"
+								textSize="12"
+								text="{{@data.home.totalLimit}}"
+								textColor="@color/kColorThreeLevelText"
+								textFontWeight="400" />
+					</LinearLayout>
+
+				</LinearLayout>
+
+        <!-- 申购产品列表 -->
+				<LinearLayout
+						width="match_parent"
+						height="wrap_content"
+						orientation="vertical"
+						visibility="{{@data.home.contentVisable|gone}}">
+
+          <LinearLayout
+              marginTop="8"
+              marginBottom="8"
+              width="match_parent"
+              height="wrap_content"
+              orientation="horizontal">
+
+            <TextView
+              width="wrap_content"
+              height="wrap_content"
+              layout_gravity="left"
+              textSize="11"
+              textFontWeight="400"
+              textColor="@color/kColorThreeLevelText"
+              text="{{@i18n/n_trade_margin_coin}}"
+              gravity="left" />
+            
+            <View width="0" weight="1" height="0" />
+
+            <TextView
+                width="wrap_content"
+                height="wrap_content"
+                layout_gravity="right"
+                textSize="11"
+                textFontWeight="400"
+                textColor="@color/kColorThreeLevelText"
+                text="{{@i18n/n_shark_fin_APY_Est}}"
+                gravity="right" />
+          </LinearLayout>
+
+					<For
+							data="@data.home.productList"
+							itemKey="element"
+							typeKey="cellType">
+
+						<Cell
+								type="normal"
+								width="match_parent"
+								height="64"
+								marginBottom="12">
+
+							<LinearLayout
+									width="match_parent"
+									height="64"
+									paddingLeft="12"
+									paddingRight="12"
+									orientation="horizontal"
+									cornerRadius="8"
+									borderWidth="0.5"
+									borderColor="@color/eColorPrimarySeparator"
+									onClick="@event.home.goDeposit({{@element.idx}})"
+                  gravity="centerVertical">
+
+                <ImageView
+                    width="14"
+                    height="14"
+                    marginRight="4"
+                    layout_gravity="center"
+                    gravity="center"
+                    src="{{@element.icon}}" />
+
+                <TextView
+                    marginRight="4"
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="16"
+                    textFontWeight="500"
+                    textColor="@color/kColorPrimaryText"
+                    text="{{@element.title}}" />
+
+                <TextView
+                    marginRight="4"
+                    paddingLeft="4"
+                    paddingRight="4"
+                    width="wrap_content"
+                    height="18"
+                    textSize="11"
+                    gravity="center"
+                    textFontWeight="500"
+                    textColor="@color/kButtonUnselectTextColor"
+                    text="{{@element.term}}"
+                    background="@color/KBaseColorInputBackground"
+                    borderWidth="2"
+                    borderColor="@color/KBaseColorInputBackground" />
+
+                <TextView
+                    width="0"
+                    weight="1"
+                    height="wrap_content"
+                    textSize="16"
+                    textFontWeight="500"
+                    textColor="@color/kColorPriceGreen"
+                    text="{{@element.earnings}}"
+                    gravity="right" />
+							</LinearLayout>
+						</Cell>
+					</For>
+				</LinearLayout>
+
+        <!-- 查看更多 -->
+				<LinearLayout
+						width="match_parent"
+						height="wrap_content"
+						gravity="center|left"
+						paddingTop="4"
+						orientation="horizontal"
+						onClick="@event.home.goHistory()">
+
+					<TextView
+							height="wrap_content"
+							width="wrap_content"
+							text="{{@i18n/n_shark_fin_all_history}}"
+							textSize="14"
+							textFontWeight="400"
+							gravity="center"
+							textColor="@color/KBaseColorMajorTheme100" />
+
+					<ImageView
+							height="10"
+							width="6"
+							gravity="center"
+							layout_gravity="center"
+							marginLeft="7"
+							marginBottom="0.5"
+							src="@drawable/edge_engine_home_blue_right_arrows" />
+				</LinearLayout>
+
+
+        <!-- 常见问题区域 -->
+				<LinearLayout
+						width="match_parent"
+						height="44"
+						marginTop="40"
+						gravity="center"
+						orientation="horizontal">
+
+					<TextView
+							width="wrap_content"
+							height="wrap_content"
+							textSize="18"
+							textFontWeight="500"
+							textColor="@color/kColorPrimaryText"
+							text="{{@i18n/n_shark_fin_common_problem}}" />
+					<View
+							width="0"
+							height="1"
+							weight="1" />
+					<TextView
+							width="wrap_content"
+							height="wrap_content"
+							textSize="12"
+							textFontWeight="400"
+							textColor="@color/kColorMajorTheme100"
+							text="{{@i18n/n_kline_more}}"
+							onClick="@event.home.goAllFAQs()" />
+
+				</LinearLayout>
+
+        <!-- 问题列表 -->
+				<LinearLayout
+						width="match_parent"
+						height="wrap_content"
+						orientation="vertical">
+					<For
+							data="@data.home.questionList"
+							itemKey="element"
+							typeKey="cellType">
+						<Cell
+								type="normal"
+								width="match_parent"
+								height="wrap_content">
+
+							<LinearLayout
+									width="match_parent"
+									height="wrap_content"
+									marginTop="16"
+									orientation="vertical">
+
+                <!-- Q -->
+								<LinearLayout
+										width="match_parent"
+										height="wrap_content"
+										orientation="horizontal"
+                    onClick="@event.home.clickQA('{{@element.index}}')" >
+
+									<TextView
+											width="16"
+											height="16"
+											cornerRadius="4"
+											textSize="12"
+											gravity="center"
+											textFontWeight="500"
+											textColor="@color/kColorSecondaryText"
+											background="@color/KBaseColorInputBackground"
+											text="Q" />
+
+									<TextView
+											width="279"
+											height="wrap_content"
+											marginLeft="5"
+											marginRight="24"
+											textSize="14"
+											textFontWeight="500"
+											maxLines="0"
+											textColor="@color/kColorPrimaryText"
+											text="{{@element.q}}" />
+
+									<ImageView
+											width="16"
+											height="16"
+											layout_gravity="right"
+											src="{{@element.qaIcon}}" />
+
+								</LinearLayout>
+
+                <!-- A -->
+								<LinearLayout
+										width="match_parent"
+										height="wrap_content"
+										marginTop="16"
+										orientation="horizontal"
+										visibility="{{@element.answerVisable}}">
+
+									<TextView
+											width="16"
+											height="16"
+											cornerRadius="4"
+											textSize="12"
+											textFontWeight="500"
+											gravity="center"
+											textColor="@color/kColorSecondaryText"
+											background="@color/KBaseColorInputBackground"
+											text="A" />
+
+									<TextView
+											width="323"
+											height="wrap_content"
+											marginLeft="5"
+											textSize="14"
+											textFontWeight="400"
+											textColor="@color/kColorSecondaryText"
+											maxLines="0"
+											text="{{@element.a}}" />
+
+								</LinearLayout>
+
+								<View
+										width="match_parent"
+										height="0.5"
+										marginTop="16"
+										background="@color/KBaseColorPrimarySeparator" />
+
+							</LinearLayout>
+
+						</Cell>
+					</For>
+
+
+				</LinearLayout>
+			</LinearLayout>
+
+		</Scroller>
+	</LinearLayout>
+
+</FrameLayout>

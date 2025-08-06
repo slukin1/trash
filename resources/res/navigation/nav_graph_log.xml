@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_graph" app:startDestination="@+id/LogListFragment">
+    <fragment android:label="list" android:name="com.huobi.webcache.ui.LogListFragment" android:id="@+id/LogListFragment">
+        <action android:id="@+id/action_LogListFragment_to_LogDetailFragment" app:destination="@+id/LogDetailFragment"/>
+    </fragment>
+    <fragment android:label="detail" android:name="com.huobi.webcache.ui.LogDetailFragment" android:id="@+id/LogDetailFragment">
+        <action android:id="@+id/action_LogDetailFragment_to_LogListFragment" app:destination="@+id/LogListFragment"/>
+    </fragment>
+</navigation>

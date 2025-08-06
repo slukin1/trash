@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:titleText="@string/dt_mock_page_info"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/dimen_15" android:textStyle="bold" android:textColor="@android:color/holo_red_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10" android:text="当前页面"/>
+            <TextView android:textSize="@dimen/dimen_12" android:id="@+id/tv_page_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:textIsSelectable="true"/>
+            <View android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/dimen_8" android:layout_marginBottom="@dimen/dimen_8"/>
+            <TextView android:textSize="@dimen/dimen_15" android:textStyle="bold" android:textColor="@android:color/holo_red_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Intent参数"/>
+            <TextView android:textSize="@dimen/dimen_12" android:id="@+id/tv_intent_params" android:layout_width="match_parent" android:layout_height="wrap_content" android:textIsSelectable="true"/>
+            <View android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/dimen_8" android:layout_marginBottom="@dimen/dimen_8"/>
+            <TextView android:textSize="@dimen/dimen_15" android:textStyle="bold" android:textColor="@android:color/holo_red_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已加载fragments"/>
+            <TextView android:textSize="@dimen/dimen_12" android:id="@+id/tv_page_fragments" android:layout_width="match_parent" android:layout_height="wrap_content" android:textIsSelectable="true"/>
+            <View android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/dimen_8" android:layout_marginBottom="@dimen/dimen_8"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

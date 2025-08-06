@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_55">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <RelativeLayout android:id="@+id/market_check_rl" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.hbg.lib.widgets.CommonCheckBox android:id="@+id/market_check_cb" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_centerVertical="true" app:drawable_checked="@drawable/alert_checked" app:drawable_unchecked="@drawable/alert_unchecked"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginTop="@dimen/dimen_5" android:layout_marginBottom="@dimen/dimen_5" android:layout_toRightOf="@+id/market_check_cb" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/market_edit_coll_symbol_text_color" android:id="@+id/market_symbol_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+                <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorThreeLevelText" android:id="@+id/market_symbol_tv2" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginLeft="@dimen/dimen_2_5" android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:id="@+id/market_coll_top_iv" android:layout_width="@dimen/dimen_28" android:layout_height="@dimen/dimen_28" android:layout_marginRight="@dimen/dimen_30" android:src="@drawable/quotes_edit_top" android:scaleType="centerInside"/>
+        <ImageView android:id="@+id/market_coll_drag_iv" android:layout_width="@dimen/dimen_28" android:layout_height="@dimen/dimen_28" android:layout_marginRight="@dimen/dimen_10" android:src="@drawable/quotes_edit_drag" android:scaleType="centerInside"/>
+    </LinearLayout>
+    <View android:id="@+id/market_header_divider" android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginLeft="@dimen/dimen_40"/>
+</LinearLayout>

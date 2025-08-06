@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_fragment_info_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/market_info_bottom_container" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0">
+        <include android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_market_info_bottom"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/market_info_refresh" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/market_info_bottom_container" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:srlEnableLoadMore="false" app:srlEnableRefresh="false">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/id_cl_kline_coordinator" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout android:orientation="vertical" android:id="@+id/id_abl_kline_appbar_layout" android:background="#00000000" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_behavior="com.huochat.community.widget.FlingBehavior">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_scrollFlags="3">
+                    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_kline_top"/>
+                        <HorizontalScrollView android:background="?attr/kline_activity_background_color" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+                            <com.hbg.lib.widgets.CommonTabLayout android:id="@+id/market_tab" android:background="@drawable/shape_kline_top_bg" android:paddingLeft="@dimen/dimen_8" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1" app:tab_current_position="0" app:tab_indicator_color="@color/baseColorMajorTheme100" app:tab_select_color="?attr/kline_primary_text_color" app:tab_text_size="@dimen/global_text_size_14" app:tab_unselect_color="?attr/kline_three_level_text_color"/>
+                        </HorizontalScrollView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <FrameLayout android:id="@+id/market_info_container" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include android:id="@+id/market_info_more_detail_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/kline_period_more_layout"/>
+    <include android:id="@+id/market_info_more_detail_layout_etp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/kline_period_more_layout_etp"/>
+    <include android:id="@+id/market_info_kline_type_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/kline_etp_type"/>
+    <include android:id="@+id/trade_target_left_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/kline_index_setting_layout"/>
+    <ImageView android:id="@+id/etp_kline_butten_top_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?attr/etp_kline_butten_top" app:layout_constraintBottom_toTopOf="@+id/market_info_bottom_container" app:layout_constraintRight_toRightOf="0"/>
+    <com.huochat.community.widget.CommunityDisclaimerBottomView android:id="@+id/cdbv_community_disclaimer_float_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:layout_marginRight="@dimen/dimen_10" app:layout_constraintBottom_toTopOf="@+id/market_info_bottom_container" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

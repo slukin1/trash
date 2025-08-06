@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:id="@+id/loadingStateRelativeLayout" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.hbg.lib.widgets.LoadingView android:id="@+id/bar_loading" android:layout_width="@dimen/common_middle_loading_w" android:layout_height="@dimen/common_middle_loading_h" app:lottie_loop="true" app:lottie_rawRes="@raw/d_middle"/>
+</LinearLayout>

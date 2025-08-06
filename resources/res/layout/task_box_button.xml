@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/aivAction" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_account_task_box_success"/>
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@+id/lavAction" android:visibility="gone" android:layout_width="@dimen/dimen_24" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/rewards_box_button"/>
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/dimen_12" android:textStyle="bold" android:textColor="@color/baseTextColor" android:ellipsize="end" android:gravity="center" android:id="@+id/atvAction" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_user_center_go" android:maxLines="1" android:singleLine="true"/>
+</merge>

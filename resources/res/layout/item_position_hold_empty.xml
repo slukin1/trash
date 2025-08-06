@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_70" android:src="@drawable/common_empty_icon"/>
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_default_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trade_no_record"/>
+</LinearLayout>

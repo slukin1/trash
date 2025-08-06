@@ -1,0 +1,244 @@
+<!--普通广告列表-->
+<FrameLayout width="375" height="{{@data.advertList.contentHeight | match_parent}}">
+    <!-- 广告列表 -->
+    <LinearLayout width="match_parent" height="match_parent" orientation="vertical" visibility="{{@data.advertList.normal.listVisible | visible}}">
+        <RecyclerView width="match_parent" height="match_parent" gravity="centerVertical" onRefresh="@event.advertList.refreshAdvertList(1)" onLoadMore="@event.advertList.loadMoreAdvertList(1)" data="@data.advertList.normal.datas" refreshStatus="{{@data.advertList.normal.refreshStatus}}" loadMoreStatus="{{@data.advertList.normal.loadMoreStatus}}" noMoreData="{{@data.advertList.normal.noMoreData}}" itemKey="element" typeKey="type">
+            <!-- 广告Cell -->
+             <Cell type="advertCell" width="match_parent" height="wrap_content" background="@color/kColorContentBackground">
+                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" onClick="@event.advertList.onClickTradeOperation({{@element.index}})">
+                    <FrameLayout width="match_parent" height="wrap_content" orientation="vertical" gravity="right">
+                        <!-- 活动标签 -->
+                        <LinearLayout width="wrap_content" height="16" orientation="vertical" marginLeft="0" layout_gravity="top|right" background="#1A0173E5" bottomLeftRadius="8" topLeftRadius="8" visibility="{{@element.labelVisible | gone}}">
+                            <TextView width="wrap_content" height="16" text="{{@element.labelName}}" textColor="@color/kColorMajorTheme100" textSize="10" gravity="center" marginLeft="6" marginRight="6"/>
+                        </LinearLayout>
+                        <!-- 主内容 -->
+                        <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" marginBottom="20" marginTop="20">
+                        <!-- 头部 -->
+                        <LinearLayout width="match_parent" height="20" orientation="horizontal" gravity="centerVertical" marginLeft="16" marginRight="16">
+                            <!-- 在线圆点 -->
+                            <View width="5" height="5" cornerRadius="2.5" background="{{@element.onlineColor}}"/>
+                            <!-- 普通商家名字 -->
+                            <TextView width="wrap_content" height="wrap_content" marginLeft="2" marginRight="2" text="{{ @element.userName }}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500" onClick="@event.advertList.onClickMerchantName({{@element.uid}})" visibility="{{@element.merchantVisible | visible }}"/>
+                            <!-- 付费商家名字 -->
+                            <FrameLayout visibility="{{@element.sMerchantVisible | gone }}" width="{{@element.sMerchantContentWidth | 0}}" height="18" marginLeft="2" marginRight="2" cornerRadius="4" onClick="@event.advertList.onClickMerchantName({{@element.uid}})">
+                                <ImageView width="match_parent" height="18" scaleType="fitXY" cornerRadius="4" src="@drawable/advert_privilege_merchant_bg"/>
+                                <LinearLayout width="wrap_content" height="match_parent" orientation="horizontal" gravity="centerVertical" layout_gravity="centerVertical">
+                                    <ImageView width="wrap_content" height="wrap_content" src="@drawable/advert_privilege_merchant_name"/>
+                                    <TextView width="wrap_content" height="wrap_content" marginLeft="4" marginRight="4" layout_gravity="centerVertical" text="{{ @element.userName }}" textColor="#373228" textSize="14" textFontWeight="500"/>
+                                </LinearLayout>
+                            </FrameLayout>
+                            <!-- 商家标签 -->
+                            <ImageView width="wrap_content" height="wrap_content" marginLeft="2" src="{{@element.blueShield.idIcon}}" visibility="{{@element.blueShield.idVisible}}"/>
+                            <ImageView width="wrap_content" height="wrap_content" marginLeft="2" src="{{@element.level.idIcon}}" visibility="{{@element.level.idVisible}}"/>
+                            <ImageView width="wrap_content" height="wrap_content" marginLeft="2" src="@drawable/otc_advert_thumb_up_icon" visibility="{{@element.thumbUpData.idVisible}}"/>
+                            <ImageView width="wrap_content" height="wrap_content" marginLeft="2" src="@drawable/otc_merchant_followed" visibility="{{@element.follow.idVisible}}"/>
+                            <ImageView width="wrap_content" height="wrap_content" marginLeft="2" src="{{@element.traded.idIcon}}" visibility="{{@element.traded.idVisible}}"/>
+                            
+                            <View width="0" weight="1"/>
+                            
+                            <!-- 成单量 & 完成率 -->
+                            <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" gravity="centerVertical">
+                                <TextView width="wrap_content" height="wrap_content" marginRight="5" text="{{@element.totalTradeOrderCountText}}" textColor="@color/kColorSecondaryText" textSize="11"/>
+                                
+                                <View width="0.5" height="10" background="@color/kColorSecondaryText"/>
+                                
+                                <TextView width="wrap_content" height="wrap_content" marginLeft="5" text="{{@element.orderCompleteRateText}}" textColor="@color/kColorSecondaryText" textSize="11"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 主内容 -->
+                        <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="16" marginLeft="16" marginRight="16">
+                            
+                            <LinearLayout width="0" weight="1" height="wrap_content" orientation="vertical">
+                                <!-- 价格 -->
+                                <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="bottom">
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.symbol}}" textColor="@color/kColorPrimaryText" textSize="12" marginRight="2" marginBottom="2"/>
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.showPrice}}" textColor="@color/kColorPrimaryText" textSize="20" textFontWeight="600"/>    
+                                </LinearLayout>
+                                <!-- 数量 -->
+                                <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="6">
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_item_merchant_num}}" textColor="@color/kColorThreeLevelText" textSize="11"/>
+                                    <View width="4"/>
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.numText}}" textColor="@color/kColorPrimaryText" textSize="11"/>    
+                                </LinearLayout>
+                                <!-- 限额 -->
+                                <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="4">
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_merchant_limit}}" textColor="@color/kColorThreeLevelText" textSize="11"/>
+                                    <View width="4"/>
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.limitAmountText}}" textColor="@color/kColorPrimaryText" textSize="11"/>    
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout width="120" height="wrap_content" orientation="vertical">
+                                <!-- 交易时长 -->
+                                <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" marginTop="8" gravity="right">
+                                    <ImageView width="wrap_content" height="wrap_content" src="@drawable/otc_advert_limit_time_icon"/>
+                                    <View width="2"/>
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.tradeDurationText}}" textColor="@color/kColorSecondaryText" textSize="11"/>
+                                </LinearLayout>
+                                <!--            验证单            -->
+                                <LinearLayout visibility="{{@element.verifyCapitalVisible | gone}}" width="120" height="wrap_content" orientation="horizontal" gravity="right" marginTop="6" onClick="@event.advertList.onClickVerifyCapital({{@element.index}})">
+                                    <!-- 验证单 -->
+                                    <BottomLineTextView height="18" text="{{@element.verifyCapitalText}}" textColor="@Color/kColorThreeLevelText" textSize="11" width="wrap_content" gravity="right" visibility="{{@element.verifyCapitalYesVisible | gone }}"/>
+                                    <TextView width="wrap_content" height="wrap_content" text="{{@element.verifyCapitalText}}" textColor="@color/kColorThreeLevelText" textSize="11" visibility="{{@element.verifyCapitalNoVisible | gone }}"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        
+                         <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="bottom" marginLeft="16">
+                            <!-- 支付方式 -->
+                            <LinearLayout width="0" weight="1" height="wrap_content" orientation="horizontal" marginTop="12">
+                                <TagView data="@element.payMethods" height="wrap_content" itemKey="method" typeKey="type" mainAxisSpace="6" crossAxisSpace="3" width="match_parent">
+                                    <TagCell type="1" width="wrap_content" height="wrap_content" background="@color/kColorTipsBackground" cornerRadius="8">
+                                        <LinearLayout height="wrap_content" width="wrap_content" orientation="horizontal" gravity="center" marginLeft="6" marginRight="6" marginTop="3" marginBottom="3">
+                                                <View background="{{@method.color | @color/kColorMajorTheme100}}" width="4" height="4" cornerRadius="2"/>
+                                                <TextView width="wrap_content" height="wrap_content" marginLeft="4" text="{{@method.name}}" textColor="@color/kColorThreeLevelText" textSize="11"/>
+                                        </LinearLayout>
+                                    </TagCell>
+                                </TagView>
+                            </LinearLayout>
+                            <!-- 交易按钮与更多 -->
+                            <LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal" gravity="right|bottom">
+                                <!-- 购买/出售样式与交易提示区分展示 -->
+                                <LinearLayout width="wrap_content" height="28" cornerRadius="4" background="{{@element.tradeButton.backgroundColor}}" gravity="center" onClick="@event.advertList.onClickTradeOperation({{@element.index}})" visibility="{{@element.tradeButton.visibility}}">
+                                    <TextView width="60" height="28" text="{{@element.tradeButton.title}}" textColor="{{@element.tradeButton.titleColor}}" textSize="14" gravity="center" textFontWeight="500"/>
+                                </LinearLayout>
+                                <TextView width="wrap_content" height="28" text="{{@element.tradeButton.title}}" textColor="{{@element.tradeButton.titleColor}}" textSize="14" textFontWeight="500" gravity="center" visibility="{{@element.tradeButton.tipsVisibility}}" onClick="@event.advertList.onClickTradeOperation({{@element.index}})"/>
+                                <LinearLayout width="wrap_content" height="28" paddingRight="16" onClick="@event.advertList.onClickMore({{@element.index}})">
+                                <ImageView width="16" height="28" src="@drawable/advert_expand" scaleType="center"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                         </LinearLayout>       
+                    </LinearLayout>
+                    </FrameLayout>
+                    <!-- 分割线 -->
+                    <View height="0.5" width="match_parent" marginLeft="16" marginRight="16" background="@color/kColorEBEBEB"/>
+                    <!-- 更多关注按钮 -->
+                    <LinearLayout width="match_parent" height="36" orientation="vertical" gravity="center" visibility="{{@element.expandAreaVisibility | gone}}" background="@color/kColorInputFill">
+                        <LinearLayout width="match_parent" height="match_parent" orientation="horizontal" gravity="center" onClick="@event.advertList.onClickFollow({{@element.index}})">
+                            <ImageView width="wrap_content" height="wrap_content" src="{{@element.follow.icon}}"/>
+                            <View width="4"/>
+                            <TextView width="wrap_content" height="wrap_content" text="{{@element.follow.title}}" textColor="@color/kColorThreeLevelText" textSize="12"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </Cell>
+            <!-- 海景房cell -->
+            <Cell type="seaViewRoomCell" width="match_parent" height="222" onClick="@event.advertList.onClickSeaviewRoom()">
+                <LinearLayout width="match_parent" height="match_parent" orientation="vertical">
+                    <LinearLayout width="match_parent" height="match_parent" orientation="vertical" marginBottom="20" marginLeft="16" marginRight="16" marginTop="20">
+                        <!-- 头部 -->
+                        <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal">
+                            <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_advert_thumbsUp_exclusive_zone_title}}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500"/>
+                            <View width="0" weight="1"/>
+                            <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_advert_more}}" textColor="@color/kColorMajorTheme100" textSize="12"/>          
+                        </LinearLayout>
+                        <!-- 内容区 -->
+                        <LinearLayout width="match_parent" height="154" orientation="horizontal" marginTop="8" cornerRadius="8" background="@color/kColorTipsBackground" gravity="left | center">   
+                            <GirdView height="match_parent" width="match_parent" data="@element.rooms" itemKey="item" typeKey="cellType" orientation="vertical" mainAxisSpace="0" crossAxisSpace="0" crossAxisItemCount="3">
+                                <GirdCell cellType="roomSubCell" width="114" height="match_parent" onClick="@event.advertList.onClickSeaviewRoom()">
+                                    <LinearLayout width="114" height="match_parent" orientation="vertical" gravity="top|center" marginTop="16" marginBottom="16">   
+                                        <!-- 名次icon -->
+                                        <ImageView width="32" height="32" src="{{@item.rankIcon}}" marginTop="0"/>
+                                        <!-- 商家信息 -->
+                                        <LinearLayout width="wrap_content" height="match_parent" orientation="horizontal" gravity="center">
+                                            <FrameLayout width="114" height="match_parent" orientation="vertical" gravity="top|centerHorizontal">   
+                                                <!-- 存在显示样式 -->
+                                                <LinearLayout width="match_parent" height="match_parent" orientation="vertical" gravity="top|centerHorizontal" visibility="{{@item.visibility}}">   
+                                                    <!-- 商家名字 -->
+                                                    <TextView width="wrap_content" height="wrap_content" text="{{@item.userName}}" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="500" marginTop="8"/>
+                                                    <!-- 身份标识 -->
+                                                    <LinearLayout width="match_parent" height="14" orientation="horizontal" gravity="centerHorizontal">
+                                                        <ImageView width="wrap_content" height="wrap_content" marginLeft="1" marginRight="1" src="{{@item.blueShield.idIcon}}" visibility="{{@item.blueShield.idVisible}}"/>
+                                                        <ImageView width="wrap_content" height="wrap_content" marginLeft="1" marginRight="1" src="{{@item.level.idIcon}}" visibility="{{@item.level.idVisible}}"/>
+                                                        <ImageView width="wrap_content" height="wrap_content" marginLeft="1" marginRight="1" src="@drawable/otc_advert_thumb_up_icon" visibility="{{@item.thumbUpData.idVisible}}"/>
+                                                        <ImageView width="wrap_content" height="wrap_content" marginLeft="1" marginRight="1" src="@drawable/otc_merchant_followed" visibility="{{@item.follow.idVisible}}"/>
+                                                        <ImageView width="wrap_content" height="wrap_content" marginLeft="1" marginRight="1" src="{{@item.traded.idIcon}}" visibility="{{@item.traded.idVisible}}"/>
+                                                    </LinearLayout>
+                                                    <!-- 成单量 & 完成率 -->
+                                                    <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="centerHorizontal" marginTop="8">
+                                                        <TextView width="wrap_content" height="wrap_content" text="{{@item.totalTradeOrderCountText}}" textColor="@color/kColorPrimaryText" textSize="11" marginRight="4"/>
+                                                        <View width="1" height="10" background="@color/kColorFourLevelText" layout_gravity="center"/>
+                                                        <TextView width="wrap_content" height="wrap_content" text="{{@item.orderCompleteRateText}}" textColor="@color/kColorPrimaryText" textSize="11" marginLeft="4"/>
+                                                    </LinearLayout>
+                                                    <!-- 价格 -->
+                                                    <LinearLayout width="match_parent" height="wrap_content" orientation="horizontal" gravity="bottom|centerHorizontal" marginTop="8">
+                                                        <TextView width="wrap_content" height="wrap_content" text="{{@item.symbol}}" textColor="@color/kColorPrimaryText" textSize="12" marginRight="1" marginBottom="2"/>
+                                                        <TextView width="wrap_content" height="wrap_content" text="{{@item.showPrice}}" textColor="@color/kColorPrimaryText" textSize="20" textFontWeight="700"/>    
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                                <!-- 不存在显示样式 -->
+                                                <LinearLayout width="114" height="match_parent" orientation="vertical" gravity="top|centerHorizontal" visibility="{{@item.emptyVisible}}">   
+                                                    <!-- 商家名字 -->
+                                                    <TextView width="wrap_content" height="wrap_content" text="--" textColor="@color/kColorPrimaryText" textSize="12" textFontWeight="500" marginTop="8"/>
+                                                    <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_advert_thumbsUp_wait_stay}}" textColor="@color/kColorSecondaryText" textSize="12" marginTop="22"/>
+                                                </LinearLayout>
+                                            </FrameLayout>
+                                            <View width="1" marginBottom="55" height="80" background="@color/kColorPrimarySeparator" visibility="{{@item.lineVisible}}"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </GirdCell>
+                            </GirdView> 
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+                    <!-- 分割线 -->
+                    <View height="0.5" width="match_parent" marginLeft="16" marginRight="16" background="@color/kColorEBEBEB"/>
+                </LinearLayout>
+            </Cell>
+            <!-- 添加广告 -->
+            <Cell type="addAdvertCell" width="match_parent" height="wrap_content">
+                <LinearLayout width="match_parent" height="wrap_content" orientation="vertical" marginLeft="16" marginRight="16">
+                    <LinearLayout width="match_parent" height="48" orientation="horizontal" gravity="left|center">
+                        <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_created_advert_guide}}" textColor="@color/kColorPrimaryText" textSize="12" gravity="center"/>
+                        <View width="0" weight="1"/>
+                        <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_cloud_wallet_go_create}}" textColor="@color/kColorMajorTheme100" textSize="12" onClick="@event.advertList.onGreateAdvert()"/>
+                    </LinearLayout>
+                    <!-- 分割线 -->
+                    <View height="0.5" width="match_parent" background="@color/kColorEBEBEB"/>
+                </LinearLayout>
+            </Cell>
+            <!-- 底部扩展（刘海屏底部+广告模式） -->
+            <Cell type="footer" width="match_parent" height="wrap_content">
+            <View width="match_parent" height="{{@data.advertList.bottomOffset}}"/>
+            </Cell>
+        </RecyclerView>
+    </LinearLayout>
+    <!-- 验证单弹窗 -->
+    <View width="0" height="0" popTemplate="verify_capital_popview.xml" popShowMode="modal" popShow="{{@data.verifyCapital.popState.isShowing}}" popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="center" onPopDismiss="@event.verifyCapital.popDismiss()"/>
+    <!-- 风控弹窗 -->
+    <View width="0" height="0" popTemplate="risk_control_popview.xml" popShowMode="modal" popShow="{{@data.riskControl.popState.isShowing}}" popArrowDirection="up" popArrowHeight="0" popArrowWidth="0" popBackgroundDimmed="true" popCancelOnTouchOutside="false" popModalPositon="center" onPopDismiss="@event.riskControl.popDismiss()"/>
+    <!-- 广告列表加载动画 -->
+    <LinearLayout width="match_parent" height="match_parent" visibility="{{@data.advertList.normal.loadingVisible | visible }}">
+        <RecyclerView width="match_parent" height="match_parent" gravity="centerVertical" data="@data.advertList.normal.loadingTempDatas" itemKey="element" typeKey="type" scrollEnabled="false">
+            <!-- 广告Cell -->
+             <Cell type="advertLoadCellDay" width="375" height="wrap_content" background="@color/kColorContentBackground">
+                <LottieView width="match_parent" height="164" loop="true" playStatus="@data.advertList.normal.loadingStatus" resource="@raw/skeleton_otc_a"/>
+             </Cell>
+             <Cell type="advertLoadCellNight" width="375" height="wrap_content" background="@color/kColorContentBackground">
+                <LottieView width="match_parent" height="164" loop="true" playStatus="@data.advertList.normal.loadingStatus" resource="@raw/skeleton_otc_a_night"/>
+             </Cell>
+        </RecyclerView>
+    </LinearLayout>
+    <!--空白视图-->
+    <LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/kColorContentBackground" visibility="{{@data.advertList.normal.emptyVisible | gone}}">
+        <LinearLayout width="match_parent" height="match_parent" orientation="vertical" gravity="top|centerHorizontal">
+            <ImageView width="wrap_content" height="wrap_content" src="@drawable/pro_empty" marginTop="90" gravity="center"/>
+            <TextView width="match_parent" height="wrap_content" text="{{@data.advertList.normal.emptyTips}}" textColor="@color/kColorThreeLevelText" textSize="12" maxLines="0" marginTop="12" marginLeft="16" marginRight="16" gravity="center"/>
+            <LinearLayout width="120" height="40" marginTop="20" gravity="center" background="@color/kColorPrimaryBackground" visibility="{{@data.advertList.normal.emptybuttonVisible | gone }}" cornerRadius="4" onClick="@event.advertList.onClickToDeposit()">
+                <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_otc_advert_empty_go_to_deposit}}" textColor="@color/kColorPrimaryText" textSize="14"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--无网视图-->
+    <LinearLayout width="match_parent" height="match_parent" orientation="vertical" background="@color/kColorContentBackground" visibility="{{@data.advertList.normal.noNetVisible|gone}}">
+        <LinearLayout width="match_parent" height="match_parent" orientation="vertical" gravity="top|centerHorizontal">
+            <ImageView width="wrap_content" height="wrap_content" src="@drawable/pro_offline" marginTop="90" gravity="center"/>
+            <TextView width="match_parent" height="wrap_content" text="{{@i18n/n_no_network}}" textColor="@color/kColorThreeLevelText" textSize="12" maxLines="0" marginTop="12" marginLeft="16" marginRight="16" gravity="center"/>
+            <LinearLayout width="120" height="40" marginTop="20" gravity="center" background="@color/kColorPrimaryBackground" onClick="@event.advertList.refreshAdvertList(1)">
+                <TextView width="wrap_content" height="wrap_content" text="{{@i18n/n_login_switch_retry}}" textColor="@color/kColorMajorTheme100" textSize="14" maxLines="0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

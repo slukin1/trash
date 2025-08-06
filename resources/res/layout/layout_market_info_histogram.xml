@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/dimen_18" android:textColor="?attr/kline_primary_text_color" android:id="@+id/tv_histogram_title" android:paddingTop="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dimen_12" android:textColor="?attr/kline_three_level_text_color" android:id="@+id/tv_flow_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_20" android:layout_toLeftOf="@+id/tv_flow_time" android:layout_alignParentLeft="true"/>
+        <TextView android:textSize="@dimen/dimen_12" android:textColor="?attr/kline_three_level_text_color" android:id="@+id/tv_flow_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_kline_one_day" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <com.hbg.module.kline.view.histogram.HistogramView android:id="@+id/hv_chart" android:layout_width="match_parent" android:layout_height="@dimen/dimen_200" android:layout_marginTop="@dimen/dimen_5" app:axis_space="3dp" app:tips_size="11.6sp" app:y_size="@dimen/dimen_12" app:zero_line_color="?attr/kline_primary_separator_color" app:zero_line_size="1dp"/>
+    <com.hbg.module.kline.view.histogram.DateView android:id="@+id/de_chart" android:layout_width="match_parent" android:layout_height="@dimen/dimen_20" app:axis_space="3dp"/>
+</LinearLayout>

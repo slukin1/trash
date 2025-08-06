@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/dimen_7" android:paddingBottom="@dimen/dimen_7" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/margin_loan_title_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_margin_left" android:layout_weight="1"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:id="@+id/margin_base_currency_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="right" android:id="@+id/margin_quote_currency_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/global_margin_right" android:layout_weight="1"/>
+</LinearLayout>

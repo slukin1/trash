@@ -1,0 +1,3 @@
+<LinearLayout gravity="center" height="44" onClick="@event.historyClick.jump()" orientation="vertical" width="44">
+    <ImageView height="28" src="@drawable/edge_engine_history" width="28"/>
+</LinearLayout>

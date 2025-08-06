@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:id="@+id/trade_reduce_ll" android:background="@drawable/selector_trade_input_btn_bg" android:layout_width="@dimen/dimen_35" android:layout_height="match_parent" android:layout_margin="@dimen/dimen_2">
+        <ImageView android:id="@+id/trade_reduce_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_trade_price_reduce"/>
+    </LinearLayout>
+    <EditText android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:textColorHint="@color/global_input_hint_color" android:gravity="center" android:id="@+id/input_et" android:background="@null" android:paddingLeft="@dimen/dimen_10" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" android:layout_centerVertical="true" android:inputType="numberDecimal" android:textCursorDrawable="@drawable/color_cursor1"/>
+    <LinearLayout android:gravity="center" android:id="@+id/trade_add_ll" android:background="@drawable/selector_trade_input_btn_bg" android:layout_width="@dimen/dimen_35" android:layout_height="match_parent" android:layout_margin="@dimen/dimen_2">
+        <ImageView android:id="@+id/trade_add_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_trade_price_add"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<LinearLayout height="match_parent" orientation="vertical" width="275">
+    <View height="25" visibility="{{@data.drawer.statusPlaceVisible | gone}}" width="275" background="@color/KBaseColorDeepestBackground"/>
+    <TextView background="@color/KBaseColorDeepestBackground" height="wrap_content" paddingBottom="16" paddingLeft="16" paddingRight="16" paddingTop="16" text="{{@i18n/n_copy_trading_title}}" textColor="@color/kColorPrimaryText" textSize="16" textFontWeight="400" width="275"/>
+
+    <LinearLayout background="@color/KBaseColorContentBackground" height="0" weight="1" orientation="vertical" width="275">
+
+        <TextView height="wrap_content" paddingBottom="8" paddingStart="16" paddingEnd="16" paddingTop="12" text="{{@i18n/n_market_order_list_all}}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="400" width="275"/>
+
+        <View background="@color/KBaseColorMajorTheme100" cornerRadius="2" height="2" marginStart="20" width="20"/>
+
+        <View background="@color/KBaseColorPrimarySeparator" height="0.5" width="275"/>
+
+        <RecyclerView data="@data.drawer.contractSymbolList" height="0" weight="1" indexKey="i" itemKey="item" width="275">
+
+            <Cell height="wrap_content" type="1" width="match_parent">
+
+                <LinearLayout gravity="centerVertical" height="40" paddingStart="16" paddingEnd="16" onClick="@event.onSymbolChange('{{@item.symbolShortType}}')" orientation="horizontal" width="match_parent">
+                    <TextView height="wrap_content" text="{{@item.symbolTitle | }}" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="400" width="wrap_content"/>
+                    <TextView background="@color/KBaseColorMajorTheme006" cornerRadius="2" height="wrap_content" marginStart="4" paddingBottom="1" paddingLeft="4" paddingRight="4" paddingTop="1" text="{{@i18n/n_market_contract_swap_trade_name}}" textColor="@color/KBaseColorMajorTheme100" textSize="10" textFontWeight="400" width="wrap_content"/>
+
+                    <View weight="1"/>
+
+                    <TextView height="wrap_content" text="{{@item.symbolPrice | }}" textColor="{{@item.symbolColor}}" textSize="14" textFontWeight="400" width="wrap_content" isSubscript="true"/>
+
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+    </LinearLayout>
+</LinearLayout>

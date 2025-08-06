@@ -1,0 +1,229 @@
+<LinearLayout width="match_parent" height="match_parent" background="@color/KBaseColorContentBackground" orientation="vertical">
+	<!-- 导航 -->
+	<LinearLayout width="match_parent" height="44" gravity="centerVertical" orientation="horizontal">
+
+		<ImageView width="44" height="44" paddingTop="8" paddingBottom="8" paddingLeft="16" gravity="center" onClick="@event.coindetail.backClicked()" src="@drawable/edge_engine_top_bar_back_normal"/>
+
+		<LinearLayout width="0" weight="1" marginLeft="44" height="match_parent" gravity="center">
+
+			<ImageView width="20" height="20" gravity="fitCenter" src="{{@data.coindetail.coinLogo}}"/>
+
+			<TextView marginLeft="4" width="wrap_content" height="match_parent" textColor="@color/kColorPrimaryText" textSize="18" gravity="center" text="{{@data.coindetail.displayName}}" textFontWeight="500"/>
+		</LinearLayout>
+
+		<ImageView width="44" height="44" paddingTop="8" paddingBottom="8" paddingLeft="16" gravity="center" onClick="@event.coindetail.jumpIntro()" src="@drawable/edge_engine_icon_earn_home_record"/>
+
+		<ImageView width="44" height="44" paddingTop="8" paddingBottom="8" paddingRight="16" gravity="center" onClick="@event.coindetail.openShare()" src="@drawable/ic_asset_position_share"/>
+	</LinearLayout>
+
+	<View width="match_parent" height="0" popTemplate="detailpop.xml" popShow="{{@data.coindetail.popShow}}" popCancelOnTouchOutside="true" popBackgroundDimmed="true" popShowMode="modal" popModalPositon="bottom" onPopDismiss="@event.coindetail.popClose()"/>
+
+	<LinearLayout weight="1" height="0" width="match_parent" orientation="vertical">
+
+		<RecyclerView data="@data.coindetail.historyList" height="match_parent" width="match_parent" onRefresh="@event.coindetail.refresh()" onLoadMore="@event.coindetail.loadMore()" refreshStatus="{{@data.coindetail.refreshStatus}}" loadMoreStatus="{{@data.coindetail.loadMoreStatus}}" itemKey="element" typeKey="type">
+
+			<Header width="match_parent" height="wrap_content">
+				<LinearLayout width="match_parent" height="wrap_content" orientation="vertical">
+					<!-- 余额 -->
+					<LinearLayout marginLeft="16" marginRight="16" marginTop="16" marginBottom="12" width="match_parent" height="wrap_content" orientation="vertical">
+
+						<TextView text="{{@i18n/n_otc_balance_trade_available}}" height="20" textColor="@color/kColorThreeLevelText" textSize="14" textFontWeight="400" width="wrap_content"/>
+
+						<TextView marginTop="4" richText="{{@data.coindetail.totalBalance}}" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="26" textFontWeight="700" width="match_parent" maxWidth="343" maxLines="0" lineSpacing="2"/>
+					</LinearLayout>
+					<View width="match_parent" height="0.5" background="@color/kColorEBEBEB"/>
+					<FrameLayout width="match_parent" height="195" orientation="vertical">
+						<!-- 可用收益 -->
+						<GirdView height="187" width="match_parent" data="@data.coindetail.gridData" itemKey="element" typeKey="cellType" orientation="vertical" mainAxisSpace="0.5" crossAxisSpace="0" crossAxisItemCount="2" background="@color/kColorEBEBEB">
+
+							<GirdCell cellType="1" width="187.5" height="{{@element.height}}">
+
+								<LinearLayout paddingLeft="16" paddingRight="16" width="match_parent" height="match_parent" gravity="centerVertical" orientation="vertical" background="@color/KBaseColorContentBackground">
+
+									<FrameLayout width="match_parent" height="16" orientation="vertical">
+
+										<TextView height="match_parent" width="match_parent" text="------------------------------------" textColor="@color/kColorThreeLevelText" textSize="12" paddingTop="8" visibility="{{@element.lineShow|gone}}"/>
+
+										<LinearLayout width="match_parent" height="match_parent" orientation="horizontal">
+
+											<TextView height="16" width="wrap_content" maxLines="1" maxWidth="155.5" text="{{@element.name}}" gravity="left|center" textColor="@color/kColorThreeLevelText" textSize="12" textFontWeight="400" onClick="@event.coindetail.popShow({{@element.popType}})"/>
+
+											<View width="0" weight="1" height="match_parent" background="@color/KBaseColorContentBackground"/>
+										</LinearLayout>
+									</FrameLayout>
+
+									<TextView marginTop="2" height="20" width="match_parent" text="{{@element.value}}" gravity="left|center" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="400" maxWidth="155.5" autoSizeMinTextSize="10" autoSizeTextType="uniform"/>
+
+									<TextView marginTop="2" height="16" width="match_parent" text="{{@element.valueRate}}" gravity="left|center" textColor="{{@element.rateColor}}" textSize="12" textFontWeight="400" maxWidth="155.5" autoSizeMinTextSize="10" autoSizeTextType="uniform" visibility="{{@element.rateShow}}"/>
+								</LinearLayout>
+							</GirdCell>
+						</GirdView>
+
+						<View width="0.5" layout_gravity="center" height="match_parent" background="@color/kColorEBEBEB"/>
+					</FrameLayout>
+
+					<View width="match_parent" height="8" background="@color/KBaseColorDeepestBackground"/>
+					<!-- 去交易 -->
+					<LinearLayout marginLeft="16" marginRight="16" marginTop="16" marginBottom="12" width="match_parent" height="24" gravity="centerVertical" orientation="horizontal" onClick="@event.coindetail.tradeClicked()" visibility="{{@data.coindetail.tradeCardShow|gone}}">
+
+						<TextView text="{{@i18n/n_go_trade}}" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="18" textFontWeight="500" width="0" weight="1"/>
+
+						<ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_coindetail_arrow"/>
+					</LinearLayout>
+					<!-- 去交易 -->
+					<Scroller width="match_parent" height="114" orientation="horizontal" visibility="{{@data.coindetail.tradeCardShow|gone}}">
+
+						<LinearLayout paddingLeft="8" paddingBottom="12" paddingRight="16" width="wrap_content" height="114" gravity="centerVertical" orientation="horizontal">
+
+							<For data="@data.coindetail.coinContents" itemKey="element" typeKey="cellType">
+
+								<Cell type="1" width="148" height="match_parent">
+
+									<LinearLayout marginLeft="8" paddingLeft="12" paddingRight="12" width="match_parent" height="match_parent" gravity="centerVertical" orientation="vertical" cornerRadius="8" borderWidth="0.5" borderColor="@color/KBaseColorPrimarySeparator" onClick="@event.coindetail.tradeItemClicked('{{@element.jumpUrl}}','{{@element.currency}}','{{@element.recomBaseInfo}}')">
+
+										<TextView text="{{@element.name}}" height="16" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="400" width="match_parent"/>
+
+										<TextView marginTop="2" paddingLeft="4" paddingRight="4" text="{{@element.label}}" height="16" textColor="@color/kColorSecondaryText" textSize="10" textFontWeight="500" gravity="center" width="wrap_content" cornerRadius="2" background="@color/KBaseColorInputBackground"/>
+
+										<TextView marginTop="16" text="{{@element.text}}" height="20" textColor="{{@element.textColor}}" textSize="14" textFontWeight="500" width="match_parent"/>
+
+										<TextView text="{{@element.labelText}}" height="16" textColor="{{@element.labelTextColor}}" textSize="12" textFontWeight="400" width="match_parent"/>
+									</LinearLayout>
+								</Cell>
+							</For>
+						</LinearLayout>
+					</Scroller>
+					<!-- 去赚币 -->
+					<LinearLayout marginLeft="16" marginRight="16" marginTop="16" marginBottom="12" width="match_parent" height="24" gravity="centerVertical" orientation="horizontal" onClick="@event.coindetail.earnClicked()" visibility="{{@data.coindetail.earnCardShow|gone}}">
+
+						<TextView text="{{@i18n/n_asset_coindetail_earn}}" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="18" textFontWeight="500" width="0" weight="1"/>
+
+						<ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_coindetail_arrow"/>
+					</LinearLayout>
+					<!-- 去赚币 -->
+					<LinearLayout marginLeft="16" marginRight="16" marginBottom="12" width="match_parent" height="64" gravity="centerVertical" orientation="horizontal" cornerRadius="8" borderWidth="0.5" borderColor="@color/KBaseColorPrimarySeparator" onClick="@event.coindetail.earnItemClicked()" visibility="{{@data.coindetail.earnCardShow|gone}}">
+
+						<LinearLayout width="240" height="wrap_content" gravity="centerVertical" orientation="vertical">
+							<TextView marginLeft="16" richText="{{@data.coindetail.earnText}}" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="14" textFontWeight="500" width="240"/>
+
+							<TextView marginTop="2" marginLeft="16" cornerRadius="4" paddingLeft="4" paddingRight="4" width="wrap_content" height="14" text="+Launchpool" textColor="@color/kColorMajorTheme100" textSize="10" textFontWeight="400" gravity="center" background="@color/trade_tag_text_bg" visibility="{{@data.coindetail.launchPoolVisib|gone}}"/>
+						</LinearLayout>
+
+						<ImageView marginLeft="4" width="wrap_content" height="wrap_content" layout_gravity="bottom" src="@drawable/edge_engine_coindetail_apy"/>
+					</LinearLayout>
+					<!-- 历史记录 -->
+					<LinearLayout marginLeft="16" marginRight="16" marginTop="16" marginBottom="12" width="match_parent" height="24" gravity="centerVertical" orientation="horizontal" onClick="@event.coindetail.historyClicked()">
+
+						<TextView text="{{@i18n/n_exchange_order_history_orders}}" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="18" textFontWeight="500" width="0" weight="1"/>
+
+						<ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_coindetail_arrow" visibility="gone"/>
+					</LinearLayout>
+					<!-- 历史记录 tab -->
+					<Scroller width="match_parent" height="22" marginLeft="16" marginRight="16" marginBottom="8" gravity="centerVertical" orientation="horizontal">
+						<LinearLayout width="wrap_content" height="wrap_content" orientation="horizontal">
+							<For data="@data.coindetail.historyTypes" itemKey="element" typeKey="type">
+								<Cell width="wrap_content" height="wrap_content" type="tab" onClick="@event.coindetail.historyTypeClicked({{@element.index}})">
+									<TextView marginRight="8" paddingLeft="12" paddingRight="12" text="{{@element.text}}" textSize="12" textFontWeight="500" textColor="{{@element.textColor}}" width="wrap_content" height="22" gravity="center" cornerRadius="4" background="{{@element.bgColor}}"/>
+								</Cell>
+							</For>
+						</LinearLayout>
+					</Scroller>
+					
+					<SliderView width="match_parent" height="wrap_content" direction="horizontal" autoScroll="false" scrollMode="reverse" onSelected="@event.coindetail.recordTypeSelected(@eventParams)" currentIndex="@data.coindetail.recordTabIndex" startIndex="1" disableCache="true">
+						<For data="@data.coindetail.sliderData" itemKey="item" typeKey="listType">
+							<Cell width="match_parent" height="wrap_content" type="sliderCell">
+								<RecyclerView width="match_parent" height="{{@item.tableHeight}}" data="@item.cellData" itemKey="element" typeKey="cellType" orientation="vertical" showDividers="false" scrollEnabled="false" onLoadMore="@event.coindetail.historyLoadMore()" loadMoreStatus="{{@data.coindetail.historyLoadMoreStatus}}">
+
+									<Cell width="match_parent" height="112.5" type="type1">
+
+										<LinearLayout width="match_parent" height="match_parent" marginLeft="16" marginRight="16" marginTop="12" orientation="vertical">
+
+											<LinearLayout width="match_parent" height="20" orientation="horizontal" gravity="centerVertical">
+
+												<TextView width="0" weight="1" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="14" gravity="left" text="{{@element.displayTitle}}" textFontWeight="500"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="14" gravity="right" text="{{@element.displayAmount}}" textFontWeight="500"/>
+											</LinearLayout>
+
+											<LinearLayout width="match_parent" height="16" marginTop="12" orientation="horizontal" gravity="centerVertical">
+
+												<TextView width="0" weight="1" height="wrap_content" textColor="@color/kColorThreeLevelText" textSize="12" gravity="left" text="{{@i18n/n_coindetail_history_status}}" textFontWeight="400"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="12" gravity="right" text="{{@element.displayState}}" textFontWeight="400"/>
+											</LinearLayout>
+
+											<LinearLayout width="match_parent" height="16" marginTop="4" orientation="horizontal" gravity="centerVertical">
+
+												<TextView width="0" weight="1" height="wrap_content" textColor="@color/kColorThreeLevelText" textSize="12" gravity="left" text="{{@i18n/n_coindetail_history_fee}}" textFontWeight="400"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="12" gravity="right" text="{{@element.displayFee}}" textFontWeight="400"/>
+											</LinearLayout>
+
+											<LinearLayout width="match_parent" height="16" marginTop="4" orientation="horizontal" gravity="centerVertical">
+
+												<TextView width="0" weight="1" height="wrap_content" textColor="@color/kColorThreeLevelText" textSize="12" gravity="left" text="{{@i18n/n_coindetail_history_time}}" textFontWeight="400"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="12" gravity="right" text="{{@element.displayTime}}" textFontWeight="400"/>
+											</LinearLayout>		
+											
+											<LinearLayout width="match_parent" height="0.5" marginTop="12" gravity="center">
+												<View width="match_parent" height="0.5" background="@color/kColorEBEBEB"/>
+											</LinearLayout>
+										</LinearLayout>
+									</Cell>
+
+									<Cell width="match_parent" height="86.5" type="type2">
+
+										<LinearLayout marginLeft="16" marginRight="16" marginTop="16" width="match_parent" height="match_parent" orientation="vertical">
+
+											<LinearLayout width="match_parent" height="20" orientation="horizontal" gravity="centerVertical">
+
+												<TextView width="0" weight="1" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="14" gravity="left" text="{{@element.displayTitle}}" textFontWeight="500"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/kColorPrimaryText" textSize="14" gravity="right" text="{{@element.displayAmount}}" textFontWeight="500"/>
+											</LinearLayout>
+
+											<TextView marginTop="4" width="wrap_content" height="16" textColor="@color/kColorThreeLevelText" textSize="12" gravity="left" text="{{@element.displayDetail}}" textFontWeight="400"/>
+
+											<TextView marginTop="2" width="wrap_content" height="16" textColor="@color/kColorThreeLevelText" textSize="12" gravity="left" text="{{@element.displayTime}}" textFontWeight="400"/>
+
+											<LinearLayout width="match_parent" height="0.5" marginTop="12" gravity="center">
+												<View width="match_parent" height="0.5" background="@color/kColorEBEBEB"/>
+											</LinearLayout>
+										</LinearLayout>										
+									</Cell>
+
+									<Cell width="match_parent" height="wrap_content" type="empty">
+										<LinearLayout height="wrap_content" width="match_parent" orientation="vertical">
+
+											<LinearLayout height="wrap_content" width="match_parent" gravity="center" orientation="vertical" marginTop="80" marginBottom="80">
+
+												<ImageView width="wrap_content" height="wrap_content" src="@drawable/edge_engine_icon_earn_empty_data"/>
+
+												<TextView width="wrap_content" height="wrap_content" textColor="@color/eBaseColorThreeLevelText" textSize="12" marginTop="12" text="{{@i18n/n_contract_trade_no_record}}"/>
+											</LinearLayout>
+										</LinearLayout>
+									</Cell>
+
+								</RecyclerView>
+							</Cell>
+						</For>
+					</SliderView>
+				</LinearLayout>
+			</Header>
+			<Cell width="match_parent" height="0" type="cell"/>
+		</RecyclerView>
+	</LinearLayout>
+
+	<LinearLayout width="match_parent" height="70" orientation="vertical">
+
+		<LinearLayout marginLeft="16" marginRight="16" width="match_parent" height="70" orientation="horizontal" gravity="centerVertical">
+
+			<TextView text="{{@i18n/n_otc_deposit_title}}" width="0" weight="1" height="44" textColor="@color/KBaseTextColor" textSize="14" gravity="center" textFontWeight="400" background="@color/kColorMajorTheme100" cornerRadius="4" onClick="@event.coindetail.depositClicked()"/>
+
+			<TextView marginLeft="8" text="{{@i18n/n_asset_position_trade_coin}}" width="0" weight="1" height="44" textColor="@color/kColorPrimaryText" textSize="14" gravity="center" textFontWeight="400" background="@color/KBaseColorInputBackground" cornerRadius="4" onClick="@event.coindetail.withdrawClicked()"/>
+
+			<TextView marginLeft="8" text="{{@i18n/n_balance_contract_transfer}}" width="0" weight="1" height="44" textColor="@color/kColorPrimaryText" textSize="14" gravity="center" textFontWeight="400" background="@color/KBaseColorInputBackground" cornerRadius="4" onClick="@event.coindetail.transferClicked()"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

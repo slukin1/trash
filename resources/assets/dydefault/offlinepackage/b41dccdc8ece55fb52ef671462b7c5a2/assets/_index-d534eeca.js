@@ -1,0 +1,1 @@
+import{a as s,u as a,r as e,l as n,j as t,F as l,d as f}from"./index-3fce51b3.js";const i=()=>{const i=s(),{lang:o}=a();return e.useEffect((()=>{let s=f;if(o){n.find((s=>s.key===o))&&(s=o)}i(`/${s}/global-licensed-businesses`)}),[]),t(l,{})};export{i as default};

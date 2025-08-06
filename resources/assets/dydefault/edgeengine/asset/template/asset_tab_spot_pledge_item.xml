@@ -1,0 +1,37 @@
+<!-- 现货质押item 列表模版 -->
+<LinearLayout background="@color/KBaseColorContentBackground" height="48" orientation="vertical" width="375">
+
+    <LinearLayout height="48" marginLeft="16" marginRight="16" orientation="horizontal" width="343">
+
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="horizontal" width="132">
+
+            <ImageView height="20" src="{{@initData.symbolIcon}}" width="20"/>
+
+            <LinearLayout gravity="centerVertical" height="match_parent" marginLeft="4" orientation="vertical" width="112">
+
+                <TextView height="wrap_content" text="{{@initData.symbolName}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" width="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="vertical" width="100">
+
+            <TextView height="wrap_content" gravity="left" text="{{@initData.amount}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="13" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+        </LinearLayout>
+
+        <View width="0" height="match_parent" marginLeft="11" weight="1"/>
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="vertical" width="wrap_content">
+
+
+            <TextView height="wrap_content" gravity="right" text="{{@initData.value}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="13" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="44dp">
+        <ImageView android:id="@+id/iv_back" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginLeft="15dp" android:src="@drawable/icon_live_back_black" android:layout_centerVertical="true"/>
+        <TextView android:textSize="18sp" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标题" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/sfl_live_sub" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="350dp" app:empty_view="@layout/common_empty_item_layout" app:error_view="@layout/layout_live_load_error" app:loading_view="@layout/common_loading_view_balance">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content" android:paddingTop="15dp" android:paddingBottom="15dp" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+        </com.hbg.lib.widgets.LoadingLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

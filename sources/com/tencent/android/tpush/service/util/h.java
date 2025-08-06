@@ -1,0 +1,7 @@
+package com.tencent.android.tpush.service.util;
+
+public class h {
+    public static boolean a(String str) {
+        return str == null || str.trim().length() == 0;
+    }
+}

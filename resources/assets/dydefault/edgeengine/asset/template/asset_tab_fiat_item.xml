@@ -1,0 +1,37 @@
+<!--  法币Item 模版 -->
+<LinearLayout background="@color/KBaseColorContentBackground" height="58" orientation="vertical" width="375">
+
+    <LinearLayout height="58" orientation="horizontal" marginLeft="16" marginRight="16" width="match_parent">
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="horizontal" width="132">
+
+            <ImageView height="20" src="{{@initData.symbolIcon}}" width="20"/>
+
+            <LinearLayout gravity="centerVertical" height="match_parent" marginLeft="4" orientation="vertical" width="wrap_content">
+
+                <TextView height="wrap_content" text="{{@initData.symbolName}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" width="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout gravity="centerVertical" height="match_parent" orientation="vertical" width="100">
+
+            <TextView height="wrap_content" layout_grivity="left" text="{{@initData.faitFreeze}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+        </LinearLayout>
+
+        <View width="0" height="0" weight="1"/>
+        <LinearLayout gravity="right" height="match_parent" orientation="vertical" width="wrap_content">
+
+
+            <TextView height="wrap_content" marginTop="10" text="{{@initData.faitAvailable}}" textColor="@color/kColorPrimaryText" textFontWeight="600" textSize="14" gravity="right" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+
+            <TextView height="wrap_content" text="{{@initData.faitValue}}" textColor="@color/kColorSecondaryText" textFontWeight="400" textSize="12" gravity="right" width="100" autoSizeMinTextSize="8" autoSizeTextType="uniform"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/v_cover" android:background="@color/bubble_popup_cover" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <RelativeLayout android:id="@+id/rl_all_forbid" android:background="@drawable/bg_live_user_list" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
+        <TextView android:textSize="14sp" android:textColor="@color/color_F0F1F4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:text="@string/n_content_chat_forbin_all" android:layout_centerVertical="true"/>
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/sc_all_forbid" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:switchMinWidth="@dimen/dimen_60" app:theme="@style/live_switch_style" app:trackTint="@color/color_212632"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refresh_layout" android:background="@drawable/bg_live_user_list" android:paddingTop="@dimen/dimen_10" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="@dimen/dimen_515" android:paddingVertical="@dimen/dimen_10">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

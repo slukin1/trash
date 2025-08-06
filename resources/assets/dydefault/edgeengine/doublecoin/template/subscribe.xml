@@ -1,0 +1,457 @@
+<LinearLayout
+        width="match_parent"
+        height="match_parent"
+        background="@color/KBaseColorInputBackground"
+        orientation="vertical">
+
+
+    <LinearLayout
+            width="match_parent"
+            height="24"
+            marginLeft="16"
+            marginTop="16"
+            marginRight="16"
+            gravity="center_vertical">
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="参考年化"
+                textColor="@color/kColorThreeLevelText"
+                textSize="14" />
+
+        <View
+                width="0"
+                height="0"
+                weight="1" />
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="205.00%"
+                textColor="@color/kColorPriceGreen"
+                textSize="16" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            width="match_parent"
+            height="20"
+            marginLeft="16"
+            marginTop="8"
+            marginRight="16"
+            gravity="center_vertical">
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="收益率"
+                textColor="@color/kColorThreeLevelText"
+                textSize="14" />
+
+        <ImageView
+                width="12"
+                height="12"
+                marginLeft="4"
+                src="@drawable/edge_engine_shark_info_icon" />
+
+        <View
+                width="0"
+                height="0"
+                weight="1" />
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="205.00%"
+                textColor="@color/kColorPrimaryText"
+                textSize="16" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            width="match_parent"
+            height="20"
+            marginLeft="16"
+            marginTop="8"
+            marginRight="16"
+            gravity="center_vertical">
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="期限"
+                textColor="@color/kColorThreeLevelText"
+                textSize="14" />
+
+        <View
+                width="0"
+                height="0"
+                weight="1" />
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="205.00%"
+                textColor="@color/kColorPrimaryText"
+                textSize="16" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            width="match_parent"
+            height="20"
+            marginLeft="16"
+            marginTop="8"
+            marginRight="16"
+            gravity="center_vertical">
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="目标价格"
+                textColor="@color/kColorThreeLevelText"
+                textSize="14" />
+
+        <View
+                width="0"
+                height="0"
+                weight="1" />
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                text="205.00%"
+                textColor="@color/kColorPrimaryText"
+                textSize="16" />
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                textSize="10"
+                text="+0.23%"
+                paddingLeft="4"
+                paddingRight="4"
+                paddingTop="1"
+                paddingBottom="1"
+                marginLeft="4"
+                textColor="@color/kColorSecondaryText" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            width="match_parent"
+            height="match_parent"
+            marginTop="16"
+            orientation="vertical"
+            paddingLeft="16"
+            paddingRight="16"
+            background="@color/KBaseColorContentBackground">
+
+
+        <TextView
+                width="wrap_content"
+                height="wrap_content"
+                marginTop="16"
+                text="申购数量"
+                textColor="@color/kColorPrimaryText"
+                textSize="16" />
+
+        <LinearLayout
+                width="match_parent"
+                height="44"
+                marginTop="12"
+                orientation="horizontal"
+                gravity="center_vertical"
+                background="@color/KBaseColorInputBackground">
+
+            <EditText
+                    width="0"
+                    weight="1"
+                    height="match_parent"
+                    inputType="numberDecimal"
+                    textColorHint="@color/baseColorThreeLevelText"
+                    paddingLeft="12"
+                    paddingRight="8"
+                    background="@color/KBaseColorInputBackground"
+                    onFocusChange="@event.deposit.focusChange(@eventParams)"
+                    textFontWeight="500"
+                    textSize="20"
+                    textColor="@color/kColorPrimaryText"
+                    onTextChange="@event.deposit.textChange(@eventParams)"
+                    requestFocus="{{@data.deposit.onFocus}}"
+                    onReturn="@event.deposit.onReturn(@eventParams)"
+                    text="{{@data.deposit.editText | }}" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    text="BCH"
+                    marginLeft="8"
+                    textColor="@color/kColorThreeLevelText"
+                    textSize="14" />
+
+            <View
+                    width="1"
+                    height="20"
+                    marginLeft="8"
+                    marginRight="8"
+                    background="@color/KBaseColorPrimarySeparator" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="14"
+                    text="最大"
+                    marginRight="16"
+                    textColor="@color/kColorPrimaryText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                width="match_parent"
+                marginTop="8"
+                gravity="center_vertical"
+                height="16">
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="期权账户可用余额"
+                    textColor="@color/kColorThreeLevelText" />
+
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="0 BTC"
+                    marginLeft="2"
+                    textColor="@color/kColorPrimaryText" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="买币"
+                    marginLeft="8"
+                    textColor="@color/kColorMajorTheme100" />
+
+
+            <View
+                    width="1"
+                    height="12"
+                    marginLeft="4"
+                    marginRight="4"
+                    background="@color/KBaseColorPrimarySeparator" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="划转"
+                    textColor="@color/kColorMajorTheme100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                width="match_parent"
+                marginTop="8"
+                height="27">
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="预估收益"
+                    textColor="@color/kColorThreeLevelText" />
+
+
+            <LinearLayout
+                    width="0"
+                    weight="1"
+                    gravity="right|center_vertical"
+                    height="match_parent"
+                    orientation="vertical">
+                <TextView
+                        width="wrap_content"
+                        height="wrap_content"
+                        textSize="12"
+                        text="-- USDT"
+                        marginLeft="2"
+                        textColor="@color/kColorPrimaryText" />
+
+                <TextView
+                        width="wrap_content"
+                        height="wrap_content"
+                        textSize="11"
+                        text="立即申购回款"
+                        textColor="@color/kColorThreeLevelText" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                width="match_parent"
+                marginTop="8"
+                gravity="center_vertical"
+                height="16">
+
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="预估收益"
+                    textColor="@color/kColorThreeLevelText" />
+
+            <TextView
+                    width="0"
+                    weight="1"
+                    gravity="right"
+                    height="wrap_content"
+                    textSize="12"
+                    text="291,799.73 BCH"
+                    marginLeft="2"
+                    textColor="@color/kColorPrimaryText" />
+        </LinearLayout>
+
+        <LinearLayout
+                width="match_parent"
+                marginTop="8"
+                gravity="center_vertical"
+                height="16">
+
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="设置赎回价"
+                    textColor="@color/kColorThreeLevelText" />
+
+            <ImageView
+                    width="12"
+                    height="12"
+                    marginLeft="4"
+                    src="@drawable/edge_engine_shark_info_icon" />
+
+            <TextView
+                    width="0"
+                    weight="1"
+                    gravity="right"
+                    height="wrap_content"
+                    textSize="12"
+                    text="展开"
+                    marginLeft="2"
+                    textColor="@color/kColorMajorTheme100" />
+
+            <ImageView
+                    width="12"
+                    height="12"
+                    marginLeft="4"
+                    src="@drawable/ic_dc_status_open" />
+        </LinearLayout>
+
+        <LinearLayout
+                width="match_parent"
+                height="44"
+                marginTop="8"
+                gravity="center_vertical"
+                background="@color/KBaseColorInputBackground"
+                orientation="horizontal">
+
+
+            <EditText
+                    width="0"
+                    weight="1"
+                    height="match_parent"
+                    inputType="numberDecimal"
+                    textColorHint="@color/baseColorThreeLevelText"
+                    paddingLeft="12"
+                    paddingRight="8"
+                    onFocusChange="@event.deposit.focusChange(@eventParams)"
+                    textFontWeight="500"
+                    background="@color/KBaseColorInputBackground"
+                    textSize="14"
+                    hint="赎回价需大于260（选填）"
+                    textColor="@color/kColorPrimaryText"
+                    onTextChange="@event.deposit.textChange(@eventParams)"
+                    requestFocus="{{@data.deposit.onFocus}}"
+                    onReturn="@event.deposit.onReturn(@eventParams)"
+                    text="{{@data.deposit.editText | }}" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    text="USDT"
+                    marginRight="16"
+                    marginLeft="8"
+                    textColor="@color/kColorThreeLevelText"
+                    textSize="14" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                width="match_parent"
+                marginTop="32"
+                gravity="center_vertical"
+                height="16">
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="16"
+                    text="回款场景"
+                    textColor="@color/kColorPrimaryText" />
+
+            <ImageView
+                    width="12"
+                    height="12"
+                    marginLeft="4"
+                    src="@drawable/edge_engine_shark_info_icon" />
+
+            <View
+                    width="0"
+                    height="0"
+                    weight="1" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="BCH指数价："
+                    textColor="@color/kColorPrimaryText" />
+
+            <TextView
+                    width="wrap_content"
+                    height="wrap_content"
+                    textSize="12"
+                    text="255.34"
+                    textColor="@color/kColorPrimaryText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                width="match_parent"
+                height="165"
+                marginTop="12">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:insetLeft="@dimen/dimen_16" android:insetRight="@dimen/dimen_16" android:insetTop="@dimen/dimen_16" android:insetBottom="@dimen/dimen_16">
+    <shape>
+        <solid android:color="@color/dialog_img_bg"/>
+        <corners android:radius="@dimen/dimen_8"/>
+    </shape>
+</inset>

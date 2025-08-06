@@ -1,0 +1,42 @@
+<LinearLayout height="wrap_content" marginBottom="16" orientation="vertical" paddingLeft="8" paddingRight="8" width="match_parent" visibility="{{@data.operation.functionVisibility | gone}}">
+  <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent" visibility="{{@data.operation.firstFunctionVisibility | gone}}">
+    <For data="@data.operation.firstFunctionList" itemKey="operation" typeKey="type">
+      <Cell height="78" type="1" width="match_parent" weight="1" gravity="centerHorizontal" onClick="@event.operationClickItem({{@operation.operationIndex}})">
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.contentVisibility | visible}}">
+          <ImageView height="40" marginTop="8" scaleType="fitCenter" src="{{@operation.iconUrl}}" width="40" background="@color/kColorTipsBackground" placeholder="@drawable/home_operation_placeholder" cornerRadius="20"/>
+          <TextView height="wrap_content" gravity="center" maxWidth="70" marginTop="8" maxLines="2" text="{{@operation.title}}" textColor="@color/kColorPrimaryText" textSize="11" width="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.cornerMarkTextVisibility | gone}}">
+          <TextView background="#FE8731" cornerRadius="8" gravity="center" height="16" maxWidth="72" paddingEnd="4" paddingStart="4" textSize="10" width="wrap_content" textColor="#FFFFFF" text="{{@operation.cornerMarkText}}"/>
+          <ImageView height="3" marginTop="-1" src="@drawable/home_funtion_item_corner_arrow" width="6" scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.cornerMarkIconVisibility | gone}}">
+          <ImageView height="20" scaleType="fitCenter" src="{{@operation.cornerMarkIcon}}" tag="ApngDecoder" width="wrap_content"/>
+        </LinearLayout>
+      </Cell>
+    </For>
+  </LinearLayout>
+
+  <LinearLayout height="wrap_content" orientation="horizontal" width="match_parent" marginTop="8" visibility="{{@data.operation.secondFunctionVisibility | gone}}">
+
+    <For data="@data.operation.secondFunctionList" itemKey="operation" typeKey="type">
+      <Cell height="78" type="1" width="match_parent" weight="1" gravity="centerHorizontal" onClick="@event.operationClickItem({{@operation.operationIndex}})">
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.contentVisibility | visible}}">
+          <ImageView height="40" marginTop="8" scaleType="fitCenter" src="{{@operation.iconUrl}}" width="40" background="@color/kColorTipsBackground" placeholder="@drawable/home_operation_placeholder" cornerRadius="20"/>
+          <TextView height="wrap_content" gravity="center" maxWidth="70" marginTop="8" maxLines="2" text="{{@operation.title}}" textColor="@color/kColorPrimaryText" textSize="11" width="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.cornerMarkTextVisibility | gone}}">
+          <TextView background="#FE8731" cornerRadius="8" gravity="center" height="16" maxWidth="72" paddingEnd="4" paddingStart="4" textSize="10" width="wrap_content" textColor="#FFFFFF" text="{{@operation.cornerMarkText}}"/>
+          <ImageView height="3" marginTop="-1" src="@drawable/home_funtion_item_corner_arrow" width="6" scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <LinearLayout width="match_parent" height="wrap_content" gravity="centerHorizontal" orientation="vertical" visibility="{{@operation.cornerMarkIconVisibility | gone}}">
+          <ImageView height="20" scaleType="fitCenter" src="{{@operation.cornerMarkIcon}}" width="wrap_content"/>
+        </LinearLayout>
+      </Cell>
+    </For>
+  </LinearLayout>
+</LinearLayout>

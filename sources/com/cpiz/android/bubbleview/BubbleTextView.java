@@ -1,0 +1,196 @@
+package com.cpiz.android.bubbleview;
+
+import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import androidx.core.content.ContextCompat;
+import com.cpiz.android.bubbleview.BubbleStyle;
+import com.hbg.lib.widgets.R$drawable;
+import m4.a;
+
+public class BubbleTextView extends TextView implements BubbleStyle, a {
+
+    /* renamed from: b  reason: collision with root package name */
+    public final BubbleImpl f64756b;
+
+    public BubbleTextView(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, 0);
+    }
+
+    public void a(int i11, int i12, int i13, int i14) {
+        super.setPadding(i11, i12, i13, i14);
+    }
+
+    public final void b(Context context, AttributeSet attributeSet) {
+        setBackgroundDrawable((GradientDrawable) ContextCompat.getDrawable(context, R$drawable.common_bg_bubble_corner_bg));
+        this.f64756b.v(this, context, attributeSet);
+    }
+
+    public BubbleStyle.ArrowDirection getArrowDirection() {
+        return this.f64756b.c();
+    }
+
+    public float getArrowHeight() {
+        return this.f64756b.d();
+    }
+
+    public float getArrowPosDelta() {
+        return this.f64756b.e();
+    }
+
+    public BubbleStyle.ArrowPosPolicy getArrowPosPolicy() {
+        return this.f64756b.f();
+    }
+
+    public View getArrowTo() {
+        return this.f64756b.g();
+    }
+
+    public float getArrowWidth() {
+        return this.f64756b.h();
+    }
+
+    public int getBorderColor() {
+        return this.f64756b.j();
+    }
+
+    public float getBorderWidth() {
+        return this.f64756b.k();
+    }
+
+    public BubbleImpl getBubbleImpl() {
+        return this.f64756b;
+    }
+
+    public float getCornerBottomLeftRadius() {
+        return this.f64756b.l();
+    }
+
+    public float getCornerBottomRightRadius() {
+        return this.f64756b.m();
+    }
+
+    public float getCornerTopLeftRadius() {
+        return this.f64756b.n();
+    }
+
+    public float getCornerTopRightRadius() {
+        return this.f64756b.o();
+    }
+
+    public int getFillColor() {
+        return this.f64756b.p();
+    }
+
+    public float getFillPadding() {
+        return this.f64756b.q();
+    }
+
+    public int getPaddingBottom() {
+        return this.f64756b.r();
+    }
+
+    public int getPaddingLeft() {
+        return this.f64756b.s();
+    }
+
+    public int getPaddingRight() {
+        return this.f64756b.t();
+    }
+
+    public int getPaddingTop() {
+        return this.f64756b.u();
+    }
+
+    public int getSuperPaddingBottom() {
+        return super.getPaddingBottom();
+    }
+
+    public int getSuperPaddingLeft() {
+        return super.getPaddingLeft();
+    }
+
+    public int getSuperPaddingRight() {
+        return super.getPaddingRight();
+    }
+
+    public int getSuperPaddingTop() {
+        return super.getPaddingTop();
+    }
+
+    public void onLayout(boolean z11, int i11, int i12, int i13, int i14) {
+        super.onLayout(z11, i11, i12, i13, i14);
+        this.f64756b.I(i13 - i11, i14 - i12, true);
+    }
+
+    public void setArrowCornerRadius(int i11) {
+        this.f64756b.x(i11);
+    }
+
+    public void setArrowDirection(BubbleStyle.ArrowDirection arrowDirection) {
+        this.f64756b.setArrowDirection(arrowDirection);
+    }
+
+    public void setArrowHeight(float f11) {
+        this.f64756b.y(f11);
+    }
+
+    public void setArrowPosDelta(float f11) {
+        this.f64756b.setArrowPosDelta(f11);
+    }
+
+    public void setArrowPosPolicy(BubbleStyle.ArrowPosPolicy arrowPosPolicy) {
+        this.f64756b.setArrowPosPolicy(arrowPosPolicy);
+    }
+
+    public void setArrowTo(int i11) {
+        this.f64756b.z(i11);
+    }
+
+    public void setArrowWidth(float f11) {
+        this.f64756b.B(f11);
+    }
+
+    public void setBorderColor(int i11) {
+        this.f64756b.C(i11);
+    }
+
+    public void setBorderWidth(float f11) {
+        this.f64756b.setBorderWidth(f11);
+    }
+
+    public void setCornerRadius(float f11) {
+        this.f64756b.D(f11);
+    }
+
+    public void setFillColor(int i11) {
+        this.f64756b.F(i11);
+    }
+
+    public void setFillPadding(float f11) {
+        this.f64756b.G(f11);
+    }
+
+    public void setPadding(int i11, int i12, int i13, int i14) {
+        BubbleImpl bubbleImpl = this.f64756b;
+        if (bubbleImpl == null) {
+            Log.w("BubbleView", "mBubbleImpl == null on old Android platform");
+            a(i11, i12, i13, i14);
+            return;
+        }
+        bubbleImpl.H(i11, i12, i13, i14);
+    }
+
+    public BubbleTextView(Context context, AttributeSet attributeSet, int i11) {
+        super(context, attributeSet, i11);
+        this.f64756b = new BubbleImpl();
+        b(context, attributeSet);
+    }
+
+    public void setArrowTo(View view) {
+        this.f64756b.setArrowTo(view);
+    }
+}

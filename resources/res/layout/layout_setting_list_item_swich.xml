@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60">
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:layout_gravity="center" android:id="@+id/id_setting_list_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/dimen_5" android:layout_centerVertical="true"/>
+    <com.hbg.lib.widgets.CommonSwitchButton android:id="@+id/id_setting_list_item_switch" android:layout_width="40dp" android:layout_height="20dp" android:layout_marginRight="@dimen/dimen_15" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <View android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

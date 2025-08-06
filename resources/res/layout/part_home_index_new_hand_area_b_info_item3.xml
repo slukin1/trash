@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bg_new_hand_area_info" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/rl_new_hand_area_top_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11dp">
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/rl_new_hand_area_project_2_sub_title_and_benefit_text" android:layout_width="wrap_content" android:layout_height="20dp">
+            <TextView android:textSize="10sp" android:textColor="#909090" android:gravity="center_vertical" android:id="@+id/tv_new_hand_area_project_2_sub_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="1dp"/>
+            <TextView android:textSize="14sp" android:textColor="#ff971e" android:gravity="center_vertical" android:id="@+id/tv_new_hand_area_project_2_benefit_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toRightOf="@+id/tv_new_hand_area_project_2_sub_title" android:fontFamily="@font/roboto_medium" android:layout_marginStart="2dp"/>
+        </RelativeLayout>
+        <TextView android:textSize="11sp" android:textColor="#000000" android:id="@+id/tv_new_hand_area_project_2_title" android:layout_width="wrap_content" android:layout_height="14dp" android:layout_marginTop="-1dp" android:layout_below="@+id/rl_new_hand_area_project_2_sub_title_and_benefit_text" android:layout_centerHorizontal="true" android:fontFamily="@font/roboto_regular"/>
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginTop="11dp" android:src="@drawable/ic_new_hand_area_separate_line"/>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/rl_new_hand_area_bottom_half" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/rl_new_hand_area_project_3_sub_title_and_benefit_text" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginTop="9dp">
+            <TextView android:textSize="10sp" android:textColor="#909090" android:gravity="center_vertical" android:id="@+id/tv_new_hand_area_project_3_sub_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="1dp"/>
+            <TextView android:textSize="14sp" android:textColor="#ff971e" android:gravity="center_vertical" android:id="@+id/tv_new_hand_area_project_3_benefit_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:fontFamily="@font/roboto_medium" android:layout_marginStart="2dp" android:layout_toEndOf="@+id/tv_new_hand_area_project_3_sub_title"/>
+        </RelativeLayout>
+        <TextView android:textSize="11sp" android:textColor="#000000" android:id="@+id/tv_new_hand_area_project_3_title" android:layout_width="wrap_content" android:layout_height="14dp" android:layout_marginTop="-1dp" android:layout_below="@+id/rl_new_hand_area_project_3_sub_title_and_benefit_text" android:layout_centerHorizontal="true" android:fontFamily="@font/roboto_regular"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <SurfaceView android:id="@+id/preview_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.google.zxing.client.android.ViewfinderView android:id="@+id/viewfinder_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.Toolbar android:id="@+id/capture_toolbar" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:navigationIcon="@drawable/top_bar_white_back_nomal" app:theme="@style/Theme.ToolBar">
+        <TextView android:textSize="@dimen/global_text_size_18" android:textColor="@color/baseTextColor" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_scan"/>
+        <ImageView android:layout_gravity="right" android:id="@+id/import_tv" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/global_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/scancode_photo"/>
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/dimen_10" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/global_text_size_12" android:id="@+id/otc_tab_coin_name_cn_txt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="@dimen/global_text_size_16" android:id="@+id/otc_tab_coin_name_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_3" android:fontFamily="@font/roboto_medium"/>
+</LinearLayout>

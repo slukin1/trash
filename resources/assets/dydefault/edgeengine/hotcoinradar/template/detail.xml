@@ -1,0 +1,937 @@
+<LinearLayout
+  width="match_parent"
+  height="match_parent"
+  orientation="vertical"
+  gravity="center"
+  background="@color/KBaseColorContentBackground">
+
+  <!--页面顶部导航栏-->
+  <FrameLayout
+    marginTop="{{@data.commonData.statusHeight}}"
+    width="match_parent"
+    height="44">
+
+    <ImageView
+      src="@drawable/edge_engine_top_bar_back_normal"
+      onClick="@event.detail.backClicked()"
+      paddingLeft="16"
+      paddingRight="16"
+      layout_gravity="centerVertical"
+      width="wrap_content"
+      height="wrap_content" />
+
+    <LinearLayout
+      layout_gravity="center"
+      gravity="center"
+      width="wrap_content"
+      height="match_parent">
+
+      <ImageView
+        src="{{@data.detail.topIcon}}"
+        cornerRadius="10"
+        borderWidth="0.5"
+        borderColor="@color/kContentSeperatorColor"
+        width="20"
+        height="20" />
+      <View
+        width="8"
+        height="0" />
+      <TextView
+        text="{{@data.detail.topTitle}}"
+        textSize="18"
+        textFontWeight="500"
+        textColor="@color/kColorPrimaryText"
+        marginLeft="4"
+        width="wrap_content"
+        height="wrap_content" />
+
+    </LinearLayout>
+
+  </FrameLayout>
+
+  <FrameLayout
+    width="match_parent"
+    height="match_parent"
+    orientation="vertical"
+    gravity="center"
+    background="@color/KBaseColorContentBackground">
+
+    <LinearLayout
+      width="match_parent"
+      height="match_parent"
+      orientation="vertical"
+      gravity="bottom"
+      visibility="{{@data.detail.pageVisibilityConig.listVisibility}}">
+      <RecyclerView
+        weight="1"
+        data="@data.detail.list"
+        width="match_parent"
+        height="match_parent"
+        onRefresh="@event.detail.onRefresh()"
+        refreshStatus="{{@data.detail.refreshStatus}}"
+        onLoadMore="@event.detail.onLoadMore()"
+        loadMoreStatus="{{@data.detail.loadMoreStatus}}"
+        itemKey="item"
+        typeKey="type">
+        <Header
+          width="match_parent"
+          height="wrap_content">
+
+          <LinearLayout
+            width="match_parent"
+            height="wrap_content"
+            orientation="vertical"
+            gravity="center">
+            <!-- 顶部图表 -->
+            <LinearLayout
+              width="match_parent"
+              height="wrap_content"
+              orientation="vertical"
+              gravity="left"
+              background="@color/KBaseColorContentBackground">
+              <!-- 价格、涨跌幅、互动次数等筛选框 -->
+              <LinearLayout
+                marginLeft="16"
+                marginRight="16"
+                marginTop="16"
+                width="match_parent"
+                height="wrap_content"
+                orientation="horizontal"
+                gravity="left|bottom">
+                <TextView
+                  height="38"
+                  width="wrap_content"
+                  gravity="center"
+                  text="{{@data.detail.coinPrice}}"
+                  textColor="@color/kColorSecondaryButtonText"
+                  textFontWeight="700"
+                  textSize="28" />
+                <View
+                  width="8"
+                  height="1" />
+                <TextView
+                  height="25"
+                  width="wrap_content"
+                  gravity="center"
+                  marginBottom="1.5"
+                  text="{{@data.detail.coinPriceRange}}"
+                  textColor="{{@data.detail.coinPriceRangeTextColor}}"
+                  textFontWeight="400"
+                  textSize="14" />
+              </LinearLayout>
+              <!--互动次数等标题及筛选项-->
+              <LinearLayout
+                marginTop="20"
+                marginLeft="16"
+                marginRight="16"
+                width="match_parent"
+                height="40"
+                orientation="horizontal"
+                gravity="center"
+                cornerRadius="4"
+                background="@color/KAssetTopHeaderContentBackground"
+                onClick="@event.detail.clickedChartSelector()">
+                <TextView
+                  height="match_parent"
+                  width="wrap_content"
+                  gravity="center|left"
+                  marginLeft="12"
+                  text="{{@data.detail.chartSelectorTitle}}"
+                  textColor="@color/kColorPrimaryText"
+                  textFontWeight="500"
+                  textSize="14" />
+                <View
+                  width="0"
+                  weight="1"
+                  height="1" />
+                <ImageView
+                  height="12"
+                  width="12"
+                  marginRight="12"
+                  src="@drawable/edge_engine_hot_coint_arrow_down" />
+              </LinearLayout>
+              <HotCoinChartView
+                marginTop="16"
+                marginLeft="16"
+                marginRight="16"
+                xTextWidth="29"
+                xTextHeight="14"
+                pointListJson="{{@data.detail.pointListJson}}"
+                width="match_parent"
+                height="138" />
+              <!--图表周期-->
+              <LinearLayout
+                width="wrap_content"
+                height="wrap_content"
+                grivaty="centerVertical"
+                marginLeft="16"
+                marginRight="16"
+                orientation="horizontal"
+                marginTop="16">
+                <For data="@data.detail.periodList" itemKey="element" typeKey="type">
+                  <Cell width="wrap_content" height="wrap_content" type="1">
+                    <LinearLayout width="wrap_content" height="wrap_content"
+                      gravity="centerVertical"
+                      orientation="horizontal">
+                      <TextView
+                        width="62"
+                        height="25"
+                        cornerRadius="4"
+                        text="{{@element.text}}"
+                        textSize="12"
+                        textFontWeight="{{@element.textFontWeight}}"
+                        textColor="{{@element.textColor}}"
+                        gravity="center"
+                        background="{{@element.backgroundColor}}"
+                        onClick="@event.detail.clickedPeriodItem({{@element.index}})" />
+                      <View width="8" height="1" />
+                    </LinearLayout>
+                  </Cell>
+                </For>
+              </LinearLayout>
+            </LinearLayout>
+            <!-- 市场情绪 -->
+            <LinearLayout
+              width="match_parent"
+              height="72"
+              orientation="vertical"
+              gravity="left"
+              marginTop="24"
+              marginLeft="16"
+              marginRight="16"
+              background="@color/KBaseColorContentBackground">
+              <!-- 标题 -->
+              <LinearLayout
+                width="match_parent"
+                height="24"
+                orientation="horizontal"
+                gravity="left|center"
+                marginTop="8"
+                marginBottom="8">
+                <TextView
+                  width="wrap_content"
+                  height="wrap_content"
+                  text="{{@data.detail.marketSentiment.title}}"
+                  textSize="16"
+                  textColor="@color/kColorPrimaryText"
+                  textFontWeight="500"
+                  autoSizeTextType="uniform"
+                  gravity="center" />
+                <LinearLayout width="24" height="24" gravity="center"
+                  onClick="@event.detail.marketSentimentInfoAction()">
+                  <ImageView
+                    width="16"
+                    height="16"
+                    layout_gravity="center"
+                    marginLeft="6"
+                    src="@drawable/edge_engine_copy_alert" />
+                </LinearLayout>
+              </LinearLayout>
+              <!-- 进度条 -->
+              <LinearLayout
+                width="match_parent"
+                height="8"
+                orientation="horizontal"
+                gravity="left">
+                <LinearLayout
+                  width="0"
+                  weight="{{@data.detail.marketSentiment.bullishValue}}"
+                  height="match_parent"
+                  orientation="horizontal"
+                  gravity="right">
+                  <FrameLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="right">
+                    <LinearLayout
+                      width="match_parent"
+                      height="match_parent"
+                      orientation="horizontal"
+                      gravity="left"
+                      background="{{@data.detail.marketSentiment.bullishColor}}"
+                      cornerRadius="2">
+                    </LinearLayout>
+                    <ImageView
+                      width="4.5"
+                      height="8"
+                      layout_gravity="center|right"
+                      scaleType="center_crop"
+                      src="@drawable/hotcoin_radar_sentiment_progress_line_right"
+                      visibility="{{@data.detail.marketSentiment.bullishImageVisibility}}" />
+                  </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                  width="0"
+                  weight="{{@data.detail.marketSentiment.bearishValue}}"
+                  height="match_parent"
+                  orientation="horizontal"
+                  gravity="left">
+                  <FrameLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="left">
+                    <LinearLayout
+                      width="match_parent"
+                      height="match_parent"
+                      orientation="horizontal"
+                      gravity="left"
+                      background="{{@data.detail.marketSentiment.bearishColor}}"
+                      cornerRadius="2">
+                    </LinearLayout>
+                    <ImageView
+                      width="4.5"
+                      height="8"
+                      layout_gravity="center|left"
+                      scaleType="center_crop"
+                      src="@drawable/hotcoin_radar_sentiment_progress_line_left"
+                      visibility="{{@data.detail.marketSentiment.bearishImageVisibility}}"/>
+                  </FrameLayout>
+                </LinearLayout>
+              </LinearLayout>
+              <!-- 数字 -->
+              <LinearLayout
+                width="match_parent"
+                height="16"
+                marginTop="8"
+                orientation="horizontal"
+                gravity="left">
+                <TextView
+                  width="0"
+                  height="match_parent"
+                  text="{{@data.detail.marketSentiment.bullishTitle}}"
+                  textSize="14"
+                  textColor="{{@data.detail.marketSentiment.bullishColor}}"
+                  textFontWeight="400"
+                  gravity="left"
+                  weight="0.5" />
+                <TextView
+                  width="0"
+                  height="match_parent"
+                  weight="0.5"
+                  text="{{@data.detail.marketSentiment.bearishTitle}}"
+                  textSize="14"
+                  textColor="{{@data.detail.marketSentiment.bearishColor}}"
+                  textFontWeight="400"
+                  gravity="right" />
+              </LinearLayout>
+            </LinearLayout>
+
+            <View
+              width="match_parent"
+              height="24"
+              background="@color/KBaseColorContentBackground" />
+
+            <!-- 一级标题 -->
+            <LinearLayout
+              width="match_parent"
+              height="48"
+              marginLeft="16"
+              marginRight="16"
+              orientation="horizontal"
+              gravity="left"
+              background="@color/KBaseColorContentBackground">
+
+              <TextView
+                width="wrap_content"
+                height="match_parent"
+                text="{{@data.detail.listTitles.elitePostsTitle}}"
+                textSize="16"
+                textColor="{{@data.detail.listTitles.elitePostsTitleColor}}"
+                textFontWeight="500"
+                marginRight="16"
+                gravity="left|center"
+                onClick="@event.detail.elitePostsAction()"
+                visibility="{{@data.detail.listTitles.elitePostsTitleVisibility}}" />
+
+              <TextView
+                width="wrap_content"
+                height="match_parent"
+                text="{{@data.detail.listTitles.newsTitle}}"
+                textSize="16"
+                textColor="{{@data.detail.listTitles.newsTitleColor}}"
+                textFontWeight="500"
+                gravity="left|center"
+                onClick="@event.detail.selectedNewsAction()"
+                visibility="{{@data.detail.listTitles.newsTitleTitleVisibility}}" />
+
+            </LinearLayout>
+
+            <View
+              width="match_parent"
+              height="0.5"
+              background="@color/kColorEBEBEB" />
+
+            <!-- 筛选 -->
+            <LinearLayout
+              width="match_parent"
+              height="40"
+              marginLeft="16"
+              marginRight="16"
+              orientation="horizontal"
+              gravity="left"
+              background="@color/KBaseColorContentBackground"
+              visibility="{{@data.detail.listTitles.filterButtonVisibility}}">
+
+              <TextView
+                width="wrap_content"
+                height="match_parent"
+                text="{{@data.detail.listTitles.hotTitle}}"
+                textSize="12"
+                textColor="{{@data.detail.listTitles.hotTitleColor}}"
+                textFontWeight="500"
+                gravity="center"
+                marginTop="8"
+                marginBottom="8"
+                marginRight="8"
+                paddingLeft="10"
+                paddingRight="10"
+                paddingTop="4"
+                paddingBottom="4"
+                cornerRadius="4"
+                background="{{@data.detail.listTitles.hotTitleBackgroundColor}}"
+                onClick="@event.detail.selectedHotAction()" />
+
+              <TextView
+                width="wrap_content"
+                height="match_parent"
+                text="{{@data.detail.listTitles.lastTitle}}"
+                textSize="12"
+                textColor="{{@data.detail.listTitles.lastTitleColor}}"
+                textFontWeight="500"
+                gravity="center"
+                marginTop="8"
+                marginBottom="8"
+                paddingLeft="10"
+                paddingRight="10"
+                paddingTop="4"
+                paddingBottom="4"
+                cornerRadius="4"
+                background="{{@data.detail.listTitles.lastTitleBackgroundColor}}"
+                onClick="@event.detail.selectedLastAction()" />
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </Header>
+        <!-- 列表 -->
+
+        <!-- 文字 -->
+        <Cell
+          height="wrap_content"
+          type="1"
+          width="match_parent">
+          <LinearLayout
+            width="match_parent"
+            height="wrap_content"
+            orientation="vertical"
+            gravity="center"
+            background="@color/KBaseColorContentBackground"
+            onClick="@event.detail.cellSelected('{{@item.index}}')">
+            <LinearLayout
+              width="match_parent"
+              height="wrap_content"
+              orientation="vertical"
+              gravity="center"
+              marginLeft="16"
+              marginRight="16">
+              <!-- 信息 -->
+              <LinearLayout
+                marginTop="16"
+                width="match_parent"
+                height="40"
+                orientation="horizontal"
+                gravity="left">
+                <LinearLayout
+                  width="40"
+                  height="40"
+                  orientation="horizontal"
+                  gravity="left">
+                  <FrameLayout
+                    width="match_parent"
+                    height="match_parent"
+                    background="@color/KBaseColorContentBackground"
+                    orientation="horizontal">
+                    <ImageView
+                      width="40"
+                      height="40"
+                      layout_gravity="center"
+                      scaleType="center_crop"
+                      src="{{@item.avatar}}"
+                      cornerRadius="20" />
+                    <ImageView
+                      marginLeft="26"
+                      marginTop="26"
+                      width="14"
+                      height="14"
+                      src="@drawable/hotcoin_radar_x" />
+                  </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                  width="0"
+                  height="match_parent"
+                  orientation="vertical"
+                  gravity="left"
+                  marginLeft="12"
+                  marginRight="12"
+                  weight="1">
+
+                  <TextView
+                    width="match_parent"
+                    maxLines="1"
+                    ellipsis="true"
+                    height="20"
+                    text="{{@item.nickname}}"
+                    textSize="14"
+                    textColor="@color/kColorPrimaryText"
+                    textFontWeight="500"
+                    gravity="left|center" />
+
+                  <TextView
+                    width="match_parent"
+                    height="16"
+                    marginTop="2"
+                    text="{{@item.publishTime}}"
+                    textSize="12"
+                    textColor="@color/KBaseColorSecondaryText"
+                    textFontWeight="400"
+                    gravity="left|center" />
+                </LinearLayout>
+
+                <LinearLayout
+                  width="wrap_content"
+                  height="match_parent"
+                  orientation="vertical"
+                  gravity="center"
+                  onClick="@event.detail.sourceItemSelected('{{@item.index}}')"
+                  visibility="{{@item.sourceVisibility|gone}}">
+                  <TextView
+                    width="wrap_content"
+                    height="match_parent"
+                    text="{{@item.sourceTitle}}"
+                    textSize="12"
+                    textColor="@color/KBaseColorSecondaryText"
+                    textFontWeight="400"
+                    gravity="right|center" />
+                </LinearLayout>
+              </LinearLayout>
+
+              <!-- 内容 -->
+              <LinearLayout
+                width="match_parent"
+                height="wrap_content"
+                orientation="horizontal"
+                gravity="left|center"
+                marginTop="12">
+                <TextView
+                  width="match_parent"
+                  height="wrap_content"
+                  text="{{@item.showContent}}"
+                  textColor="@color/kColorPrimaryText"
+                  textSize="15"
+                  textFontWeight="400"
+                  gravity="left|center"
+                  maxLines="15"
+                  lineSpacing="7" />
+              </LinearLayout>
+
+              <!-- 图片 -->
+              <LinearLayout
+                width="match_parent"
+                height="220"
+                orientation="horizontal"
+                gravity="center"
+                marginTop="12"
+                cornerRadius="8"
+                visibility="{{@item.imageComponenVisibility | gone}}">
+                <FrameLayout
+                  width="match_parent"
+                  height="match_parent"
+                  orientation="vertical"
+                  gravity="left">
+                  <!-- 单图 -->
+                  <LinearLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="left|center"
+                    cornerRadius="8"
+                    visibility="{{@item.oneImageVisibility | gone}}">
+                    <ImageView
+                      cornerRadius="8"
+                      width="match_parent"
+                      height="match_parent"
+                      layout_gravity="center"
+                      src="{{@item.imageOne}}"
+                      onClick="@event.detail.imageSelected(0,{{@item.index}})"
+                      scaleType="center_crop"
+                      placeholder="{{@data.detail.placeholder.one}}" />
+                  </LinearLayout>
+
+                  <!-- 双图 -->
+                  <LinearLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="left|center"
+                    cornerRadius="8"
+                    visibility="{{@item.twoImageVisibility | gone}}">
+                    <ImageView
+                      width="169.5"
+                      topLeftRadius="8"
+                      bottomLeftRadius="8"
+                      height="match_parent"
+                      layout_gravity="center"
+                      src="{{@item.imageOne}}"
+                      onClick="@event.detail.imageSelected(0,{{@item.index}})"
+                      scaleType="center_crop"
+                      marginRight="2"
+                      weight="1"
+                      placeholder="{{@data.detail.placeholder.left}}" />
+                    <ImageView
+                      width="169.5"
+                      topRightRadius="8"
+                      bottomRightRadius="8"
+                      height="match_parent"
+                      layout_gravity="center"
+                      src="{{@item.imageTwo}}"
+                      onClick="@event.detail.imageSelected(1,{{@item.index}})"
+                      scaleType="center_crop"
+                      marginLeft="2"
+                      weight="1"
+                      placeholder="{{@data.detail.placeholder.left}}" />
+                  </LinearLayout>
+
+                  <!-- 三图 -->
+                  <LinearLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="left|center"
+                    cornerRadius="8"
+                    visibility="{{@item.threeImageVisibility | gone}}">
+                    <ImageView
+                      width="169.5"
+                      topLeftRadius="8"
+                      bottomLeftRadius="8"
+                      height="match_parent"
+                      layout_gravity="center"
+                      src="{{@item.imageOne}}"
+                      onClick="@event.detail.imageSelected(0,{{@item.index}})"
+                      scaleType="center_crop"
+                      weight="1"
+                      marginRight="2"
+                      placeholder="{{@data.detail.placeholder.left}}" />
+                    <LinearLayout
+                      width="169.5"
+                      height="match_parent"
+                      orientation="vertical"
+                      gravity="left|center"
+                      cornerRadius="8"
+                      marginLeft="2"
+                      weight="1">
+                      <ImageView
+                        width="match_parent"
+                        height="108"
+                        topRightRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageTwo}}"
+                        onClick="@event.detail.imageSelected(1,{{@item.index}})"
+                        scaleType="center_crop"
+                        weight="1"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                      <ImageView
+                        width="match_parent"
+                        height="108"
+                        bottomRightRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageThree}}"
+                        onClick="@event.detail.imageSelected(2,{{@item.index}})"
+                        scaleType="center_crop"
+                        marginTop="4"
+                        weight="1"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                    </LinearLayout>
+                  </LinearLayout>
+
+                  <!-- 四图 -->
+                  <LinearLayout
+                    width="match_parent"
+                    height="match_parent"
+                    orientation="horizontal"
+                    gravity="left|center"
+                    cornerRadius="8"
+                    visibility="{{@item.fourImageVisibility | gone}}">
+
+                    <LinearLayout
+                      width="169.5"
+                      height="match_parent"
+                      orientation="vertical"
+                      gravity="left|center"
+                      marginRight="2"
+                      weight="0.5">
+                      <ImageView
+                        width="169.5"
+                        height="108"
+                        topLeftRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageOne}}"
+                        onClick="@event.detail.imageSelected(0,{{@item.index}})"
+                        marginBottom="2"
+                        scaleType="center_crop"
+                        weight="0.5"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                      <ImageView
+                        width="169.5"
+                        height="108"
+                        bottomLeftRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageTwo}}"
+                        onClick="@event.detail.imageSelected(1,{{@item.index}})"
+                        marginTop="2"
+                        scaleType="center_crop"
+                        weight="0.5"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                      width="169.5"
+                      height="match_parent"
+                      orientation="vertical"
+                      gravity="left|center"
+                      marginLeft="2"
+                      weight="0.5">
+                      <ImageView
+                        width="169.5"
+                        height="108"
+                        topRightRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageThree}}"
+                        onClick="@event.detail.imageSelected(2,{{@item.index}})"
+                        scaleType="center_crop"
+                        marginBottom="2"
+                        weight="0.5"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                      <ImageView
+                        width="169.5"
+                        height="108"
+                        bottomRightRadius="8"
+                        layout_gravity="center"
+                        src="{{@item.imageFour}}"
+                        onClick="@event.detail.imageSelected(3,{{@item.index}})"
+                        scaleType="center_crop"
+                        marginTop="2"
+                        weight="0.5"
+                        placeholder="{{@data.detail.placeholder.samll}}" />
+                    </LinearLayout>
+
+                  </LinearLayout>
+                </FrameLayout>
+              </LinearLayout>
+
+              <!-- 转发 -->
+              <LinearLayout
+                width="match_parent"
+                height="wrap_content"
+                orientation="horizontal"
+                gravity="left|center"
+                marginTop="12"
+                cornerRadius="8"
+                borderWidth="0.5"
+                borderColor="@color/eSecondarySeparatorColor"
+                background="@color/KBaseColorContentBackground"
+                visibility="{{@item.parentDynamicComponenVisibility}}">
+                <TextView
+                  width="match_parent"
+                  height="wrap_content"
+                  text="{{@item.parentDynamicContent}}"
+                  textSize="15"
+                  textColor="@color/kColorPrimaryText"
+                  textFontWeight="400"
+                  gravity="left|center"
+                  maxLines="4"
+                  lineSpacing="7"
+                  paddingLeft="12"
+                  paddingRight="12"
+                  paddingTop="12"
+                  paddingBottom="12" />
+              </LinearLayout>
+              <!-- 互动 -->
+              <LinearLayout
+                width="match_parent"
+                height="34"
+                orientation="horizontal"
+                gravity="left|center"
+                background="@color/kColorTipsBackground"
+                marginTop="12"
+                cornerRadius="8">
+                <TextView
+                  width="wrap_content"
+                  height="wrap_content"
+                  text="{{@data.detail.itemTitle.interactionsTitle}}"
+                  textSize="12"
+                  textColor="@color/KBaseColorSecondaryText"
+                  textFontWeight="400"
+                  gravity="left|center"
+                  paddingLeft="12" />
+                <View
+                  width="0"
+                  height="match_parent"
+                  weight="1" />
+                <TextView
+                  width="wrap_content"
+                  height="match_parent"
+                  text="{{@item.interactions}}"
+                  textSize="14"
+                  textColor="@color/kColorPrimaryText"
+                  textFontWeight="500"
+                  gravity="right|center"
+                  paddingRight="12" />
+              </LinearLayout>
+            </LinearLayout>
+            <View
+              width="match_parent"
+              height="0.5"
+              background="@color/kColorEBEBEB"
+              marginTop="11" />
+          </LinearLayout>
+
+
+        </Cell>
+
+        <Cell height="wrap_content" type="2" width="match_parent">
+          <LinearLayout
+            width="match_parent"
+            height="wrap_content"
+            orientation="vertical"
+            gravity="left|center"
+            marginTop="8"
+            onClick="@event.detail.cellSelected('{{@item.index}}')">
+
+            <LinearLayout
+              width="match_parent"
+              height="wrap_content"
+              orientation="vertical"
+              gravity="left|center"
+              marginTop="16"
+              marginLeft="16"
+              marginRight="16">
+
+              <TextView
+                width="match_parent"
+                height="wrap_content"
+                text="{{@item.newsContent}}"
+                textSize="15"
+                gravity="left|enter"
+                textColor="@color/kColorPrimaryText"
+                textFontWeight="400"
+                maxLines="3"
+                lineSpacing="6" />
+
+              <LinearLayout
+                width="match_parent"
+                height="17"
+                orientation="horizontal"
+                gravity="left|center"
+                marginTop="12">
+
+                <TextView
+                  width="0"
+                  height="wrap_content"
+                  text="{{@item.newsSouce}}"
+                  textSize="12"
+                  gravity="left|center"
+                  textColor="@color/kColorADADB4"
+                  weight="0.5" />
+
+                <TextView
+                  width="0"
+                  height="wrap_content"
+                  text="{{@item.newsTime}}"
+                  textSize="12"
+                  gravity="right|center"
+                  textColor="@color/kColorADADB4"
+                  weight="0.5" />
+              </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+              width="match_parent"
+              height="0.5"
+              background="@color/kColorEBEBEB"
+              marginTop="11" />
+
+          </LinearLayout>
+        </Cell>
+
+      </RecyclerView>
+
+      <LinearLayout
+        width="match_parent"
+        height="68"
+        orientation="vertical"
+        gravity="center"
+        layout_gravity="bottom"
+        background="@color/KBaseColorContentBackground"
+        onClick="@event.detail.tradeAction()">
+        <TextView
+          width="match_parent"
+          height="36"
+          text="{{@data.detail.tradeTitle}}"
+          textSize="14"
+          textColor="@color/KBaseTextColor"
+          textFontWeight="500"
+          gravity="center"
+          marginLeft="16"
+          marginRight="16"
+          cornerRadius="4"
+          background="@color/kColorMajorTheme100" />
+      </LinearLayout>
+
+      <View height="{{@data.detail.tradeMarginBottom}}" width="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      width="match_parent"
+      height="match_parent"
+      orientation="vertical"
+      gravity="center"
+      background="@color/KBaseColorContentBackground"
+      visibility="{{@data.detail.pageVisibilityConig.loadingVisibility}}">
+      <LottieView
+        width="match_parent"
+        height="match_parent"
+        loop="true"
+        playStatus="@data.detail.loadingLottieStatus"
+        resource="@raw/hotcoin_radar_loading" />
+    </LinearLayout>
+
+  </FrameLayout>
+
+  <!-- 顶部图标筛选弹框 -->
+  <View
+    width="0"
+    height="0"
+    popTemplate="hotcoin_detail_chart_pop.xml"
+    popShow="{{@data.detail.showChartPop|false}}"
+    popCancelOnTouchOutside="false"
+    popBackgroundDimmed="true"
+    popShowMode="modal"
+    popModalPositon="bottom" />
+
+  <!-- 提醒提示弹框 -->
+  <View
+    width="0"
+    height="0"
+    popTemplate="hotcoin_detail_tip_pop.xml"
+    popShow="{{@data.detail.tipAlertShow|false}}"
+    popCancelOnTouchOutside="false"
+    popBackgroundDimmed="true"
+    popShowMode="modal"
+    popModalPositon="center" />
+
+</LinearLayout>

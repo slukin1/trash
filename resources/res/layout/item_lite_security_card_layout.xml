@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/root_view" android:background="@drawable/bg_lite_security_maker_info_card_shape" android:layout_width="match_parent" android:layout_height="@dimen/dimen_55" android:paddingStart="@dimen/dimen_10" android:paddingEnd="@dimen/dimen_10">
+    <ImageView android:id="@+id/card_icon_iv" android:layout_width="@dimen/dimen_32" android:layout_height="@dimen/dimen_32" android:layout_marginTop="@dimen/dimen_11_5" android:layout_marginBottom="@dimen/dimen_11_5" android:src="@drawable/lite_security_icon_face" android:scaleType="centerCrop"/>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:id="@+id/card_desc_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/dimen_10"/>
+</LinearLayout>

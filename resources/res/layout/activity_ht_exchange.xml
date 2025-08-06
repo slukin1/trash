@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:actionIcon="@drawable/otc_market_history_btn" app:titleText="@string/ht_exchange_title"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@+id/cl_root" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:id="@+id/appbar_layout" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/global_top_layout_height" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:layout_scrollFlags="3" app:theme="@style/Theme.CollapsingToolbar" app:title="@string/ht_exchange_title">
+                <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:layout_collapseMode="1"/>
+            </com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/ll_tips" android:background="@color/bottom_reminder_background_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
+                    <com.huobi.view.FontIconTextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/icon_font_small_i_filled" android:layout_marginStart="@dimen/dimen_15" android:layout_marginEnd="@dimen/dimen_8"/>
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorMajorTheme100" android:ellipsize="marquee" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/tv_tips" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:layout_weight="1" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="@font/roboto_regular"/>
+                    <com.huobi.view.FontIconTextView android:textSize="@dimen/dimen_14" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:id="@+id/font_icon_text_view_personal_more" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/icon_font_right_arrow" android:layout_marginStart="@dimen/dimen_15" android:layout_marginEnd="@dimen/dimen_15"/>
+                </LinearLayout>
+            </FrameLayout>
+            <include android:id="@+id/rcv_head" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/dimen_35" layout="@layout/item_ht_exchange_head"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:empty_view="@layout/ht_exchange_empty_view" app:error_view="@layout/ht_exchange_error_view" app:loading_view="@layout/common_loading_view_balance">
+                <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/rcv" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+            </com.hbg.lib.widgets.LoadingLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_ht_exchange_bottom_bar"/>
+</LinearLayout>

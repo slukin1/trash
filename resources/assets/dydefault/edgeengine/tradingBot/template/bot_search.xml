@@ -1,0 +1,468 @@
+<LinearLayout
+    width="match_parent"
+    height="match_parent"
+    background="@color/KBaseColorContentBackground"
+    onClick="@event.botSearch.clearFocus()"
+    orientation="vertical">
+
+    <LinearLayout
+        width="match_parent"
+        height="44"
+        gravity="centerVertical"
+        orientation="horizontal">
+
+        <ImageView
+            width="wrap_content"
+            height="wrap_content"
+            paddingLeft="16"
+            gravity="center"
+            onClick="@event.botSearch.cancel()"
+            src="@drawable/edge_engine_top_bar_back_normal" />
+
+        <LinearLayout
+            width="0"
+            weight="1"
+            height="36"
+            background="@color/kColorInputFill"
+            gravity="centerVertical"
+            cornerRadius="18"
+            borderWidth="1"
+            borderColor="{{@data.botSearch.borderColor}}"
+            orientation="horizontal">
+
+            <ImageView
+                width="32"
+                height="32"
+                marginLeft="8"
+                src="@drawable/edge_engine_icon_earn_home_search" />
+
+            <EditText
+                height="match_parent"
+                width="0"
+                weight="1"
+                hint="{{@i18n/n_trade_bot_search_share_code}}"
+                onReturn="@event.botSearch.onReturn(@eventParams)"
+                onTextChange="@event.botSearch.textChange(@eventParams)"
+                onFocusChange="@event.botSearch.focusChange(@eventParams)"
+                requestFocus="{{@data.botSearch.onFocus}}"
+                text="{{@data.botSearch.searchInput}}"
+                paddingLeft="4"
+                paddingRight="4"
+                textColor="@color/kColorPrimaryText"
+                textColorHint="@color/baseColorThreeLevelText"
+                textFontWeight="400"
+                textSize="14" />
+
+            <ImageView
+                width="20"
+                height="20"
+                marginRight="8"
+                onClick="@event.botSearch.clearInput()"
+                visibility="{{@data.botSearch.clearInputVis}}"
+                src="@drawable/edge_engine_icon_earn_clear_input_ct" />
+
+        </LinearLayout>
+
+        <TextView
+            width="wrap_content"
+            height="match_parent"
+            textColor="@color/kColorPrimaryText"
+            textSize="14"
+            paddingRight="16"
+            paddingLeft="16"
+            onClick="@event.botSearch.search()"
+            gravity="centerVertical"
+            text="{{@i18n/n_search_coin}}"
+            textFontWeight="500" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        width="match_parent"
+        height="match_parent"
+        gravity="center"
+        marginTop="24"
+        orientation="vertical">
+        <!-- 列表 -->
+        <View
+            width="match_parent"
+            height="0"
+            popTemplate="bot_copy_edit_pop.xml"
+            popShow="{{@data.botCopyPop.copyPopShow}}"
+            onPopDismiss="@event.botCopyPop.copyPopDismiss()"
+            popCancelOnTouchOutside="true"
+            popBackgroundDimmed="true"
+            popShowMode="modal"
+            popModalPositon="bottom" />
+        <View
+            width="match_parent"
+            height="0"
+            popTemplate="bot_create_confirm_pop.xml"
+            popShow="{{@data.botCreateConfirmPop.popShow}}"
+            onPopDismiss="@event.botCreateConfirmPop.confirmPopDismiss()"
+            popCancelOnTouchOutside="true"
+            popBackgroundDimmed="true"
+            popShowMode="modal"
+            popModalPositon="bottom" />
+        <View height="0" onPopDismiss="@event.commonPop.popDismiss()" popCancelOnTouchOutside="false"
+            popModalPositon="center" popShow="{{@data.commonPop.popShow}}" popShowMode="modal"
+            popTemplate="commonPop.xml" width="0"/>
+        <View
+            width="0"
+            height="0"
+            popTemplate="common_option_pop.xml"
+            popShow="{{@data.commonOptionPop.popShow}}"
+            onPopDismiss="@event.commonOptionPop.optionPopDismiss()"
+            popCancelOnTouchOutside="true"
+            popBackgroundDimmed="true"
+            popShowMode="modal"
+            popModalPositon="bottom" />
+        <RecyclerView
+            width="match_parent"
+            height="match_parent"
+            data="@data.botSearch.traderList"
+            itemKey="element"
+            typeKey="traderListType">
+            <Cell
+                type="1"
+                width="match_parent"
+                height="wrap_content"
+                marginBottom="12">
+                <LinearLayout
+                    width="match_parent"
+                    height="wrap_content"
+                    gravity="top"
+                    orientation="vertical"
+                    marginLeft="16"
+                    marginRight="16"
+                    cornerRadius="8"
+                    paddingTop="12"
+                    paddingLeft="12"
+                    paddingRight="12"
+                    borderWidth="0.5"
+                    borderColor="@color/kColorPrimarySeparator"
+                    onClick="@event.botSearch.clickedItem({{@element.index}})">
+
+                    <!--第一行-->
+                    <LinearLayout
+                        width="match_parent"
+                        height="wrap_content"
+                        gravity="centerVertical"
+                        orientation="horizontal">
+
+                        <!--币种icon-->
+                        <ImageView
+                            width="28"
+                            height="28"
+                            src="{{@element.symbolUrl}}"
+                            cornerRadius="14" />
+
+                        <View width="8" />
+
+                        <LinearLayout
+                            width="0"
+                            weight="1"
+                            height="wrap_content"
+                            gravity="left"
+                            orientation="vertical">
+
+                            <!--币对-->
+                            <TextView
+                                width="wrap_content"
+                                height="wrap_content"
+                                text="{{@element.symbolShow}}"
+                                textColor="@color/kColorPrimaryText"
+                                textFontWeight="500"
+                                textSize="16" />
+                            <!--现货网格-->
+                            <TextView
+                                width="match_parent"
+                                height="wrap_content"
+                                marginTop="2"
+                                richText="{{@element.runTypeName}}"
+                                textColor="@color/kColorThreeLevelText"
+                                textFontWeight="400"
+                                textSize="11" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            width="wrap_content"
+                            height="wrap_content"
+                            gravity="right"
+                            orientation="vertical">
+                            <LinearLayout
+                                width="wrap_content"
+                                height="wrap_content"
+                                gravity="centerVertical"
+                                orientation="horizontal">
+                                <!--复制次数icon-->
+                                <ImageView
+                                    width="12"
+                                    height="12"
+                                    src="@drawable/edge_engine_trading_bot_list_num" />
+                                <View width="4" />
+                                <TextView
+                                    width="wrap_content"
+                                    height="wrap_content"
+                                    text="{{@element.copyNum}}"
+                                    textColor="@color/kColorThreeLevelText"
+                                    textFontWeight="400"
+                                    textSize="12" />
+                            </LinearLayout>
+                            <!--108天12时12分-->
+                            <TextView
+                                width="wrap_content"
+                                height="wrap_content"
+                                marginTop="4"
+                                text="{{@element.date}}"
+                                textColor="@color/kColorThreeLevelText"
+                                textFontWeight="400"
+                                textSize="11" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View height="16" />
+
+                    <!--收益率+K线-->
+                    <LinearLayout
+                        width="match_parent"
+                        height="44"
+                        gravity="centerVertical"
+                        orientation="horizontal">
+                        <!--收益率标题-->
+                        <LinearLayout
+                            width="wrap_content"
+                            height="44"
+                            gravity="left"
+                            orientation="vertical">
+                            <!--收益率或者收益额-->
+                            <TextView
+                                width="wrap_content"
+                                height="wrap_content"
+                                text="{{@element.largeTitle}}"
+                                textColor="@color/kColorThreeLevelText"
+                                textFontWeight="400"
+                                textSize="12" />
+                            <!-- +623.25%或者$1,623.25 -->
+                            <TextView
+                                width="wrap_content"
+                                height="wrap_content"
+                                text="{{@element.largeContent}}"
+                                textColor="{{@element.apyTextColor}}"
+                                textFontWeight="500"
+                                textSize="20" />
+                        </LinearLayout>
+
+                        <View weight="1" />
+
+                        <!--K线图-->
+                        <KlineChat
+                            width="120"
+                            height="40"
+                            lineWidth = "1"
+                            rate="{{@element.totalProfitRate}}"
+                            data="{{@element.profits}}" />
+                    </LinearLayout>
+
+
+                    <!--收益额+交易胜率-->
+                    <LinearLayout
+                        width="match_parent"
+                        marginTop="12"
+                        marginBottom="6"
+                        gravity="left|center"
+                        height="wrap_content"
+                        orientation="horizontal">
+                        <!--收益额或者收益率-->
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@element.normalTitle}}"
+                            textColor="@color/kColorThreeLevelText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <View width="4" />
+                        <!-- $1,623.25或者+623.25% -->
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@element.normalContent}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <!--交易胜率或者最大回撤-->
+                        <TextView
+                            width="0"
+                            weight="1"
+                            height="wrap_content"
+                            text="{{@element.rightTitle}}"
+                            textColor="@color/kColorThreeLevelText"
+                            textFontWeight="400"
+                            maxLines="2"
+                            gravity="right"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <View width="4" />
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@element.rightValue}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}" />
+                    </LinearLayout>
+
+                    <!--套利次数(24H｜总)+最小投资额-->
+                    <LinearLayout
+                        width="match_parent"
+                        marginBottom="6"
+                        height="wrap_content"
+                        orientation="horizontal"
+                        gravity="left|center"
+                        visibility="{{@element.arbitrageVisibility | gone}}">
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@i18n/n_contract_grid_arbitrage_24h_total}}"
+                            textColor="@color/kColorThreeLevelText"
+                            textFontWeight="400"
+                            maxWidth="120"
+                            maxLines="2"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <View width="4" />
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@element.arbitrage}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <View weight="1" />
+                        <!--最小投资额-->
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@i18n/n_trade_min_invest_amt}}"
+                            textColor="@color/kColorThreeLevelText"
+                            textFontWeight="400"
+                            maxLines="2"
+                            gravity="right"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            paddingLeft="4"
+                            paddingRight="4"
+                            text="{{@element.minInvest}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}"/>
+                    </LinearLayout>
+
+                    <!--分享码-->
+                    <LinearLayout
+                    width="match_parent"
+                    marginBottom="6"
+                    height="wrap_content"
+                    orientation="horizontal"
+                    gravity="left|center"
+                    visibility="{{@element.arbitrageVisibility | gone}}">
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@i18n/n_trade_bot_share_code}}"
+                            textColor="@color/kColorThreeLevelText"
+                            textFontWeight="400"
+                            maxLines="2"
+                            textSize="{{@element.winRateFontSize}}" />
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            paddingLeft="4"
+                            paddingRight="4"
+                            text="{{@element.markCode}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="{{@element.winRateFontSize}}"
+                            onClick="@event.botSearch.copyShareCode('{{@element.markCode}}')"/>
+                        <ImageView
+                            width="12"
+                            height="12"
+                            src="@drawable/edge_engine_trading_bot_list_copy"
+                            onClick="@event.botSearch.copyShareCode('{{@element.markCode}}')"/>
+                    </LinearLayout>
+
+                    <!--分割线-->
+                    <View
+                        height="0.5"
+                        width="match_parent"
+                        marginTop = "6"
+                        background="@color/eColorInputFillDisabled"/>
+
+                    <!--最后一行-->
+                    <LinearLayout
+                        width="match_parent"
+                        height="52"
+                        gravity="centerVertical"
+                        orientation="horizontal">
+
+                        <!--头像-->
+                        <ImageView
+                            width="16"
+                            height="16"
+                            src="{{@element.img}}"
+                            cornerRadius="8" />
+                        <View width="8" />
+
+                        <TextView
+                            width="wrap_content"
+                            height="wrap_content"
+                            text="{{@element.nick}}"
+                            textColor="@color/kColorPrimaryText"
+                            textFontWeight="400"
+                            textSize="14" />
+                        <View weight="1" />
+                        <!--复制-->
+                        <TextView
+                            width="56"
+                            height="28"
+                            text="{{@i18n/n_share_btn_copy}}"
+                            textColor="#FFFFFF"
+                            textFontWeight="500"
+                            textSize="12"
+                            cornerRadius="4"
+                            background="@color/kColorMajorTheme100"
+                            onClick="@event.botSearch.clickedCopy({{@element.index}})"
+                            maxLines="2"
+                            gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </Cell>
+            <Cell
+                type="2"
+                width="match_parent"
+                height="wrap_content">
+                <!-- 空样式 -->
+                <LinearLayout
+                    width="match_parent"
+                    height="168"
+                    orientation="vertical"
+                    gravity="center">
+                    <ImageView
+                        width="60"
+                        height="60"
+                        src="@drawable/edge_engine_empty" />
+                    <TextView
+                        marginTop="12"
+                        width="match_parent"
+                        height="wrap_content"
+                        gravity="center"
+                        textSize="12"
+                        text="{{@i18n/n_trade_bot_search_empty}}"
+                        textColor="@color/eBaseColorThreeLevelText" />
+                </LinearLayout>
+            </Cell>
+        </RecyclerView>
+    </LinearLayout>
+</LinearLayout>
+

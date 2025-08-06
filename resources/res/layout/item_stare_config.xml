@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tvStareName" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/tvStareDesc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/scSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_marginStart="@dimen/dimen_10" app:switchMinWidth="@dimen/dimen_40" app:theme="@style/quickWithdrawStyle" app:trackTint="@color/activity_setting_track_color"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llChangeLay" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="6dp" android:layout_marginStart="@dimen/dimen_16" android:layout_marginEnd="@dimen/dimen_16">
+        <LinearLayout android:gravity="center_vertical" android:background="@drawable/bg_stare_change" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <EditText android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:textColorHint="@color/baseColorThreeLevelText" android:gravity="center_vertical" android:id="@+id/etPercent" android:background="@color/transparent" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:maxLength="6" android:layout_weight="1" android:inputType="number" android:paddingStart="@dimen/dimen_12"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/stare_percent_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:fontFamily="@font/roboto_medium" android:layout_marginStart="5dp" android:layout_marginEnd="12dp" android:textFontWeight="500"/>
+            <View android:background="@color/trade_input_border_color" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageView android:id="@+id/ivMinus" android:layout_width="38dp" android:layout_height="match_parent" android:src="@drawable/icon_stare_minus_normal" android:scaleType="fitCenter"/>
+            <View android:background="@color/trade_input_border_color" android:layout_width="1dp" android:layout_height="16dp"/>
+            <ImageView android:id="@+id/ivPlus" android:layout_width="38dp" android:layout_height="match_parent" android:src="@drawable/icon_stare_plus_normal" android:scaleType="fitCenter"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/ivChangeBtn" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/icon_stare_change_btn_gray" android:layout_marginStart="@dimen/dimen_19"/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorThreeLevelText" android:id="@+id/tvLegalCurrency" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_16" android:includeFontPadding="false" android:layout_marginStart="@dimen/dimen_16" android:layout_marginEnd="@dimen/dimen_16"/>
+    <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginStart="@dimen/dimen_15" android:layout_marginEnd="@dimen/dimen_15"/>
+</LinearLayout>

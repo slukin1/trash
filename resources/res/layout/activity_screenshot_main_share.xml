@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root_container" android:background="#80000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/share_container" android:background="@drawable/shape_screenshop_dialog_bg" android:paddingBottom="@dimen/dimen_5" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/shape_screenshop_dialog_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_164">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorPrimaryText" android:gravity="left" android:id="@+id/share_intro_text" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_13" android:paddingBottom="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/invite_share_poster_to" android:fontFamily="@font/roboto_medium"/>
+                <ImageView android:id="@+id/screenshot_share_close" android:layout_width="@dimen/dimen_26" android:layout_height="@dimen/dimen_26" android:layout_marginTop="@dimen/dimen_11" android:layout_marginRight="@dimen/dimen_15" android:src="@drawable/screenshot_close" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_40">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/id_screen_save_vg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+                    <ImageView android:id="@+id/id_screen_save_iv" android:layout_width="@dimen/dimen_35" android:layout_height="@dimen/dimen_35" android:src="@drawable/screenshot_save_icon"/>
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="#8c9fad" android:gravity="center" android:id="@+id/id_screen_save_tv" android:layout_width="@dimen/dimen_60" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:lines="1" android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/id_screen_share_vg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_20" android:layout_marginTop="@dimen/dimen_10">
+                    <ImageView android:id="@+id/id_screen_share_iv" android:layout_width="@dimen/dimen_35" android:layout_height="@dimen/dimen_35" android:src="@drawable/screenshot_share_icon"/>
+                    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="#8c9fad" android:gravity="center" android:id="@+id/id_screen_share_tv" android:layout_width="@dimen/dimen_60" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:lines="1" android:fontFamily="@font/roboto_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/screen_shot_iv" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_80" android:layout_marginTop="@dimen/dimen_20" android:layout_marginRight="@dimen/dimen_80" android:layout_marginBottom="@dimen/dimen_25" android:layout_above="@+id/share_container"/>
+</RelativeLayout>

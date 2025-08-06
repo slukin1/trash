@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="@dimen/dimen_0"/>
+            <solid android:color="@color/otc_select_coin_pressed_color"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="@dimen/dimen_0"/>
+            <gradient android:startColor="@color/otc_select_coin_start_en_color" android:endColor="@color/otc_select_coin_end_en_color" android:angle="0"/>
+        </shape>
+    </item>
+</selector>

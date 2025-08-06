@@ -1,0 +1,221 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="match_parent"
+    orientation="vertical" width="match_parent">
+    <!--请准确填写您的认证信息-->
+  <View width="match_parent" height="{{@data.statusHeight}}" />
+  <FrameLayout
+    gravity="centerVertical"
+    height="44"
+    orientation="vertical"
+    width="match_parent">
+    <TextView
+      width="match_parent"
+      height="wrap_content"
+      gravity="center"
+      textSize="18"
+      textColor="@color/kColorPrimaryText"
+      textFontWeight="500"
+      text="{{@i18n/n_kyc_inst_title}}" />
+
+    <ImageView
+      width="wrap_content"
+      height="wrap_content"
+      gravity="center"
+      paddingLeft="16"
+      paddingRight="16"
+      onClick="@event.kycCloseView()"
+      src="@drawable/edge_engine_top_bar_back_normal" />
+  </FrameLayout>
+  <Scroller 
+    height="0"
+    orientation="vertical"
+    weight="1"
+    width="match_parent">
+    <LinearLayout
+    width="match_parent"
+    height="wrap_content"
+    orientation="vertical">
+  <!--请准确填写您的认证信息-->
+    <LinearLayout gravity="centerVertical" height="wrap_content" marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" width="0" weight="1" marginBottom="12"  marginTop="12"
+            text="{{@data.title}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" />
+        <ImageView height="16" width="16" src="@drawable/icon_hbg_dialog_top_close" onClick="@event.kycCloseView()" visibility="gone" />
+    </LinearLayout>
+    <View background="@color/KCommon_widget_stroke_color" width="match_parent" height="0.5" />
+
+  <!--国籍-->
+    <TextView height="wrap_content" width="wrap_content" marginBottom="8" marginLeft="16" marginRight="16" marginTop="16"
+        text="{{@i18n/n_kyc_quick_nationality}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" />
+
+    <LinearLayout background="@color/baseColorInputBackground" cornerRadius="4" gravity="centerVertical" height="wrap_content" onClick="@event.kycSelectNationality()"
+        marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+        <ImageView height="12" width="wrap_content" marginLeft="12" src="{{@data.flagUrl}}" background="@color/baseColorInputBackground" />
+        <TextView height="wrap_content" width="0" weight="1" paddingLeft="6" marginRight="12" marginTop="13" marginBottom="13"
+            text="{{@data.countryName}}" textColor="{{@data.countryNameColor}}" textFontWeight="400" textSize="14" />
+        <ImageView height="wrap_content" width="wrap_content" marginRight="15" src="@drawable/down_arrow_kyc_quick_auth" />
+    </LinearLayout>
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.nationalityErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_nationality_placeholder}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+  <!--证件号码-->
+    <TextView height="wrap_content" width="wrap_content" marginTop="16" marginLeft="16" marginRight="16" marginBottom="8" visibility="{{@data.showIdNumber | gone}}"
+        text="{{@i18n/n_kyc_quick_id_number}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" />
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" visibility="{{@data.showIdNumber | gone}}"
+        background="@color/baseColorInputBackground" cornerRadius="4" marginLeft="16" marginRight="16">
+        <EditText width="0" height="44" weight="1" hint="{{@i18n/n_kyc_quick_input_id_number}}" inputType="text" cornerRadius="4"
+            textColorHint="@color/baseColorThreeLevelText" background="@color/baseColorInputBackground" paddingLeft="12" paddingRight="12"
+            borderColor="{{@data.idNumberBorderColor | @color/baseColorInputBackground}}" borderWidth="1" onFocusChange="@event.idNumberFocusChange(@eventParams)"
+            textFontWeight="400" textSize="14" textColor="@color/kColorPrimaryText" onTextChange="@event.idNumberChange(@eventParams, 1)" />
+        <ImageView height="16" width="16" marginRight="11" visibility="{{@data.showIdNumberClearIcon | gone}}" onClick="@event.clearInput(0)" src="@drawable/kyc_quick_auth_edit_clear" />
+    </LinearLayout>
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.idNumberInputErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_input_correct_id_number}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+  <!--Last Name-->
+    <TextView height="wrap_content" width="wrap_content" marginLeft="16" marginRight="16" marginTop="16" marginBottom="8" visibility="{{@data.showLocalName | gone}}"
+        text="{{@i18n/n_kyc_quick_lastname}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" />
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" visibility="{{@data.showLocalName | gone}}"
+        background="@color/baseColorInputBackground" cornerRadius="4" marginLeft="16" marginRight="16">
+        <EditText width="0" height="44" weight="1" hint="{{@i18n/n_kyc_quick_lastname_placeholder}}" inputType="text" cornerRadius="4"
+            textColorHint="@color/baseColorThreeLevelText" background="@color/baseColorInputBackground" paddingLeft="12" paddingRight="12"
+            borderColor="{{@data.lastNameBorderColor | @color/baseColorInputBackground}}" borderWidth="1" onFocusChange="@event.lastNameFocusChange(@eventParams)"
+            textFontWeight="400" textSize="14" textColor="@color/kColorPrimaryText" onTextChange="@event.lastNameChange(@eventParams, 1)" />
+        <ImageView height="16" width="16" marginRight="11" visibility="{{@data.showLastNameClearIcon | gone}}" onClick="@event.clearInput(3)" src="@drawable/kyc_quick_auth_edit_clear" />
+    </LinearLayout>
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginTop="8" marginLeft="16"
+        marginRight="16" visibility="{{@data.lastNameInputErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_lastname_error}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+  <!--First Name-->
+    <TextView height="wrap_content" width="wrap_content" marginLeft="16" marginRight="16" marginBottom="8" marginTop="16" visibility="{{@data.showLocalName | gone}}"
+        text="{{@i18n/n_kyc_quick_firstname}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" />
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" visibility="{{@data.showLocalName | gone}}"
+        background="@color/baseColorInputBackground" cornerRadius="4" marginLeft="16" marginRight="16">
+        <EditText width="0" height="44" weight="1" hint="{{@i18n/n_kyc_quick_firstname_placeholder}}" inputType="text" cornerRadius="4"
+            textColorHint="@color/baseColorThreeLevelText" background="@color/baseColorInputBackground" paddingLeft="12" paddingRight="12"
+            borderColor="{{@data.firstNameBorderColor | @color/baseColorInputBackground}}" borderWidth="1" onFocusChange="@event.firstNameFocusChange(@eventParams)"
+            textFontWeight="400" textSize="14" textColor="@color/kColorPrimaryText" onTextChange="@event.firstNameChange(@eventParams, 1)" />
+        <ImageView height="16" width="16" marginRight="11" visibility="{{@data.showFirstNameClearIcon | gone}}" onClick="@event.clearInput(1)" src="@drawable/kyc_quick_auth_edit_clear" />
+    </LinearLayout>
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.firstNameInputErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_firstname_error}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+  <!--EN Last Name-->
+    <TextView height="wrap_content" width="wrap_content" marginLeft="16" marginRight="16" marginBottom="8" marginTop="16"
+        text="{{@i18n/n_kyc_quick_lastname_en}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" visibility="{{@data.showEnName | visible}}" />
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal"
+        background="@color/baseColorInputBackground" cornerRadius="4" marginLeft="16" marginRight="16" visibility="{{@data.showEnName | visible}}">
+        <EditText width="0" height="44" weight="1" hint="{{@i18n/n_kyc_quick_lastname_en_placeholder}}" inputType="text" cornerRadius="4"
+            textColorHint="@color/baseColorThreeLevelText" background="@color/baseColorInputBackground" paddingLeft="12" paddingRight="12"
+            borderColor="{{@data.enLastNameBorderColor | @color/baseColorInputBackground}}" borderWidth="1" onFocusChange="@event.enLastNameFocusChange(@eventParams)"
+            textFontWeight="400" textSize="14" textColor="@color/kColorPrimaryText" onTextChange="@event.enLastNameChange(@eventParams, 1)" />
+        <ImageView height="16" width="16" marginRight="11" visibility="{{@data.showEnLastNameClearIcon | gone}}" onClick="@event.clearInput(4)" src="@drawable/kyc_quick_auth_edit_clear" />
+    </LinearLayout>
+
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.enLastNameInputErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_lastname_error}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+
+  <!--EN First Name-->
+    <TextView height="wrap_content" width="wrap_content" marginLeft="16" marginRight="16" marginBottom="8" marginTop="16"
+        text="{{@i18n/n_kyc_quick_firstname_en}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" visibility="{{@data.showEnName | visible}}" />
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal"
+        background="@color/baseColorInputBackground" cornerRadius="4" marginLeft="16" marginRight="16" visibility="{{@data.showEnName | visible}}">
+        <EditText width="0" height="44" weight="1" hint="{{@i18n/n_kyc_quick_firstname_en_placeholder}}" inputType="text" cornerRadius="4"
+            textColorHint="@color/baseColorThreeLevelText" background="@color/baseColorInputBackground" paddingLeft="12" paddingRight="12"
+            borderColor="{{@data.enFirstNameBorderColor | @color/baseColorInputBackground}}" borderWidth="1" onFocusChange="@event.enFirstNameFocusChange(@eventParams)"
+            textFontWeight="400" textSize="14" textColor="@color/kColorPrimaryText" onTextChange="@event.enFirstNameChange(@eventParams, 1)" />
+        <ImageView height="16" width="16" marginRight="11" visibility="{{@data.showEnFirstNameClearIcon | gone}}" onClick="@event.clearInput(2)" src="@drawable/kyc_quick_auth_edit_clear" />
+    </LinearLayout>
+
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.enFirstNameInputErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_firstname_error}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+
+  <!--生日-->
+    <TextView height="wrap_content" width="wrap_content" marginLeft="16" marginRight="16" marginBottom="8" marginTop="16"
+        text="{{@i18n/n_kyc_quick_birthday}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="12" />
+
+    <LinearLayout background="@color/baseColorInputBackground" cornerRadius="4" gravity="centerVertical" height="wrap_content" onClick="@event.kycSelectBirthday()"
+        marginLeft="16" marginRight="16" orientation="horizontal" width="match_parent">
+        <TextView height="wrap_content" width="0" weight="1" paddingLeft="12" marginRight="12" marginTop="13" marginBottom="13"
+            text="{{@data.birthdayText | MM/DD/YYYY}}" textColor="{{@data.birthdayColor}}" textFontWeight="400" textSize="14" />
+        <ImageView height="wrap_content" width="wrap_content" marginRight="15" src="@drawable/down_arrow_kyc_quick_auth" />
+    </LinearLayout>
+  <!--输入错误提示语-->
+    <LinearLayout width="match_parent" height="wrap_content" gravity="centerVertical" orientation="horizontal" marginLeft="16"
+        marginRight="16" marginTop="8" visibility="{{@data.birthdayErrorTips | gone}}">
+        <ImageView height="11" width="11" marginRight="4.5" src="@drawable/kyc_input_error_tips" />
+        <TextView height="wrap_content" width="wrap_content" text="{{@i18n/n_kyc_quick_birthday_error}}" textColor="#F95A50" textFontWeight="400" textSize="12" />
+    </LinearLayout>
+  </LinearLayout>
+  </Scroller>
+  <!--说明-->
+    <LinearLayout height="wrap_content" marginLeft="16" marginRight="8" marginTop="20" marginBottom="12" gravity="centerVertical"
+        orientation="horizontal" width="match_parent" visibility="{{@data.showDmcBox | gone}}" onClick="@event.dmcBoxChange()">
+        <ImageView height="14" width="14" src="{{@data.dmcBoxIcon}}"/>
+        <TextView height="wrap_content" width="wrap_content" maxLines="0" maxWidth="306" marginLeft="5"
+            text="{{@i18n/n_kyc_quick_to_be_dominica_citizen_meta}}" textColor="#5E697A" textFontWeight="400" textSize="12" />
+        <ImageView 
+          paddingLeft="4"
+          paddingRight="8"
+          height="14" 
+          width="26" 
+          src="@drawable/edge_engine_copy_trading_fok"
+          onClick="@event.dmcInfoClicked()" />
+    </LinearLayout>
+    <!-- 自动成为多米尼克 -->
+    <LinearLayout
+      width="match_parent"
+      height="wrap_content"
+      marginLeft="16"
+      marginRight="8"
+      marginTop="20"
+      marginBottom="12"
+      gravity="centerVertical"
+      orientation="horizontal"
+      visibility="{{@data.showAutoDmc | gone}}">
+      <TextView
+        height="wrap_content"
+        width="wrap_content"
+        maxLines="0"
+        maxWidth="325"
+        text="{{@i18n/n_kyc_dmc_auto_meta}}"
+        textColor="#5E697A"
+        textFontWeight="400"
+        textSize="12" />
+      <ImageView 
+        paddingLeft="4"
+        paddingRight="8"
+        height="14"
+        width="26"
+        src="@drawable/edge_engine_copy_trading_fok"
+        onClick="@event.dmcInfoClicked()" />
+    </LinearLayout>
+  <!--按钮-->
+    <LinearLayout background="@color/kColorMajorTheme100" cornerRadius="4" gravity="center" height="44" marginBottom="16"
+        marginLeft="16" marginRight="16" marginTop="16" orientation="horizontal" width="match_parent" onClick="@event.kycClickedSubmit()">
+
+        <TextView height="wrap_content" width="wrap_content" text="{{@data.buttonTitle}}"
+            textColor="#FFFFFF" textFontWeight="500" textSize="14" />
+
+    </LinearLayout>
+    <View width="match_parent" height="{{@data.bottomOffset}}" />
+</LinearLayout>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_selected="true">
+        <bitmap android:src="?attr/kline_etp_intro_close"/>
+    </item>
+    <item android:state_selected="false">
+        <bitmap android:src="?attr/kline_etp_intro_open"/>
+    </item>
+</selector>

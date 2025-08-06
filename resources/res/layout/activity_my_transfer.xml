@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/id_back" android:padding="@dimen/dimen_14" android:layout_width="@dimen/dimen_44" android:layout_height="@dimen/dimen_44" android:src="@drawable/selector_top_bar_back"/>
+    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_gravity="center_horizontal" android:id="@+id/id_points_history_details_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_30" android:text="@string/my_transfer_title"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10">
+        <TextView android:textSize="@dimen/global_text_size_32" android:textColor="@color/baseColorPrimaryText" android:id="@+id/id_points_history_details_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/id_points_history_details_amount_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_9" android:text="@string/points_pts" android:fontFamily="@font/roboto_medium" app:layout_constraintBaseline_toBaselineOf="@+id/id_points_history_details_amount" app:layout_constraintBottom_toBottomOf="@+id/id_points_history_details_amount" app:layout_constraintLeft_toRightOf="@+id/id_points_history_details_amount"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_20" android:layout_marginRight="@dimen/dimen_20">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_42">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_my_price"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:layout_gravity="end" android:id="@+id/id_my_transfer_usdt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_single_price"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:layout_gravity="end" android:id="@+id/id_my_transfer_single_price" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_account"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:layout_gravity="end" android:id="@+id/id_my_transfer_account" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_uid"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:layout_gravity="end" android:id="@+id/id_my_transfer_uid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginTop="@dimen/dimen_20"/>
+            <LinearLayout android:id="@+id/detail_date_ll" android:paddingTop="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/points_history_details_date" android:layout_weight="3"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="right" android:id="@+id/detail_date_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="7"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/detail_points_id_ll" android:paddingTop="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/points_history_details_points_id" android:layout_weight="3"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:gravity="right" android:id="@+id/detail_points_id_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="7"/>
+            </LinearLayout>
+            <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginTop="@dimen/dimen_20"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20">
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transfer_transfer_status"/>
+                <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_jump_btn_color" android:layout_gravity="end" android:id="@+id/id_my_transfer_status" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginTop="@dimen/dimen_20"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/bottom_sheet_behavior">
+        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/id_my_transfer_bottom_btn" android:background="@drawable/common_btn_selector_r5" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_margin="@dimen/dimen_14" android:text="@string/points_transfer_cancel_transfer"/>
+    </FrameLayout>
+</LinearLayout>

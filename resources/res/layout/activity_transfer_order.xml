@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:actionIcon="@drawable/global_filter_unselected"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@+id/cl_root" android:background="@color/app_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:id="@+id/tranfer_order_appbar_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/global_top_layout_height">
+            <com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:layout_scrollFlags="3" app:theme="@style/Theme.CollapsingToolbar" app:title="@string/order_history_title">
+                <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/top_bar_height" app:layout_collapseMode="1" app:theme="@style/Theme.ToolBar">
+                    <TextView android:textSize="@dimen/global_left_title_text_size" android:textColor="@color/global_secondary_text_color" android:id="@+id/transfer_history_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_medium"/>
+                    <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/transfer_select_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/global_margin_right" android:src="@drawable/global_filter_unselected"/>
+                </androidx.appcompat.widget.Toolbar>
+            </com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/transferPtrFrame" android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/transfer_order_rv" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </com.hbg.lib.widgets.LoadingLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

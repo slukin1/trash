@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zopim.android.sdk.widget.view.WidgetView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/widget_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30dp" android:minHeight="30dp" style="@style/chat_widget">
+    <ImageView android:id="@+id/background" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/chat_widget_background"/>
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/row_typing_indicator_view"/>
+    <TextView android:id="@+id/unread_notification" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/chat_widget_unread_notification"/>
+</com.zopim.android.sdk.widget.view.WidgetView>

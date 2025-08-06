@@ -1,0 +1,30 @@
+<LinearLayout background="@color/KBaseColorContentBackground" height="wrap_content" orientation="vertical" topLeftRadius="8" topRightRadius="8" width="375">
+
+    <LinearLayout gravity="centerVertical" height="44" orientation="horizontal" width="match_parent">
+
+        <TextView height="wrap_content" marginBottom="12" marginStart="16" marginTop="12" text="{{@i18n/n_copy_trading_contract_symbol_setting}}" textColor="@color/kColorPrimaryText" textFontWeight="500" textSize="16" width="wrap_content"/>
+
+        <View height="0" weight="1" width="0"/>
+
+        <ImageView height="wrap_content" marginRight="16" onClick="@event.tradePanel.closeChooseUnit()" src="@drawable/edge_engine_copy_trading_dialog_close" width="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout background="@color/KBaseColorInputBackground" borderColor="{{@data.tradePanel.chooseSymbolBorder}}" borderWidth="1" cornerRadius="4" gravity="centerVertical" height="wrap_content" marginLeft="16" marginRight="16" marginTop="16" onClick="@event.tradePanel.chooseUnit(1)" orientation="horizontal" paddingBottom="16" paddingTop="16" width="match_parent">
+
+        <TextView height="wrap_content" marginLeft="12" text="{{@data.tradePanel.baseCurrencyTitle}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" weight="1" width="0"/>
+
+        <ImageView height="16" marginRight="12" src="@drawable/icon_copytrading_currency_selection_s" visibility="{{@data.tradePanel.chooseSymbolVisible | gone}}" width="16"/>
+    </LinearLayout>
+
+    <LinearLayout background="@color/KBaseColorInputBackground" borderColor="{{@data.tradePanel.chooseCurrencyBorder}}" borderWidth="1" cornerRadius="4" gravity="centerVertical" height="wrap_content" marginBottom="24" marginLeft="16" marginRight="16" marginTop="16" onClick="@event.tradePanel.chooseUnit(2)" orientation="horizontal" paddingBottom="16" paddingTop="16" width="match_parent">
+
+        <LinearLayout height="wrap_content" orientation="vertical" weight="1" width="0">
+
+            <TextView height="wrap_content" marginLeft="12" text="{{@data.tradePanel.quoteCurrencyTitle}}" textColor="@color/kColorPrimaryText" textFontWeight="400" textSize="14" width="match_parent"/>
+
+            <TextView height="wrap_content" marginLeft="12" marginTop="4" maxLines="3" text="{{@i18n/n_copy_trading_order_quantity_tips}}" textColor="@color/kColorThreeLevelText" textFontWeight="400" textSize="12" width="match_parent"/>
+        </LinearLayout>
+
+        <ImageView height="16" marginRight="12" src="@drawable/icon_copytrading_currency_selection_s" visibility="{{@data.tradePanel.chooseCurrencyVisible | gone}}" width="16"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root" android:tag="layout/item_recommend_live_item_0" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:background="@drawable/border_rectangle_8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:id="@+id/cardView" android:layout_width="240dp" android:layout_height="135dp" android:layout_margin="@dimen/dimen_1" app:cardCornerRadius="8dp" app:cardElevation="0dp">
+            <RelativeLayout android:id="@+id/rlRoot" android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatImageView android:id="@+id/ivCover" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+                <com.hbg.module.libkt.custom.blur.BlurView android:id="@+id/blurView" android:layout_width="match_parent" android:layout_height="@dimen/dimen_32" android:layout_alignBottom="@+id/ivCover" android:layout_alignStart="@+id/ivCover" android:layout_alignEnd="@+id/ivCover"/>
+                <com.huobi.view.roundview.RoundTextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvTitle" android:paddingLeft="@dimen/dimen_16" android:paddingRight="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="@dimen/dimen_32" android:singleLine="true" android:layout_alignBottom="@+id/ivCover" android:layout_alignStart="@+id/ivCover" android:layout_alignEnd="@+id/ivCover" android:paddingHorizontal="@dimen/dimen_16"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:orientation="horizontal" android:id="@+id/llLiveHint" android:background="@drawable/bg_live_broadcast_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="7dp" android:paddingEnd="1dp">
+            <com.hbg.lib.widgets.SafeLottieView android:layout_gravity="center_vertical" android:id="@+id/ivLivePlaying" android:layout_width="8dp" android:layout_height="8dp" android:layout_marginStart="2dp" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/group_chat_voice_live_white"/>
+            <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@+id/ivLiveIcon" android:visibility="gone" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_live_appointment" android:layout_marginStart="2dp"/>
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/baseTextColor" android:id="@+id/tvLiveType" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_marginStart="2dp" android:layout_marginEnd="4dp"/>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llBottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <FrameLayout android:id="@+id/flAvatar" android:background="@drawable/border_avatar_circle" android:layout_width="@dimen/dimen_21" android:layout_height="@dimen/dimen_21">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@+id/ivAvatar" android:layout_width="@dimen/dimen_20" android:layout_height="@dimen/dimen_20" android:scaleType="centerCrop"/>
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center_vertical" android:id="@+id/tvNickname" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="@dimen/dimen_8"/>
+    </LinearLayout>
+</LinearLayout>

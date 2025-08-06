@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/search_symbol_header" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_45">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/id_back_btn" android:paddingLeft="@dimen/global_padding_right" android:paddingTop="@dimen/dimen_6" android:paddingRight="@dimen/global_padding_right" android:paddingBottom="@dimen/dimen_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_top_bar_back" android:layout_centerVertical="true"/>
+        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorBlueButton" android:id="@+id/search_symbol_ok" android:paddingLeft="@dimen/global_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10" android:text="@string/n_widget_market_save" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textFontWeight="500"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_serach_input_container" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_toLeftOf="@+id/search_symbol_ok" android:layout_toRightOf="@+id/id_back_btn" android:layout_centerVertical="true" android:animateLayoutChanges="true">
+            <com.huobi.view.HBSearchView android:gravity="center_vertical" android:id="@+id/search_symbol_input" android:background="@null" android:layout_width="@dimen/dimen_0" android:layout_height="match_parent" android:maxLines="1" android:layout_weight="1" android:inputType="text" android:imeOptions="actionSearch" app:textHint="@string/search_symbol_edittext_hint" app:textHintColor="@color/baseColorSecondaryText"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/rlv_search_result_list" android:paddingBottom="@dimen/dimen_20" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_search_norecord" android:background="@color/global_item_bg" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_90" android:src="@drawable/common_empty_icon"/>
+            <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_default_text_color" android:id="@+id/tv_no_data_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20" android:text="@string/trade_no_record"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
