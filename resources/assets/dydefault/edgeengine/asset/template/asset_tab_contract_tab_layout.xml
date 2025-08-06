@@ -1,8 +1,0 @@
-<!-- 合约 3级TabLayout 模版 -->
-<LinearLayout height="40" orientation="horizontal" paddingLeft="16" width="match_parent">
-
-    <TextView gravity="center" height="match_parent" text="全部资产" textColor="{{@data.totalAssetSelectorColor}}" textSize="12" width="wrap_content" onClick="@event.allAssetClick()"/>
-
-    <TextView gravity="center" height="match_parent" marginLeft="24" text="{{@i18n/n_contract_trade_position_hold}}" textColor="{{@data.positionSelectorColor}}" onClick="@event.positionClick()" textSize="12" width="wrap_content"/>
-
-</LinearLayout>

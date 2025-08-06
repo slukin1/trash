@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/KBaseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:titleText="@string/n_security_passkeys"/>
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/passkey_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
-    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/text_white" android:gravity="center" android:id="@+id/btn_passkey_list_add" android:background="@drawable/common_blue_5_radius_selector" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:layout_marginBottom="@dimen/dimen_16" android:text="@string/n_security_passkeys_add" android:fontFamily="@font/roboto_medium"/>
-</LinearLayout>

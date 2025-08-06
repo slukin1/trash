@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/fragment_live_category_0" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.hbg.module.libkt.custom.indicator.CoIndicator android:id="@+id/coIndicator" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="40dp" android:overScrollMode="never"/>
-    <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:empty_view="@layout/common_empty_item_layout" app:error_view="@layout/content_error_view" app:loading_view="@layout/common_loading_view_balance">
-        <com.hbg.module.content.custom.NestedScrollableHost android:id="@+id/nestLay" android:layout_width="match_parent" android:layout_height="match_parent">
-            <androidx.viewpager2.widget.ViewPager2 android:id="@+id/vpContent" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
-        </com.hbg.module.content.custom.NestedScrollableHost>
-    </com.hbg.lib.widgets.LoadingLayout>
-</LinearLayout>

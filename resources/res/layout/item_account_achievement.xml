@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_15">
-    <ImageView android:id="@+id/img" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_15" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_marginEnd="@dimen/dimen_4"/>
-</LinearLayout>

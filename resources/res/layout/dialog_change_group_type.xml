@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
-    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:id="@+id/tvAdminVerify" android:background="@drawable/bg_top_white_radius" android:layout_width="match_parent" android:layout_height="54dp" android:text="@string/n_live_group_admin_verify_join" android:textFontWeight="400"/>
-    <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="8dp"/>
-    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/baseColorSecondaryText" android:gravity="center" android:id="@+id/tvCancel" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="54dp" android:text="@string/n_cancel" android:textFontWeight="400"/>
-</LinearLayout>

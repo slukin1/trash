@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.huobi.view.radiogroup.RadioContainer xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/type_email_tab" android:layout_width="wrap_content" android:layout_height="match_parent">
-    <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent">
-        <CheckBox android:textSize="@dimen/global_text_size_14" android:textColor="@color/color_subscribe_type_tab" android:id="@+id/tv_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:button="@null" android:fontFamily="@font/dinpro_medium"/>
-        <CheckBox android:layout_gravity="bottom" android:id="@+id/type_line" android:background="@drawable/selector_register_type_tab" android:layout_width="match_parent" android:layout_height="@dimen/dimen_3" android:button="@null"/>
-    </FrameLayout>
-</com.huobi.view.radiogroup.RadioContainer>

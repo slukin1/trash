@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <include android:id="@+id/optimal_five" layout="@layout/label_optimal_price_grade"/>
-    <include android:id="@+id/optimal_ten" layout="@layout/label_optimal_price_grade"/>
-    <include android:id="@+id/optimal_twenty" layout="@layout/label_optimal_price_grade"/>
-    <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="optimal_five,optimal_ten,optimal_twenty" app:flow_horizontalBias="0" app:flow_horizontalGap="@dimen/dimen_8" app:flow_horizontalStyle="2" app:flow_verticalBias="0" app:flow_verticalGap="@dimen/dimen_8" app:flow_wrapMode="1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-</merge>

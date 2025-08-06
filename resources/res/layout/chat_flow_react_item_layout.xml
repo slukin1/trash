@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/chat_react_bg" android:layout_width="wrap_content" android:layout_height="23.04dp" android:paddingStart="7.68dp" android:paddingEnd="7.68dp">
-    <ImageView android:layout_gravity="center" android:id="@+id/face_iv" android:layout_width="15.36dp" android:layout_height="15.36dp" android:scaleType="fitCenter"/>
-    <View android:layout_gravity="center" android:background="#33444444" android:layout_width="0.96dp" android:layout_height="match_parent" android:layout_marginTop="4.32dp" android:layout_marginBottom="4.32dp" android:layout_marginStart="3.84dp" android:layout_marginEnd="3.84dp"/>
-    <TextView android:textSize="10.56sp" android:textColor="?attr/chat_react_text_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/users_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
-</LinearLayout>

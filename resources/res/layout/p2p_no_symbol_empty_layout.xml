@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/loading_bg_color" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
-        <ImageView android:id="@+id/id_ads_empty_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_120" android:src="@drawable/home_buy_empty_image"/>
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_default_text_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_16" android:text="@string/n_otc_not_support_fiat" android:layout_marginStart="@dimen/dimen_20" android:layout_marginEnd="@dimen/dimen_20"/>
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>

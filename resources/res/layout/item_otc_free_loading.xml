@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.hbg.lib.widgets.SafeLottieView android:id="@+id/id_free_c_view" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/skeleton_otc_c"/>
-    <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-    <com.hbg.lib.widgets.SafeLottieView android:id="@+id/id_free_b_view" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/skeleton_otc_b"/>
-    <View android:background="@color/baseColorSecondarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-    <com.huobi.otc.widget.OtcAdsSkeletonView android:orientation="vertical" android:id="@+id/otc_ads_skeleton_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/consRootView" android:tag="layout/item_community_img_0" android:background="@color/baseColorContentBackground" android:paddingTop="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.huobi.view.roundview.RoundRelativeLayout android:layout_width="@dimen/dimen_240" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0">
-        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    </com.huobi.view.roundview.RoundRelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>

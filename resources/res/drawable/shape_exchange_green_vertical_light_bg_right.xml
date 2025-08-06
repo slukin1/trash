@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <gradient android:startColor="@color/trade_buy_start_color" android:endColor="@color/trade_buy_end_color" android:angle="45"/>
-    <corners android:topRightRadius="@dimen/dimen_4" android:bottomRightRadius="@dimen/dimen_4"/>
-</shape>

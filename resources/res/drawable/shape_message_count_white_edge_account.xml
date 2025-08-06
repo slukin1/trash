@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <solid android:color="@color/baseCoinDangerousTip"/>
-    <corners android:radius="@dimen/dimen_30"/>
-    <stroke android:width="@dimen/dimen_1" android:color="@color/baseColorDeepestBackground"/>
-    <padding android:left="@dimen/dimen_5" android:right="@dimen/dimen_5"/>
-</shape>

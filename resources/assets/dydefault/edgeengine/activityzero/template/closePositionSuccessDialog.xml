@@ -1,9 +1,0 @@
-<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="8" width="325" height="wrap_content" orientation="vertical" paddingLeft="16" paddingRight="16">
-  <LottieView width="108" height="104" loop="false" layout_gravity="center" background="@color/KBaseColorContentBackground" playStatus="@data.openPosition.loadingLottieStatus" resource="@raw/activity_zero_success"/>
-  <TextView width="wrap_content" height="wrap_content" marginTop="4" text="{{@data.openPosition.closePositionSuccessDialog.pnl}}" textColor="@color/kColorPriceGreen" layout_gravity="center" textSize="28" textFontWeight="500"/>
-  <TextView width="match_parent" height="wrap_content" gravity="center" marginTop="8" text="{{@i18n/n_zero_swap_close_position_success_prompt}}" textColor="@color/kColorSecondaryText" textSize="14"/>
-  <LinearLayout width="293" height="wrap_content" marginTop="24" marginBottom="24" orientation="horizontal">
-    <TextView width="0" height="44" weight="1" background="@color/kColorInputFill" gravity="center" minHeight="44" text="{{@i18n/n_cancel}}" onClick="@event.openPosition.hideClosePositionSuccessDialog()" textColor="@color/kColorSecondaryButtonText" cornerRadius="4" textSize="14" textFontWeight="500"/>
-    <TextView width="0" height="44" marginStart="12" weight="1" background="@color/kColorMajorTheme100" gravity="center" cornerRadius="4" text="{{@i18n/n_otc_go_check}}" textColor="@color/KBaseTextColor" onClick="@event.openPosition.navigationClosePositionSuccessDialog()" textSize="14" textFontWeight="500"/>
-  </LinearLayout>
-</LinearLayout>

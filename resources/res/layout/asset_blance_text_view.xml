@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <com.hbg.lib.widgets.NumberAnimView android:textSize="@dimen/global_text_size_20" android:id="@+id/integer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_regular" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-    <com.hbg.lib.widgets.NumberAnimView android:textSize="@dimen/global_text_size_16" android:id="@+id/decimal_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toBottomOf="@+id/integer_text" app:layout_constraintStart_toEndOf="@+id/integer_text"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

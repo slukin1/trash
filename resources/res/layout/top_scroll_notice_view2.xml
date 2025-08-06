@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
-    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/dimen_10">
-        <com.hbg.lib.widgets.notice.TopScrollNoticeItemView2 android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view1" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <com.hbg.lib.widgets.notice.TopScrollNoticeItemView2 android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view2" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <View android:layout_gravity="end" android:id="@+id/cover_view" android:background="@drawable/market_indicator_shadow" android:visibility="gone" android:layout_width="@dimen/dimen_24" android:layout_height="match_parent"/>
-    </FrameLayout>
-    <ImageView android:id="@+id/index_notice_more" android:layout_width="42dp" android:layout_height="match_parent" android:src="@drawable/home_notice_more_btn" android:scaleType="centerInside"/>
-</LinearLayout>

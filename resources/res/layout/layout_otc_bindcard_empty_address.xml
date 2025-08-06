@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:layout_gravity="center" android:id="@+id/id_empty_difAddress" android:background="@drawable/common_blue_selector" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40" android:layout_marginLeft="20dp" android:layout_marginTop="@dimen/dimen_3" android:layout_marginRight="20dp" android:text="@string/n_otc_card_address_add_new" android:textAllCaps="false" android:fontFamily="@font/roboto_regular" android:layout_marginHorizontal="20dp"/>
-</FrameLayout>

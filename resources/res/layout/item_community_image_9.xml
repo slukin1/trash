@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/linear_layout_item_root" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <include android:id="@+id/iUserInfoPanel" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/part_community_news_userinfo"/>
-    <include android:id="@+id/part_moment_user_info" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/part_community_news_content"/>
-    <include android:id="@+id/ll_image_container" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/template_view_picture_9"/>
-    <include android:id="@+id/part_moment_list_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/part_community_news_oprate_bottom"/>
-    <View android:id="@+id/view_bottom_line" android:background="#f4f4f4" android:layout_width="match_parent" android:layout_height="10dp"/>
-</LinearLayout>

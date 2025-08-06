@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8" android:layout_marginBottom="@dimen/dimen_2">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5">
-        <TextView android:enabled="false" android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryIconButton" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_otc_p2p_historic_choice" android:layout_centerVertical="true" android:textAllCaps="false"/>
-        <ImageView android:id="@+id/history_clear" android:padding="@dimen/dimen_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:src="@drawable/otc_filter_history_delete" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
-    </RelativeLayout>
-    <GridLayout android:orientation="horizontal" android:id="@+id/history_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:rowCount="3" android:columnCount="2"/>
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView android:id="@+id/margin_rate_instrument" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edge_engine_asset_instrument"/>
-    <ImageView android:id="@+id/margin_rate_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edge_engine_asset_pointer"/>
-    <ImageView android:id="@+id/margin_risk_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edge_engine_asset_risk_empty"/>
-</RelativeLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/loading_layout" android:background="@color/transparent" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
-    <RelativeLayout android:orientation="vertical" android:id="@+id/layout_loading" android:background="@color/pop_loading_layout_bg" android:padding="@dimen/dimen_17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-        <ProgressBar android:id="@+id/bar_loading" android:visibility="visible" android:layout_width="@dimen/dimen_26" android:layout_height="@dimen/dimen_26" android:indeterminate="false" android:layout_centerVertical="true" style="@style/popsubmitLoading"/>
-        <TextView android:textColor="@color/pop_loading_hint_text" android:id="@+id/hint_loading_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_17" android:layout_toRightOf="@+id/bar_loading" android:layout_centerVertical="true"/>
-    </RelativeLayout>
-</RelativeLayout>

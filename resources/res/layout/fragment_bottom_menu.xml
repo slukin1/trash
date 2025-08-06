@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/bottom_menu_shape" android:paddingTop="@dimen/dimen_5" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ListView android:id="@+id/lv_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_5" android:layout_marginRight="@dimen/dimen_5" android:divider="@color/baseColorPrimarySeparator" android:dividerHeight="@dimen/global_divider_height" android:layout_weight="1"/>
-    <View android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_5"/>
-    <LinearLayout android:orientation="vertical" android:id="@+id/cancel_ll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5">
-        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/bottom_menu_cancel_btn_text_color" android:gravity="center" android:id="@+id/tv_cancel" android:background="@color/bottom_menu_btn_bg_common_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50" android:text="@string/n_otc_new_otc_cancel" android:fontFamily="@font/roboto_medium"/>
-    </LinearLayout>
-</LinearLayout>

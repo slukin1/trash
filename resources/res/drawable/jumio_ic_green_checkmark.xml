@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="80dp" android:width="80dp" android:autoMirrored="true" android:viewportWidth="80" android:viewportHeight="80">
-    <path android:fillColor="?attr/colorPrimary" android:pathData="M40,0L40,0A40,40 0,0 1,80 40L80,40A40,40 0,0 1,40 80L40,80A40,40 0,0 1,0 40L0,40A40,40 0,0 1,40 0z" android:fillAlpha="0.8"/>
-    <path android:fillColor="?attr/jumio_scanview_foreground" android:pathData="M58.396,27.594C59.195,28.391 59.202,29.691 58.411,30.497L36.915,52.391C36.533,52.781 36.012,53 35.468,53C34.925,53 34.404,52.781 34.022,52.391L21.589,39.728C20.798,38.922 20.805,37.623 21.604,36.825C22.403,36.028 23.691,36.034 24.482,36.84L35.468,48.03L55.518,27.609C56.308,26.803 57.597,26.796 58.396,27.594Z" android:fillType="1"/>
-    <path android:fillColor="?attr/jumio_scanview_foreground" android:pathData="M10,40C10,56.569 23.431,70 40,70C56.569,70 70,56.569 70,40C70,23.431 56.569,10 40,10C23.431,10 10,23.431 10,40ZM40,6C21.222,6 6,21.222 6,40C6,58.778 21.222,74 40,74C58.778,74 74,58.778 74,40C74,21.222 58.778,6 40,6Z" android:fillType="1"/>
-</vector>

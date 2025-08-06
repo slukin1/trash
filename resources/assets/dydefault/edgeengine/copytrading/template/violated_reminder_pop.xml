@@ -1,5 +1,0 @@
-
-<LinearLayout cornerRadius="8" width="325" height="wrap_content" orientation="vertical" paddingTop="16" paddingLeft="16" paddingRight="16" paddingBottom="16" background="@color/KBaseColorContentBackground">
-        <TextView text="{{@i18n/n_copy_trading_violated_reminder}}" textSize="14" width="293" maxWidth="wrap_content" height="wrap_content" textFontWeight="400" maxLines="0" textColor="@color/kColorPrimaryText"/>
-        <TextView gravity="center" text="{{@i18n/n_contract_string_confirm}}" textSize="14" width="293" height="40" cornerRadius="4" textFontWeight="400" marginTop="16" background="@color/kColorMajorTheme100" textColor="@color/kColorWhiteText" onClick="@event.homePage.clickedViolatedReminderDone()"/>
-</LinearLayout>

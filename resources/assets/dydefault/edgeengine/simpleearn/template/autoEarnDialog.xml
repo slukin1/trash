@@ -1,9 +1,0 @@
-<LinearLayout background="@color/KBaseTextColor" height="wrap_content" orientation="vertical" width="325" cornerRadius="8" paddingLeft="16" paddingRight="16">
-
-    <TextView height="wrap_content" maxLines="0" textFontWeight="600" text="{{@data.autoearn.tipTitle}}" textColor="@color/kColorPrimaryText" textSize="16" marginTop="16" width="match_parent"/>
-
-    <TextView height="wrap_content" maxLines="0" textFontWeight="400" text="{{@data.autoearn.tipContent}}" textColor="@color/kColorPrimaryText" textSize="14" marginTop="16" width="match_parent"/>
-
-    <TextView background="@color/kColorMajorTheme100" gravity="center" height="40" cornerRadius="4" textFontWeight="500" marginTop="16" marginBottom="16" onClick="@event.autoearn.closeDialog()" text="{{@i18n/n_known}}" textColor="@color/KBaseColorContentBackground" textSize="14" width="match_parent"/>
-
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <item android:id="@+id/liveness_overlay_bg" android:drawable="@drawable/jumio_liveness_overlay_part_bg"/>
-    <item android:id="@+id/liveness_overlay_part_main" android:drawable="@drawable/jumio_liveness_overlay_part_main_animated"/>
-    <item android:id="@+id/liveness_overlay_outer" android:drawable="@drawable/jumio_liveness_overlay_part_outer"/>
-</layer-list>

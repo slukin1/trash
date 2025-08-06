@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="horizontal" android:id="@+id/linear_layout_image_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="12dp" android:layout_marginRight="15dp">
-        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageView android:id="@+id/iv_community_pic_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_default_huobi_chat" android:scaleType="fitStart"/>
-            <TextView android:textSize="10dp" android:textColor="@color/color_ffffff" android:layout_gravity="right" android:id="@+id/tvLongImage" android:background="@drawable/shape_long_image" android:paddingLeft="5dp" android:paddingTop="2dp" android:paddingRight="5dp" android:paddingBottom="2dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:text="长图"/>
-        </FrameLayout>
-    </LinearLayout>
-</LinearLayout>

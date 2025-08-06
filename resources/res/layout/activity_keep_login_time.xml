@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:titleText="@string/security_keep_login_time"/>
-    <FrameLayout android:orientation="vertical" android:id="@+id/cl_root" android:background="@color/global_item_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_keep_login_time_recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:layout_gravity="bottom" android:background="@drawable/shape_step_rate_current_rate" android:padding="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15" android:layout_marginBottom="@dimen/dimen_30" android:text="@string/n_security_keep_login_time_tips" android:lineSpacingExtra="@dimen/dimen_4"/>
-    </FrameLayout>
-</LinearLayout>

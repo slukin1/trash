@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_50" android:src="@drawable/current_order_empty"/>d 
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_default_text_color" android:id="@+id/tv_balance_empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20" android:text="@string/trade_no_record"/>
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:gravity="center" android:id="@+id/tv_mining_now" android:background="@drawable/bg_mining_now" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_marginTop="@dimen/dimen_15" android:minWidth="@dimen/dimen_125" android:text="@string/n_balance_mining_deposit" android:paddingStart="@dimen/global_padding_left" android:paddingEnd="@dimen/global_padding_right"/>
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:tag="layout/item_live_category_title_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:id="@+id/vLine" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="8dp"/>
-    <TextView android:textSize="16sp" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvTitle" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="40dp" android:text="直播中" android:singleLine="true" android:layout_centerVertical="true" android:paddingStart="15dp" android:paddingEnd="15dp"/>
-</LinearLayout>

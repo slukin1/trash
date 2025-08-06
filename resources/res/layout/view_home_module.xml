@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <com.airbnb.lottie.LottieAnimationView android:id="@+id/home_module_yugu_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" app:lottie_loop="true"/>
-    <TextView android:textColor="@color/color_red" android:id="@+id/home_module_debugname_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</merge>

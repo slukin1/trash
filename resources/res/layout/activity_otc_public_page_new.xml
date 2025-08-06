@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.hbg.lib.widgets.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/loading_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/ll_line" app:empty_view="@layout/p2p_no_symbol_empty_layout">
-    <FrameLayout android:id="@+id/fl_content" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</com.hbg.lib.widgets.LoadingLayout>

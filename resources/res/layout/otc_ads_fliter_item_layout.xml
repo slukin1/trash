@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/id_filter_item_name_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dimen_100" android:maxLines="1"/>
-    <ImageView android:id="@+id/id_filter_item_iv" android:layout_width="@dimen/dimen_12" android:layout_height="@dimen/dimen_12" android:src="@drawable/otc_trade_filter_arrow" android:layout_marginStart="@dimen/dimen_2"/>
-</LinearLayout>

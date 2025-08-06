@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8">
-    <RelativeLayout android:id="@+id/rl_icon_and_corner_mark_container" android:layout_width="match_parent" android:layout_height="@dimen/dimen_40">
-        <ImageView android:id="@+id/iv_icon" android:layout_width="@dimen/dimen_40" android:layout_height="@dimen/dimen_40" android:scaleType="fitCenter" android:layout_centerInParent="true"/>
-        <ImageView android:id="@+id/iv_corner_mark" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentEnd="true"/>
-        <TextView android:id="@+id/tv_corner_mark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-    <TextView android:enabled="false" android:textSize="@dimen/dimen_11" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_title" android:background="@null" android:layout_width="match_parent" android:layout_height="32dp" android:layout_marginLeft="@dimen/dimen_1_5" android:layout_marginTop="-7dp" android:layout_marginRight="@dimen/dimen_1_5" android:text="行业" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="0dp" android:fontFamily="@font/dinpro_regular" android:layout_marginHorizontal="@dimen/dimen_1_5"/>
-</LinearLayout>

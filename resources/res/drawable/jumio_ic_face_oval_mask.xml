@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="415dp" android:width="343dp" android:viewportWidth="343" android:viewportHeight="415">
-    <path android:fillColor="?attr/jumio_face_animation_foreground" android:pathData="M171.519,32C240.088,32 294.038,111.15 294.038,207.5C294.038,303.85 240.088,383 171.519,383C102.95,383 49,303.85 49,207.5C49,111.15 102.95,32 171.519,32ZM171.519,38C107.282,38 55,113.445 55,207.5C55,301.555 107.282,377 171.519,377C235.756,377 288.038,301.555 288.038,207.5C288.038,113.445 235.756,38 171.519,38Z" android:strokeColor="?attr/jumio_face_animation_foreground" android:strokeWidth="1" android:fillType="0"/>
-</vector>

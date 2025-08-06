@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.huochat.community.widget.HotTopicTagFlowView android:id="@+id/hot_topic_tag_flow_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp"/>
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dimen_24">
-        <TextView android:textSize="@dimen/dimen_12" android:textColor="?attr/communityListTopNewCountTipsColor" android:gravity="center_vertical" android:id="@+id/tv_new_dynamic_count" android:paddingLeft="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/community_dynamic_last_refresh_count"/>
-        <TextView android:textSize="@dimen/dimen_12" android:textColor="?attr/communityListTopSortBtnTextColor" android:gravity="center" android:id="@+id/tv_new_dynamic_sort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_15" android:text="默认" android:drawableLeft="?attr/communityListTopDefaultSortBtnIcon" android:drawablePadding="5dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
-        <View android:id="@+id/v_sort_bottom_line" android:layout_width="@dimen/dimen_140" android:layout_height="0.5dp" android:layout_below="@+id/tv_new_dynamic_sort" android:layout_alignRight="@+id/tv_new_dynamic_sort"/>
-    </RelativeLayout>
-</LinearLayout>

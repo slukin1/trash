@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="18dp" android:width="18dp" android:viewportWidth="18" android:viewportHeight="18">
-    <path android:fillColor="@drawable/$ic_ugc_task_gift__0" android:pathData="M2.636,8L15.364,8A1,1 0,0 1,16.364 9L16.364,17A1,1 0,0 1,15.364 18L2.636,18A1,1 0,0 1,1.636 17L1.636,9A1,1 0,0 1,2.636 8z"/>
-    <path android:fillColor="#ffa525" android:pathData="M3.273,2.242L5.656,0.574A1,1 95.655,0 1,7.049 0.819L9.656,4.543A1,1 108.897,0 1,9.411 5.935L7.028,7.604A1,1 70.355,0 1,5.635 7.358L3.028,3.635A1,1 82.982,0 1,3.273 2.242z"/>
-    <path android:fillColor="#ffa525" android:pathData="M14.727,2.242L12.344,0.574A1,1 80.008,0 0,10.951 0.819L8.344,4.543A1,1 79.438,0 0,8.589 5.935L10.972,7.604A1,1 79.722,0 0,12.365 7.358L14.972,3.635A1,1 79.722,0 0,14.727 2.242z"/>
-    <path android:fillColor="@drawable/$ic_ugc_task_gift__1" android:pathData="M1,4L17,4A1,1 0,0 1,18 5L18,8A1,1 0,0 1,17 9L1,9A1,1 0,0 1,0 8L0,5A1,1 0,0 1,1 4z"/>
-    <path android:fillColor="@drawable/$ic_ugc_task_gift__2" android:pathData="M7.364,4.091h3.273v5.727h-3.273z"/>
-    <path android:fillColor="#ff9c2d" android:pathData="M7.364,9H10.637V18H7.364V9Z"/>
-</vector>

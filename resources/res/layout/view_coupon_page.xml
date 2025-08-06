@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/smart_refresh_layout_coupon_page" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.huobi.page.SmartRefreshHeader android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <com.hbg.lib.widgets.LoadingLayout android:id="@+id/loading_layout_coupon_page" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/easy_recycler_view_coupon_page" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15" android:overScrollMode="never"/>
-    </com.hbg.lib.widgets.LoadingLayout>
-    <com.huobi.page.SmartRefreshFooter android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>

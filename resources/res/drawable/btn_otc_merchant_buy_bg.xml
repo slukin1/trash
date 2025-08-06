@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:shape="rectangle">
-    <gradient android:startColor="@color/otc_merchant_item_buy_startcolor" android:endColor="@color/otc_merchant_item_buy_endcolor" android:angle="0" android:type="linear"/>
-    <corners android:radius="@dimen/dimen_4"/>
-</shape>

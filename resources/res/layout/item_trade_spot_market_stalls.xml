@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="@dimen/dimen_20" android:layout_height="@dimen/dimen_26">
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_secondary_text_color" android:id="@+id/stalls_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
-</RelativeLayout>

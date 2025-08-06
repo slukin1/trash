@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <solid android:color="@color/chat_bubble_visitor"/>
-    <corners android:topLeftRadius="@dimen/chat_bubble_radius" android:topRightRadius="@dimen/chat_bubble_radius" android:bottomLeftRadius="@dimen/chat_bubble_radius" android:bottomRightRadius="@dimen/chat_bubble_radius"/>
-    <stroke android:width="@dimen/chat_bubble_stroke" android:color="@color/chat_bubble_stroke"/>
-</shape>

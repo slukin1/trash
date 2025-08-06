@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppBarLayout" android:id="@+id/id_common_list_appbar_layout" android:layout_width="match_parent" android:layout_height="@dimen/global_top_layout_height">
-        <com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance" app:expandedTitleMarginBottom="@dimen/global_expanded_title_margin_bottom" app:expandedTitleMarginStart="@dimen/global_margin_left" app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance" app:theme="@style/Theme.CollapsingToolbar">
-            <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.ToolBar" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:layout_collapseMode="1" app:title="Title"/>
-        </com.huobi.view.collapsingtoolbarlayout.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-    <com.hbg.lib.widgets.adapter.recyclerview.EasyRecyclerView android:id="@+id/id_common_list_recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>

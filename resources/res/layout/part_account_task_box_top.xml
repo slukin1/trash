@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.huobi.view.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="0dp" android:layout_height="@dimen/dimen_174" android:layout_weight="1" app:rv_backgroundColor="@color/baseColorContentBackground" app:rv_cornerRadius="@dimen/dimen_8">
-    <LinearLayout android:gravity="center" android:id="@+id/taskBoxTitleBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10" android:paddingStart="@dimen/dimen_16" android:paddingEnd="@dimen/dimen_16">
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:id="@+id/taskBoxTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="@dimen/dimen_4"/>
-        <ImageView android:id="@+id/taskBoxMore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/account_box_more_icon"/>
-    </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:id="@+id/taskBoxContent" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</com.huobi.view.roundview.RoundLinearLayout>

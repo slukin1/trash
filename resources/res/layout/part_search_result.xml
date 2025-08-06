@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/search_result_rank_layout" android:paddingLeft="@dimen/dimen_16" android:paddingTop="@dimen/dimen_10" android:paddingRight="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_search_list_shape_pale_white" android:paddingTop="@dimen/dimen_5" android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.hbg.lib.widgets.CommonTextListIndicator android:layout_gravity="left" android:id="@+id/search_result_tab" android:background="@color/account_global_bg" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_45" android:layout_marginLeft="@dimen/dimen_5"/>
-        <View android:id="@+id/current_order_divider" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-        <androidx.viewpager.widget.ViewPager android:id="@+id/search_result_pager" android:background="@color/account_global_bg" android:layout_width="wrap_content" android:layout_height="match_parent"/>
-    </LinearLayout>
-</FrameLayout>

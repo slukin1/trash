@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:name="vector" android:height="80dp" android:width="80dp" android:autoMirrored="true" android:viewportWidth="80" android:viewportHeight="80">
-    <path android:name="circle" android:fillColor="?attr/jumio_scanview_foreground" android:pathData="M 10 40 C 10 56.569 23.431 70 40 70 C 56.569 70 70 56.569 70 40 C 70 23.431 56.569 10 40 10 C 23.431 10 10 23.431 10 40 Z M 40 6 C 21.222 6 6 21.222 6 40 C 6 58.778 21.222 74 40 74 C 58.778 74 74 58.778 74 40 C 74 21.222 58.778 6 40 6 Z" android:fillType="1"/>
-</vector>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/id_dialog_contract_position_stop_root_parent" android:layout_width="match_parent" android:layout_height="match_parent">
-    <View android:id="@+id/dialog_contract_bg" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <include layout="@layout/dialog_contract_position_stop_trade_content"/>
-    <include android:id="@+id/dialog_loading" android:visibility="gone" layout="@layout/dialog_fragment_loading"/>
-</FrameLayout>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="224dp" android:width="178dp" android:viewportWidth="178" android:viewportHeight="224">
-    <path android:name="livenessOverlay_t" android:pathData="M178,6 C83.16,6 6,103.79 6,224" android:strokeColor="@color/jumio_gray_8" android:strokeWidth="6" android:trimPathStart="0.25" android:trimPathEnd="0.75"/>
-</vector>

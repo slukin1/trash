@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/single_safeguard_ll" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:id="@+id/single_safeguard_top_divider" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/safeguard_tv" android:background="@color/baseColorModuleColumnClicked" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_7" android:paddingRight="@dimen/dimen_15" android:paddingBottom="@dimen/dimen_7" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <View android:id="@+id/single_safeguard_bottom_divider" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-</LinearLayout>

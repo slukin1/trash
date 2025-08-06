@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/item_search_symbol_layout" android:background="@drawable/selector_common_item_click" android:layout_width="match_parent" android:layout_height="@dimen/dimen_50">
-    <TextView android:textSize="@dimen/global_text_size_16" android:textColor="@color/global_main_text_color" android:id="@+id/item_search_symbol_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium"/>
-    <ImageView android:id="@+id/item_search_symbol_collect" android:padding="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/star_common_light2" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
-    <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height" android:layout_marginLeft="@dimen/dimen_15" android:layout_alignParentBottom="true"/>
-</RelativeLayout>

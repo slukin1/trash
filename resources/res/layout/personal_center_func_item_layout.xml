@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/personal_center_func" android:background="@drawable/personal_center_func_item_bg" android:paddingLeft="@dimen/dimen_24" android:paddingTop="@dimen/dimen_19" android:paddingRight="@dimen/dimen_24" android:paddingBottom="@dimen/dimen_30" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/personalcenter_rebate" android:layout_alignParentRight="true" android:translationY="@dimen/dimen_3"/>
-    <com.hbg.lib.widgets.SafeLottieView android:id="@+id/lottie_animation_icon" android:layout_width="@dimen/dimen_30" android:layout_height="@dimen/dimen_30" android:layout_alignParentRight="true" android:translationY="@dimen/dimen_3"/>
-    <LinearLayout android:orientation="vertical" android:id="@+id/textLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5" android:layout_toLeftOf="@+id/icon" android:layout_alignParentLeft="true">
-        <TextView android:textSize="@dimen/dimen_16" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:maxLines="2" android:fontFamily="@font/roboto_medium"/>
-        <TextView android:textSize="@dimen/dimen_10" android:textColor="@color/baseColorSecondaryText" android:ellipsize="end" android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:text="subtitle" android:maxLines="1"/>
-    </LinearLayout>
-</RelativeLayout>

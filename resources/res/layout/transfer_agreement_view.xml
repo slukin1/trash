@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <CheckBox android:id="@+id/agreement_check_icon" android:layout_width="@dimen/dimen_14" android:layout_height="@dimen/dimen_14" android:button="@drawable/checkbox_selector_transfer"/>
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorContentText" android:id="@+id/agreement_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dimen_6"/>
-</LinearLayout>

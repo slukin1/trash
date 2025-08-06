@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.hbg.lib.widgets.CommonTextListIndicator android:layout_gravity="left" android:id="@+id/market_tab" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_35" android:layout_marginTop="@dimen/dimen_5" app:use_transparent_pic="true"/>
-    <View android:id="@+id/market_header_divider" android:background="@color/global_divider_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-</LinearLayout>

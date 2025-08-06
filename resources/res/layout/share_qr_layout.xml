@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="@dimen/dimen_70">
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
-        <TextView android:textSize="@dimen/global_text_size_16" android:textColor="#1f3f59" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/invite_share_qr_title" android:singleLine="true" android:fontFamily="@font/roboto_medium"/>
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="#8c9fad" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_2_5" android:text="@string/invite_share_qr_summary"/>
-    </LinearLayout>
-    <ImageView android:id="@+id/qr_code_image" android:layout_width="@dimen/dimen_52" android:layout_height="@dimen/dimen_52"/>
-</LinearLayout>

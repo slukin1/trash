@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:id="@+id/trading_setting_item_top_line" android:background="@color/trade_dialog_safeguard_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_10"/>
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/trading_setting_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_19" android:layout_marginRight="@dimen/dimen_15" android:text="@string/n_notification_push_title" android:fontFamily="@font/roboto_regular" android:layout_marginHorizontal="@dimen/dimen_15"/>
-</LinearLayout>

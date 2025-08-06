@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="right" android:layout_gravity="right" android:paddingLeft="@dimen/chat_bubble_visitor_margin_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/chat_bubble_vertical_margin" android:minHeight="@dimen/chat_bubble_min_height">
-    <RelativeLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/message_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
-        <ImageView android:layout_gravity="center" android:id="@+id/send_failed_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="0x7f08089b" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/_chat_bubble_visitor_send_failed_icon"/>
-        <FrameLayout android:id="@+id/message_placeholder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/send_failed_icon"/>
-    </RelativeLayout>
-    <TextView android:gravity="left" android:id="@+id/send_failed_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_failed_tap_to_retry" android:singleLine="true" android:layout_below="@+id/message_container" android:layout_alignParentRight="true" style="@style/_chat_bubble_visitor_send_failed_message"/>
-</RelativeLayout>

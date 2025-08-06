@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:padding="@dimen/sns_margin_medium" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.sumsub.sns.core.widget.SNSSubtitle2TextView android:id="@+id/sns_item_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.6"/>
-    <com.sumsub.sns.core.widget.SNSBodyTextView android:gravity="end" android:id="@+id/sns_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/sns_margin_small"/>
-    <com.sumsub.sns.core.widget.SNSSubtitle2TextView android:id="@+id/sns_time" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:layout_marginStart="@dimen/sns_margin_tiny"/>
-</LinearLayout>

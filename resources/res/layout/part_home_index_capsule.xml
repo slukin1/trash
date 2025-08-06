@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.huobi.view.roundview.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_capsule" android:layout_width="match_parent" android:layout_height="@dimen/dimen_60" android:layout_marginBottom="@dimen/dimen_8" app:rv_backgroundColor="@color/baseColorContentBackground" app:rv_cornerRadius="@dimen/dimen_8">
-    <ImageView android:id="@+id/iv_capsule" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</com.huobi.view.roundview.RoundRelativeLayout>

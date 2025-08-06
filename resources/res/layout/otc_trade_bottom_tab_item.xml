@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_bottom" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-    <FrameLayout android:id="@+id/fl_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
-        <ImageView android:id="@+id/iv" android:layout_width="@dimen/dimen_26" android:layout_height="@dimen/dimen_26" android:src="@drawable/select_otc_bottom_exchange_bg"/>
-        <View android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/tv_bottom_trade_order_num" android:background="@drawable/otc_order_red_dot" android:visibility="gone" android:layout_width="@dimen/dimen_5" android:layout_height="@dimen/dimen_5" android:layout_marginTop="@dimen/dimen_1" android:layout_marginRight="@dimen/dimen_1"/>
-    </FrameLayout>
-    <TextView android:textSize="@dimen/global_text_size_10" android:textStyle="bold" android:textColor="@drawable/select_otc_bottom_tv_color" android:gravity="center" android:id="@+id/tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_2" android:text="交易" android:layout_below="@+id/fl_image" android:layout_centerHorizontal="true"/>
-</RelativeLayout>

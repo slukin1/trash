@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <solid android:color="@color/login_v2_bottom_background"/>
-    <stroke android:width="@dimen/dimen_0_5" android:color="@color/baseColorInputField" android:dashWidth="@dimen/dimen_2" android:dashGap="@dimen/dimen_2"/>
-</shape>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <com.hbg.lib.widgets.SafeLottieView android:id="@+id/ivLiveGiftFloat" android:layout_width="@dimen/dimen_62" android:layout_height="@dimen/dimen_52" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/box_json"/>
-    <View android:id="@+id/vBgLiveGiftFloatTime" android:background="@drawable/bg_live_gift_float_time" android:visibility="gone" android:layout_width="@dimen/dimen_52" android:layout_height="@dimen/dimen_15" android:layout_marginTop="48dp" android:layout_centerHorizontal="true"/>
-    <TextView android:textSize="@dimen/dimen_12" android:textStyle="bold" android:textColor="@color/COLOR_FFEFA8" android:id="@+id/tvBgLiveGiftFloatTime" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_15" android:layout_marginTop="47dp" android:layout_marginBottom="2dp" android:layout_centerHorizontal="true"/>
-    <ImageView android:id="@+id/ivBgLiveGiftFloatTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_38" android:src="@drawable/icon_live_gift_float_text" android:layout_centerHorizontal="true"/>
-</RelativeLayout>

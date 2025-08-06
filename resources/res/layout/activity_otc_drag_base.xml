@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.huobi.otc.widget.DragRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_drag" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.huobi.otc.widget.OtcFloatView android:orientation="horizontal" android:id="@+id/fv_float" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_121" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/dimen_8"/>
-</com.huobi.otc.widget.DragRelativeLayout>

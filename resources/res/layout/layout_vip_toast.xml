@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/id_vip_toast_bg" android:background="@drawable/toast_elite_bg" android:paddingLeft="@dimen/dimen_10" android:paddingRight="@dimen/dimen_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15">
-    <ImageView android:id="@+id/id_vip_toast_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toast_elite_icon"/>
-    <TextView android:textColor="@color/color_account_vip_toast_elite" android:id="@+id/id_vip_toast_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_10" android:text="@string/account_vip_login_tips_elite"/>
-</LinearLayout>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="horizontal" android:padding="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/baseColorPrimaryText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_24" android:text="@string/n_otc_created_advert_guide" android:layout_weight="1" android:layout_toLeftOf="@+id/item_publish" android:layout_centerVertical="true"/>
-        <TextView android:textSize="@dimen/dimen_12" android:textColor="@color/baseColorMajorTheme100" android:id="@+id/item_tv_create" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_cloud_wallet_go_create"/>
-    </LinearLayout>
-    <View android:id="@+id/line" android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:layout_marginHorizontal="@dimen/dimen_16"/>
-</LinearLayout>

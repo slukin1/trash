@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dimen_34">
-    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="?attr/kline_primary_text_color" android:id="@+id/coin_text" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
-    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="?attr/kline_primary_text_color" android:gravity="right" android:id="@+id/coin_weight_text" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"/>
-    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="?attr/kline_primary_text_color" android:gravity="right" android:id="@+id/coin_last_price_text" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5"/>
-    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="?attr/kline_primary_text_color" android:gravity="right" android:id="@+id/coin_rise_or_all_pct_text" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5"/>
-</LinearLayout>

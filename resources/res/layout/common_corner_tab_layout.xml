@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
-    <FrameLayout android:layout_gravity="center_vertical" android:id="@+id/id_common_corner_tab_layout1" android:paddingLeft="@dimen/dimen_5" android:paddingRight="@dimen/dimen_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="@dimen/dimen_3" android:minWidth="@dimen/dimen_64" android:layout_weight="1">
-        <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:layout_gravity="center" android:id="@+id/id_common_corner_tab_tv1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
-    </FrameLayout>
-    <FrameLayout android:layout_gravity="center_vertical" android:id="@+id/id_common_corner_tab_layout2" android:paddingLeft="@dimen/dimen_5" android:paddingRight="@dimen/dimen_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dimen_3" android:minWidth="@dimen/dimen_64" android:layout_weight="1">
-        <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:layout_gravity="center" android:id="@+id/id_common_corner_tab_tv2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    </FrameLayout>
-</LinearLayout>

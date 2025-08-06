@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<View xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/v_message_count_dot" android:background="@drawable/shape_red_point_pure_bg" android:layout_width="@dimen/dimen_9" android:layout_height="@dimen/dimen_9"/>

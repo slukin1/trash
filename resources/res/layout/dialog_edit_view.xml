@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
-    <EditText android:id="@+id/editText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:hint="请输入要过滤的字符串" android:ems="30" android:inputType="textPersonName"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,0 @@
-<LinearLayout background="@color/kColorSecondaryText" cornerRadius="2" width="wrap_content" height="wrap_content" orientation="vertical" paddingBottom="1" paddingLeft="4" paddingRight="4" paddingTop="1">
-        <TextView text="{{@data.tradePanel.fiatPrice}}" width="wrap_content" height="wrap_content" textColor="@color/KBaseColorContentBackground" textSize="10" textFontWeight="400"/>
-</LinearLayout>

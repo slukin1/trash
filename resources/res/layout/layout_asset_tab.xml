@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <HorizontalScrollView android:id="@+id/title_horizontal_scroll" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginTop="@dimen/dimen_15" android:layout_marginBottom="@dimen/dimen_13">
-        <com.huobi.view.TitleLayout android:layout_gravity="center_vertical" android:id="@+id/title_layout" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="@dimen/dimen_5"/>
-    </HorizontalScrollView>
-    <ImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="match_parent"/>
-</FrameLayout>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_hot_area" android:background="@drawable/market_hot_search_btn_selector" android:layout_width="match_parent" android:layout_height="@dimen/dimen_35">
-    <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerVertical="true" android:fontFamily="@font/roboto_medium"/>
-</RelativeLayout>

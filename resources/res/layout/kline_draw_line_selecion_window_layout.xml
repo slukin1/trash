@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:background="?attr/kline_draw_rectangular_bg_attr" android:paddingLeft="@dimen/dimen_15" android:paddingTop="@dimen/dimen_15" android:paddingRight="@dimen/dimen_20" android:paddingBottom="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/contentLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-</RelativeLayout>

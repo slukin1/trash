@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/baseColorContentBackground" android:paddingLeft="@dimen/dimen_16" android:paddingTop="@dimen/dimen_16" android:paddingRight="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="horizontal" android:id="@+id/item_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_8"/>
-    <TextView android:textSize="@dimen/global_text_size_10" android:textColor="@color/baseColorSecondaryTextNew" android:ellipsize="end" android:id="@+id/tvDsc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_16" android:text="@string/n_home_feed_contract_msg" android:maxLines="2" android:layout_weight="1" android:lineHeight="@dimen/dimen_24"/>
-</LinearLayout>

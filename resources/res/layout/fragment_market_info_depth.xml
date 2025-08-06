@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.hbg.lib.widgets.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/depth_loading_layout" android:layout_width="match_parent" android:layout_height="match_parent">
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
-        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-            <com.hbg.module.kline.ui.KLineDepthLayout android:id="@+id/id_kline_depth_layout" android:layout_width="match_parent" android:layout_height="@dimen/dimen_285" android:layout_alignParentTop="true" app:depth_grid_color="?attr/kline_primary_separator_color" app:depth_label_text_color="?attr/kline_three_level_text_color" app:depth_left_fill_color="?attr/kline_depth_green" app:depth_right_fill_color="?attr/kline_depth_red" app:depth_touch_label_background_color="?attr/kline_floating_window_color" app:depth_touch_pointer_bg_color="?attr/kline_depth_touch_pointer_bg_color"/>
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
-</com.hbg.lib.widgets.LoadingLayout>

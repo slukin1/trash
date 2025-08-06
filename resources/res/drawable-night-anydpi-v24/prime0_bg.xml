@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="60dp" android:width="351dp" android:viewportWidth="351" android:viewportHeight="60">
-    <path android:fillColor="@drawable/$prime0_bg__0" android:pathData="M8,0.25L343,0.25A7.75,7.75 0,0 1,350.75 8L350.75,52A7.75,7.75 0,0 1,343 59.75L8,59.75A7.75,7.75 0,0 1,0.25 52L0.25,8A7.75,7.75 0,0 1,8 0.25z"/>
-    <path android:fillColor="@drawable/$prime0_bg__1" android:pathData="M8,0.25L343,0.25A7.75,7.75 0,0 1,350.75 8L350.75,52A7.75,7.75 0,0 1,343 59.75L8,59.75A7.75,7.75 0,0 1,0.25 52L0.25,8A7.75,7.75 0,0 1,8 0.25z" android:fillAlpha="0.8"/>
-    <path android:fillColor="#00000000" android:pathData="M8,0.25L343,0.25A7.75,7.75 0,0 1,350.75 8L350.75,52A7.75,7.75 0,0 1,343 59.75L8,59.75A7.75,7.75 0,0 1,0.25 52L0.25,8A7.75,7.75 0,0 1,8 0.25z" android:strokeColor="@drawable/$prime0_bg__2" android:strokeWidth="0.5"/>
-</vector>

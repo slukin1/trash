@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.hbg.lib.widgets.tablayout.TabItemLayoutIndicator android:id="@+id/rect_tab_layout" android:background="@drawable/shape_tab_item_uncheck_bg" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginTop="@dimen/dimen_15" android:layout_marginRight="@dimen/dimen_15" app:middle_tab_text_size="@dimen/global_text_size_12" app:tab_check_bg="@drawable/shape_tab_item_check_bg" app:tab_check_color="@color/baseColorMajorTheme100" app:tab_padding_left="@dimen/dimen_2" app:tab_padding_right="@dimen/dimen_2" app:tab_unCheck_color="@color/baseColorSecondaryText"/>
-    <com.huobi.view.NoHorizontalScrollViewPager android:id="@+id/vp_margin" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</LinearLayout>

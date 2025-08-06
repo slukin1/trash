@@ -1,9 +1,0 @@
-<LinearLayout width="375" height="wrap_content" orientation="vertical" onClick="@event.assetNewEarnGuideHide()">
-	<FrameLayout marginLeft="26" marginRight="26" width="wrap_content" height="wrap_content" gravity="centerVertical">
-		<LinearLayout marginTop="10" width="wrap_content" height="wrap_content" orientation="horizontal" cornerRadius="8" gravity="center" background="@color/KBaseColorContentBackground">
-			<TextView width="wrap_content" height="wrap_content" marginTop="12" marginLeft="56" marginRight="12" marginBottom="12" textSize="14" textFontWeight="400" maxLines="0" maxWidth="240" textColor="@color/kColorPrimaryText" text="{{@i18n/n_earnhome_asset_guide}}"/>
-		</LinearLayout>
-		<ImageView width="54" height="48" src="@drawable/edge_engine_icon_new_earn_guide"/>
-	</FrameLayout>
-	<ImageView marginLeft="36" marginBottom="8" width="8" height="4" src="@drawable/edge_engine_earn_pop_down"/>
-</LinearLayout>

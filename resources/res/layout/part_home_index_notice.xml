@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="32.5dp" android:layout_marginBottom="@dimen/dimen_8">
-    <com.hbg.lib.widgets.TopScrollNoticeView android:id="@+id/index_notice_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:notice_cover_visibility="2" app:notice_left_visibility="0" app:notice_more_visibility="0"/>
-    <View android:background="@color/baseColorPrimarySeparator" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" app:layout_constraintBottom_toBottomOf="0"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.huobi.homemarket.view.MarketCollectionIndicator android:layout_gravity="left" android:id="@+id/collectionIndicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_40" android:layout_marginTop="@dimen/dimen_5" app:use_transparent_pic="true"/>
-    <View android:background="@color/global_divider_color" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-    <com.huobi.homemarket.ui.MarketSortLayout android:id="@+id/market_sort" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30"/>
-</LinearLayout>

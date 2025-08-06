@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:id="@+id/v_line" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="8dp"/>
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/baseColorContentBackground" android:paddingTop="@dimen/dimen_20" android:paddingBottom="@dimen/dimen_16" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="18sp" android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:maxWidth="200dp" android:text="直播中" android:lines="1" android:layout_weight="1" android:layout_centerVertical="true" android:textFontWeight="500"/>
-        <TextView android:textSize="13dp" android:textColor="@color/baseColorSecondaryIconButton" android:ellipsize="end" android:id="@+id/tv_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:maxWidth="120dp" android:text="@string/n_personal_footprint_more" android:lines="1" android:drawableRight="@drawable/icon_live_more" android:drawablePadding="8dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
-    </LinearLayout>
-</LinearLayout>

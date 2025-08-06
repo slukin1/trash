@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/position_quant_root" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutDescription="@xml/item_asset_position_coin_content_scene_new">
-    <include layout="@layout/include_asset_position_tabs_quant"/>
-    <LinearLayout android:orientation="vertical" android:id="@+id/constraintLayout" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
-        <include layout="@layout/include_asset_position_level"/>
-    </LinearLayout>
-</androidx.constraintlayout.motion.widget.MotionLayout>

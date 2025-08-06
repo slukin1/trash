@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="18dp" android:width="18dp" android:viewportWidth="18" android:viewportHeight="18">
-    <path android:fillColor="@color/baseColorMajorTheme100" android:pathData="M10.329,1.809C9.799,1.694 9.248,1.633 8.684,1.633C4.44,1.633 1,5.073 1,9.317C1,13.56 4.44,17 8.684,17C12.927,17 16.368,13.56 16.368,9.317C16.368,9.04 16.353,8.767 16.324,8.498L14.853,8.892C14.863,9.032 14.868,9.174 14.868,9.317C14.868,12.732 12.099,15.5 8.684,15.5C5.269,15.5 2.5,12.732 2.5,9.317C2.5,5.901 5.269,3.133 8.684,3.133C9.114,3.133 9.534,3.177 9.94,3.26L10.329,1.809Z" android:fillType="1"/>
-    <path android:fillColor="@drawable/$wallet_icon_analysis__0" android:pathData="M8.5,16C12.09,16 15,13.09 15,9.5C15,5.91 12.09,3 8.5,3C4.91,3 2,5.91 2,9.5C2,13.09 4.91,16 8.5,16Z" android:strokeAlpha="0.2" android:fillAlpha="0.2" android:fillType="1"/>
-    <group>
-        <clip-path android:pathData="M17.75,7.362C16.922,4.266 14.484,1.828 11.387,1L9.059,9.691L17.75,7.362Z"/>
-        <path android:fillColor="@color/baseColorMajorTheme100" android:pathData="M11.387,1L11.775,-0.449C10.975,-0.663 10.153,-0.188 9.939,0.612L11.387,1ZM17.75,7.362L18.138,8.811C18.938,8.597 19.413,7.775 19.199,6.975L17.75,7.362ZM9.059,9.691L7.61,9.303C7.471,9.821 7.619,10.373 7.998,10.752C8.377,11.131 8.929,11.279 9.447,11.14L9.059,9.691ZM11,2.449C13.578,3.138 15.612,5.172 16.301,7.75L19.199,6.975C18.233,3.36 15.39,0.517 11.775,-0.449L11,2.449ZM10.507,10.08L12.836,1.388L9.939,0.612L7.61,9.303L10.507,10.08ZM9.447,11.14L18.138,8.811L17.362,5.914L8.67,8.242L9.447,11.14Z"/>
-    </group>
-</vector>

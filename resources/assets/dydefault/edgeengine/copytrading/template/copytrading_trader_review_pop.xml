@@ -1,9 +1,0 @@
-<LinearLayout background="@color/KBaseColorContentBackground" cornerRadius="8" width="325" height="wrap_content" orientation="vertical" paddingLeft="16" paddingRight="16" paddingBottom="16">
-    <TextView gravity="left" text="{{@i18n/n_copy_trading_trader_review_passed}}" textSize="14" width="293" height="wrap_content" textFontWeight="400" marginTop="16" maxLines="0" textColor="@color/kColorPrimaryText"/>
-    <!--  取消、开启  -->
-    <LinearLayout width="match_parent" height="44" marginTop="32" marginLeft="16" marginRight="16" gravity="center" orientation="horizontal">
-        <TextView height="match_parent" width="0" weight="1" cornerRadius="4" gravity="center" text="{{@i18n/n_contract_cancel}}" textSize="14" textColor="@color/kColorPrimaryText" background="@color/KBaseColorInputBackground" textFontWeight="500" onClick="@event.homePage.clickedTraderReviewCancel()"/>
-        <View width="8"/>
-        <TextView height="match_parent" width="0" weight="1" cornerRadius="4" gravity="center" text="{{@i18n/n_content_live_permission_open}}" textSize="14" textColor="@color/kColorWhiteText" background="@color/kColorMajorTheme100" textFontWeight="500" onClick="@event.homePage.clickedTraderReviewStart()"/>
-    </LinearLayout>
-</LinearLayout>

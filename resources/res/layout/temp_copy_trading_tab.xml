@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.huobi.view.radiogroup.RadioContainer xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/main_index_tab" android:tag="layout/temp_copy_trading_tab_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <CheckBox android:id="@+id/main_index_cb" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/copytrading_tab_bg_home"/>
-    <CheckBox android:textSize="@dimen/global_text_size_10" android:textColor="@color/color_grey_orange" android:id="@+id/main_index_txt_cb" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/global_main_tabbar_txt_image_margin" android:button="@null" android:text="@string/n_tab_channel_home"/>
-</com.huobi.view.radiogroup.RadioContainer>

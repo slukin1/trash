@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <solid android:color="@color/points_pack_pending_bg"/>
-    <corners android:radius="@dimen/dimen_1_5"/>
-    <stroke android:width="@dimen/global_divider_width" android:color="@color/global_divider_color"/>
-</shape>

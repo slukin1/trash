@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.hbg.lib.widgets.IndexRankSubTextListIndicator android:layout_gravity="center" android:id="@+id/sub_market_tab" android:background="@color/baseColorContentBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_32" android:layout_marginTop="@dimen/dimen_3" app:use_transparent_pic="true"/>
-    <View android:background="@color/baseColorPrimarySeparator" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5"/>
-    <com.huobi.index.ui.widget.IndexViewPager android:id="@+id/sub_ranking_viewpager" android:background="@color/baseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>

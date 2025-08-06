@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <androidx.core.widget.NestedScrollView android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0.1dp" app:layout_scrollFlags="1">
-        <include android:id="@+id/view_layout_empty" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/view_momment_page_empty"/>
-    </androidx.core.widget.NestedScrollView>
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/smart_refresh_layout" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:srlEnableNestedScrolling="false" app:srlEnableOverScrollBounce="false" app:srlEnableOverScrollDrag="false" app:srlEnablePureScrollMode="false" app:srlEnableRefresh="false">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:visibility="invisible" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:fadeScrollbars="false" android:overScrollMode="never" app:layout_scrollFlags="1"/>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-</FrameLayout>

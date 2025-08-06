@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llItem" android:tag="layout/item_fans_0" android:padding="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.hbg.module.huobi.im.view.AvatarView android:id="@+id/ivAvatar" android:layout_width="40dp" android:layout_height="40dp" app:avatarType="0" app:viewSize="40"/>
-    <TextView android:textColor="@color/baseColorPrimaryText" android:ellipsize="end" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1" android:layout_marginStart="10dp"/>
-    <com.hbg.module.community.widgets.FollowView android:id="@+id/followView" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_24" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="@+id/imageHeader" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="@+id/imageHeader" app:rv_cornerRadius="@dimen/dimen_4"/>
-</LinearLayout>

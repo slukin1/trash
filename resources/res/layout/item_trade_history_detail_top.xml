@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/tv_trade_history_detail_root" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/global_secondary_text_color" android:id="@+id/tv_trade_history_detail_top_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_12"/>
-    <com.hbg.lib.widgets.SubscriptTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_trade_history_detail_top_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_4" android:drawablePadding="@dimen/dimen_2" android:fontFamily="@font/roboto_medium" app:auto_size_tv_min_text_size="@dimen/global_text_size_10"/>
-</LinearLayout>

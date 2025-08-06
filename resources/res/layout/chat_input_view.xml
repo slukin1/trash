@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/input_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/chat_input_field_container">
-    <ImageView android:id="@+id/chat_reply_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chat_reply_icon"/>
-    <EditText android:id="@+id/input_field" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/input_field_hint" android:layout_weight="1" style="@style/chat_input_field"/>
-    <ImageButton android:id="@+id/send_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chat_send_button"/>
-    <ImageButton android:id="@+id/attach_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chat_attach_button"/>
-</LinearLayout>

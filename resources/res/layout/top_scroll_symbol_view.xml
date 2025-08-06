@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/dimen_15" android:paddingRight="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="match_parent">
-    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="@dimen/dimen_9" android:layout_weight="1">
-        <com.hbg.lib.widgets.TopScrollSymbolItemView android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view_front" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <com.hbg.lib.widgets.TopScrollSymbolItemView android:layout_gravity="center_vertical" android:id="@+id/top_scroll_item_view_behind" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    </FrameLayout>
-</LinearLayout>

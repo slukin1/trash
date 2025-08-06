@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/markets_top_label_ll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/global_padding_right">
-    <TextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/kColorThreeLevelText" android:id="@+id/contract_vertical_price_label_tv" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/n_exchange_order_list_price" android:layout_weight="1"/>
-    <TextView android:textSize="@dimen/global_text_size_11" android:textColor="@color/kColorThreeLevelText" android:gravity="end" android:id="@+id/contract_vertical_amount_label_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_contract_trade_input_amount"/>
-</LinearLayout>

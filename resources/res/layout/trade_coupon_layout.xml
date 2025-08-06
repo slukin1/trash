@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/coupon_layout_label_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n_exchange_coupon_label"/>
-    <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorPrimaryText" android:gravity="right" android:id="@+id/coupon_layout_value_tv" android:paddingLeft="@dimen/dimen_13" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_3" android:maxLines="2" android:includeFontPadding="false" android:layout_toRightOf="@+id/coupon_layout_label_tv" android:layout_centerVertical="true" app:auto_size_tv_min_text_size="@dimen/global_text_size_8"/>
-</RelativeLayout>

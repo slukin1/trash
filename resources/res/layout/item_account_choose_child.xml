@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/common_widget_background_color" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <RelativeLayout android:id="@+id/rl_account" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_main_text_color" android:id="@+id/tv_title" android:paddingLeft="@dimen/dimen_36" android:paddingTop="@dimen/global_padding_left" android:paddingBottom="@dimen/global_padding_left" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mine_pool_header_title" android:fontFamily="@font/roboto_regular"/>
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/global_secondary_text_color" android:id="@+id/tv_arrow" android:background="@drawable/global_normal_arrow_down" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:drawablePadding="@dimen/global_drawable_padding" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/global_padding_left" android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-    <View android:id="@+id/account_bottom_line" android:background="@color/baseColorPrimarySeparator" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dimen_0_5" android:paddingStart="@dimen/dimen_16" android:paddingEnd="@dimen/dimen_16"/>
-</LinearLayout>

@@ -1,8 +1,0 @@
-<LinearLayout height="match_parent" orientation="vertical" width="375" background="@color/KBaseColorContentBackground">
-    <LinearLayout background="@color/KBaseColorInputBackground" borderColor="@color/kColorMajorTheme100" borderWidth="{{@data.introductionSetting.borderWidth}}" cornerRadius="4" height="108" marginTop="10" marginLeft="16" marginRight="16" orientation="vertical" width="343">
-
-        <EditText height="64" marginTop="12" marginLeft="12" marginRight="12" width="match_parent" bindText="@data.introductionSetting.introduction" lines="10" hint="{{@i18n/n_copy_trading_trader_introduction_placeholder}}" inputType="text" onFocusChange="@event.introductionSetting.onFocusChange(0,@eventParams)" onTextChange="@event.introductionSetting.onTextChange(0,@eventParams)" requestFocus="{{@data.introductionSetting.introductionFocus}}" textColor="@color/kColorPrimaryText" editTextColor="@color/kColorPrimaryText" textColorHint="@color/eButtonUnenabledBgColor" editTextTintColor="@color/eButtonUnenabledBgColor" textFontWeight="400" textSize="12"/>
-
-        <TextView gravity="right" height="wrap_content" marginRight="12" marginTop="4" text="{{@data.introductionSetting.counter}}" textColor="@color/KBaseColorSecondaryText" textFontWeight="500" textSize="14" width="match_parent"/>
-    </LinearLayout>
-</LinearLayout>

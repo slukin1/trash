@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/jumio_liveness_overlay_part_main">
-    <target android:name="livenessOverlay_t" android:animation="@drawable/$jumio_liveness_overlay_part_main_animated__0"/>
-    <target android:name="livenessOverlay_t" android:animation="@drawable/$jumio_liveness_overlay_part_main_animated__1"/>
-</animated-vector>

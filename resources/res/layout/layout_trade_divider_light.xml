@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<View xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/trade_dialog_divider_color_light" android:layout_width="match_parent" android:layout_height="@dimen/global_divider_height"/>

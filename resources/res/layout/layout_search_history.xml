@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorPrimaryText" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_14" android:text="@string/n_new_search_history_title" android:height="@dimen/dimen_48" android:layout_weight="1" android:fontFamily="@font/roboto_medium"/>
-        <ImageView android:layout_gravity="center" android:id="@+id/image_view_clear" android:paddingRight="@dimen/dimen_15" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/search_history_delete"/>
-    </LinearLayout>
-    <com.huobi.view.wraplayout.AutoWrapLayout android:orientation="vertical" android:id="@+id/wrap_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15" android:layout_marginBottom="@dimen/dimen_11"/>
-</LinearLayout>

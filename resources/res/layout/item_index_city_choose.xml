@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textSize="@dimen/global_text_size_14" android:textColor="@color/baseColorMajorTheme100" android:gravity="center_vertical" android:id="@+id/tv_index" android:background="@color/baseColorDeepestBackground" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:layout_marginRight="@dimen/dimen_15" android:paddingStart="@dimen/dimen_15"/>

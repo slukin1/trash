@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="layout/item_gift_top_0" android:layout_width="27dp" android:layout_height="24dp">
-    <ImageView android:id="@+id/ivAvatar" android:tag="binding_1" android:layout_width="24dp" android:layout_height="24dp" android:scaleType="centerCrop" android:layout_marginStart="3dp"/>
-</FrameLayout>

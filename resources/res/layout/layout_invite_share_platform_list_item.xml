@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20" android:layout_marginRight="@dimen/dimen_10">
-    <FrameLayout android:layout_width="@dimen/dimen_35" android:layout_height="@dimen/dimen_35">
-        <ImageView android:id="@+id/id_invite_share_platform_list_item_iv" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
-        <View android:id="@+id/id_invite_share_platform_list_item_cover" android:background="@drawable/selector_share_icon_cover" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    </FrameLayout>
-    <com.hbg.lib.widgets.AutoSizeTextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/invite_share_platform_list_item_text_color" android:gravity="center" android:id="@+id/id_invite_share_platform_list_item_tv" android:layout_width="@dimen/dimen_60" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5" android:lines="1" android:fontFamily="@font/roboto_regular"/>
-</LinearLayout>

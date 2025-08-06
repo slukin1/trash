@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/dimen_100" android:paddingBottom="@dimen/dimen_15" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:layout_width="match_parent" android:layout_height="0.5dp"/>
-    <ImageView android:id="@+id/iv_item_empty_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/community_ic_default_empty" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
-    <TextView android:textSize="12dp" android:textColor="@color/color_C5CFD5" android:gravity="center_horizontal" android:id="@+id/tv_item_empty_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/community_empty_no_content_hint" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/iv_item_empty_icon"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

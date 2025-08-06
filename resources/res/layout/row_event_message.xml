@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/chat_bubble_vertical_margin">
-    <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/message_text" android:background="@drawable/zopim_chat_event_bg_shape" android:padding="@dimen/chat_bubble_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chat_row_event_message"/>
-</LinearLayout>

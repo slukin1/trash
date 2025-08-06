@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="18dp" android:width="18dp" android:viewportWidth="18" android:viewportHeight="18">
-    <path android:fillColor="@color/kColorSecondaryText" android:pathData="M9,0L9,0A9,9 0,0 1,18 9L18,9A9,9 0,0 1,9 18L9,18A9,9 0,0 1,0 9L0,9A9,9 0,0 1,9 0z"/>
-    <path android:fillColor="#ffffff" android:pathData="M5.5,4.5L7.5,4.5A1,1 0,0 1,8.5 5.5L8.5,7.5A1,1 0,0 1,7.5 8.5L5.5,8.5A1,1 0,0 1,4.5 7.5L4.5,5.5A1,1 0,0 1,5.5 4.5z"/>
-    <path android:fillColor="#ffffff" android:pathData="M5.5,9.5L7.5,9.5A1,1 0,0 1,8.5 10.5L8.5,12.5A1,1 0,0 1,7.5 13.5L5.5,13.5A1,1 0,0 1,4.5 12.5L4.5,10.5A1,1 0,0 1,5.5 9.5z"/>
-    <path android:fillColor="#ffffff" android:pathData="M10.5,4.5L12.5,4.5A1,1 0,0 1,13.5 5.5L13.5,7.5A1,1 0,0 1,12.5 8.5L10.5,8.5A1,1 0,0 1,9.5 7.5L9.5,5.5A1,1 0,0 1,10.5 4.5z"/>
-    <path android:fillColor="#ffffff" android:pathData="M11.5,9.5L11.5,9.5A2,2 0,0 1,13.5 11.5L13.5,11.5A2,2 0,0 1,11.5 13.5L11.5,13.5A2,2 0,0 1,9.5 11.5L9.5,11.5A2,2 0,0 1,11.5 9.5z"/>
-</vector>

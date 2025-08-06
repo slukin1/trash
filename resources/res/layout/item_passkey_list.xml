@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/KBaseColorContentBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_16" android:layout_marginTop="@dimen/dimen_16" android:layout_marginBottom="@dimen/dimen_16" android:layout_weight="1">
-        <TextView android:textSize="@dimen/global_text_size_16" android:textStyle="bold" android:textColor="@color/baseColorPrimaryText" android:id="@+id/tv_title_passkey_list_item" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/tv_second_title_passkey_list_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
-        <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseColorSecondaryText" android:id="@+id/tv_third_title_passkey_list_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_8"/>
-    </LinearLayout>
-    <ImageView android:id="@+id/iv_passkey_list_item_edit" android:layout_width="@dimen/dimen_16" android:layout_height="@dimen/dimen_16" android:layout_marginRight="@dimen/dimen_16" android:src="@drawable/icon_passkey_item_edit"/>
-</LinearLayout>

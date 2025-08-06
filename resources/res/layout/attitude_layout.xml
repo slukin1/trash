@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:id="@+id/popRootView" android:background="?attr/k_bg_pop_attitude" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_46" android:paddingStart="@dimen/dimen_10" android:paddingEnd="@dimen/dimen_10" android:layout_marginStart="@dimen/dimen_16" android:layout_marginEnd="@dimen/dimen_16">
-            <LinearLayout android:orientation="horizontal" android:id="@+id/llAttitudes" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <ImageView android:layout_width="14dp" android:layout_height="5dp" android:layout_marginTop="-0.8dp" android:src="?attr/k_pop_bottom_arrow" android:layout_below="@+id/popRootView" android:layout_marginStart="@dimen/dimen_120"/>
-    </RelativeLayout>
-</LinearLayout>

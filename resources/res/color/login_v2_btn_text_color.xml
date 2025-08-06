@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:state_enabled="false" android:color="@color/login_v2_login_button_disable_text_color"/>
-    <item android:color="@color/login_v2_login_button_enable_text_color"/>
-</selector>

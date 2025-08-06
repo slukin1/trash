@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/color_lite_order_filter_state" android:gravity="center" android:id="@+id/checkBox" android:background="@drawable/selector_option_field_filter_item" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/dimen_30" android:text="@string/contarct_position_lever_label"/>
-</RelativeLayout>

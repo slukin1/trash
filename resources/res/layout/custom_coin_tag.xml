@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:id="@+id/llCoinTag" android:tag="layout/custom_coin_tag_0" android:background="@color/baseColorRed005" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_22" android:paddingStart="8dp" android:paddingEnd="8dp" android:layout_marginEnd="@dimen/dimen_8">
-    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iconImage" android:layout_width="@dimen/dimen_12" android:layout_height="@dimen/dimen_12" android:layout_marginEnd="@dimen/dimen_2"/>
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="?attr/kline_primary_text_color" android:id="@+id/tvSymbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/dimen_4"/>
-    <TextView android:textSize="@dimen/global_text_size_12" android:textColor="@color/baseCoinDangerousTip" android:id="@+id/tvSymbolPercent" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-</LinearLayout>

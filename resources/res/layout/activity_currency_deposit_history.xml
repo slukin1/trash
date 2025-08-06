@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.huobi.view.title.HbTitleBar android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="@dimen/dimen_44" app:actionIcon="@drawable/global_filter_unselected" app:titleText="@string/currency_history_title"/>
-    <com.hbg.lib.widgets.LoadingLayout android:orientation="vertical" android:id="@+id/loading_layout" android:background="@color/global_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/tradePtrFrame" android:layout_width="match_parent" android:layout_height="match_parent">
-            <androidx.recyclerview.widget.RecyclerView android:id="@+id/hisory_order_rv" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-    </com.hbg.lib.widgets.LoadingLayout>
-</LinearLayout>

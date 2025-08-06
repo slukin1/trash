@@ -1,6 +1,0 @@
-<LinearLayout height="wrap_content" orientation="vertical" width="match_parent" background="#FFFFFF">
-    <TextView width="match_parent" height="44" marginStart="16" marginEnd="16" marginTop="16" marginBottom="16"
-        text="{{@data.save | @i18n/network_detecting}}" textColor="#0173E5" textSize="14" textWeight="400" gravity="center" background="#FAFAFA"
-        cornerRadius="4" onClick="@event.capture()"/>
-</LinearLayout>
-
